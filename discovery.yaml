@@ -1,4 +1,4 @@
-  ignore:
-    - google_cast
-    - philips_hue
-    - igd
+ignore:
+  - google_cast
+  - philips_hue
+  - igd
