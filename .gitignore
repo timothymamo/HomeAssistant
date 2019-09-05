@@ -1,0 +1,27 @@
+# Ignore auto-generated files and folders
+.cloud/
+deps/
+.ps4-games.json
+html5_push_registrations.conf
+.storage/
+tts/
+.uuid
+
+# Ignore secrets file
+secrets.yaml
+
+# Ignore the log and database
+home-assistant.log
+home-assistant_v2.db
+
+# Ignore any private keys
+asus_router
+
+# Ignore google verification for html5
+www/google*
+
+# Ignore custom components
+custom_components/*
+
+# Ignore known devices
+known_devices*
