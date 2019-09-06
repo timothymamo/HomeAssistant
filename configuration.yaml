@@ -15,7 +15,7 @@ tts:
   - platform: google_translate
 
 homeassistant:
-  customize: !include customize.yaml
+  customize: !include_dir_list customize/
 
 discovery: !include discovery.yaml
 media_player: !include media_player.yaml
@@ -26,3 +26,4 @@ hacs: !include hacs.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+zone: !include_dir_list zones/
