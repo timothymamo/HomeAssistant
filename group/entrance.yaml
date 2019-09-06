@@ -1,0 +1,7 @@
+entrance:
+  name: Entrance
+  entities:
+    - light.inner_candle_entrance
+    - sensor.motion_sensor_entrance_2
+    - sensor.motion_sensor_entrance
+    - binary_sensor.motion_sensor_entrance_2
