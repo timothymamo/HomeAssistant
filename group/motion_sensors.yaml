@@ -1,4 +1,4 @@
-motion_sensors.yaml:
+motion_sensors:
   name: Motion Sensors
   entities:
     - binary_sensor.motion_sensor_bottom_stairs_2

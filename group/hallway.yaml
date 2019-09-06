@@ -1,5 +1,6 @@
 hallway:
   name: Hallway
+  entities:
     - light.hue_bulb_hallway
     - sensor.motion_sensor_hallway
     - sensor.motion_sensor_storage
