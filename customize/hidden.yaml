@@ -33,3 +33,5 @@ device_tracker.rubys_galaxy_s7:
   hidden: true
 device_tracker.tims_galaxy_s7:
   hidden: true
+sensor.hacs:
+  hidden: true
