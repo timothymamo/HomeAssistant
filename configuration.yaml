@@ -15,7 +15,7 @@ tts:
   - platform: google_translate
 
 homeassistant:
-  customize: !include_dir_list /config/customize/
+  customize: !include_dir_merge_named /config/customize/
 
 discovery: !include discovery.yaml
 media_player: !include media_player.yaml
