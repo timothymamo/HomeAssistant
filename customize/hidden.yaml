@@ -25,3 +25,11 @@ device_tracker.sony_tv:
   hidden: true
 device_tracker.tim_work_laptop:
   hidden: true
+device_tracker.device_tracker.tim_s7:
+  hidden: true
+device_tracker.tims_desktop:
+  hidden: true
+device_tracker.rubys_galaxy_s7:
+  hidden: true
+device_tracker.tims_galaxy_s7:
+  hidden: true
