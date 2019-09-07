@@ -27,7 +27,7 @@ asuswrt: !include asuswrt.yaml
 notify: !include notify.yaml
 hacs: !include hacs.yaml
 group: !include_dir_merge_named /config/group/
-automation: !include_dir_merge_list /config/automations
+automation: !include_dir_merge_list /config/automations/
 script: !include scripts.yaml
 zone: !include_dir_list /config/zones/
 sensor: !include sensors.yaml
