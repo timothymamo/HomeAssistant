@@ -1,6 +1,6 @@
 title: Bedroom
 icon: mdi:bed-king-outline
-path: home
+path: bedroom
 cards:
   - entities:
       - light.hue_ambiance_3_bedroom
