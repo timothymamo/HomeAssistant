@@ -1,0 +1,12 @@
+title: Entrance
+icon: mdi: door-open
+path: entrance
+cards:
+  - entities:
+      - light.inner_candle_entrance
+      - sensor.motion_sensor_entrance_2
+      - sensor.motion_sensor_entrance
+      - binary_sensor.motion_sensor_entrance_2
+    show_header_toggle: true
+    title: Entrance
+    type: entities

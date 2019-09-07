@@ -1,0 +1,13 @@
+title: Living
+icon: mdi: sofa
+path: living
+cards:
+  - entities:
+      - light.hue_colour
+    show_header_toggle: true
+    title: Living Room
+    type: entities
+  - entity: media_player.mybraviatv
+    type: media-control
+  - entity: media_player.playstation_4
+    type: media-control

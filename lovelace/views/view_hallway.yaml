@@ -1,0 +1,15 @@
+title: Hallway
+icon: mdi: coat-rack
+path: hallway
+cards:
+  - entities:
+    - light.hue_bulb_hallway
+    - sensor.motion_sensor_hallway
+    - sensor.motion_sensor_storage
+    - binary_sensor.motion_sensor_hallway_2
+    - binary_sensor.motion_sensor_storage_2
+    - sensor.motion_sensor_hallway_2
+    - sensor.motion_sensor_storage_2
+  show_header_toggle: true
+  title: Hallway
+  type: entities

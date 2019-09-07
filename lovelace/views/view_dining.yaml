@@ -1,0 +1,10 @@
+title: Dining
+icon: mdi:table-chair
+path: dining
+cards:
+  - entities:
+      - light.hue_ambiance_1_dining
+      - light.hue_ambiance_2_dining
+    show_header_toggle: true
+    title: Dining Room
+    type: entities
