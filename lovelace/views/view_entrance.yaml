@@ -1,5 +1,5 @@
 title: Entrance
-icon: mdi: door-open
+icon: mdi:door-open
 path: entrance
 cards:
   - entities:
