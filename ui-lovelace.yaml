@@ -2,3 +2,8 @@ title: Main Lovelace
 views:
   - !include /config/lovelace/views/view_home.yaml
   - !include /config/lovelace/views/view_bedroom.yaml
+  - !include /config/lovelace/views/view_dining.yaml
+  - !include /config/lovelace/views/view_entrance.yaml
+  - !include /config/lovelace/views/view_hallway.yaml
+  - !include /config/lovelace/views/view_kitchen.yaml
+  - !include /config/lovelace/views/view_living.yaml
