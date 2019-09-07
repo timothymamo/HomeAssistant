@@ -1,4 +1,4 @@
-- alias: 'Turn on Entrance when door is opened'
+- alias: 'Turn on Kitchen when sensor triggered'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen_2
@@ -9,7 +9,7 @@
   action:
     - service: light.turn_on
       entity_id: light.hue_bulb_kitchen
-- alias: 'Turn off Entrance after 2 min'
+- alias: 'Turn off Kitchen after 5 min'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen_2
