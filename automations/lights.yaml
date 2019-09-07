@@ -17,7 +17,7 @@
   condition:
     - condition: state
       entity_id: light.inner_candle_entrance
-      to: 'on'
+      state: 'on'
       for:
         minutes: 2
   action:
