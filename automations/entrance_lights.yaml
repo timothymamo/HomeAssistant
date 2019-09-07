@@ -13,11 +13,11 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_entrance_2
-      to: 'on'
+      to: 'off'
   condition:
     - condition: state
-      entity_id: light.inner_candle_entrance
-      state: 'on'
+      entity_id: binary_sensor.motion_sensor_entrance_2
+      state: 'pff'
       for:
         minutes: 2
   action:

@@ -1,0 +1,25 @@
+- alias: 'Turn on Entrance when door is opened'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_kitchen_2
+      to: "on"
+  condition:
+    - condition: template
+      value_template: '{{ state_attr("sensor.daylight", "daylight") == "false" }}'
+  action:
+    - service: light.turn_on
+      entity_id: light.hue_bulb_kitchen
+- alias: 'Turn off Entrance after 2 min'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_kitchen_2
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.motion_sensor_kitchen_2
+      state: 'off'
+      for:
+        minutes: 5
+  action:
+    - service: light.turn_off
+      entity_id: light.hue_bulb_kitchen
