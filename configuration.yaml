@@ -30,3 +30,4 @@ group: !include_dir_merge_named /config/group/
 automation: !include automations.yaml
 script: !include scripts.yaml
 zone: !include_dir_list /config/zones/
+sensor: !include sensors.yaml
