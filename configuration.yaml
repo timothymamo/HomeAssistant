@@ -17,6 +17,9 @@ tts:
 homeassistant:
   customize: !include_dir_merge_named /config/customize/
 
+lovelace:
+  mode: yaml
+
 discovery: !include discovery.yaml
 media_player: !include media_player.yaml
 recorder: !include recorder.yaml

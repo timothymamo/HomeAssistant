@@ -1,0 +1,3 @@
+title: Main Lovelace
+views:
+  - !include /config/lovelace/views/view_home.yaml
