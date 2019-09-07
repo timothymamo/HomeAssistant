@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_entrance_2
-      to: "on"
+      to: 'on'
   condition:
     - condition: template
       value_template: '{{ state_attr("sensor.daylight", "daylight") == "false" }}'
@@ -17,7 +17,7 @@
   condition:
     - condition: state
       entity_id: binary_sensor.motion_sensor_entrance_2
-      state: 'pff'
+      state: 'off'
       for:
         minutes: 2
   action:

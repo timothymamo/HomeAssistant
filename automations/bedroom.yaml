@@ -1,0 +1,12 @@
+- alias: 'Turn on Bedroom when bottom stairs sensor triggered'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_bottom_stairs_2
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.motion_sensor_top_stairs_2
+      state: 'off'
+  action:
+    - service: light.turn_on
+      entity_id: light.hue_ambiance_3_bedroom

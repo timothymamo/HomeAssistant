@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen_2
-      to: "on"
+      to: 'on'
   condition:
     - condition: template
       value_template: '{{ state_attr("sensor.daylight", "daylight") == "false" }}'
