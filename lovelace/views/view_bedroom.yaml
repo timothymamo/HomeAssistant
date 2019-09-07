@@ -1,0 +1,9 @@
+title: Bedroom
+icon: mdi:bed-king-outline
+path: home
+cards:
+  - entities:
+      - light.hue_ambiance_3_bedroom
+    show_header_toggle: true
+    title: Bedroom
+    type: entities

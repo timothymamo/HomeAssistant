@@ -16,11 +16,6 @@ cards:
     title: Dining Room
     type: entities
   - entities:
-      - light.hue_ambiance_3_bedroom
-    show_header_toggle: true
-    title: Bedroom
-    type: entities
-  - entities:
       - light.inner_candle_entrance
       - sensor.motion_sensor_entrance_2
       - sensor.motion_sensor_entrance
