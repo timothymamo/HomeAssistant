@@ -1,3 +1,8 @@
+resources:
+# Mini Media Player - installed via HACS
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    type: module
+
 title: Main Lovelace
 views:
   - !include /config/lovelace/views/view_home.yaml

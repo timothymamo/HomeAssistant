@@ -8,6 +8,7 @@ cards:
     title: Living Room
     type: entities
   - entity: media_player.mybraviatv
-    type: media-control
+    type: custom:mini-media-play
   - entity: media_player.playstation_4
-    type: media-control
+    type: custom:mini-media-play
+    icon: mdi:playstation
