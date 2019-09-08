@@ -7,3 +7,4 @@ views:
   - !include /config/lovelace/views/view_hallway.yaml
   - !include /config/lovelace/views/view_kitchen.yaml
   - !include /config/lovelace/views/view_living.yaml
+  - !include /config/lovelace/views/view_automations.yaml

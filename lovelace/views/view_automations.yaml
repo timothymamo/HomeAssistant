@@ -1,0 +1,17 @@
+title: Automation
+icon: mdi:auto-fix
+path: automation
+cards:
+  - entities:
+      - automation.turn_off_entrance_after_2_min
+      - automation.turn_off_hallway_after_3_min
+      - automation.turn_off_kitchen_after_3_min
+      - automation.turn_on_bedroom_when_bottom_stairs_sensor_triggered
+      - automation.turn_on_dining_and_hallway_when_top_stairs_sensor_triggered
+      - automation.turn_on_entrance_when_door_is_opened
+      - automation.turn_on_hallway_then_dining_when_hallway_sensor_triggered
+      - automation.turn_on_hallway_when_storage_sensor_triggered
+      - automation.turn_on_kitchen_when_sensor_triggered
+    show_header_toggle: false
+    title: Automations
+    type: entities
