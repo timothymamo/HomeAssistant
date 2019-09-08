@@ -4,4 +4,4 @@
   mac: !secret tv_mac 
   amp: True
   android: True
-  name: MyBraviaTV
+  name: TV
