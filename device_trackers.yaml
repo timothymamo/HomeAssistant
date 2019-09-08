@@ -1,4 +1,0 @@
-- platform: ping
-  hosts: 
-    S7: 192.168.1.10
-    count: 2
