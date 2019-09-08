@@ -6,6 +6,7 @@ html5_push_registrations.conf
 .storage/
 tts/
 .uuid
+www/community/
 
 # Ignore secrets file
 secrets.yaml
