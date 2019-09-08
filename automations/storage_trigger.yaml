@@ -1,7 +1,7 @@
-- alias: 'Turn on Kitchen when sensor triggered'
+- alias: 'Turn on Hallway when storage sensor triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen_2
+      entity_id: binary_sensor.motion_sensor_storage_2
       to: 'on'
   condition:
     condition: and
@@ -9,23 +9,23 @@
       - condition: template
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
       - condition: state
-        entity_id: light.hue_bulb_kitchen
+        entity_id: light.hue_bulb_hallway
         state: 'off'
   action:
     - service: light.turn_on
-      entity_id: light.hue_bulb_kitchen
+      entity_id: light.hue_bulb_hallway
 
-- alias: 'Turn off Kitchen after 3 min'
+- alias: 'Turn off Hallway after 3 min'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen_2
+      entity_id: binary_sensor.motion_storage_2
       to: 'off'
   condition:
     - condition: state
-      entity_id: binary_sensor.motion_sensor_kitchen_2
+      entity_id: binary_sensor.motion_storage_2
       state: 'off'
       for:
         minutes: 3
   action:
     - service: light.turn_off
-      entity_id: light.hue_bulb_kitchen
+      entity_id: light.hue_bulb_hallway

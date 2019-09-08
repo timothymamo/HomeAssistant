@@ -1,0 +1,26 @@
+- alias: 'Turn on Hallway then Dining when hallway sensor triggered'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_hallway_2
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+      - condition: template
+        value_template: >
+          '{{as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)}} >
+           {{as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)}}'
+      - condition: time
+        after: '15:00:00'
+        before: '23:30:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.dinning_room
+    - delay: 0:45
+    - service: light.turn_on
+      entity_id: light.hue_bulb_hallway
+    - service: light.turn_off
+      entity_id: light.inner_candle_entrance
+    - delay: 1:00

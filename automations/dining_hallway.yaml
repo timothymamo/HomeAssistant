@@ -4,9 +4,22 @@
       entity_id: binary_sensor.motion_sensor_top_stairs_2
       to: 'on'
   condition:
-    - condition: state
-      entity_id: binary_sensor.motion_sensor_bottom_stairs_2
-      state: 'off'
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+      - condition: template
+        value_template: >
+          '{{as_timestamp(states.binary_sensor.motion_sensor_top_stairs_2.last_changed)}} >
+           {{as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_2.last_changed)}}'
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: light.hue_bulb_hallway
+          state: 'off'
+        - condition: state
+          entity_id: group.dinning_room
+          state: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
