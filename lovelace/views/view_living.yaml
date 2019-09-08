@@ -17,7 +17,7 @@ cards:
           id: Netflix
         - icon: mdi:video-input-hdmi
           type: source
-          id: HDMI2
+          id: "HDMI 2"
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:playstation
