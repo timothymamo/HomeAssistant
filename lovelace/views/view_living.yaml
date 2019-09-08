@@ -10,14 +10,14 @@ cards:
   - entity: media_player.mybraviatv
     type: custom:mini-media-player
     shortcuts:
-    columns: 4 # Max buttons per row
-    buttons:
-      - icon: mdi:netflix
-        type: source
-        id: Netflix
-      - icon: mdi:video-input-hdmi
-        type: source
-        id: HDMI2
+      columns: 4 # Max buttons per row
+      buttons:
+        - icon: mdi:netflix
+          type: source
+          id: Netflix
+        - icon: mdi:video-input-hdmi
+          type: source
+          id: HDMI2
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:playstation
