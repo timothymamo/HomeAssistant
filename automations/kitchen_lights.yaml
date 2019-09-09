@@ -22,6 +22,10 @@
       to: 'off'
       for:
         minutes: 3
+  condition:
+    - condition: state
+      entity_id: light.hue_bulb_kitchen
+      state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.hue_bulb_kitchen

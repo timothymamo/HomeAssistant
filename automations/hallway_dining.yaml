@@ -37,6 +37,10 @@
       to: 'off'
       for:
         minutes: 3
+  condition:
+    - condition: state
+      entity_id: light.hue_bulb_hallway
+      state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.hue_bulb_hallway
@@ -48,6 +52,10 @@
       to: 'on'
       for:
         minutes: 3
+  condition:
+    - condition: state
+      entity_id: group.dinning_room
+      state: 'on'
   action:
     - service: homeassistant.turn_off
       entity_id: group.dinning_room
