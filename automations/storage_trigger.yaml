@@ -20,10 +20,6 @@
     - platform: state
       entity_id: binary_sensor.motion_storage_2
       to: 'off'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.motion_storage_2
-      state: 'off'
       for:
         minutes: 3
   action:

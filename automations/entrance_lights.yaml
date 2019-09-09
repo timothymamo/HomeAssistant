@@ -27,17 +27,12 @@
     - platform: state
       entity_id: binary_sensor.motion_sensor_entrance_2
       to: 'off'
+      for:
+        minutes: 2
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.motion_sensor_entrance_2
-        state: 'off'
-        for:
-          minutes: 2
-      - condition: state
-        entity_id: light.inner_candle_entrance
-        state: 'on'
+    - condition: state
+      entity_id: light.inner_candle_entrance
+      state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.inner_candle_entrance

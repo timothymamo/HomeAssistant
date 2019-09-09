@@ -12,9 +12,14 @@
         value_template: >
           '{{as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)}} >
            {{as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)}}'
-      - condition: time
-        after: '15:00:00'
-        before: '23:30:00'
+      - condition: or
+        conditions:
+          - condition: time
+            after: '15:00:00'
+            before: '23:30:00'
+          - condition: time
+            after: '07:00:00'
+            before: '09:30:00'
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
@@ -24,3 +29,25 @@
     - service: light.turn_off
       entity_id: light.inner_candle_entrance
     - delay: 1:00
+
+- alias: 'Turn off Hallway after 3 min'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_hallway_2
+      to: 'off'
+      for:
+        minutes: 3
+  action:
+    - service: light.turn_off
+      entity_id: light.hue_bulb_hallway
+
+- alias: 'Turn off Dining after 3 min of TV on'
+  trigger:
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'on'
+      for:
+        minutes: 3
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.dinning_room

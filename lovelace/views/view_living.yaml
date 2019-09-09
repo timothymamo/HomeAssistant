@@ -8,6 +8,7 @@ cards:
     title: Living Room
     type: entities
   - entity: media_player.mybraviatv
+    name: TV
     type: custom:mini-media-player
     icon: 'mdi:television'
     volume_stateless: true
