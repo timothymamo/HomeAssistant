@@ -15,9 +15,10 @@
   action:
     - service: light.turn_on
       entity_id: light.hue_colour
-      rgb_color: [237, 167, 36]
-      brightness_pct: 20
-      transition: 90
+      data:
+        rgb_color: [237, 167, 36]
+        brightness_pct: 20
+        transition: 90
 
 - alias: 'Turn off Living Room when TV goes off'
   trigger:
@@ -36,7 +37,6 @@
         minutes: 2
     - service: light.turn_off
       entity_id: light.hue_colour
-      transition: 90
     - delay:
         minutes: 5
     - service: homeassistant.turn_off
