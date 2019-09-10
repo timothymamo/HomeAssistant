@@ -18,7 +18,7 @@
         entity_id: light.hue_colour
         rgb_color: [237, 167, 36]
         brightness_pct: 60
-        transition: 90
+        transition: 900
 
 - alias: 'Turn off Living Room when TV goes off'
   trigger:
