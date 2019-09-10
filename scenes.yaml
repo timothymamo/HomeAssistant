@@ -1,0 +1,17 @@
+- name: 'Movie Night'
+  entities:
+    - light.hue_colour:
+        state: 'on'
+        rgb_color: [237, 167, 36]
+        brightness_pct: 20
+    - media_player.mybraviatv:
+        state: 'on'
+        media_content_type: 'tvshow'
+        media_content_id: 'Netflix'
+
+- name: 'Movie Night Light'
+  entities:
+    - light.hue_colour:
+        state: 'on'
+        rgb_color: [237, 167, 36]
+        brightness_pct: 20
