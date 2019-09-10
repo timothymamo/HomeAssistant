@@ -13,8 +13,7 @@
         state: 'off'
       - condition: template
         value_template: >
-          '{{as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)}} >
-           {{as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)}}'
+          '{{ as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed) > as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) }}'
       - condition: time
         after: '15:00:00'
         before: '23:30:00'
