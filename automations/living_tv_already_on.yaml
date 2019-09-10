@@ -14,8 +14,8 @@
         state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.hue_colour
       data:
+        entity_id: light.hue_colour
         rgb_color: [237, 167, 36]
         brightness_pct: 20
         transition: 90
