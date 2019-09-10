@@ -1,0 +1,43 @@
+- alias: 'Turn on Living Room when TV is on and it gets dark'
+  trigger:
+    - platform: state
+      entity_id: sensor.daylight
+      to: 'false'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.hue_colour
+        state: 'off'
+      - condition: state
+        entity_id: media_player.mybraviatv
+        state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.hue_colour
+      rgb_color: [237, 167, 36]
+      brightness_pct: 20
+      transition: 90
+
+- alias: 'Turn off Living Room when TV goes off'
+  trigger:
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'off'
+  condition:
+    condition:
+      - condition: state
+        entity_id: media_player.mybraviatv
+        state: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.dining
+    - service: light.turn_off
+      entity_id: light.hue_colour
+      transition: 90
+      delay:
+        minutes: 2
+    - service: homeassistant.turn_off
+      entity_id: group.dining
+      delay:
+        minutes: 5
