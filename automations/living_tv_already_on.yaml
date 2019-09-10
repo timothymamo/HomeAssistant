@@ -13,12 +13,14 @@
         entity_id: media_player.mybraviatv
         state: 'on'
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.hue_colour
-        rgb_color: [237, 167, 36]
-        brightness_pct: 20
-        transition: 90
+    - service: homeassistant.turn_on
+      entity_id: scene.movie_night_light
+      transition: 90
+      # data:
+      #   entity_id: light.hue_colour
+      #   rgb_color: [237, 167, 36]
+      #   brightness_pct: 20
+      #   transition: 90
 
 - alias: 'Turn off Living Room when TV goes off'
   trigger:
