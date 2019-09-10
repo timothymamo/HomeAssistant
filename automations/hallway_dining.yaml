@@ -21,14 +21,16 @@
             after: '07:00:00'
             before: '09:30:00'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.dinning_room
-    - delay: 0:45
     - service: light.turn_on
       entity_id: light.hue_bulb_hallway
+    - delay:
+        seconds: 45
+    - service: homeassistant.turn_on
+      entity_id: group.dinning_room
+    - delay:
+        minutes: 1
     - service: light.turn_off
       entity_id: light.inner_candle_entrance
-    - delay: 1:00
 
 - alias: 'Turn off Hallway after 3 min'
   trigger:
