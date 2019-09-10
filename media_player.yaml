@@ -5,3 +5,5 @@
   amp: True
   android: True
   name: MyBraviaTV
+  sourcefilter:
+      - 'HDMI'

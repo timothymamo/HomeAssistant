@@ -10,7 +10,8 @@
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
       - condition: template
         value_template: >
-          '{{ as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) > as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed) }}'
+          '{{ as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) > 
+          as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed) }}'
       - condition: or
         conditions:
           - condition: time
