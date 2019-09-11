@@ -16,8 +16,8 @@
     - service: light.turn_on
       data:
         entity_id: light.hue_colour
-        rgb_color: [237, 167, 36]
-        brightness_pct: 60
+        rgb_color: [255,145,38]
+        brightness_pct: 100
         transition: 900
 
 - alias: 'Turn off Living Room when TV goes off'

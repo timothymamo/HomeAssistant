@@ -2,8 +2,8 @@
   entities:
     light.hue_colour:
       state: 'on'
-      rgb_color: [237, 167, 36]
-      brightness_pct: 60
+      rgb_color: [255,145,38]
+      brightness_pct: 100
     media_player.mybraviatv:
       state: 'on'
       media_content_type: 'tvshow'
