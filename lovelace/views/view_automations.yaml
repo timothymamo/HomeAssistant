@@ -7,4 +7,4 @@ cards:
       type: entities
       title: Automations
       show_header_toggle: false
-    group: group.automation
+    group: group.all_automations
