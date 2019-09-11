@@ -2,22 +2,9 @@ title: Automation
 icon: mdi:auto-fix
 path: automation
 cards:
-  - entities:
-      - automation.switch_tv_source_to_hdmi_2_if_ps4_is_truned_on
-      - automation.switch_tv_to_netflix_when_ps4_is_turned_off
-      - automation.turn_off_dining_after_3_min_of_tv_on
-      - automation.turn_off_entrance_after_2_min
-      - automation.turn_off_hallway_after_3_min
-      - automation.turn_off_hallway_after_3_min_storage_trigger
-      - automation.turn_off_kitchen_after_3_min
-      - automation.turn_off_living_room_when_tv_goes_off
-      - automation.turn_on_bedroom_when_bottom_stairs_sensor_triggered
-      - automation.turn_on_dining_and_hallway_when_top_stairs_sensor_triggered
-      - automation.turn_on_entrance_when_door_is_opened
-      - automation.turn_on_hallway_then_dining_when_hallway_sensor_triggered
-      - automation.turn_on_hallway_when_storage_sensor_triggered
-      - automation.turn_on_kitchen_when_sensor_triggered
-      - automation.turn_on_living_room_when_tv_is_on_and_it_gets_dark
-    show_header_toggle: false
-    title: Automations
-    type: entities
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Automations
+      show_header_toggle: false
+    group: group.automation

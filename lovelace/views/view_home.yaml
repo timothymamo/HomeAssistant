@@ -44,5 +44,5 @@ cards:
   - type: custom:group-card
     card:
       type: entities
-      title: Group card
+      title: Wake Up Light
     group: group.alarm_clock
