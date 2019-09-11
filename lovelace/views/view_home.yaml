@@ -2,12 +2,8 @@ title: Home
 icon: mdi:home
 path: home
 badges:
-  - binary_sensor.updater
-  - binary_sensor.remote_ui
   - person.ruby
   - person.tim
-  - sensor.daylight
-  - sun.sun
 cards:
   - entities:
       - binary_sensor.motion_sensor_bottom_stairs_2

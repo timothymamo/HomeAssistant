@@ -4,4 +4,4 @@ alarm_clock:
     - input_datetime.wakeup_time
     - input_boolean.wakeup_enabled
     - input_boolean.wakeup_weekend
-    - counter.wakeup_transition
+    - input_number.wakeup_transition 
