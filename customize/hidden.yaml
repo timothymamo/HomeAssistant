@@ -33,3 +33,7 @@ device_tracker.tims_galaxy_s7:
   hidden: true
 sensor.hacs:
   hidden: true
+binary_sensor.updater:
+  hidden: true
+binary_sensor.remote_ui:
+  hidden: true
