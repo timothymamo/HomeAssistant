@@ -35,4 +35,4 @@ sensor: !include sensors.yaml
 scene: !include_dir_merge_list /config/scenes/
 input_boolean: !include input_booleans.yaml
 input_datetime: !include input_datetimes.yaml
-counter: !include counters.yaml
+input_number: !include input_numbers.yaml
