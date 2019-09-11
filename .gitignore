@@ -26,3 +26,6 @@ custom_components/*
 
 # Ignore known devices
 known_devices*
+
+# Ignore google maps cookie file
+.google_maps_location_sharing*

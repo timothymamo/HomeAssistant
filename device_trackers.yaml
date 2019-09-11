@@ -1,0 +1,4 @@
+- platform: google_maps
+  username: !secret gmaps_user
+  scan_interval: 10
+  max_gps_accuracy: 200
