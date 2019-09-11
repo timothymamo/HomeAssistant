@@ -8,7 +8,7 @@ cards:
       - automation.turn_off_dining_after_3_min_of_tv_on
       - automation.turn_off_entrance_after_2_min
       - automation.turn_off_hallway_after_3_min
-      - automation.turn_off_hallway_after_3_min_2
+      - automation.turn_off_hallway_after_3_min_storage_trigger
       - automation.turn_off_kitchen_after_3_min
       - automation.turn_off_living_room_when_tv_goes_off
       - automation.turn_on_bedroom_when_bottom_stairs_sensor_triggered
