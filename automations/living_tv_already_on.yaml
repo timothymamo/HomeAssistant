@@ -1,8 +1,7 @@
 - alias: 'Turn on Living Room when TV is on and it gets dark'
   trigger:
-    - platform: state
-      entity_id: sensor.daylight
-      to: 'false'
+    - platform: template
+      value_template: "{{ is_state_attr('sensor.daylight', 'daylight', 'false') }}"
   condition:
     condition: and
     conditions:
