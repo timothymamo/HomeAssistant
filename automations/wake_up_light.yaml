@@ -24,3 +24,4 @@
       data_template:
         transition: "{{ counter.wakeup_transition * 60 }}"
         brightness_pct: 100
+        color_temp: 389
