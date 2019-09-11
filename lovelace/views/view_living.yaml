@@ -18,7 +18,10 @@ cards:
         - icon: mdi:netflix
           type: tvshow
           id: Netflix
-        - icon: mdi:video-input-hdmi
+        - icon: mdi:format-header-1
+          type: source
+          id: 'HDMI 1'
+        - icon: mdi:format-header-2
           type: source
           id: 'HDMI 2/MHL'
   - entity: media_player.playstation_4

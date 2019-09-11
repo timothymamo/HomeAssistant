@@ -1,0 +1,7 @@
+wakeup_transition:
+  name: "Transition Time (min)"
+  minimum: 1
+  maximum: 60
+  initial: 15
+  step: 1
+  icon: mdi:transition-masked
