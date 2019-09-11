@@ -21,6 +21,9 @@ homeassistant:
 lovelace:
   mode: yaml
 
+influxdb:
+  host: 192.168.1.70
+
 device_tracker: !include device_trackers.yaml
 discovery: !include discovery.yaml
 media_player: !include media_player.yaml
