@@ -41,3 +41,8 @@ cards:
     type: entities
   - entity: weather.home
     type: weather-forecast
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Group card
+    group: group.alarm_clock

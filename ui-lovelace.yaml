@@ -2,6 +2,9 @@ resources:
 # Mini Media Player - installed via HACS
   - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
     type: module
+# Group Card - https://github.com/custom-cards/group-card
+  - url: /community_plugin/group-card/group-card.js
+    type: module
 
 title: Main Lovelace
 views:
