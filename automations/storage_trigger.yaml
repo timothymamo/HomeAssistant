@@ -15,7 +15,7 @@
     - service: light.turn_on
       entity_id: light.hue_bulb_hallway
 
-- alias: 'Turn off Hallway after 3 min'
+- alias: 'Turn off Hallway after 3 min - Storage trigger'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_storage_2
