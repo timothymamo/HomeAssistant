@@ -21,7 +21,7 @@
       entity_id: input_boolean.hallway
       to: 'on'
       for:
-        seconds: 20
+        seconds: 30
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.hallway
