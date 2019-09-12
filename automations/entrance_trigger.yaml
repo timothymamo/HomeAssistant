@@ -11,11 +11,11 @@
       - condition: or
         conditions:
           - condition: time
-            after: '15:00:00'
+            after: '13:00:00'
             before: '23:30:00'
           - condition: time
             after: '07:00:00'
-            before: '10:30:00'
+            before: '09:30:00'
   action:
     - service: light.turn_on
       entity_id: light.inner_candle_entrance

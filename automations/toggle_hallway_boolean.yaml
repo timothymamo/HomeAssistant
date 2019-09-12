@@ -1,7 +1,7 @@
 - alias: 'Toggle hallway boolean when sensor triggers'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_entrance_2
+      entity_id: binary_sensor.motion_sensor_hallway_2
       to: 'on'
   condition: 
     condition: and
