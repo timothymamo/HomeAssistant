@@ -1,15 +1,13 @@
-- alias: 'Turn on Hallway then Dining when hallway sensor triggered'
+- alias: 'Turn on Hallway then Dining when entrance sensor triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_hallway_2
+      entity_id: input_boolean.entrance
       to: 'on'
   condition:
     condition: and
     conditions:
       - condition: template
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
-      - condition: template
-        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)) - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)) > 0 ) }}'
       - condition: or
         conditions:
           - condition: time
@@ -20,28 +18,25 @@
             before: '10:30:00'
   action:
     - service: light.turn_on
+      entity_id: light.inner_candle_entrance
+    - delay:
+        seconds: 15
+    - service: light.turn_on
       entity_id: light.hue_bulb_hallway
     - delay:
-        seconds: 30
+        seconds: 45
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
     - delay:
-        minutes: 1
+        seconds: 15
     - service: light.turn_off
       entity_id: light.inner_candle_entrance
-
-- alias: 'Turn off Hallway after 3 min'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.motion_sensor_hallway_2
-      to: 'off'
-      for:
-        minutes: 3
-  action:
+    - delay:
+        minutes: 1
     - service: light.turn_off
       entity_id: light.hue_bulb_hallway
 
-- alias: 'Turn off Dining after 3 min of TV on'
+- alias: 'Turn off Dining after 3 min TV is on'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
