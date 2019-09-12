@@ -8,9 +8,6 @@
     conditions:
       - condition: template
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
-      - condition: state
-        entity_id: light.inner_candle_entrance
-        state: 'off'
       - condition: template
         value_template: > 
           '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)) -
@@ -26,10 +23,6 @@
       to: 'off'
       for:
         minutes: 2
-  condition:
-    - condition: state
-      entity_id: light.inner_candle_entrance
-      state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.inner_candle_entrance

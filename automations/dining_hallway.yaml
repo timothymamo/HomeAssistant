@@ -12,14 +12,6 @@
         value_template: >
           '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_top_stairs_2.last_changed)) -
           (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_2.last_changed)) > 0 ) }}'
-      - condition: or
-        conditions:
-        - condition: state
-          entity_id: light.hue_bulb_hallway
-          state: 'off'
-        - condition: state
-          entity_id: group.dinning_room
-          state: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
