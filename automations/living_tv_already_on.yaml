@@ -26,10 +26,10 @@
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
     - delay:
-        minutes: 2
+        minutes: 1
     - service: light.turn_off
       entity_id: light.hue_colour
     - delay:
-        minutes: 5
+        minutes: 3
     - service: homeassistant.turn_off
       entity_id: group.dinning_room
