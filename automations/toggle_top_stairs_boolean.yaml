@@ -16,7 +16,7 @@
       entity_id: input_boolean.top_stairs
       to: 'on'
       for:
-        seconds: 15
+        seconds: 20
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.top_stairs
