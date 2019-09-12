@@ -15,13 +15,13 @@
     - service: light.turn_on
       entity_id: light.hue_bulb_kitchen
 
-- alias: 'Turn off Kitchen after 3 min'
+- alias: 'Turn off Kitchen after 2 min'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen_2
       to: 'off'
       for:
-        minutes: 3
+        minutes: 2
   condition:
     - condition: state
       entity_id: light.hue_bulb_kitchen

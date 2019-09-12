@@ -9,9 +9,7 @@
       - condition: template
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", true) }}'
       - condition: template
-        value_template: >
-          '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)) -
-          (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)) > 0 ) }}'
+        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed)) - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed)) > 0 ) }}'
       - condition: or
         conditions:
           - condition: time
@@ -19,7 +17,7 @@
             before: '23:30:00'
           - condition: time
             after: '07:00:00'
-            before: '09:30:00'
+            before: '10:30:00'
   action:
     - service: light.turn_on
       entity_id: light.hue_bulb_hallway
