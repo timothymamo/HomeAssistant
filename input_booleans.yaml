@@ -2,7 +2,16 @@ wakeup_enabled:
   name: "Wake-up lights"
   initial: on
   icon: mdi:theme-light-dark
+
 wakeup_weekend:
   name: "Enable Wake-up on weekends"
   initial: off # I disable the system on default on weekends
   icon: mdi:calendar-blank
+
+top_stairs:
+  name: "Top Stairs Motion Sensor"
+  inital: off
+
+bottom_stairs:
+  name: "Bottom Stairs Motion Sensor"
+  inital: off

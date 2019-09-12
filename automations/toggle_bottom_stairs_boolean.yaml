@@ -1,0 +1,22 @@
+- alias: 'Toggle bottom stairs boolean when sensor triggers'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_bottom_stairs_2
+      to: 'on'
+  condition:
+    - condition: template
+      value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_2.last_changed) - (as_timestamp(states.binary_sensor.motion_sensor_top_stairs_2.last_changed))) > 0 ) }}'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.bottom_stairs
+
+- alias: 'Toggle bottom stairs boolean after 15 sec'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bottom_stairs
+      to: 'on'
+      for:
+        seconds: 15
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.bottom_stairs
