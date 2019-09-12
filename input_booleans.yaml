@@ -10,8 +10,10 @@ wakeup_weekend:
 
 top_stairs:
   name: "Top Stairs Motion Sensor"
-  inital: off
+  initial: off
+  icon: mdi:motion-sensor
 
 bottom_stairs:
   name: "Bottom Stairs Motion Sensor"
-  inital: off
+  initial: off
+  icon: mdi:motion-sensor
