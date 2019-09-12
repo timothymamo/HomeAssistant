@@ -1,15 +1,11 @@
 - alias: 'Turn on Dining and Hallway when top stairs sensor triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_top_stairs_2
+      entity_id: input_boolean.top_stairs
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition: template
-        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
-      - condition: template
-        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_top_stairs_2.last_changed)) - (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_2.last_changed)) > 0 ) }}'
+    - condition: template
+      value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
