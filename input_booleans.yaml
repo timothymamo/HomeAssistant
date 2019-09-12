@@ -17,3 +17,13 @@ bottom_stairs:
   name: "Bottom Stairs Motion Sensor"
   initial: off
   icon: mdi:motion-sensor
+
+entrance:
+  name: "Entrance Motion Sensor"
+  initial: off
+  icon: mdi:motion-sensor
+
+hallway:
+  name: "Hallway Motion Sensor"
+  initial: off
+  icon: mdi:motion-sensor

@@ -18,6 +18,8 @@ cards:
   - entities:
       - input_boolean.bottom_stairs
       - input_boolean.top_stairs
+      - input_boolean.entrance
+      - input_boolean.hallway
     show_header_toggle: false
     title: Motion Sensors Boolean
     type: entities

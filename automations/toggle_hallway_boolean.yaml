@@ -1,0 +1,27 @@
+- alias: 'Toggle hallway boolean when sensor triggers'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_sensor_entrance_2
+      to: 'on'
+  condition: 
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed))) > 0 ) }}'
+      - condition: state
+        entity_id: input_boolean.entrance
+        state: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hallway
+
+- alias: 'Toggle hallway boolean after 15 sec'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hallway
+      to: 'on'
+      for:
+        seconds: 20
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.hallway
