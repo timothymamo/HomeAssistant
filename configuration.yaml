@@ -45,6 +45,4 @@ scene: !include_dir_merge_list /config/scenes/
 input_boolean: !include input_booleans.yaml
 input_datetime: !include input_datetimes.yaml
 input_number: !include input_numbers.yaml
-# shell_command: !include_dir_merge_list /config/shell_commands/
-shell_command:
-  app_change: '/usr/bin/curl -X POST http://192.168.1.200/DIAL/apps/{{ app_uri }}'
+shell_command: !include_dir_merge_list /config/shell_commands/
