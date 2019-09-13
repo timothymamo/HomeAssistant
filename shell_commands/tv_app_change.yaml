@@ -1,1 +1,1 @@
-app_change: '/usr/bin/curl -X POST http://192.168.1.200/DIAL/apps/{{ app_uri }}'
+- app_change: '/usr/bin/curl -X POST http://192.168.1.200/DIAL/apps/{{ app_uri }}'
