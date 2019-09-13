@@ -25,8 +25,9 @@ cards:
           type: source
           id: 'HDMI 2/MHL'
         - icon: mdi:death-star-variant
-          type: tvshow
-          id: Disney+
+          type: script
+          id: script.app_change
+          # data: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:playstation
