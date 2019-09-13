@@ -1,3 +1,5 @@
-# - disney_plus:
-#     sequence:
-#       - service: shell_command.app_change
+app_change:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: '{{ player_uri }}'
