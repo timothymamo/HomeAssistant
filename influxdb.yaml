@@ -1,3 +1,11 @@
 host: 192.168.1.70
 username: !secret influxdb_user
 password: !secret influxdb_password
+exclude:
+  domains:
+    - zone
+  entities:
+    - sensor.hacs
+    - sensor.time
+    - sun.sun
+    - weather.home
