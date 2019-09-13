@@ -38,7 +38,7 @@ script:
     sequence:
       - service: shell_command.app_change
         data:
-          app_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+          app_uri: '{{ player_uri }}'
 zone: !include_dir_list /config/zones/
 sensor: !include sensors.yaml
 scene: !include_dir_merge_list /config/scenes/

@@ -27,7 +27,8 @@ cards:
         - icon: mdi:death-star-variant
           type: script
           id: script.app_change
-          # data: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+          data:
+            player_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:playstation
