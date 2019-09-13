@@ -1,0 +1,37 @@
+filter:
+  include_entities:
+    - group.all_lights
+    - group.bedroom
+    - group.dinning_room
+    - group.entrance
+    - group.hallway
+    - group.kitchen
+    - group.living_room
+    - script.disney
+    - script.netflix
+  include_domains:
+    - light
+    - media_player
+    - scene
+  exclude_entities:
+    - group.alarm_clock
+    - group.all_automations
+    - group.all_devices
+    - group.all_scripts
+    - group.lux_sensors
+    - group.motion_sensors
+    - group.stairway
+    - group.temp_sensors
+    - input_datetime.wakeup_time
+    - input_number.wakeup_transition
+    - script.app_change
+  exclude_domains:
+    - automation
+    - binary_sensor
+    - device_tracker
+    - input_boolean
+    - person
+    - sensor
+    - sun
+    - weather
+    - zone

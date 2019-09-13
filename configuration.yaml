@@ -40,3 +40,4 @@ input_boolean: !include input_booleans.yaml
 input_datetime: !include input_datetimes.yaml
 input_number: !include input_numbers.yaml
 shell_command: !include_dir_merge_named /config/shell_commands/
+alexa: !include_dir_merge_named /config/alexa/
