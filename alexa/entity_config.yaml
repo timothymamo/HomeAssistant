@@ -53,7 +53,5 @@ entity_config:
     display_categories: 'TV'
   scene.movie_night:
     name: 'Movie Night'
-    display_categories: 'SCENE'
   scene.movie_night_light:
     name: 'Mvoe Night Light'
-    display_categories: 'SCENE'
