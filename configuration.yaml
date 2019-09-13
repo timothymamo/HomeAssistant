@@ -1,5 +1,4 @@
 # Default integrations (substitute for default_config) 
-cloud:
 config:
 frontend:
   themes: !include_dir_merge_named /config/lovelace/themes/
@@ -40,102 +39,103 @@ input_boolean: !include input_booleans.yaml
 input_datetime: !include input_datetimes.yaml
 input_number: !include input_numbers.yaml
 shell_command: !include_dir_merge_named /config/shell_commands/
-alexa:
-  filter:
-    include_entities:
-      - group.all_lights
-      - group.bedroom
-      - group.dinning_room
-      - group.entrance
-      - group.hallway
-      - group.kitchen
-      - group.living_room
-      - script.disney
-      - script.netflix
-    include_domains:
-      - light
-      - media_player
-      - scene
-    exclude_entities:
-      - group.alarm_clock
-      - group.all_automations
-      - group.all_devices
-      - group.all_scripts
-      - group.lux_sensors
-      - group.motion_sensors
-      - group.stairway
-      - group.temp_sensors
-      - input_datetime.wakeup_time
-      - input_number.wakeup_transition
-      - script.app_change
-    exclude_domains:
-      - automation
-      - binary_sensor
-      - device_tracker
-      - input_boolean
-      - person
-      - sensor
-      - sun
-      - weather
-      - zone
-  entity_config:
-    group.all_lights:
-      name: 'All Lights'
-      display_categories: 'LIGHT'
-    group.bedroom:
-      name: 'Bedroom'
-      display_categories: 'LIGHT'
-    group.dinning_room:
-      name: 'Dining Room'
-      display_categories: 'LIGHT'
-    group.entrance:
-      name: 'Entrance'
-      display_categories: 'Light'
-    group.hallway:
-      name: 'Hallway'
-      display_categories: 'LIGHT'
-    group.kitchen:
-      name: 'Kitchen'
-      display_categories: 'LIGHT'
-    group.living_room:
-      name: 'Living Room'
-      display_categories: 'LIGHT'
-    script.disney:
-      name: 'Disney'
-      display_categories: 'SCENE'
-    script.netflix:
-      name: 'Netflix'
-      display_categories: 'SCENE'
-    light.hue_ambiance_1_dining:
-      name: 'Dining 1'
-      display_categories: 'LIGHT'
-    light.hue_ambiance_2_dining:
-      name: 'Dining 3'
-      display_categories: 'LIGHT'
-    light.hue_ambiance_3_bedroom:
-      name: 'Bedroom Light'
-      display_categories: 'LIGHT'
-    light.hue_bulb_hallway:
-      name: 'Hallway Light'
-      display_categories: 'LIGHT'
-    light.hue_bulb_kitchen:
-      name: 'Kitchen Light'
-      display_categories: 'LIGHT'
-    light.hue_colour:
-      name: 'Lamp'
-      display_categories: 'LIGHT'
-    light.inner_candle_entrance:
-      name: 'Entrance Light'
-      display_categories: 'LIGHT'
-    media_player.mybraviatv:
-      name: 'TV'
-      display_categories: 'TV'
-    media_player.playstation_4:
-      name: 'PlayStation 4'
-      display_categories: 'TV'
-    scene.movie_night:
-      name: 'Movie Night'
-      display_categories: 'SCENE'
-    scene.movie_night_light:
-      name: 'Mvoe Night Light'
-      display_categories: 'SCENE'
+cloud:
+  alexa:
+    filter:
+      include_entities:
+        - group.all_lights
+        - group.bedroom
+        - group.dinning_room
+        - group.entrance
+        - group.hallway
+        - group.kitchen
+        - group.living_room
+        - script.disney
+        - script.netflix
+      include_domains:
+        - light
+        - media_player
+        - scene
+      exclude_entities:
+        - group.alarm_clock
+        - group.all_automations
+        - group.all_devices
+        - group.all_scripts
+        - group.lux_sensors
+        - group.motion_sensors
+        - group.stairway
+        - group.temp_sensors
+        - input_datetime.wakeup_time
+        - input_number.wakeup_transition
+        - script.app_change
+      exclude_domains:
+        - automation
+        - binary_sensor
+        - device_tracker
+        - input_boolean
+        - person
+        - sensor
+        - sun
+        - weather
+        - zone
+    entity_config:
+      group.all_lights:
+        name: 'All Lights'
+        display_categories: 'LIGHT'
+      group.bedroom:
+        name: 'Bedroom'
+        display_categories: 'LIGHT'
+      group.dinning_room:
+        name: 'Dining Room'
+        display_categories: 'LIGHT'
+      group.entrance:
+        name: 'Entrance'
+        display_categories: 'Light'
+      group.hallway:
+        name: 'Hallway'
+        display_categories: 'LIGHT'
+      group.kitchen:
+        name: 'Kitchen'
+        display_categories: 'LIGHT'
+      group.living_room:
+        name: 'Living Room'
+        display_categories: 'LIGHT'
+      script.disney:
+        name: 'Disney'
+        display_categories: 'SCENE'
+      script.netflix:
+        name: 'Netflix'
+        display_categories: 'SCENE'
+      light.hue_ambiance_1_dining:
+        name: 'Dining 1'
+        display_categories: 'LIGHT'
+      light.hue_ambiance_2_dining:
+        name: 'Dining 3'
+        display_categories: 'LIGHT'
+      light.hue_ambiance_3_bedroom:
+        name: 'Bedroom Light'
+        display_categories: 'LIGHT'
+      light.hue_bulb_hallway:
+        name: 'Hallway Light'
+        display_categories: 'LIGHT'
+      light.hue_bulb_kitchen:
+        name: 'Kitchen Light'
+        display_categories: 'LIGHT'
+      light.hue_colour:
+        name: 'Lamp'
+        display_categories: 'LIGHT'
+      light.inner_candle_entrance:
+        name: 'Entrance Light'
+        display_categories: 'LIGHT'
+      media_player.mybraviatv:
+        name: 'TV'
+        display_categories: 'TV'
+      media_player.playstation_4:
+        name: 'PlayStation 4'
+        display_categories: 'TV'
+      scene.movie_night:
+        name: 'Movie Night'
+        display_categories: 'SCENE'
+      scene.movie_night_light:
+        name: 'Mvoe Night Light'
+        display_categories: 'SCENE'
