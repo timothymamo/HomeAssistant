@@ -22,10 +22,8 @@ entity_config:
     display_categories: 'LIGHT'
   script.disney:
     name: 'Disney'
-    display_categories: 'SCENE'
   script.netflix:
     name: 'Netflix'
-    display_categories: 'SCENE'
   light.hue_ambiance_1_dining:
     name: 'Dining 1'
     display_categories: 'LIGHT'
