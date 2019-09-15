@@ -14,7 +14,7 @@
         brightness_pct: 100
         transition: 900
 
-- alias: 'Turn on Living Room when TV goes off'
+- alias: 'Turn off Living Room when TV goes off'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
