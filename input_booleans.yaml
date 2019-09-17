@@ -36,4 +36,4 @@ no_one_home:
 override_presence:
   name: "Override Home Presence"
   initial: off
-  icon: mdi:account-lock-outline
+  icon: mdi:lock-outline
