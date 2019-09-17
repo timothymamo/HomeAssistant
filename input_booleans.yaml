@@ -32,3 +32,8 @@ no_one_home:
   name: "No One Home"
   initial: off
   icon: mdi:home-export-outline
+
+override_presence:
+  name: "Override Home Presence"
+  initial: off
+  icon: mdi:account-lock-outline

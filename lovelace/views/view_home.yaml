@@ -6,6 +6,11 @@ badges:
   - person.tim
 cards:
   - entities:
+      - input_boolean.override_presence
+    show_header_toggle: false
+    title: Override Boolean
+    type: entities
+  - entities:
       - binary_sensor.motion_sensor_bottom_stairs_2
       - binary_sensor.motion_sensor_entrance_2
       - binary_sensor.motion_sensor_hallway_2
