@@ -15,7 +15,8 @@
         entity_id: media_player.mybraviatv
         media_content_type: tvshow
         media_content_id: 'Netflix'
-    - condition:
+    - condition: and
+      conditions:
         - condition: template
           value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
     - service: scene.turn_on

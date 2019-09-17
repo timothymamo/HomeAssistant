@@ -9,9 +9,6 @@
       - condition: template
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
       - condition: state
-        entity_id: input_boolean.no_one_home
-        state: 'off'
-      - condition: state
         entity_id: light.hue_bulb_kitchen
         state: 'off'
   action:
