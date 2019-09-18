@@ -9,7 +9,7 @@ cards:
       - input_boolean.override_presence
       - input_boolean.no_one_home
     show_header_toggle: false
-    title: Override Boolean
+    title: Presence
     type: entities
   - entities:
       - binary_sensor.motion_sensor_bottom_stairs_2
