@@ -18,5 +18,8 @@
       conditions:
         - condition: template
           value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+        - condition: state
+          entity_id: input_boolean.no_one_home
+          state: 'off'
     - service: scene.turn_on
       entity_id: scene.movie_night_light
