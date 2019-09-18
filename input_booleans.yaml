@@ -28,6 +28,16 @@ hallway:
   initial: off
   icon: mdi:motion-sensor
 
+kitchen:
+  name: "Kitchen Motion Sesnor"
+  initial: off
+  icon: mdi:motion-sensor
+
+storage:
+  name: "Storage Motion Sensor"
+  initial: off
+  icon: mdi:motion-sensor
+
 no_one_home:
   name: "No One Home"
   initial: off
