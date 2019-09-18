@@ -37,3 +37,8 @@ override_presence:
   name: "Override Home Presence"
   initial: off
   icon: mdi:lock-outline
+
+asleep:
+  name: "Everyone is asleep"
+  initial: off
+  icon: mdi:sleep

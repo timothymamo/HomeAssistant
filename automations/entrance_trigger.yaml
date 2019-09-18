@@ -11,6 +11,9 @@
       - condition: state
         entity_id: input_boolean.no_one_home
         state: 'off'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
       - condition: or
         conditions:
           - condition: time

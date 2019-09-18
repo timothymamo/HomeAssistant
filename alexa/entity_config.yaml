@@ -54,4 +54,6 @@ entity_config:
   scene.movie_night:
     name: 'Movie Night'
   scene.movie_night_light:
-    name: 'Mvoe Night Light'
+    name: 'Movie Night Light'
+  input_boolean.asleep:
+    name: 'Everyone Asleep'

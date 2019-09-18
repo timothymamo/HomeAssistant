@@ -11,6 +11,9 @@
       - condition: state
         entity_id: input_boolean.no_one_home
         state: 'off'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
