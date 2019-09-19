@@ -33,3 +33,5 @@
         transition: "{{ states.input_number.wakeup_transition.state | int * 60 }}"
         brightness_pct: 100
         color_temp: 389
+    - service: automation.trigger
+      entity_id: automation.turn_off_asleep_boolean_in_the_morning

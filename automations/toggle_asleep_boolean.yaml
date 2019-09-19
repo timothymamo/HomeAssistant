@@ -1,7 +1,5 @@
 - alias: 'Turn off Asleep Boolean in the morning'
   trigger:
-    - service: automation.trigger
-      entity_id: automation.wake_me_up_with_bedroom_light_transition_for_weekdays
     - platform: template
       value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
