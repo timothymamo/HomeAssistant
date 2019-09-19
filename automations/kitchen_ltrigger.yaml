@@ -1,7 +1,7 @@
 - alias: 'Turn on Kitchen when sensor triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen_2
+      entity_id: input_boolean.kitchen
       to: 'on'
   condition:
     condition: and
@@ -10,9 +10,6 @@
         value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
       - condition: state
         entity_id: input_boolean.no_one_home
-        state: 'off'
-      - condition: state
-        entity_id: light.hue_bulb_kitchen
         state: 'off'
       - condition: state
         entity_id: input_boolean.asleep
@@ -24,14 +21,10 @@
 - alias: 'Turn off Kitchen after 2 min'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen_2
+      entity_id: input_boolean.kitchen
       to: 'off'
       for:
         minutes: 2
-  condition:
-    - condition: state
-      entity_id: light.hue_bulb_kitchen
-      state: 'on'
   action:
     - service: light.turn_off
       entity_id: light.hue_bulb_kitchen
