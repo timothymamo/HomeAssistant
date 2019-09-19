@@ -37,12 +37,6 @@
       entity_id: light.inner_candle_entrance
     - delay:
         seconds: 45
-    - condition:
-        - condition: state
-          entity_id: input_boolean.storage
-          to: 'off'
-          for:
-            minutes: 4
     - service: light.turn_off
       entity_id: light.hue_bulb_hallway
 
