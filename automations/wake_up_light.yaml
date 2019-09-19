@@ -11,9 +11,6 @@
       - condition: state
         entity_id: input_boolean.wakeup_enabled
         state: 'on'
-      - condition: state
-        entity_id: input_boolean.asleep
-        state: 'off'
       - condition: or
         conditions:
           - condition: state
