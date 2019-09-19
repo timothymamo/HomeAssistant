@@ -4,13 +4,8 @@
       entity_id: binary_sensor.motion_sensor_hallway_2
       to: 'on'
   condition: 
-    condition: and
-    conditions:
-      - condition: template
-        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed))) > 0 ) }}'
-      - condition: state
-        entity_id: input_boolean.entrance
-        state: 'off'
+    - condition: template
+      value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed))) > 0 ) }}'
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.hallway
