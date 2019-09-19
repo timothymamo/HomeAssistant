@@ -1,7 +1,7 @@
 - alias: 'Turn on Hallway when storage sensor triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_storage_2
+      entity_id: input_boolean.storage
       to: 'on'
   condition:
     condition: and
@@ -21,7 +21,7 @@
 - alias: 'Turn off Hallway after 3 min - Storage trigger'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_storage_2
+      entity_id: input_boolean.storage
       to: 'off'
       for:
         minutes: 3
