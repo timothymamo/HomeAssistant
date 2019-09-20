@@ -4,4 +4,4 @@
       value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
     - service: homeassistant.turn_off
-      entity_id: input_boolean.everyone_asleep
+      entity_id: input_boolean.asleep
