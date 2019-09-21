@@ -41,3 +41,8 @@ input_number: !include input_numbers.yaml
 shell_command: !include_dir_merge_named /config/shell_commands/
 cloud:
   alexa: !include_dir_merge_named /config/alexa/
+alexa_media:
+  accounts:
+    - email: !secret amazon_user
+      password: !secret amazon_password
+      url: amazon.co.uk
