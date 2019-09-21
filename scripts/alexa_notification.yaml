@@ -2,8 +2,8 @@ alexa_test_announce:
   sequence:
     - service: notify.alexa_media
       data:
-        target: media_player.timothy_s_bose_soundbar_500
+        target: "Timothy's Bose Soundbar 500"
         #title: My title for Echo show
-        message: "Test"
+        message: "Hello Tim. How are you?"
         data:
-          type: announce
+          type: tts
