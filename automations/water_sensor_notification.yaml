@@ -5,10 +5,20 @@
     - platform: state
       entity_id: binary_sensor.water_1
       to: 'on'
+    - platform: state
+      entity_id: binary_sensor.water_2
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.water_3
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.water_4
+      to: 'on'
   action:
     - service: notify.tim_phone_notifier
-      title: "!!! WATER SENSOR WARNING !!!"
-      target: TimsS7
-      message: "!!! Water sensor under the dish weasher has been triggered !!!"
-      # data_template:
-      #   message: '{% if is_state("binary_sensor.water_1", "on") or is_state("binary_sensor.water_4", "on") %}!!! Water sensor under the dish weasher has been triggered !!!{% elif is_state("binary_sensor.water_2", "on") %}!!! Water sensor under the washing machine has been triggered !!!{% elif is_state("binary_sensor.water_3", "on") %}!!! Water sensor under the boiler has been triggered !!!{% endif %}'
+      data:
+        title: "!!! WATER SENSOR WARNING !!!"
+        target: TimsS7
+        message: "!!! Water sensor under the dish weasher has been triggered !!!"
+        # data_template:
+        #   message: '{% if is_state("binary_sensor.water_1", "on") or is_state("binary_sensor.water_4", "on") %}!!! Water sensor under the dish weasher has been triggered !!!{% elif is_state("binary_sensor.water_2", "on") %}!!! Water sensor under the washing machine has been triggered !!!{% elif is_state("binary_sensor.water_3", "on") %}!!! Water sensor under the boiler has been triggered !!!{% endif %}'
