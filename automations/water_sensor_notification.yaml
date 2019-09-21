@@ -25,6 +25,8 @@
       data:
         title: "!!! WATER SENSOR WARNING !!!"
         target: TimsS7
+    - service: media_player.media_pause
+      entity_id: media_player.mybraviatv
     - service: notify.alexa_media
       data:
         target: 
