@@ -1,8 +1,8 @@
 - alias: 'Reminder to take Meter Readings'
   trigger:
     - platform: state
-      entity_id: binary_sensor.openclose_1
-      to: 'on'
+      entity_id: person.tim
+      to: 'home'
   condition:
     condition: and
     conditions:
@@ -10,8 +10,6 @@
         after: '16:00:00'
         weekday:
           - mon
-      - condition: template
-        value_template: '{{ is_state("person.tim", "home") }}'
       - condition: state
         entity_id: input_boolean.meter_notification_sent
         state: 'off'

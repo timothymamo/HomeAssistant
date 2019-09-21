@@ -9,6 +9,7 @@ cards:
       - input_boolean.override_presence
       - input_boolean.no_one_home
       - input_boolean.asleep
+      - input_boolean.meter_notification_sent
     show_header_toggle: false
     title: Presence
     type: entities
