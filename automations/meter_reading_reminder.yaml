@@ -18,7 +18,6 @@
       data:
         title: "Meter Readings Reminder"
         target: TimsS7
-        data_template:
-          message: 'Reminder to take Elec/Gas/Water readings'
+        message: 'Reminder to take Elec/Gas/Water readings'
     - service: automation.trigger
       entity_id: automation.turn_off_meter_reading_boolean
