@@ -55,5 +55,5 @@ asleep:
 
 meter_notification_sent:
   name: "Meter Notification has been sent"
-  inital: off
+  initial: off
   icon: mdi:message-alert-outline
