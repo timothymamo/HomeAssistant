@@ -27,7 +27,17 @@
         target: TimsS7
     - service: notify.alexa_media
       data:
-        target: ["Timothy's Bose Soundbar 500"]
-        message: "Water has been detected"
+        target: 
+          - ["Timothy's Bose Soundbar 500"]
+          - ["Kitchen Dot"]
+          - ["Bedroom Dot"]
+        message: "A water leak has been detected. The
+        {% if is_state('binary_sensor.water_1', 'on') or is_state('binary_sensor.water_4', 'on') %}
+        water sensor under the dish washer has been triggered.
+        {% elif is_state('binary_sensor.water_2', 'on') %}
+        water sensor under the washing machine has been triggered.
+        {% elif is_state('binary_sensor.water_3', 'on') %}
+        water sensor under the boiler has been triggered.
+        {% endif %}"
         data:
           type: tts

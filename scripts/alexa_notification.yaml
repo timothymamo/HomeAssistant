@@ -1,8 +1,0 @@
-alexa_test_announce:
-  sequence:
-    - service: notify.alexa_media
-      data:
-        target: ["Timothy's Bose Soundbar 500"]
-        message: "Hello Tim. How are you?"
-        data:
-          type: tts
