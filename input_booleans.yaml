@@ -52,3 +52,8 @@ asleep:
   name: "Everyone is asleep"
   initial: off
   icon: mdi:sleep
+
+meter_notification_sent:
+  name: "Meter Notification has been sent"
+  inital: off
+  icon: mdi:message-alert-outline

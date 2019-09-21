@@ -1,0 +1,26 @@
+- alias: 'Reminder to take Meter Readings'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.openclose_1
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '16:00:00'
+        weekday:
+          - mon
+      - condition: template
+        value_template: '{{ is_state("person.tim", "home") }}'
+      - condition: state
+        entity_id: input_boolean.meter_notification_sent
+        state: 'off'
+  action:
+    - service: notify.tim_phone_notifier
+      data:
+        title: "Meter Readings Reminder"
+        target: TimsS7
+        data_template:
+          message: 'Reminder to take Elec/Gas/Water readings'
+    - service: automation.trigger
+      entity_id: automation.turn_off_meter_reading_boolean
