@@ -1,8 +1,7 @@
 - alias: 'Warn when water sensor is triggered'
   trigger:
     - platform: template
-      entity_id: >-
-        '{% if is_state("binary_sensor.water_1", "on") 
+      entity_id: '{% if is_state("binary_sensor.water_1", "on") 
         or is_state("binary_sensor.water_2", "on") 
         or is_state("binary_sensor.water_3", "on") 
         or is_state("binary_sensor.water_4", "on") %}
@@ -13,8 +12,7 @@
       title: "!!! WATER SENSOR WARNING !!!"
       target: TimsS7
       data_template:
-        message: >-
-          '{% if is_state("binary_sensor.water_1", "on") or is_state("binary_sensor.water_4", "on") %}
+        message: '{% if is_state("binary_sensor.water_1", "on") or is_state("binary_sensor.water_4", "on") %}
           !!! Water sensor under the dish weasher has been triggered !!!
           {% elif is_state("binary_sensor.water_2", "on") %}
           !!! Water sensor under the washing machine has been triggered !!!
