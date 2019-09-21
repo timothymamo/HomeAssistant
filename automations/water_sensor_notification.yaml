@@ -28,11 +28,11 @@
     - service: media_player.media_pause
       entity_id: media_player.mybraviatv
     - service: notify.alexa_media
-      data:
+      data_template:
         target: 
-          - ["Timothy's Bose Soundbar 500"]
-          - ["Kitchen Dot"]
-          - ["Bedroom Dot"]
+          - "Timothy's Bose Soundbar 500"
+          - "Kitchen Dot"
+          - "Bedroom Dot"
         message: "A water leak has been detected. The
         {% if is_state('binary_sensor.water_1', 'on') or is_state('binary_sensor.water_4', 'on') %}
         water sensor under the dish washer has been triggered.
