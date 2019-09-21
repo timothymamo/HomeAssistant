@@ -13,7 +13,7 @@ secrets.yaml
 
 # Ignore the log and database
 home-assistant.log
-home-assistant_v2.db
+home-assistant_v2.db*
 
 # Ignore any private keys
 asus_router
