@@ -25,4 +25,9 @@
       data:
         title: "!!! WATER SENSOR WARNING !!!"
         target: TimsS7
-        
+    - service: notify.alexa_media
+      data:
+        target: ["Timothy's Bose Soundbar 500"]
+        message: "Water has been detected"
+        data:
+          type: tts
