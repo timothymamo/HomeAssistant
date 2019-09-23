@@ -19,5 +19,6 @@
         title: "Meter Readings Reminder"
         target: TimsS7
         message: "Reminder to take Elec/Gas/Water readings"
-    - service: automation.trigger
-      entity_id: automation.turn_off_meter_reading_boolean
+    - service: state
+      entity_id: input_boolean.meter_notification_sent
+      state: 'on'
