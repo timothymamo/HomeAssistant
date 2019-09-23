@@ -3,7 +3,7 @@ language: python
 python: "3.6.4"
 
 before_install:
-  - touch fake_key.pem
+  - ls -lA
   - mv travis_secrets.yaml secrets.yaml
 
 install:
@@ -11,4 +11,4 @@ install:
   - pip3 install colorlog
 
 script:
-  - hass --script check_config --info all
+  - hass --script check_config --info all -c /
