@@ -19,6 +19,5 @@
         title: "Meter Readings Reminder"
         target: TimsS7
         message: "Reminder to take Elec/Gas/Water readings"
-    - service: state
+    - service: homeassistant.turn_on
       entity_id: input_boolean.meter_notification_sent
-      state: 'on'
