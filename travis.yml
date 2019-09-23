@@ -4,11 +4,12 @@ python: "3.6.4"
 
 before_install:
   - ls -lA
+  - touch /config/asus_router
   - mv travis_secrets.yaml secrets.yaml
+  - HA_VERSION=$(<.HA_VERSION)
 
 install:
-  - pip3 install homeassistant
-  - pip3 install colorlog
+  - pip3 install homeassistant==${HA_VERSION}
 
 script:
   - hass --script check_config --info all -c ./
