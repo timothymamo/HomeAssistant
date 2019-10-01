@@ -1,7 +1,7 @@
 - alias: 'Toggle boolean when everyone leaves home'
   trigger:
     - platform: template
-      value_template: '{% if not is_state("person.ruby", "home") or not is_state("person.tim", "home") %}true{% endif %}'
+      value_template: '{% if not is_state("person.ruby", "home") and not is_state("person.tim", "home") %}true{% endif %}'
   condition: 
     - condition: state
       entity_id: input_boolean.override_presence
