@@ -17,7 +17,7 @@
     - service: notify.tim_phone_notifier
       data:
         title: "Meter Readings Reminder"
-        target: TimsS7
+        target: TimS7
         message: "Reminder to take Elec/Gas/Water readings"
     - service: homeassistant.turn_on
       entity_id: input_boolean.meter_notification_sent
