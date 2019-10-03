@@ -57,3 +57,8 @@ meter_notification_sent:
   name: "Meter Notification has been sent"
   initial: off
   icon: mdi:message-alert-outline
+
+ifttt:
+  name: "IFTTT boolean"
+  initial: off
+  icon: mdi:message-alert-outline
