@@ -3,6 +3,16 @@ icon: mdi:motion-sensor
 path: sensors
 cards:
   - entities:
+      - binary_sensor.motion_sensor_bottom_stairs_2
+      - binary_sensor.motion_sensor_entrance_2
+      - binary_sensor.motion_sensor_hallway_2
+      - binary_sensor.motion_sensor_kitchen_2
+      - binary_sensor.motion_sensor_storage_2
+      - binary_sensor.motion_sensor_top_stairs_2
+    show_header_toggle: false
+    title: Motion Sensors
+    type: entities
+  - entities:
       - sensor.motion_sensor_bottom_stairs
       - sensor.motion_sensor_entrance_2
       - sensor.motion_sensor_hallway

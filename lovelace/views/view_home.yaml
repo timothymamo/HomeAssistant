@@ -10,14 +10,14 @@ cards:
   - type: custom:group-card
     card:
       type: entities
-      title: Wake Up Light
-    group: group.alarm_clock
-  - type: custom:group-card
-    card:
-      type: entities
       title: Lights
       show_header_toggle: true
     group: group.all_lights
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Wake Up Light
+    group: group.alarm_clock
   - entities:
       - input_boolean.override_presence
       - input_boolean.no_one_home
