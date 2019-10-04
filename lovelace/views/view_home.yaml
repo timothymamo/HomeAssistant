@@ -19,22 +19,11 @@ cards:
       show_header_toggle: true
     group: group.all_lights
   - entities:
-      - sensor.motion_sensor_bottom_stairs
-      - sensor.motion_sensor_entrance_2
-      - sensor.motion_sensor_hallway
-      - sensor.motion_sensor_kitchen_2
-      - sensor.motion_sensor_storage
-      - sensor.motion_sensor_top_stairs
+      - input_boolean.override_presence
+      - input_boolean.no_one_home
+      - input_boolean.asleep
+      - input_boolean.meter_notification_sent
+      - input_boolean.ifttt
     show_header_toggle: false
-    title: Lux Sensors
-    type: entities
-  - entities:
-      - sensor.motion_sensor_bottom_stairs_2
-      - sensor.motion_sensor_entrance
-      - sensor.motion_sensor_hallway_2
-      - sensor.motion_sensor_kitchen
-      - sensor.motion_sensor_storage_2
-      - sensor.motion_sensor_top_stairs_2
-    show_header_toggle: false
-    title: Temperature Sensors
+    title: Presence
     type: entities

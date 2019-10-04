@@ -16,4 +16,5 @@ views:
   - !include /config/lovelace/views/view_hallway.yaml
   - !include /config/lovelace/views/view_entrance.yaml
   - !include /config/lovelace/views/view_presence.yaml
+  - !include /config/lovelace/views/view_sensors.yaml
   - !include /config/lovelace/views/view_automations.yaml
