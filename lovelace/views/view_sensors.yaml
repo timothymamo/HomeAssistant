@@ -1,23 +1,7 @@
 title: Home
-icon: mdi:home
-path: home
-badges:
-  - person.ruby
-  - person.tim
+icon: mdi:motion-sensor
+path: sensors
 cards:
-  - entity: weather.home
-    type: weather-forecast
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Wake Up Light
-    group: group.alarm_clock
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Lights
-      show_header_toggle: true
-    group: group.all_lights
   - entities:
       - sensor.motion_sensor_bottom_stairs
       - sensor.motion_sensor_entrance_2

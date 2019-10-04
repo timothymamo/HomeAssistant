@@ -1,0 +1,33 @@
+title: Automation
+icon: mdi:location-enter
+path: presence
+cards:
+  - entities:
+      - input_boolean.override_presence
+      - input_boolean.no_one_home
+      - input_boolean.asleep
+      - input_boolean.meter_notification_sent
+      - input_boolean.ifttt
+    show_header_toggle: false
+    title: Presence
+    type: entities
+  - entities:
+      - binary_sensor.motion_sensor_bottom_stairs_2
+      - binary_sensor.motion_sensor_entrance_2
+      - binary_sensor.motion_sensor_hallway_2
+      - binary_sensor.motion_sensor_kitchen_2
+      - binary_sensor.motion_sensor_storage_2
+      - binary_sensor.motion_sensor_top_stairs_2
+    show_header_toggle: false
+    title: Motion Sensors
+    type: entities
+  - entities:
+      - input_boolean.bottom_stairs
+      - input_boolean.top_stairs
+      - input_boolean.entrance
+      - input_boolean.hallway
+      - input_boolean.kitchen
+      - input_boolean.storage
+    show_header_toggle: false
+    title: Motion Sensors Boolean
+    type: entities

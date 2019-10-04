@@ -61,4 +61,4 @@ meter_notification_sent:
 ifttt:
   name: "IFTTT boolean"
   initial: off
-  icon: mdi:message-alert-outline
+  icon: mdi:home-automation
