@@ -1,16 +1,16 @@
 - alias: 'Toggle storage boolean when sensor triggers'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_storage_2
+      entity_id: binary_sensor.openclose_2
       to: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.storage
 
-- alias: 'Toggle storage boolean after 15 sec'
+- alias: 'Toggle storage boolean to off'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_storage_2
+      entity_id: binary_sensor.openclose_2
       to: 'off'
   action:
     - service: homeassistant.turn_off
