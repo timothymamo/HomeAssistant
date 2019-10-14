@@ -4,24 +4,8 @@
       entity_id: input_boolean.entrance
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition: template
-        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
-      - condition: state
-        entity_id: input_boolean.no_one_home
-        state: 'off'
-      - condition: state
-        entity_id: input_boolean.asleep
-        state: 'off'
-      - condition: or
-        conditions:
-          - condition: time
-            after: '13:00:00'
-            before: '23:30:00'
-          - condition: time
-            after: '07:00:00'
-            before: '09:30:00'
+    - condition: template
+      value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
     - service: light.turn_on
       entity_id: light.inner_candle_entrance
@@ -31,6 +15,8 @@
       entity_id: light.hue_bulb_hallway
     - delay:
         seconds: 30
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.no_one_home
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
     - service: light.turn_off

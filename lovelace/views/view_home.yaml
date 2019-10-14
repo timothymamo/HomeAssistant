@@ -5,8 +5,6 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - entity: weather.home
-    type: weather-forecast
   - type: custom:group-card
     card:
       type: entities
