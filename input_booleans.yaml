@@ -1,11 +1,9 @@
 wakeup_enabled:
   name: "Wake-up lights"
-  initial: on
   icon: mdi:theme-light-dark
 
 wakeup_weekend:
   name: "Enable Wake-up on weekends"
-  initial: off # I disable the system on default on weekends
   icon: mdi:calendar-blank
 
 top_stairs:
@@ -45,20 +43,13 @@ no_one_home:
 
 override_presence:
   name: "Override Home Presence"
-  initial: off
   icon: mdi:lock-outline
 
 asleep:
   name: "Everyone is asleep"
-  initial: off
   icon: mdi:sleep
 
 meter_notification_sent:
   name: "Meter Notification has been sent"
   initial: off
   icon: mdi:message-alert-outline
-
-ifttt:
-  name: "IFTTT boolean"
-  initial: off
-  icon: mdi:home-automation
