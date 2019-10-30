@@ -1,5 +1,9 @@
-- platform: html5
+# - platform: html5
+#   name: "Tim Phone Notifier"
+#   vapid_pub_key: !secret html5_public_key
+#   vapid_prv_key: !secret html5_private_key
+#   vapid_email: !secret html5_email
+
+- platform: telegram
   name: "Tim Phone Notifier"
-  vapid_pub_key: !secret html5_public_key
-  vapid_prv_key: !secret html5_private_key
-  vapid_email: !secret html5_email
+  chat_id: !secret telegram_chat_id
