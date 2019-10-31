@@ -1,0 +1,27 @@
+- alias: 'Toggle hue dimmer boolean when ON button pressed'
+  trigger:
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        id: dimmer_switch
+        event: 1000
+    - platform: state
+      entity_id: light.hue_bulb_hallway
+      to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hue_dimmer
+
+- alias: 'Toggle hue dimmer boolean when OFF button pressed'
+  trigger:
+    - platform: event
+      event_type: deconz_event
+      event_data:
+        id: dimmer_switch
+        event: 4000
+    - platform: state
+      entity_id: light.hue_bulb_hallway
+      to: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hue_dimmer

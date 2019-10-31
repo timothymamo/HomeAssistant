@@ -6,7 +6,7 @@ light.hue_ambiance_2_dining:
 light.hue_ambiance_3_bedroom:
   friendly_name: Bedroom
 light.hue_bulb_hallway:
-  friendly_name: Hallway
+  friendly_name: Hallway Light
 light.hue_bulb_kitchen:
   friendly_name: Kitchen
 light.hue_colour:

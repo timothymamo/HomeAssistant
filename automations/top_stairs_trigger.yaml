@@ -17,5 +17,17 @@
   action:
     - service: homeassistant.turn_on
       entity_id: group.dinning_room
-    - service: light.turn_on
-      entity_id: light.hue_bulb_hallway
+    - service: homeassistant.turn_on
+      entity_id: group.hallway
+    - delay:
+        minutes: 3
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.openclose_2
+        to: 'off'
+      - condition: state
+        entity_id: input_boolean.hue_dimmer
+        state: 'off'
+    - service: homeassistant.turn_off
+      entity_id: group.hallway

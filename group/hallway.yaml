@@ -2,9 +2,17 @@ hallway:
   name: Hallway
   entities:
     - light.hue_bulb_hallway
+    - input_boolean.hue_dimmer
+
+hallway_entities:
+  name: Hallway Entities
+  entities:
+    - light.hue_bulb_hallway
     - sensor.motion_sensor_hallway
     - sensor.motion_sensor_storage
     - binary_sensor.motion_sensor_hallway_2
     - binary_sensor.motion_sensor_storage_2
     - sensor.motion_sensor_hallway_2
     - sensor.motion_sensor_storage_2
+    - input_boolean.hue_dimmer
+    - input_boolean.hallway

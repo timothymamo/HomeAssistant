@@ -10,6 +10,7 @@ cards:
       - binary_sensor.motion_sensor_storage_2
       - sensor.motion_sensor_hallway_2
       - sensor.motion_sensor_storage_2
+      - input_boolean.hue_dimmer
     show_header_toggle: true
     title: Hallway
     type: entities

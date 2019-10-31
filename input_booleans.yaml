@@ -53,3 +53,6 @@ meter_notification_sent:
   name: "Meter Notification has been sent"
   initial: off
   icon: mdi:message-alert-outline
+
+hue_dimmer:
+  name: "Hue Dimmer"
