@@ -1,6 +1,6 @@
-# - platform: google_maps
-#   username: !secret gmaps_user
-#   max_gps_accuracy: 850
+- platform: google_maps
+  username: !secret gmaps_user
+  max_gps_accuracy: 850
 
 # - platform: nmap_tracker
 #   interval_seconds: 60
