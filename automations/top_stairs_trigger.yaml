@@ -21,11 +21,20 @@
       entity_id: group.hallway
     - delay:
         minutes: 3
-    - condition: or
+    - delay:
+        seconds: 45
+    - condition: and
       conditions:
         - condition: state
-          entity_id: binary_sensor.openclose_2
-          to: 'off'
+          entity_id: input_boolean.storage
+          state: 'off'
+          for:
+            minutes: 4
+    # - condition: or
+    #   conditions:
+    #     - condition: state
+    #       entity_id: binary_sensor.openclose_2
+    #       to: 'off'
     #     - condition: state
     #       entity_id: input_boolean.hue_dimmer
     #       state: 'off'
