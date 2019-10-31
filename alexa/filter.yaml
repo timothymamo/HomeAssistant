@@ -25,6 +25,10 @@ filter:
     - input_datetime.wakeup_time
     - input_number.wakeup_transition
     - script.app_change
+    - light.hue_bulb_hallway
+    - light.hue_ambiance_1_dining
+    - light.hue_ambiance_2_dining
+    - light.rwl021_6
   exclude_domains:
     - automation
     - binary_sensor

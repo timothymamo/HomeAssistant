@@ -5,12 +5,16 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Lights
-      show_header_toggle: true
-    group: group.all_lights
+  - entities:
+      - group.dinning_room
+      - light.hue_ambiance_3_bedroom
+      - group.hallway
+      - light.hue_bulb_kitchen
+      - light.hue_colour
+      - light.inner_candle_entrance
+    show_header_toggle: false
+    title: Lights
+    type: entities
   - type: custom:group-card
     card:
       type: entities
