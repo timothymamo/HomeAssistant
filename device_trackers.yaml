@@ -3,6 +3,7 @@
   max_gps_accuracy: 850
 
 - platform: nmap_tracker
+  interval_seconds: 30
   hosts: 
     - 192.168.1.10
     - 192.168.1.55
