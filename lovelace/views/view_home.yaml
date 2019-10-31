@@ -6,9 +6,9 @@ badges:
   - person.tim
 cards:
   - entities:
-      - group.dinning_room
+      - light.dining_room
       - light.hue_ambiance_3_bedroom
-      - group.hallway
+      - light.hue_bulb_hallway
       - light.hue_bulb_kitchen
       - light.hue_colour
       - light.inner_candle_entrance
