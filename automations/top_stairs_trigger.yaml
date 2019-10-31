@@ -21,22 +21,13 @@
       entity_id: group.hallway
     - delay:
         minutes: 3
-    - delay:
-        seconds: 45
-    - condition: and
+    - condition: or
       conditions:
         - condition: state
-          entity_id: input_boolean.storage
+          entity_id: binary_sensor.openclose_2
           state: 'off'
-          for:
-            minutes: 4
-    # - condition: or
-    #   conditions:
-    #     - condition: state
-    #       entity_id: binary_sensor.openclose_2
-    #       to: 'off'
-    #     - condition: state
-    #       entity_id: input_boolean.hue_dimmer
-    #       state: 'off'
+        - condition: state
+          entity_id: input_boolean.hue_dimmer
+          state: 'off'
     - service: homeassistant.turn_off
       entity_id: group.hallway
