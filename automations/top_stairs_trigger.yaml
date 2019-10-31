@@ -21,7 +21,8 @@
       entity_id: group.hallway
     - delay:
         minutes: 3
-    - condition: and
+    condition:
+      condition: and
       conditions:
       - condition: state
         entity_id: binary_sensor.openclose_2
