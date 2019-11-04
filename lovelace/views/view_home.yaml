@@ -12,7 +12,7 @@ cards:
       - light.hue_bulb_kitchen
       - light.hue_colour
       - light.inner_candle_entrance
-    show_header_toggle: false
+    show_header_toggle: true
     title: Lights
     type: entities
   - type: custom:group-card
