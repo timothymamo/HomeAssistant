@@ -1,0 +1,7 @@
+turn_off_living:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.living_light_override
+      state: 'off'
+    - service: light.turn_off
+      entity_id: light.hue_colour

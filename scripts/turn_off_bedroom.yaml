@@ -1,0 +1,7 @@
+turn_off_bedroom:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.bedroom_light_override
+      state: 'off'
+    - service: light.turn_off
+      entity_id: light.hue_ambiance_3_bedroom

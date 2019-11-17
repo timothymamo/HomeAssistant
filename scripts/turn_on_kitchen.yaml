@@ -1,0 +1,7 @@
+turn_on_kitchen:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.kitchen_light_override
+      state: 'off'
+    - service: light.turn_on
+      entity_id: light.hue_bulb_kitchen
