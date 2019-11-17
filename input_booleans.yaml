@@ -56,3 +56,28 @@ meter_notification_sent:
 
 hue_dimmer:
   name: "Hue Dimmer"
+  initial: off
+
+dining_light_override:
+  name: "Dining Room Light Override"
+  initial: off
+
+kitchen_light_override:
+  name: "Kitchen Light Override"
+  initial: off
+
+entrance_light_override:
+  name: "Entrance Light Override"
+  initial: off
+
+lamp_light_override:
+  name: "Lamp Light Override"
+  initial: off
+
+bedroom_light_override:
+  name: "Lamp Light Override"
+  initial: off
+
+hall_light_override:
+  name: "Lamp Light Override"
+  initial: off

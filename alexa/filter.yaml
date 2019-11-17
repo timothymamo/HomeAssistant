@@ -2,7 +2,7 @@ filter:
   include_entities:
     - group.all_lights
     - group.bedroom
-    - group.dinning_room
+    - group.dining_room
     - group.entrance
     - group.hallway
     - group.kitchen

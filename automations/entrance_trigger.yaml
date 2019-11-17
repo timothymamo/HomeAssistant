@@ -18,7 +18,7 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.no_one_home
     - service: homeassistant.turn_on
-      entity_id: group.dinning_room
+      entity_id: group.dining_room
     - service: light.turn_off
       entity_id: light.inner_candle_entrance
     - delay:
@@ -42,4 +42,4 @@
         minutes: 3
   action:
     - service: homeassistant.turn_off
-      entity_id: group.dinning_room
+      entity_id: group.dining_room

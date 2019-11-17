@@ -1,0 +1,5 @@
+# turn_on_dining:
+#   sequence:
+#     - service: shell_command.app_change
+#       data_template:
+#         app_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
