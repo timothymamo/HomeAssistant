@@ -1,5 +1,9 @@
-# turn_on_dining:
-#   sequence:
-#     - service: shell_command.app_change
-#       data_template:
-#         app_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+turn_on_dining:
+  sequence:
+    - condition:
+      - condition: state
+        entity_id: input_boolean.dining_light_override
+        state: 'off'
+    # - service: homeassistant.turn_on
+    #   entity_id: group.dining_room
+    - service: script.turn_on_dining

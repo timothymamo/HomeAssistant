@@ -36,13 +36,15 @@
         entity_id: input_boolean.no_one_home
         state: 'off'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.dining_room
+    # - service: homeassistant.turn_on
+    #   entity_id: group.dining_room
+    - service: script.turn_on_dining
     - delay:
         minutes: 1
     - service: light.turn_off
       entity_id: light.hue_colour
     - delay:
         minutes: 3
-    - service: homeassistant.turn_off
-      entity_id: group.dining_room
+    # - service: homeassistant.turn_off
+    #   entity_id: group.dining_room
+    - service: script.turn_off_dining

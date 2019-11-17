@@ -15,8 +15,9 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.dining_room
+    # - service: homeassistant.turn_on
+    #   entity_id: group.dining_room
+    - service: script.turn_on_dining
     - service: homeassistant.turn_on
       entity_id: group.hallway
     - delay:
