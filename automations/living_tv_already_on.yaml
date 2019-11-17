@@ -15,6 +15,9 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
+    - condition: state
+      entity_id: input_boolean.living_light_override
+      state: 'off'
     - service: scene.turn_on
       entity_id: scene.movie_night_light
 
