@@ -57,27 +57,34 @@ meter_notification_sent:
 hue_dimmer:
   name: "Hue Dimmer"
   initial: off
+  icon: mdi:light-switch
 
 dining_light_override:
   name: "Dining Room Light Override"
   initial: off
+  icon: mdi:alarm-off
 
 kitchen_light_override:
   name: "Kitchen Light Override"
   initial: off
+  icon: mdi:alarm-off
 
 entrance_light_override:
   name: "Entrance Light Override"
   initial: off
+  icon: mdi:alarm-off
 
 living_light_override:
   name: "Living Room Light Override"
   initial: off
+  icon: mdi:alarm-off
 
 bedroom_light_override:
   name: "Bedroom Light Override"
   initial: off
+  icon: mdi:alarm-off
 
 hall_light_override:
   name: "Lamp Light Override"
   initial: off
+  icon: mdi:alarm-off
