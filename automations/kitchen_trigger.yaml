@@ -15,8 +15,7 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
-    - service: light.turn_on
-      entity_id: light.hue_bulb_kitchen
+    - service: script.turn_on_kitchen
 
 - alias: 'Turn off Kitchen after 2 min'
   trigger:
@@ -26,5 +25,4 @@
       for:
         minutes: 2
   action:
-    - service: light.turn_off
-      entity_id: light.hue_bulb_kitchen
+    - service: script.turn_off_kitchen

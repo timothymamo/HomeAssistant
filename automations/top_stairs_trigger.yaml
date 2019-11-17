@@ -16,8 +16,7 @@
         state: 'off'
   action:
     - service: script.turn_on_dining
-    - service: homeassistant.turn_on
-      entity_id: group.hallway
+    - service: script.turn_on_hallway
     - delay:
         minutes: 3
     - condition: or
@@ -28,5 +27,4 @@
         - condition: state
           entity_id: input_boolean.hue_dimmer
           state: 'off'
-    - service: homeassistant.turn_off
-      entity_id: group.hallway
+    - service: script.turn_off_hallway

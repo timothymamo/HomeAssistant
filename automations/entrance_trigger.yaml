@@ -7,19 +7,16 @@
     - condition: template
       value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
-    - service: light.turn_on
-      entity_id: light.inner_candle_entrance
+    - service: script.turn_on_entrance
     - delay:
         seconds: 15
-    - service: homeassistant.turn_on
-      entity_id: group.hallway
+    - service: script.turn_on_hallway
     - delay:
         seconds: 30
     - service: homeassistant.turn_off
       entity_id: input_boolean.no_one_home
     - service: script.turn_on_dining
-    - service: light.turn_off
-      entity_id: light.inner_candle_entrance
+    - service: script.turn_off_entrance
     - delay:
         seconds: 45
     - condition: and
@@ -29,8 +26,7 @@
           state: 'off'
           for:
             minutes: 4
-    - service: homeassistant.turn_off
-      entity_id: group.hallway
+    - service: script.turn_off_hallway
 
 - alias: 'Turn off Dining after 3 min TV is on'
   trigger:

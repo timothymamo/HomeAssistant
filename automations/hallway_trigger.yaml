@@ -15,8 +15,7 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
-    - service: light.turn_on
-      entity_id: light.inner_candle_entrance
+    - service: script.turn_on_entrance
 
 - alias: 'Turn off Entrance after 2 min'
   trigger:
@@ -26,5 +25,4 @@
       for:
         minutes: 3
   action:
-    - service: light.turn_off
-      entity_id: light.inner_candle_entrance
+    - service: script.turn_off_entrance

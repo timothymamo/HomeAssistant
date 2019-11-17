@@ -15,9 +15,8 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
-    - service: light.turn_on
+    - service: script.turn_on_living
       data:
-        entity_id: light.hue_colour
         rgb_color: [255,145,38]
         brightness_pct: 100
         transition: 900
@@ -39,8 +38,7 @@
     - service: script.turn_on_dining
     - delay:
         minutes: 1
-    - service: light.turn_off
-      entity_id: light.hue_colour
+    - service: script.turn_off_living
     - delay:
         minutes: 3
     - service: script.turn_off_dining

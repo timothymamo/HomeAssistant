@@ -15,8 +15,7 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.hallway
+    - service: script.turn_on_hallway
 
 - alias: 'Turn off Hallway after 3 min - Storage trigger'
   trigger:
@@ -26,5 +25,4 @@
       for:
         minutes: 3
   action:
-    - service: homeassistant.turn_off
-      entity_id: group.hallway
+    - service: script.turn_off_hallway
