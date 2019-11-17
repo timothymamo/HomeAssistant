@@ -70,12 +70,12 @@ entrance_light_override:
   name: "Entrance Light Override"
   initial: off
 
-lamp_light_override:
-  name: "Lamp Light Override"
+living_light_override:
+  name: "Living Room Light Override"
   initial: off
 
 bedroom_light_override:
-  name: "Lamp Light Override"
+  name: "Bedroom Light Override"
   initial: off
 
 hall_light_override:

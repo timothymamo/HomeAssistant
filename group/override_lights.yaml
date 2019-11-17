@@ -4,6 +4,6 @@ override_lights:
     - input_boolean.dining_light_override
     - input_boolean.kitchen_light_override
     - input_boolean.entrance_light_override
-    - input_boolean.lamp_light_override
+    - input_boolean.living_light_override
     - input_boolean.bedroom_light_override
     - input_boolean.hall_light_override
