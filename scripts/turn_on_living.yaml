@@ -6,6 +6,6 @@ turn_on_living:
     - service: light.turn_on
       entity_id: light.hue_colour
       data_template:
-        rgb_color: "{{ rgb_color }}"
+        rgb_color: [255, 241, 224]
         brightness_pct: "{{ brightness_pct }}"
         transition: "{{ transition }}"

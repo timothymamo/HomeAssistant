@@ -4,3 +4,4 @@
       state: 'on'
       rgb_color: [255,145,38]
       brightness_pct: 100
+      transition: 900
