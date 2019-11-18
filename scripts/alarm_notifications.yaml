@@ -1,0 +1,6 @@
+alarm_notifications:
+  sequence:
+    - service: notify.tim_phone_notifier
+      data:
+        title: "!!! ENTRANCE HAS BEEN TRIGGERED !!!"
+        message: "!!! The front door has been opened !!!"

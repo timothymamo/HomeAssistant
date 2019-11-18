@@ -88,3 +88,8 @@ hall_light_override:
   name: "Lamp Light Override"
   initial: off
   icon: mdi:alarm-off
+
+disable_alarm:
+  name: "Disable Alarm"
+  intial: off
+  icon: mdi:alarm-bell

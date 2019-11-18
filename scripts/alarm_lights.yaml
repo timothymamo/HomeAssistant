@@ -1,0 +1,25 @@
+flash_lights:
+  alias: Flash Lights
+  sequence:
+    - alias: Lights On
+      service: light.turn_on
+      entity_id: group.all_lights
+      data:
+        brightness_pct: 100
+    - delay:
+        seconds: 1
+    - alias: Lights Off
+      service: light.turn_off
+      entity_id: group.all_lights
+    - alias: Call Loop Lights Script
+      service: script.turn_on
+      entity_id: script.lights_loop
+
+lights_loop:
+  alias: Lights loop
+  sequence:
+    - delay:
+        seconds: 1
+    - alias: Call Flash Lights Script
+      service: script.turn_on
+      entity_id: script.flash_lights

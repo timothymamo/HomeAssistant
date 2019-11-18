@@ -1,0 +1,23 @@
+alarm_voice:
+  sequence:
+    - alias: Voice Script
+      service: notify.alexa_media
+      target: 
+        - "Timothy's Bose Soundbar 500"
+        - "Kitchen Dot"
+        - "Bedroom Dot"
+      data:
+        type: tts
+        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+    - alias: Call Loop Voice Script
+      service: script.turn_on
+      entity_id: script.voice_loop
+
+voice_loop:
+  alias: Voice loop
+  sequence:
+    - delay:
+        seconds: 60
+    - alias: Call Voice Script
+      service: script.turn_on
+      entity_id: script.alarm_voice

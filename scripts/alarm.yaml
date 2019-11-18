@@ -1,0 +1,21 @@
+alarm:
+  alias: Alarm
+  sequence:
+    - alias: Send Notifications
+      service: homeassistant.turn_on
+      entity_id: script.alarm_notifications
+    - alias: Flash Lights
+      service: homeassistant.turn_on
+      entity_id: script.alarm_voice
+    - alias: email_Room1
+      service: notify.email
+      entity_id: script.flash_lights
+    - delay:
+        # time interval for alarm sound and light flashing
+        minutes: 5
+    - alias: Alarm Stop
+      service: homeassistant.turn_off
+      data:
+        entity_id: script.alarm_notifications
+        entity_id: script.alarm_voice
+        entity_id: script.flash_lights
