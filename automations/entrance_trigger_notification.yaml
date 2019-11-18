@@ -12,13 +12,14 @@
       entity_id: script.alarm_notifications
     - delay:
         seconds: 60
-    # - condition: and
-    #   conditions:
-    #     - condition: state
-    #       entity_id: input_boolean.entrance
-    #       to: 'on'
-    #     - condition: state
-    #       entity_id: input_boolean.disable_alarm
-    #       to: 'off'
+    - condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: input_boolean.entrance
+            to: 'on'
+          - condition: state
+            entity_id: input_boolean.disable_alarm
+            to: 'off'
     - service: script.turn_on
       entity_id: script.alarm
