@@ -12,7 +12,7 @@
       entity_id: script.alarm_notifications
     - delay:
         seconds: 60
-    - condition: and
+    - condition: or
       conditions:
         - condition: state
           entity_id: input_boolean.no_one_home
