@@ -1,24 +1,24 @@
-# - alias: 'Warn when water sensor is triggered'
-#   trigger:
-#     - platform: state
-#       entity_id: input_boolean.entrance
-#       to: 'on'
-#   condition:
-#     - condition: state
-#       entity_id: input_boolean.no_one_home
-#       state: 'on'
-#   action:
-#     - service: script.turn_on
-#       entity_id: script.alarm_notifications
-#     - delay:
-#         seconds: 60
-#     - condition: and
-#       conditions:
-#         - condition: state
-#           entity_id: input_boolean.entrance
-#           to: 'on'
-#         - condition: state
-#           entity_id: input_boolean.disable_alarm
-#           to: 'off'
-#     - service: script.turn_on
-#       entity_id: script.alarm
+- alias: 'Warn when water sensor is triggered'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.entrance
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.no_one_home
+      state: 'on'
+  action:
+    - service: script.turn_on
+      entity_id: script.alarm_notifications
+    - delay:
+        seconds: 60
+    # - condition: and
+    #   conditions:
+    #     - condition: state
+    #       entity_id: input_boolean.entrance
+    #       to: 'on'
+    #     - condition: state
+    #       entity_id: input_boolean.disable_alarm
+    #       to: 'off'
+    - service: script.turn_on
+      entity_id: script.alarm
