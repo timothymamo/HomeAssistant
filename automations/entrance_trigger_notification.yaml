@@ -16,9 +16,9 @@
       conditions:
         - condition: state
           entity_id: input_boolean.entrance
-          to: 'on'
+          state: 'on'
         - condition: state
           entity_id: input_boolean.disable_alarm
-          to: 'off'
+          state: 'off'
     - service: script.turn_on
       entity_id: script.alarm
