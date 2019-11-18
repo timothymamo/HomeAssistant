@@ -91,5 +91,5 @@ hall_light_override:
 
 disable_alarm:
   name: "Disable Alarm"
-  intial: off
+  initial: off
   icon: mdi:alarm-bell
