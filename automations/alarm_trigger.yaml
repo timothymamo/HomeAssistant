@@ -15,7 +15,7 @@
     - condition: and
       conditions:
         - condition: state
-          entity_id: input_boolean.entrance
+          entity_id: input_boolean.no_one_home
           state: 'on'
         - condition: state
           entity_id: input_boolean.disable_alarm
