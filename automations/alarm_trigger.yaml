@@ -1,4 +1,4 @@
-- alias: 'Warn when water sensor is triggered'
+- alias: 'Trigger alarm when entrance is triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.entrance
