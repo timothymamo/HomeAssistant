@@ -24,7 +24,4 @@
         - condition: state
           entity_id: binary_sensor.openclose_2
           state: 'off'
-        - condition: state
-          entity_id: input_boolean.hue_dimmer
-          state: 'off'
     - service: script.turn_off_hallway
