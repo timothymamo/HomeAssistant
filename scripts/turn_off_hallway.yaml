@@ -1,4 +1,4 @@
-turn_off_hall:
+turn_off_hallway:
   sequence:
     - condition: state
       entity_id: input_boolean.hall_light_override

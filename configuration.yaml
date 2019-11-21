@@ -42,6 +42,10 @@ shell_command: !include_dir_merge_named /config/shell_commands/
 transmission: !include transmission.yaml
 telegram_bot: !include telegram.yaml
 light: !include light_group.yaml
+blink:
+  username: !secret blink_username
+  password: !secret blink_password
+  scan_interval: 3600
 
 cloud:
   alexa: !include_dir_merge_named /config/alexa/
