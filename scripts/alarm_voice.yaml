@@ -19,7 +19,9 @@ alarm_voice:
         entity_id: 
           - media_player.bedroom_dot
           - media_player.kitchen_dot
-        volume_level: 0.8
+        volume_level: 1
+    - delay:
+        seconds: 5
     - alias: Voice Script 1
       service: notify.alexa_media
       data_template:
@@ -37,6 +39,8 @@ alarm_voice:
         message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
         data:
           type: tts
+    - delay:
+        seconds: 20
     - alias: Decrease Dots Volume
       service: media_player.volume_set
       data:
@@ -57,7 +61,7 @@ voice_loop:
   alias: Voice loop
   sequence:
     - delay:
-        seconds: 30
+        seconds: 10
     - alias: Call Voice Script
       service: script.turn_on
       entity_id: script.alarm_voice
