@@ -11,11 +11,12 @@ alarm:
       service: homeassistant.turn_on
       entity_id: script.flash_lights
     - delay:
-        # time interval for alarm sound and light flashing
         minutes: 5
-    - alias: Stop Voice Alarm
+    - alias: Disable Alarm
+      service: homeassistant.turn_on
+      entity_id: input_boolean.disable_alarm
+    - delay:
+        seconds: 65
+    - alias: Enabling Alarm
       service: homeassistant.turn_off
-      entity_id: script.alarm_voice
-    - alias: Stop Flashing Lights
-      service: homeassistant.turn_off
-      entity_id: script.flash_lights
+      entity_id: input_boolean.disable_alarm
