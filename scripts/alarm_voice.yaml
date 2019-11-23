@@ -8,13 +8,20 @@ alarm_voice:
         - condition: state
           entity_id: input_boolean.disable_alarm
           state: 'off'
-    - alias: Voice Script
+    - alias: Voice Script 1
+      service: notify.alexa_media
+      data_template:
+        target: 
+          - "Kitchen Dot"
+          - "Bedroom Dot"
+        message: '<emphasis level="strong"><prosody volume="x-loud">Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!</prosody></emphasis>'
+        data:
+          type: announce
+    - alias: Voice Script 2
       service: notify.alexa_media
       data_template:
         target: 
           - "Timothy's Bose Soundbar 500"
-          - "Kitchen Dot"
-          - "Bedroom Dot"
         message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
         data:
           type: tts
@@ -26,7 +33,7 @@ voice_loop:
   alias: Voice loop
   sequence:
     - delay:
-        seconds: 60
+        seconds: 30
     - alias: Call Voice Script
       service: script.turn_on
       entity_id: script.alarm_voice
