@@ -8,35 +8,35 @@ alarm_voice:
         - condition: state
           entity_id: input_boolean.disable_alarm
           state: 'off'
-    # - alias: Increase Soundbar Volume
-    #   service: media_player.volume_set
-    #   data:
-    #     entity_id: media_player.timothy_s_bose_soundbar_500
-    #     volume_level: 0.8
+    - alias: Increase Soundbar Volume
+      service: media_player.volume_set
+      data:
+        entity_id: media_player.timothy_s_bose_soundbar_500
+        volume_level: 0.3
     - alias: Increase Dots Volume
       service: media_player.volume_set
       data:
         entity_id: 
           - media_player.bedroom_dot
           - media_player.kitchen_dot
-        volume_level: 1
+        volume_level: 0.75
     - alias: Voice Script 1
       service: notify.alexa_media
       data_template:
         target: 
           - "Kitchen Dot"
           - "Bedroom Dot"
-        message: '<emphasis level="strong"><prosody volume="x-loud"><prosody rate="fast">Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!</prosody></prosody></emphasis>'
+        message: '<emphasis level="strong"><prosody volume="x-loud"><prosody rate="x-fast">Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!</prosody></prosody></emphasis>'
         data:
           type: announce
-    # - alias: Voice Script 2
-    #   service: notify.alexa_media
-    #   data_template:
-    #     target: 
-    #       - "Timothy's Bose Soundbar 500"
-    #     message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
-    #     data:
-    #       type: tts
+    - alias: Voice Script 2
+      service: notify.alexa_media
+      data_template:
+        target: 
+          - "Timothy's Bose Soundbar 500"
+        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+        data:
+          type: tts
     - alias: Decrease Dots Volume
       service: media_player.volume_set
       data:
@@ -44,11 +44,11 @@ alarm_voice:
           - media_player.bedroom_dot
           - media_player.kitchen_dot
         volume_level: 0.65
-    # - alias: Decrease Soundbar Volume
-    #   service: media_player.volume_set
-    #   data:
-    #     entity_id: media_player.timothy_s_bose_soundbar_500
-    #     volume_level: 0.25
+    - alias: Decrease Soundbar Volume
+      service: media_player.volume_set
+      data:
+        entity_id: media_player.timothy_s_bose_soundbar_500
+        volume_level: 0.25
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
