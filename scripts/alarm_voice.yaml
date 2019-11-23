@@ -8,12 +8,7 @@ alarm_voice:
         - condition: state
           entity_id: input_boolean.disable_alarm
           state: 'off'
-    # - alias: Increase Soundbar Volume
-    #   service: media_player.volume_set
-    #   data:
-    #     entity_id: media_player.timothy_s_bose_soundbar_500
-    #     volume_level: 0.9
-    - alias: Increase Dots Volume
+    - alias: Increase Volume
       service: media_player.volume_set
       data:
         entity_id: 
