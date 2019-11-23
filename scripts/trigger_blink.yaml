@@ -1,4 +1,4 @@
-trigger_dining_room_blink:
+trigger_blink:
   sequence:
     - service: blink.trigger_camera
     - delay:
