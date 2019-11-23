@@ -85,7 +85,7 @@ bedroom_light_override:
   icon: mdi:alarm-off
 
 hall_light_override:
-  name: "Lamp Light Override"
+  name: "Hallway Light Override"
   initial: off
   icon: mdi:alarm-off
 
