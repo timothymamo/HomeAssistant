@@ -1,5 +1,5 @@
-trigger_dining_room_blink:
-  alias: Blink Snap Picture Dining Room
+trigger_entrance_blink:
+  alias: Blink Snap Picture Entrance
   sequence:
     - service: blink.trigger_camera
       data:
