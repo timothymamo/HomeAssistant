@@ -1,0 +1,9 @@
+trigger_dining_room_blink:
+  alias: Blink Snap Picture Dining Room
+  sequence:
+    - service: blink.trigger_camera
+      data:
+        name: "Entrance"
+    - delay:
+        seconds: 10
+    - service: blink.blink_update

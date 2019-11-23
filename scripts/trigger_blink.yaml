@@ -1,6 +1,0 @@
-trigger_blink:
-  sequence:
-    - service: blink.trigger_camera
-    - delay:
-        seconds: 5
-    - service: blink.blink_update
