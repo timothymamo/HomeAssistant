@@ -4,5 +4,5 @@ trigger_living_room_blink:
       data:
         name: "Living Room"
     - delay:
-      seconds: 5
+        seconds: 5
     - service: blink.blink_update
