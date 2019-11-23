@@ -4,19 +4,31 @@ path: cameras
 cards:
   - entities:
       - camera.blink_entrance
-      - script.trigger_entrance_blink
     title: Entrance
     type: entities
     show_header_toggle: false
+  - type: entity-button
+    entity: script.trigger_entrance_blink
+    tap_action: call-service
+    service: script.turn_on
+    icon: mdi:rotate-3d-variant
   - entities:
       - camera.blink_dining_room
-      - script.trigger_dining_room_blink
     title: Dining Room
     type: entities
     show_header_toggle: false
+  - type: entity-button
+    entity: script.trigger_dining_room_blink
+    tap_action: call-service
+    service: script.turn_on
+    icon: mdi:rotate-3d-variant
   - entities:
       - camera.blink_living_room
-      - script.trigger_living_room_blink
     title: Living Room
     type: entities
     show_header_toggle: false
+  - type: entity-button
+    entity: script.trigger_living_room_blink
+    tap_action: call-service
+    service: script.turn_on
+    icon: mdi:rotate-3d-variant
