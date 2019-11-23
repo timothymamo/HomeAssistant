@@ -1,8 +1,0 @@
-trigger_dining_room_blink:
-  sequence:
-    - service: blink.trigger_camera
-      data:
-        name: "Dining Room"
-    - delay:
-        seconds: 5
-    - service: blink.blink_update

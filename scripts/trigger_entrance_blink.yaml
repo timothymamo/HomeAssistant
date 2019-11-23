@@ -1,8 +1,0 @@
-trigger_living_room_blink:
-  sequence:
-    - service: blink.trigger_camera
-      data:
-        name: "Living Room"
-    - delay:
-        seconds: 5
-    - service: blink.blink_update

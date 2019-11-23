@@ -7,28 +7,18 @@ cards:
     title: Entrance
     type: entities
     show_header_toggle: false
-  - type: entity-button
-    entity: script.trigger_entrance_blink
-    tap_action: call-service
-    service: script.turn_on
-    icon: mdi:rotate-3d-variant
   - entities:
       - camera.blink_dining_room
     title: Dining Room
     type: entities
     show_header_toggle: false
-  - type: entity-button
-    entity: script.trigger_dining_room_blink
-    tap_action: call-service
-    service: script.turn_on
-    icon: mdi:rotate-3d-variant
   - entities:
       - camera.blink_living_room
     title: Living Room
     type: entities
     show_header_toggle: false
   - type: entity-button
-    entity: script.trigger_living_room_blink
+    entity: script.trigger_blink
     tap_action: call-service
     service: script.turn_on
     icon: mdi:rotate-3d-variant
