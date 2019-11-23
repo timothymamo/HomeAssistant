@@ -19,8 +19,9 @@ alarm_voice:
     #       type: announce
     - alias: Increase Soundbar Volume
       service: media_player.volume_set
-      entity_id: media_player.timothy_s_bose_soundbar_500
-      volume_level: 0.8
+      data:
+        entity_id: media_player.timothy_s_bose_soundbar_500
+        volume_level: 0.8
     - alias: Voice Script 2
       service: notify.alexa_media
       data_template:
@@ -31,8 +32,9 @@ alarm_voice:
           type: tts
     - alias: Decrease Soundbar Volume
       service: media_player.volume_set
-      entity_id: media_player.timothy_s_bose_soundbar_500
-      volume_level: 0.25
+      data:
+        entity_id: media_player.timothy_s_bose_soundbar_500
+        volume_level: 0.25
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
