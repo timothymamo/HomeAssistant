@@ -6,11 +6,14 @@ cards:
       - camera.blink_entrance
     title: Entrance
     type: entities
+    show_header_toggle: false
   - entities:
       - camera.blink_dining_room
     title: Dining Room
     type: entities
+    show_header_toggle: false
   - entities:
       - camera.blink_living_room
     title: Living Room
     type: entities
+    show_header_toggle: false
