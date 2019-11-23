@@ -15,7 +15,7 @@ alarm_voice:
           - media_player.bedroom_dot
           - media_player.kitchen_dot
           - media_player.timothy_s_bose_soundbar_500
-        volume_level: 0.4
+        volume_level: 1
     - delay:
         seconds: 2
     - alias: Voice Script
