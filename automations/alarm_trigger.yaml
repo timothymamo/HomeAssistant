@@ -20,5 +20,7 @@
         - condition: state
           entity_id: input_boolean.disable_alarm
           state: 'off'
+    - service: alarm_control_panel.alarm_arm_away
+      entity_id: alarm_control_panel.blink_home
     - service: script.turn_on
       entity_id: script.alarm
