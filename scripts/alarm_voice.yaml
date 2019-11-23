@@ -19,7 +19,7 @@ alarm_voice:
         entity_id: 
           - media_player.bedroom_dot
           - media_player.kitchen_dot
-        volume_level: 0.75
+        volume_level: 0.8
     - alias: Voice Script 1
       service: notify.alexa_media
       data_template:
