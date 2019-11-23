@@ -15,9 +15,9 @@ alarm_voice:
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"
           - "Bedroom Dot"
+        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
         data:
           type: tts
-          message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
