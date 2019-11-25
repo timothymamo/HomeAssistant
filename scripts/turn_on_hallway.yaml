@@ -1,7 +1,0 @@
-turn_on_hallway:
-  sequence:
-    - condition: state
-      entity_id: input_boolean.hall_light_override
-      state: 'off'
-    - service: homeassistant.turn_on
-      entity_id: group.hallway

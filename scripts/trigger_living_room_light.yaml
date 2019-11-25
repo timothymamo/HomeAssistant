@@ -9,3 +9,11 @@ turn_on_living:
         rgb_color: [255, 241, 224]
         brightness_pct: "{{ brightness_pct }}"
         transition: "{{ transition }}"
+
+turn_off_living:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.living_light_override
+      state: 'off'
+    - service: light.turn_off
+      entity_id: light.hue_colour
