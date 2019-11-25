@@ -2,3 +2,5 @@
   entities:
     input_boolean.asleep:
       state: 'on'
+    group.override_lights:
+      state: 'off'
