@@ -10,10 +10,9 @@
     - service: script.turn_on_entrance
     - delay:
         seconds: 10
-    - condition:
-      - condition: state
-        entity_id: input_boolean.no_one_home
-        state: 'off'
+    - condition: state
+      entity_id: input_boolean.no_one_home
+      state: 'off'
     - service: script.turn_on_hallway
     - delay:
         seconds: 20

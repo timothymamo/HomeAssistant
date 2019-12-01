@@ -1,4 +1,4 @@
-- alias: 'Disarm Blink Cameras'
+- alias: 'Disable Alarm'
   trigger:
     - platform: state
       entity_id: input_boolean.disable_alarm
@@ -6,3 +6,5 @@
   action:
     - service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.blink_home
+    - service: script.turn_on
+      entity_id: script.stop_voice_notification
