@@ -9,23 +9,25 @@
   action:
     - service: script.turn_on_entrance
     - delay:
-        seconds: 15
+        seconds: 10
+    - condition:
+      - condition: state
+        entity_id: input_boolean.no_one_home
+        state: 'off'
     - service: script.turn_on_hallway
     - delay:
-        seconds: 30
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.no_one_home
+        seconds: 20
     - service: script.turn_on_dining
-    - service: script.turn_off_entrance
     - delay:
-        seconds: 45
+        minutes: 2
+    - service: script.turn_off_entrance
     - condition: and
       conditions:
         - condition: state
           entity_id: input_boolean.storage
           state: 'off'
           for:
-            minutes: 4
+            minutes: 2
     - service: script.turn_off_hallway
 
 - alias: 'Turn off Dining after 3 min TV is on'

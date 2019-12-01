@@ -1,0 +1,24 @@
+stop_voice_notification:
+  sequence:
+    - alias: Decrease Volume to 0
+      service: media_player.volume_set
+      data:
+        entity_id: 
+          - media_player.bedroom_dot
+          - media_player.kitchen_dot
+          - media_player.timothy_s_bose_soundbar_500
+        volume_level: 0
+    - delay:
+        seconds: 30
+    - alias: Reset Dots Volume
+      service: media_player.volume_set
+      data:
+        entity_id: 
+          - media_player.bedroom_dot
+          - media_player.kitchen_dot
+        volume_level: 0.65
+    - alias: Reset Soundbar Volume
+      service: media_player.volume_set
+      data:
+        entity_id: media_player.timothy_s_bose_soundbar_500
+        volume_level: 0.25
