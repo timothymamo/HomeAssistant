@@ -4,12 +4,14 @@ alarm:
     - alias: Send Notifications
       service: homeassistant.turn_on
       entity_id: script.alarm_notifications
-    - alias: Enable Voice Alarm
-      service: homeassistant.turn_on
-      entity_id: script.alarm_voice
     - alias: Enable Flash Lights
       service: homeassistant.turn_on
       entity_id: script.flash_lights
+    - delay:
+        minutes: 1
+    - alias: Enable Voice Alarm
+      service: homeassistant.turn_on
+      entity_id: script.alarm_voice
     - delay:
         minutes: 5
     - alias: Disable Alarm
