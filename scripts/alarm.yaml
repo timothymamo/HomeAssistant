@@ -9,6 +9,14 @@ alarm:
       entity_id: script.flash_lights
     - delay:
         minutes: 1
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.no_one_home
+          state: 'on'
+        - condition: state
+          entity_id: input_boolean.disable_alarm
+          state: 'off'
     - alias: Enable Voice Alarm
       service: homeassistant.turn_on
       entity_id: script.alarm_voice
