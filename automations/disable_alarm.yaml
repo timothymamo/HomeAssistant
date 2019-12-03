@@ -8,3 +8,7 @@
       entity_id: alarm_control_panel.blink_home
     - service: script.turn_on
       entity_id: script.stop_voice_notification
+    - delay:
+        minutes: 2
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm
