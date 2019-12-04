@@ -4,6 +4,9 @@ flash_lights:
     - condition: or
       conditions:
         - condition: state
+          entity_id: input_boolean.no_flashing_lights
+          state: 'off'
+        - condition: state
           entity_id: input_boolean.no_one_home
           state: 'on'
         - condition: state
