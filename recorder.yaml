@@ -15,8 +15,6 @@ exclude:
     - weather.home
 include:
   entities:
-    - device_tracker.google_maps_108899569217205386034
-    - device_tracker.google_maps_110493723703964927288
     - device_tracker.rubys_galaxy_s7
     - device_tracker.s7
     - device_tracker.tims_galaxy_s7
