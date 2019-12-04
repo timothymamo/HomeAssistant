@@ -21,11 +21,6 @@ cards:
       show_header_toggle: false
       title: Light Override
     group: group.override_lights
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Wake Up Light
-    group: group.alarm_clock
   - entities:
       - input_boolean.override_presence
       - input_boolean.no_one_home
@@ -35,3 +30,8 @@ cards:
     show_header_toggle: false
     title: Presence
     type: entities
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Wake Up Light
+    group: group.alarm_clock
