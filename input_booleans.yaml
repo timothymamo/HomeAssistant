@@ -97,3 +97,8 @@ no_flashing_lights:
   name: "Disable Flashing Lights"
   initial: off
   icon: mdi:car-parking-lights
+
+no_voice_alarm:
+  name: "Disable Voice Alarm"
+  initial: off
+  icon: mdi:voice-off

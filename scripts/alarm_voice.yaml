@@ -3,6 +3,9 @@ alarm_voice:
     - condition: or
       conditions:
         - condition: state
+          entity_id: input_boolean.no_voice_alarm
+          state: 'off'
+        - condition: state
           entity_id: input_boolean.no_one_home
           state: 'on'
         - condition: state
@@ -41,7 +44,7 @@ alarm_voice:
       service: media_player.volume_set
       data:
         entity_id: media_player.timothy_s_bose_soundbar_500
-        volume_level: 0.25
+        volume_level: 0.30
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
@@ -50,7 +53,7 @@ voice_loop:
   alias: Voice loop
   sequence:
     - delay:
-        seconds: 10
+        seconds: 5
     - alias: Call Voice Script
       service: script.turn_on
       entity_id: script.alarm_voice

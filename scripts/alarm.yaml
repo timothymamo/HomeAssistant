@@ -11,12 +11,12 @@ alarm:
         seconds: 5
     - alias: Disable Flash Lights
       service: homeassistant.turn_on
-      entity_id: input_boolean.flash_lights
+      entity_id: input_boolean.no_flashing_lights
     - delay:
         seconds: 30
     - alias: Enable Flash Lights
       service: homeassistant.turn_off
-      entity_id: input_boolean.flash_lights
+      entity_id: input_boolean.no_flashing_lights
     - condition: or
       conditions:
         - condition: state
@@ -25,19 +25,14 @@ alarm:
         - condition: state
           entity_id: input_boolean.disable_alarm
           state: 'off'
-    - alias: Enable Flash Lights
+    - alias: Flash Lights
       service: homeassistant.turn_on
       entity_id: script.flash_lights
-    - alias: Enable Voice Alarm
+    - alias: Voice Alarm
       service: homeassistant.turn_on
       entity_id: script.alarm_voice
     - delay:
         minutes: 5
     - alias: Disable Alarm
       service: homeassistant.turn_on
-      entity_id: input_boolean.disable_alarm
-    - delay:
-        seconds: 65
-    - alias: Enabling Alarm
-      service: homeassistant.turn_off
       entity_id: input_boolean.disable_alarm
