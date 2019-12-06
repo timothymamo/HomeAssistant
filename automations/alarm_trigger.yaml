@@ -13,7 +13,7 @@
     - service: alarm_control_panel.alarm_arm_away
       entity_id: alarm_control_panel.blink_home
     - delay:
-        seconds: 15
+        seconds: 5
     - condition: or
       conditions:
         - condition: state
