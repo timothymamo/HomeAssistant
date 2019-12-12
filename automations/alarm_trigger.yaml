@@ -14,7 +14,7 @@
       entity_id: alarm_control_panel.blink_home
     - delay:
         seconds: 5
-    - condition: or
+    - condition: and
       conditions:
         - condition: state
           entity_id: input_boolean.no_one_home

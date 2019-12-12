@@ -1,7 +1,7 @@
 flash_lights:
   alias: Flash Lights
   sequence:
-    - condition: or
+    - condition: and
       conditions:
         - condition: state
           entity_id: input_boolean.no_flashing_lights

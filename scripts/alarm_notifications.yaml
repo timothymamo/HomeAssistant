@@ -1,6 +1,6 @@
 alarm_notifications:
   sequence:
-    - condition: or
+    - condition: and
       conditions:
         - condition: state
           entity_id: input_boolean.no_one_home

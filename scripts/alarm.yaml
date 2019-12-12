@@ -17,7 +17,7 @@ alarm:
     - alias: Enable Flash Lights
       service: homeassistant.turn_off
       entity_id: input_boolean.no_flashing_lights
-    - condition: or
+    - condition: and
       conditions:
         - condition: state
           entity_id: input_boolean.no_one_home
