@@ -105,3 +105,7 @@ no_voice_alarm:
 cleaner:
   name: "Cleaner"
   icon: mdi:broom
+
+guests:
+  name: "Guests"
+  icon: mdi:account-multiple-outline
