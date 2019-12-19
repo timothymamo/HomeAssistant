@@ -13,8 +13,6 @@
     - condition: state
       entity_id: input_boolean.no_one_home
       state: 'off'
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.cleaner
     - service: script.turn_on_hallway
     - delay:
         seconds: 20
