@@ -18,7 +18,7 @@
       state: 'on'
   action:
     - service: script.turn_on
-      entity_id: script.camera_loop
+      entity_id: script.camera_arm_disarm
 
 - alias: 'Toggle Cleaner Boolean OFF'
   trigger:
