@@ -26,6 +26,7 @@ cards:
       - input_boolean.no_one_home
       - input_boolean.asleep
       - input_boolean.meter_notification_sent
+      - input_boolean.cleaner
       - input_boolean.disable_alarm
     show_header_toggle: false
     title: Presence
