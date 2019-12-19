@@ -1,0 +1,34 @@
+- alias: 'Toggle Cleaner Boolean ON'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.cleaner
+      to: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.no_one_home
+
+- alias: 'Turn on Cameras when cleaner toggle on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.entrance
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.cleaner
+      state: 'on'
+  action:
+    - service: script.turn_on
+      entity_id: script.camera_loop
+
+- alias: 'Toggle Cleaner Boolean OFF'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.cleaner
+      to: 'off'
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.blink_home
+    - condition: template
+      value_template: '{% if not is_state("person.ruby", "home") and not is_state("person.tim", "home") %}true{% endif %}'
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.no_one_home

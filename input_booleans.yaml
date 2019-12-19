@@ -101,3 +101,11 @@ no_voice_alarm:
   name: "Disable Voice Alarm"
   initial: off
   icon: mdi:voice-off
+
+cleaner:
+  name: "Cleaner"
+  icon: mdi:broom
+
+guests:
+  name: "Guests"
+  icon: mdi:account-multiple-outline
