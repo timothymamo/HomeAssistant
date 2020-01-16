@@ -1,5 +1,5 @@
 entity_config:
-  group.all_lights:
+  light.all:
     name: 'All Lights'
     display_categories: 'LIGHT'
   group.bedroom:

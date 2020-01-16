@@ -2,9 +2,17 @@ title: Automation
 icon: mdi:auto-fix
 path: automation
 cards:
-  - type: custom:group-card
+  - type: custom:auto-entities
     card:
-      type: entities
+      type: glance
       title: Automations
       show_header_toggle: false
-    group: group.all_automations
+    filter:
+      include: 
+        - domain: automation
+  # - type: custom:group-card
+  #   card:
+  #     type: entities
+  #     title: Automations
+  #     show_header_toggle: false
+  #   group: automation.all

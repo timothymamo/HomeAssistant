@@ -1,6 +1,6 @@
 filter:
   include_entities:
-    - group.all_lights
+    - light.all
     - group.bedroom
     - group.dining_room
     - group.entrance
@@ -15,9 +15,9 @@ filter:
     - scene
   exclude_entities:
     - group.alarm_clock
-    - group.all_automations
-    - group.all_devices
-    - group.all_scripts
+    - automation.all
+    - device_tracker.all
+    - script.all
     - group.lux_sensors
     - group.motion_sensors
     - group.stairway
