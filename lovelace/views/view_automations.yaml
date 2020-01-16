@@ -4,6 +4,7 @@ path: automation
 cards:
   - type: custom:auto-entities
     card:
+      type: entities
       title: Automations
       show_header_toggle: false
     filter:
