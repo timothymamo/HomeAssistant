@@ -14,14 +14,14 @@ flash_lights:
           state: 'off'
     - alias: Lights On
       service: light.turn_on
-      entity_id: light.all
+      entity_id: all
       data:
         brightness_pct: 100
     - delay:
         seconds: 1
     - alias: Lights Off
       service: light.turn_off
-      entity_id: light.all
+      entity_id: all
     - alias: Call Loop Lights Script
       service: script.turn_on
       entity_id: script.lights_loop
