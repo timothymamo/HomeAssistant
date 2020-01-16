@@ -1,0 +1,10 @@
+presence:
+  name: Presence
+  entities:
+    - input_boolean.override_presence
+    - input_boolean.no_one_home
+    - input_boolean.guests
+    - input_boolean.asleep
+    - input_boolean.meter_notification_sent
+    - input_boolean.cleaner
+    - input_boolean.disable_alarm
