@@ -14,6 +14,9 @@ filter:
     - scene
   exclude_entities:
     - group.alarm_clock
+    # - automation.all
+    # - device_tracker.all
+    # - script.all
     - group.lux_sensors
     - group.motion_sensors
     - group.stairway
