@@ -4,7 +4,6 @@ path: automation
 cards:
   - type: custom:auto-entities
     card:
-      type: glance
       title: Automations
       show_header_toggle: false
     filter:
