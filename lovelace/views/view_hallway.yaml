@@ -2,15 +2,15 @@ title: Hallway
 icon: mdi:coat-rack
 path: hallway
 cards:
-  - entities:
-      - light.hue_bulb_hallway
-      - sensor.motion_sensor_hallway
-      - sensor.motion_sensor_storage
-      - binary_sensor.motion_sensor_hallway_2
-      - binary_sensor.motion_sensor_storage_2
-      - sensor.motion_sensor_hallway_2
-      - sensor.motion_sensor_storage_2
-      - input_boolean.hue_dimmer
-    show_header_toggle: true
-    title: Hallway
-    type: entities
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Hallway
+    group: group.hallway
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Hallway Sensors
+    group: group.hallway_sensors

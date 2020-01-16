@@ -7,3 +7,5 @@ stairway:
     - sensor.motion_sensor_top_stairs_2
     - binary_sensor.motion_sensor_bottom_stairs_2
     - binary_sensor.motion_sensor_top_stairs_2
+    - input_boolean.bottom_stairs
+    - input_boolean.top_stairs

@@ -10,9 +10,3 @@ cards:
     filter:
       include: 
         - domain: automation
-  # - type: custom:group-card
-  #   card:
-  #     type: entities
-  #     title: Automations
-  #     show_header_toggle: false
-  #   group: automation.all

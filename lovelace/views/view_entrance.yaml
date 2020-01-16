@@ -2,11 +2,15 @@ title: Entrance
 icon: mdi:door-open
 path: entrance
 cards:
-  - entities:
-      - light.inner_candle_entrance
-      - sensor.motion_sensor_entrance_2
-      - sensor.motion_sensor_entrance
-      - binary_sensor.motion_sensor_entrance_2
-    show_header_toggle: true
-    title: Entrance
-    type: entities
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Entrance
+    group: group.entrance
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Entrance Sensors
+    group: group.entrance_sensors

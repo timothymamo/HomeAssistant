@@ -2,18 +2,15 @@ title: Bedroom
 icon: mdi:bed-king-outline
 path: bedroom
 cards:
-  - entities:
-      - light.hue_ambiance_3_bedroom
-    show_header_toggle: true
-    title: Bedroom
-    type: entities
-  - entities:
-      - sensor.motion_sensor_bottom_stairs
-      - sensor.motion_sensor_top_stairs
-      - sensor.motion_sensor_bottom_stairs_2
-      - sensor.motion_sensor_top_stairs_2
-      - binary_sensor.motion_sensor_bottom_stairs_2
-      - binary_sensor.motion_sensor_top_stairs_2
-    show_header_toggle: false
-    title: Stairway
-    type: entities
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Bedroom
+    group: group.bedroom
+  - type: custom:group-card
+    card:
+      type: entities
+      show_header_toggle: true
+      title: Stairway
+    group: group.stairway

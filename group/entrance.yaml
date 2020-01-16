@@ -2,6 +2,11 @@ entrance:
   name: Entrance
   entities:
     - light.inner_candle_entrance
+
+entrance_sensors:
+  name: Entrance Sensors
+  entities:
     - sensor.motion_sensor_entrance_2
     - sensor.motion_sensor_entrance
     - binary_sensor.motion_sensor_entrance_2
+    - input_boolean.entrance
