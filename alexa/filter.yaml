@@ -1,6 +1,7 @@
 filter:
   include_entities:
     - group.bedroom
+    - group.all_lights
     - group.dining_room
     - group.entrance
     - group.hallway
