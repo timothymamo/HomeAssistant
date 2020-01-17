@@ -4,8 +4,13 @@
       entity_id: input_boolean.entrance
       to: 'on'
   condition:
-    - condition: template
-      value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
   action:
     - service: script.turn_on_entrance
     - delay:
