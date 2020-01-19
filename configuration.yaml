@@ -36,6 +36,7 @@ zone: !include_dir_list /config/zones/
 sensor: !include sensors.yaml
 scene: !include_dir_merge_list /config/scenes/
 input_boolean: !include input_booleans.yaml
+counter: !include counters.yaml
 input_datetime: !include input_datetimes.yaml
 input_number: !include input_numbers.yaml
 shell_command: !include_dir_merge_named /config/shell_commands/
