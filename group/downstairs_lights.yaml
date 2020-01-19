@@ -1,0 +1,8 @@
+downstairs_lights:
+  name: Downstairs Lights
+  entities:
+    - light.inner_candle_entrance
+    - light.hue_bulb_hallway
+    - light.hue_bulb_kitchen
+    - group.dining_room
+    - light.hue_colour

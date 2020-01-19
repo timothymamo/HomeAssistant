@@ -1,0 +1,17 @@
+- alias: 'Turn off downstairs if bottom stairs counter is greater than zero'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bottom_stairs
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: counter.bottom_stairs_counter
+        below: 1
+      - condition: state
+        entity_id: input_boolean.override_downstairs
+        state: 'off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.downstairs_lights

@@ -32,3 +32,5 @@
         color_temp: 389
     - service: automation.trigger
       entity_id: automation.turn_off_asleep_boolean_in_the_morning
+    - service: counter.reset
+      entity_id: counter.bottom_stairs_counter
