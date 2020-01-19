@@ -10,7 +10,7 @@
         entity_id: counter.bottom_stairs_counter
         below: 1
       - condition: state
-        entity_id: input_boolean.override_downstairs
+        entity_id: input_boolean.downstairs_override
         state: 'off'
   action:
     - service: homeassistant.turn_off

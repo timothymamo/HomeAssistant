@@ -74,6 +74,10 @@ hall_light_override:
   name: "Hallway Light Override"
   icon: mdi:alarm-off
 
+downstairs_override:
+  name: "Downstairs Override"
+  icon: mdi:alarm-off
+
 disable_alarm:
   name: "Disable Alarm"
   icon: mdi:alarm-bell
