@@ -31,8 +31,6 @@
         brightness_pct: 100
         color_temp: 389
     - service: homeassistant.turn_off
-      entity_id: input_boolean.asleep  
-    - service: automation.trigger
-      entity_id: automation.turn_off_asleep_boolean_in_the_morning
+      entity_id: input_boolean.asleep
     - service: counter.reset
       entity_id: counter.bottom_stairs_counter
