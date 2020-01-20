@@ -29,6 +29,12 @@ filter:
     - light.hue_ambiance_1_dining
     - light.hue_ambiance_2_dining
     - light.rwl021_6
+    - media_player.tv
+    - media_player.everywhere
+    - light.rwl021_6_2
+    - media_player.soundbar
+    - media_player.timothy_s_alexa_apps
+    - media_player.timothy_s_echosim_beta
   exclude_domains:
     - automation
     - binary_sensor
