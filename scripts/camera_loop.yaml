@@ -12,6 +12,9 @@ camera_arm_disarm:
     - alias: Disarm Camera
       service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.blink_home
+    - alias: Call Camera Loop
+      service: script.turn_on
+      entity_id: script.camera_loop
 
 camera_loop:
   alias: Camera loop
