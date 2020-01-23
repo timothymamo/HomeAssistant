@@ -2,3 +2,4 @@ ignore:
   - google_cast
   - philips_hue
   - igd
+  - bose_soundtouch
