@@ -1,0 +1,9 @@
+real_feel_temp:
+  sequence:
+    - service: notify.alexa_media
+      data_template:
+        target: 
+          - "Bedroom Dot"
+        message: "The current real feel temperature is {{ states('sensor.br_feel_temperature') }}"
+        data:
+          type: tts

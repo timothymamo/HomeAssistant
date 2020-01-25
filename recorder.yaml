@@ -7,15 +7,38 @@ exclude:
     - group
     - scene
     - script
+    - switch
     - zone
   entities:
     - sensor.hacs
     - sensor.time
     - sun.sun
     - weather.home
+    - binary_sensor.openclose_1
+    - binary_sensor.vibration_2
+    - light.rwl021_6
+    - media_player.everywhere
+    - media_player.soundbar
+    - media_player.this_device
+    - media_player.timothy_s_alexa_apps
+    - media_player.timothy_s_echosim_beta
+    - media_player.tv
+    - sensor.bedroom_dot_next_alarm
+    - sensor.bedroom_dot_next_reminder
+    - sensor.bedroom_dot_next_timer
+    - sensor.kitchen_dot_next_alarm
+    - sensor.kitchen_dot_next_reminder
+    - sensor.kitchen_dot_next_timer
+    - sensor.timothy_s_bose_soundbar_500_next_alarm
+    - sensor.timothy_s_bose_soundbar_500_next_reminder
+    - sensor.timothy_s_bose_soundbar_500_next_timer
+    - sensor.window_door_sensor_1_battery_level
 include:
   entities:
     - device_tracker.rubys_galaxy_s7
-    - device_tracker.s7
+    - device_tracker.rubys_s7
     - device_tracker.tims_galaxy_s7
     - device_tracker.tims_s7
+    - device_tracker.tim_ha_app
+    - switch.transmission_switch
+    - switch.transmission_turtle_mode
