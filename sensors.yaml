@@ -8,8 +8,8 @@
   display_options:
     - 'time'
 
-- platform: buienradar
-  latitude: !secret home_lat
-  longitude: !secret home_long
-  monitored_conditions:
-    - feeltemperature
+      #- platform: buienradar
+      #  latitude: !secret home_lat
+      #  longitude: !secret home_long
+      #  monitored_conditions:
+      #    - feeltemperature
