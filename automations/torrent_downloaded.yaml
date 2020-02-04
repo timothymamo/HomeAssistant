@@ -1,20 +1,9 @@
-- alias: Completed Torrent
+- alias: Send Notificxation Completed Torrent
   trigger:
     platform: event
     event_type: transmission_downloaded_torrent
   action:
-    - service: shell_command.move_file_download
     - service: notify.tim_phone_notifier
       data_template:
         title: "Torrent completed!"
         message: "{{trigger.event.data.name}}"
-
-# - alias: Send Notificxation Completed Torrent
-#   trigger:
-#     platform: event
-#     event_type: transmission_downloaded_torrent
-#   action:
-#     - service: notify.tim_phone_notifier
-#       data_template:
-#         title: "Torrent completed!"
-#         message: "{{trigger.event.data.name}}"

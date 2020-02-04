@@ -1,1 +1,0 @@
-move_file_download: 'mv "/mnt/usb-disk-2/transmission/downloads/complete/`ls /mnt/usb-disk-2/transmission/downloads/complete/`" /home/tim/Downloads/'
