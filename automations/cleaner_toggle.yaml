@@ -1,4 +1,4 @@
-- alias: 'Toggle Cleaner Boolean ON'
+- alias: 'Toggle No One Home - Cleaner Boolean ON'
   trigger:
     - platform: state
       entity_id: input_boolean.cleaner
@@ -20,7 +20,7 @@
     - service: script.turn_on
       entity_id: script.camera_arm_disarm
 
-- alias: 'Toggle Cleaner Boolean OFF'
+- alias: 'Toggle No One Home - Cleaner Boolean OFF'
   trigger:
     - platform: state
       entity_id: input_boolean.cleaner

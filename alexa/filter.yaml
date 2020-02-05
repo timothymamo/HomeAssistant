@@ -9,6 +9,7 @@ filter:
     - group.living_room
     - script.disney
     - script.netflix
+    - script.realfeel_notification
   include_domains:
     - light
     - media_player
