@@ -1,9 +1,6 @@
 camera_arm_disarm:
   alias: Camera Arm and Disarm
   sequence:
-    - condition: state
-      entity_id: input_boolean.cleaner
-      state: 'on'
     - alias: Arm Camera
       service: alarm_control_panel.alarm_arm_away
       entity_id: alarm_control_panel.blink_home
@@ -13,14 +10,15 @@ camera_arm_disarm:
       service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.blink_home
     - alias: Call Camera Loop
-      service: script.turn_on
-      entity_id: script.camera_loop
+      service: script.camera_loop
+      data:
+        minutes: 45
 
 camera_loop:
   alias: Camera loop
   sequence:
     - delay:
-        minutes: 30
+        minutes: {{ minutes }}
     - alias: Call Camera Arm and Disarm Script
       service: script.turn_on
       entity_id: script.camera_arm_disarm
