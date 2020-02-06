@@ -2,8 +2,8 @@ camera_arm_disarm:
   alias: Camera Arm and Disarm
   sequence:
     - condition: state
-      entity_id: "{{ cond_entity }}"
-      state: "{{ cond_state }}"
+      entity_id: input_boolean.cleaner
+      state: 'on'
     - alias: Ensure Camera Loop Script is OFF
       service: script.turn_off
       entity_id: script.camera_loop
@@ -18,7 +18,7 @@ camera_arm_disarm:
     - alias: Call Camera Loop
       service: script.camera_loop
       data:
-        minutes: "{{ delay_min }}"
+        minutes: 45
 
 camera_loop:
   alias: Camera loop
