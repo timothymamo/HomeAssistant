@@ -17,8 +17,11 @@
       entity_id: input_boolean.cleaner
       state: 'on'
   action:
-    - service: script.turn_on
-      entity_id: script.camera_arm_disarm
+    - service: script.camera_arm_disarm
+      data:
+        cond_entity: input_boolean.cleaner
+        cond_state: 'on'
+        delay_min: 45
 
 - alias: 'Toggle No One Home - Cleaner Boolean OFF'
   trigger:
