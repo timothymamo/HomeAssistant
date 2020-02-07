@@ -16,9 +16,6 @@ filter:
     - scene
   exclude_entities:
     - group.alarm_clock
-    # - automation.all
-    # - device_tracker.all
-    # - script.all
     - group.lux_sensors
     - group.motion_sensors
     - group.stairway
@@ -36,6 +33,7 @@ filter:
     - media_player.soundbar
     - media_player.timothy_s_alexa_apps
     - media_player.timothy_s_echosim_beta
+    - media_player.timothy_s_bose_soundbar_500
   exclude_domains:
     - automation
     - binary_sensor
