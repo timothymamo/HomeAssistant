@@ -6,7 +6,7 @@
   condition: 
     - condition: template
       value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_hallway_2.last_changed) 
-      - (as_timestamp(states.binary_sensor.motion_sensor_entrance_2.last_changed))) > 0 ) }}'
+      - (as_timestamp(states.binary_sensor.openclose_1.last_changed))) > 0 ) }}'
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.hallway

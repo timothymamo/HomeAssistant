@@ -9,4 +9,5 @@ entrance_sensors:
     - sensor.motion_sensor_entrance_2
     - sensor.motion_sensor_entrance
     - binary_sensor.motion_sensor_entrance_2
+    - binary_sensor.openclose_1
     - input_boolean.entrance
