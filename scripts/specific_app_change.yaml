@@ -1,4 +1,4 @@
-disney:
+disney_plus:
   sequence:
     - service: shell_command.app_change
       data_template:

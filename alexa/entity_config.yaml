@@ -20,8 +20,8 @@ entity_config:
   group.living_room:
     name: 'Living Room'
     display_categories: 'LIGHT'
-  script.disney:
-    name: 'Disney'
+  script.disney_plus:
+    name: 'Disney Plus'
   script.netflix:
     name: 'Netflix'
   light.hue_ambiance_1_dining:

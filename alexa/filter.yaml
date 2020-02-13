@@ -7,7 +7,7 @@ filter:
     - group.hallway
     - group.kitchen
     - group.living_room
-    - script.disney
+    - script.disney_plus
     - script.netflix
     - script.realfeel_notification
   include_domains:
