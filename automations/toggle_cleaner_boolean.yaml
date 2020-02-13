@@ -1,7 +1,7 @@
 - alias: Toggle Cleaner Boolean ON
   trigger:
     platform: time
-    at: '08:00:00'
+    at: '07:00:00'
   condition:
     condition: and
     conditions:
@@ -13,6 +13,10 @@
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.cleaner
+    - service: notify.tim_phone_notifier
+      data:
+        title: "Leave Moeny for Cleaner"
+        message: "Don't forget to leave €60 for the cleaner on the table"
 
 - alias: Toggle Cleaner Boolean OFF
   trigger:
