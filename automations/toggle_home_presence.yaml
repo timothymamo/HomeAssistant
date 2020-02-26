@@ -23,3 +23,5 @@
       entity_id: input_boolean.no_one_home
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.cleaner

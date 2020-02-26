@@ -18,7 +18,7 @@ camera_arm_disarm:
     - alias: Call Camera Loop
       service: script.camera_loop
       data:
-        minutes: 45
+        minutes: 90
 
 camera_loop:
   alias: Camera loop

@@ -1,7 +1,8 @@
 - alias: Toggle Cleaner Boolean ON
   trigger:
-    platform: time
-    at: '07:00:00'
+    - platform: state
+      entity_id: input_boolean.no_one_home
+      to: 'on'
   condition:
     condition: and
     conditions:
