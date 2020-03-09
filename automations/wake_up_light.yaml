@@ -28,7 +28,7 @@
       entity_id: group.bedroom
       data_template:
         transition: "{{ states.input_number.wakeup_transition.state | int * 60 }}"
-        brightness_pct: 100
+        brightness: 255
         color_temp: 389
     - service: homeassistant.turn_off
       entity_id: input_boolean.asleep

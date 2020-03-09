@@ -1,8 +1,8 @@
-- platform: systemmonitor
-  resources:
-    - type: memory_use_percent
-    - type: load_5m
-    - type: processor_use
+#- platform: systemmonitor
+#  resources:
+#    - type: memory_use_percent
+#    - type: load_5m
+#    - type: processor_use
 
 - platform: time_date
   display_options:

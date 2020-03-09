@@ -7,7 +7,7 @@ turn_on_living:
       entity_id: light.hue_colour
       data_template:
         rgb_color: [255, 241, 224]
-        brightness_pct: "{{ brightness_pct }}"
+        brightness: "{{ brightness }}"
         transition: "{{ transition }}"
 
 turn_off_living:
