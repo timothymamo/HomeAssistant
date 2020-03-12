@@ -8,3 +8,9 @@ netflix:
     - service: shell_command.app_change
       data_template:
         app_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
+
+plex:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'

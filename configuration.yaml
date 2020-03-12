@@ -24,7 +24,7 @@ lovelace:
 cloud:
   alexa: !include_dir_merge_named /config/alexa/
 
-  #influxdb: !include influxdb.yaml
+influxdb: !include influxdb.yaml
 device_tracker: !include device_trackers.yaml
 discovery: !include discovery.yaml
 media_player: !include media_player.yaml
@@ -48,3 +48,4 @@ telegram_bot: !include telegram.yaml
 light: !include light_group.yaml
 alexa_media: !include alexa_media.yaml
 blink: !include blink.yaml
+plex: !include plex.yaml

@@ -1,0 +1,6 @@
+host: 192.168.1.100
+port: 32400
+token: !secret plex_token
+media_player:
+  use_episode_art: true
+  show_all_controls: false
