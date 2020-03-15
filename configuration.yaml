@@ -49,3 +49,4 @@ light: !include light_group.yaml
 alexa_media: !include alexa_media.yaml
 blink: !include blink.yaml
 plex: !include plex.yaml
+input_text: !include input_text.yaml

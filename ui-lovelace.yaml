@@ -8,6 +8,9 @@ resources:
 # Auto Entities - https://github.com/thomasloven/lovelace-auto-entities
   - url: /community_plugin/lovelace-auto-entities/auto-entities.js
     type: module
+# Text Input Row - https://github.com/gadgetchnnel/lovelace-text-input-row
+  - url: /community_plugin/lovelace-text-input-row/lovelace-text-input-row.js
+    type: js
 
 title: Main Lovelace
 views:

@@ -1,0 +1,3 @@
+create_fwd_email:
+  name: "Create Forwarding Email"
+  mode: text
