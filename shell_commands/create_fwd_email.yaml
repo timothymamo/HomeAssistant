@@ -1,5 +1,5 @@
-create_fwd_email: >
-  echo "{{ domain }} - {{ email }} - {{ dest_email }}" >> output_shell.txt
-  /usr/bin/curl -X POST https://api.gandi.net/v5/email/forwards/{{ domain }} \
-  -H "authorization: Apikey {{ api_key }}" -H "content-type: application/json" \
+create_fwd_email: >-
+  echo "{{ domain }} - {{ email }} - {{ dest_email }}" >> output_shell.txt &&
+  /usr/bin/curl -X POST https://api.gandi.net/v5/email/forwards/{{ domain }}
+  -H "authorization: Apikey {{ api_key }}" -H "content-type: application/json"
   -d '{"source":"{{ email }},"destinations":["{{ dest_email }}"]}'
