@@ -51,8 +51,4 @@ cards:
         name: ' '
         icon: 'mdi:email-send'
         action_name: Create Frowarding Email
-        service: shell_command.create_fwd_email
-        data_template:
-          domain: !secret gandi_domain
-          api_key: !secret gandi_api_key
-          dest_email: !secret gandi_dest_email
+        service: script.create_fwd_email
