@@ -55,5 +55,5 @@ cards:
         data_template:
           domain: !secret gandi_domain
           api_key: !secret gandi_api_key
-          email: '{{ states.input_text.create_fwd_email.state }}'
+          email: '{{ states("input_text.create_fwd_email") }}'
           dest_email: !secret gandi_dest_email
