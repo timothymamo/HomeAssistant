@@ -10,6 +10,7 @@ filter:
     - script.disney_plus
     - script.netflix
     - script.realfeel_notification
+    - script.plex
   include_domains:
     - light
     - media_player
