@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set +e
+
 DOMAIN="$1"
 API_KEY="$2"
 EMAIL="$3"
