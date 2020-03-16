@@ -61,7 +61,6 @@ cards:
         entities:
           - entity: script.create_fwd_email
             name: Create Frowarding Email
-            icon: ""
             tap_action:
               action: toggle
 

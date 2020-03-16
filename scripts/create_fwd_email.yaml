@@ -7,4 +7,3 @@ create_fwd_email:
         email: "{{ states('input_text.create_fwd_email') | string }}"
         dest_email: !secret gandi_dest_email
         ha_token: !secret ha_token
-        icon: mdi:email-send-outline
