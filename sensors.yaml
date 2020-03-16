@@ -20,12 +20,12 @@
       friendly_name: "Curl Response"
       value_template: "{{ 200 }}"
       icon_template: >-
-      {% if is_state('sensor.curl_msg','200') %}
+      {%- if is_state('sensor.curl_msg','200') -%}
         mdi:email-send-outline
-      {% elif is_state('sensor.curl_msg','201') %}
+      {%- elif is_state('sensor.curl_msg','201') -%}
         mdi:email-check-outline
-      {% elif is_state('sensor.curl_msg','400') or is_state('sensor.curl_msg','401') or is_state('sensor.curl_msg','403') %}
+      {%- elif is_state('sensor.curl_msg','400') or is_state('sensor.curl_msg','401') or is_state('sensor.curl_msg','403') -%}
         mdi:email-off-outline
-      {% else %}
+      {%- else -%}
         mdi:email-send-outline
-      {% endif %}
+      {%- endif -%}
