@@ -34,37 +34,12 @@ cards:
       title: Wake Up Light
     group: group.alarm_clock
 
-#   - type: entities
-#     entities:
-#       - type: 'custom:text-input-row'
-#         entity: input_text.create_fwd_email
-#       - type: call-service
-#         name: ' '
-#         icon: mdi:email-send-outline
-# # "{% if is_state('sensor.curl_msg','200') %} mdi:email-send-outline
-# # {% elif is_state('sensor.curl_msg','201') %} mdi:email-check-outline
-# # {% elif is_state('sensor.curl_msg','400') or is_state('sensor.curl_msg','401') or is_state('sensor.curl_msg','403') %} mdi:email-off-outline
-# # {% else %} mdi:email-send-outline
-# # {% endif %}"
-#         action_name: Create Frowarding Email
-#         service: script.create_fwd_email
-
   - type: entities
     entities:
       - type: 'custom:text-input-row'
         entity: input_text.create_fwd_email
-      - type: custom:multiple-entity-row
-        entity: sensor.curl_resp
-        show_state: false
+      - type: call-service
         name: ' '
-        toggle: false
-        entities:
-          - entity: script.create_fwd_email
-            name: Create Frowarding Email
-            tap_action:
-              action: toggle
-
-# type: call-service
-# name: ' '
-# action_name: Create Frowarding Email
-# service: script.create_fwd_email
+        icon: mdi:email-send-outline
+        action_name: Create Frowarding Email
+        service: script.create_fwd_email
