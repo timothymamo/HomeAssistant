@@ -2,7 +2,6 @@
 config:
 frontend:
   themes: !include_dir_merge_named /config/lovelace/themes/
-api:
 history:
 logbook:
 map:
