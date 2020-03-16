@@ -49,6 +49,11 @@ cards:
         entity: input_text.create_fwd_email
       - type: call-service
         name: ' '
-        icon: 'mdi:email-send'
+        icon: >
+		{% if is_state('sensor.curl_msg','200') %} mdi:email-send-outline
+    {% elif is_state('sensor.curl_msg','201') %} mdi:email-check-outline
+    {% elif is_state('sensor.curl_msg','400') or is_state('sensor.curl_msg','401') or is_state('sensor.curl_msg','403') %} mdi:email-off-outline
+		{% else %} mdi:email-send-outline
+		{% endif %}
         action_name: Create Frowarding Email
         service: script.create_fwd_email
