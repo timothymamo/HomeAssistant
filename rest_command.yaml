@@ -1,0 +1,15 @@
+create_fwd_email:
+  url: https://api.gandi.net/v5/email/forwards/{{ domain }}
+  method: POST
+  headers:
+    authorization: Apikey {{ api_key }}
+  content_type: application/json
+  payload: '{"source":"{{ email }}","destinations":["{{ dest_email }}"]}'
+
+# ha_api:
+#   url: http://localhost:8123/api/states/sensor.curl_resp
+#   method: POST
+#   headers:
+#     authorization: Bearer {{ ha_token }}
+#   content_type: application/json
+#   payload: '{"state": "{{ state. }}","attributes": {"message":"'"${MSG}"'"}}'

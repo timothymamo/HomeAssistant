@@ -1,6 +1,6 @@
 create_fwd_email:
   sequence:
-    - service: shell_command.create_fwd_email
+    - service: rest_command.create_fwd_email
       data_template:
         domain: !secret gandi_domain
         api_key: !secret gandi_api_key
