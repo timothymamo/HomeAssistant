@@ -24,7 +24,7 @@ else
   MSG="Cannot recognise response code ${RESP_CODE}"
 fi
 
-curl -X POST -H "Authorization: Bearer '${HA_TOKEN}'" \
+/usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
   -H "Content-Type: application/json" -d '{"state": '${RESP_CODE}'}' http://localhost:8123/api/states/sensor.curl_resp
-curl -X POST -H "Authorization: Bearer '${HA_TOKEN}'" \
+/usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
   -H "Content-Type: application/json" -d '{"state": '${MSG}'}' http://localhost:8123/api/states/sensor.curl_msg
