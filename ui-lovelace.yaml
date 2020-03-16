@@ -11,6 +11,9 @@ resources:
 # Text Input Row - https://github.com/gadgetchnnel/lovelace-text-input-row
   - url: /community_plugin/lovelace-text-input-row/lovelace-text-input-row.js
     type: js
+# Multiple Entity Row - https://github.com/benct/lovelace-multiple-entity-row
+  - url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
+    type: module
 
 title: Main Lovelace
 views:
