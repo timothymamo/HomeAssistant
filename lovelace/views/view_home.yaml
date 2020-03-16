@@ -65,6 +65,7 @@ cards:
         entity: input_text.create_fwd_email
       - type: custom:multiple-entity-row
         entity: script.create_fwd_email
+        show_state: false
         name: ' '
         toggle: false
         entities:
