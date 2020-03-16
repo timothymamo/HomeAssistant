@@ -14,11 +14,11 @@
   monitored_conditions:
     - feeltemperature
 
-- platform: rest
-  name: create_fwd_email
-  resource: https://api.gandi.net/v5/email/forwards/{{ domain }}
-  method: POST
-  headers:
-    authorization: Apikey {{ api_key }}
-    content-type: application/json
-  payload: '{"source":"{{ email }}","destinations":["{{ dest_email }}"]}'
+# - platform: rest
+#   name: create_fwd_email
+#   resource: https://api.gandi.net/v5/email/forwards/{{ domain }}
+#   method: POST
+#   headers:
+#     authorization: Apikey {{ api_key }}
+#     content-type: application/json
+#   payload: '{"source":"{{ email }}","destinations":["{{ dest_email }}"]}'
