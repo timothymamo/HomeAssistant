@@ -13,3 +13,11 @@
   longitude: !secret buienradar_long
   monitored_conditions:
     - feeltemperature
+
+- platform: template
+  sensors:
+    curl_resp:
+      friendly_name: "Curl Response"
+    
+    curl_msg:
+      friendly_name: "Curl Message"

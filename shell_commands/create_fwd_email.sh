@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+DOMAIN="$1"
+API_KEY="$2"
+EMAIL="$3"
+DEST_EMAIL="$4"
+
+EMAIL_FWD=$(/usr/bin/curl --silent https://api.gandi.net/v5/email/forwards/${DOMAIN} \
+  -H 'authorization: Apikey '${API_KEY}'' -H 'content-type: application/json' \
+  -d '{"source":"'${EMAIL}'","destinations":["'${DEST_EMAIL}'"]}' --write-out "%{http_code}\n")
+
+RESP_CODE=$(echo "${EMAIL_FWD##*\}}")
+
+if [[ "${RESP_CODE}" = 201 ]]; then
+  MSG="Woohhooo forwarding email created!!!"
+elif [[ "${RESP_CODE}" = 400 ]]; then
+  MSG=$(echo "${EMAIL_FWD%\}*}}" | jq '.errors[].description')
+elif [[ "${RESP_CODE}" = 401 ]]; then
+  MSG="Lack of Permissions"
+elif [[ "${RESP_CODE}" = 403 ]]; then
+  MSG="Wrong API Key"
+else
+  MSG="Cannot recognise response code ${RESP_CODE}"
+fi
+
+curl -X POST -d '{"state": '${RESP_CODE}'}' http://localhost:8123/api/states/sensor.curl_resp
+curl -X POST -d '{"state": '${MSG}'}' http://localhost:8123/api/states/sensor.curl_msg
