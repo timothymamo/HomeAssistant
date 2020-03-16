@@ -7,9 +7,4 @@ create_fwd_email:
         email: "{{ states('input_text.create_fwd_email') | string }}"
         dest_email: !secret gandi_dest_email
         ha_token: !secret ha_token
-        icon: >
-        {% if is_state('sensor.curl_msg','200') %} mdi:email-send-outline
-        {% elif is_state('sensor.curl_msg','201') %} mdi:email-check-outline
-        {% elif is_state('sensor.curl_msg','400') or is_state('sensor.curl_msg','401') or is_state('sensor.curl_msg','403') %} mdi:email-off-outline
-        {% else %} mdi:email-send-outline
-        {% endif %}
+        icon: mdi:email-send-outline

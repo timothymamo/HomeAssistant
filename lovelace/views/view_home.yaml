@@ -54,12 +54,18 @@ cards:
       - type: 'custom:text-input-row'
         entity: input_text.create_fwd_email
       - type: custom:multiple-entity-row
-        entity: script.create_fwd_email
+        entity: sensor.curl_resp
         show_state: false
         name: ' '
         toggle: false
         entities:
           - entity: script.create_fwd_email
             name: Create Frowarding Email
+            icon: ""
             tap_action:
               action: toggle
+
+# type: call-service
+# name: ' '
+# action_name: Create Frowarding Email
+# service: script.create_fwd_email
