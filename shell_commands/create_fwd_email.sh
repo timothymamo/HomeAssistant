@@ -25,6 +25,6 @@ else
 fi
 
 /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
-  -H "Content-Type: application/json" -d '{"state": '${RESP_CODE}'}' http://localhost:8123/api/states/sensor.curl_resp
-/usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
-  -H "Content-Type: application/json" -d '{"state": "'"${MSG}"'"}' http://localhost:8123/api/states/sensor.curl_msg
+  -H "Content-Type: application/json" -d '{"state": '${RESP_CODE}',\
+  "attributes": {"message":"'"${MSG}"'"}}' \
+  http://localhost:8123/api/states/sensor.curl_resp
