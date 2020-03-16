@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set +e
-
 DOMAIN="$1"
 API_KEY="$2"
 EMAIL="$3"
@@ -15,7 +13,7 @@ EMAIL_FWD=$(/usr/bin/curl --silent https://api.gandi.net/v5/email/forwards/${DOM
 RESP_CODE=$(echo "${EMAIL_FWD##*\}}")
 
 if [[ "${RESP_CODE}" = 201 ]]; then
-  MSG="Woohhooo forwarding email created!!!"
+  MSG="Woohhooo forwarding email ${DEST_EMAIL} created!!!"
 elif [[ "${RESP_CODE}" = 400 ]]; then
   MSG=$(echo "${EMAIL_FWD%\}*}}" | jq '.errors[].description')
 elif [[ "${RESP_CODE}" = 401 ]]; then
