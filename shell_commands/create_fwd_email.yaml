@@ -2,4 +2,4 @@
 #         /usr/bin/curl -X POST https://api.gandi.net/v5/email/forwards/{{ domain }} 
 #         -H "authorization: Apikey {{ api_key }}" -H "content-type: application/json" 
 #         -d '{"source":"{{ email  }}","destinations":["{{ dest_email }}"]}'
-create_fwd_email: /bin/bash /config/shell_commands/create_fwd_email.sh {{ domain }} {{ api_key }} {{ email }} {{ dest_email }}
+create_fwd_email: /bin/bash /config/shell_commands/create_fwd_email.sh {{ domain }} {{ api_key }} {{ email }} {{ dest_email }} {{ ha_token }}
