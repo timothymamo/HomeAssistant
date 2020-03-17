@@ -17,6 +17,9 @@ resources:
 # Button Entity Row - https://github.com/custom-cards/button-entity-row#using-state-icons
   - url: /community_plugin/button-entity-row/button-entity-row.js
     type: module
+# Template Entity Row - https://github.com/thomasloven/lovelace-template-entity-row
+  - url: /community_plugin/lovelace-template-entity-row/template-entity-row.js
+    type: module
 
 title: Main Lovelace
 views:
