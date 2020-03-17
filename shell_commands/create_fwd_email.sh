@@ -13,9 +13,9 @@ EMAIL_FWD=$(/usr/bin/curl --silent https://api.gandi.net/v5/email/forwards/${DOM
 RESP_CODE=$(echo "${EMAIL_FWD##*\}}")
 
 if [[ "${RESP_CODE}" = 201 ]]; then
-  MSG="Woohhooo forwarding email ${EMAIL}@${DOMAIN} created!!!"
+  MSG="Forwarding email created!!!"
 elif [[ "${RESP_CODE}" = 400 ]]; then
-  MSG=$(echo "${EMAIL_FWD%\}*}}" | jq '.errors[].description' | tr -d '"')
+  MSG=$(echo "${EMAIL_FWD%\}*}}" | jq '.errors[].description' | grep -o "^[^${DEST_EMAIL}@${DOMAIN}]*" | tr -d '"')
 elif [[ "${RESP_CODE}" = 401 ]]; then
   MSG="Lack of Permissions"
 elif [[ "${RESP_CODE}" = 403 ]]; then
