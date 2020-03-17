@@ -10,6 +10,6 @@ change_email_fwd_sensor_state:
   url: http://localhost:8123/api/states/sensor.curl_resp
   method: POST
   headers:
-    authorization: Bearer {{ ha_token }}
-  content_type: application/json
-  payload: '{"state": {{ state }}}}'
+    authorization: 'Bearer {{ ha_token }}'
+    content_type: 'application/json'
+  payload: '{"state": "'"{{ state }}"'"}}'
