@@ -40,15 +40,15 @@ cards:
         entity: input_text.create_fwd_email
       - type: "custom:button-entity-row"
         buttons:
-          - entity: script.create_fwd_email
+          - entity: sensor.curl_resp
             name: "Create Frowarding Email"
             service: script.create_fwd_email
             state_icons:
-              200: "mdi:email-send-outline"
-              201: "mdi:email-check-outline"
-              400: "mdi:email-off-outline"
-              401: "mdi:email-off-outline"
-              403: "mdi:email-off-outline"
+              "200": "mdi:email-send-outline"
+              "201": "mdi:email-check-outline"
+              "400": "mdi:email-off-outline"
+              "401": "mdi:email-off-outline"
+              "403": "mdi:email-off-outline"
       # - type: call-service
       #   name: ' '
       #   icon: mdi:email-send-outline
