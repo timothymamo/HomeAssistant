@@ -1,9 +1,3 @@
-#- platform: systemmonitor
-#  resources:
-#    - type: memory_use_percent
-#    - type: load_5m
-#    - type: processor_use
-
 - platform: time_date
   display_options:
     - 'time'
@@ -12,13 +6,3 @@
   latitude: !secret buienradar_lat
   longitude: !secret buienradar_long
   monitored_conditions:
-    - feeltemperature
-
-# - platform: rest
-#   name: create_fwd_email
-#   resource: https://api.gandi.net/v5/email/forwards/{{ domain }}
-#   method: POST
-#   headers:
-#     authorization: Apikey {{ api_key }}
-#     content-type: application/json
-#   payload: '{"source":"{{ email }}","destinations":["{{ dest_email }}"]}'
