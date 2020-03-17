@@ -50,5 +50,5 @@ cards:
               "401": "mdi:alert-circle-outline"
               "403": "mdi:alert-circle-outline"
       - type: custom:template-entity-row
-        name: "{{ istates.sensor.curl_resp.attributes.message }}"
+        name: "{{ states.sensor.curl_resp.attributes.message }}"
         condition: "{{ not is_state('sensor.curl_resp', '200')}}"
