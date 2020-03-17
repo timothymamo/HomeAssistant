@@ -11,4 +11,3 @@
     - service: rest_command.change_email_fwd_sensor_state
       data_template:
         ha_token: !secret ha_token
-        state: "200"
