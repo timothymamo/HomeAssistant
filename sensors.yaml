@@ -6,3 +6,4 @@
   latitude: !secret buienradar_lat
   longitude: !secret buienradar_long
   monitored_conditions:
+    - feeltemperature
