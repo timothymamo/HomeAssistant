@@ -12,4 +12,4 @@ change_email_fwd_sensor_state:
   headers:
     authorization: Bearer {{ ha_token }}
   content_type: application/json
-  payload: '{"state": "{{ state }}"}}'
+  payload: '{"state": {{ state }}}}'
