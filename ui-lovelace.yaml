@@ -14,6 +14,9 @@ resources:
 # Multiple Entity Row - https://github.com/benct/lovelace-multiple-entity-row
   - url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
     type: module
+# Button Entity Row - https://github.com/custom-cards/button-entity-row#using-state-icons
+  - url: /community_plugin/button-entity-row/button-entity-row.js
+    type: module
 
 title: Main Lovelace
 views:
