@@ -4,7 +4,7 @@
       entity_id: sensor.curl_resp
   condition:
     condition: template
-    value_template: "{{ not is_state('sensor.curl_resp', '200') }}"a
+    value_template: "{{ not is_state('sensor.curl_resp', '200') }}"
   action:
     - delay:
         seconds: 30
