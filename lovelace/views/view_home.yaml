@@ -44,7 +44,7 @@ cards:
             name: "Create Frowarding Email"
             service: script.create_fwd_email
             state_icons:
-              "200": "mdi:email-send-outline"
+              "200": "mdi:mail-alert-outlinee"
               "201": "mdi:email-check-outline"
               "400": "mdi:mail-alert-outline"
               "401": "mdi:mail-alert-outline"
