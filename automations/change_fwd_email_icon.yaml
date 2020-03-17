@@ -1,0 +1,14 @@
+- alias: 'Change Forwarding Email Sensor Icon'
+  trigger:
+    - platform: state
+      entity_id: sensor.curl_resp
+  condition:
+    condition: template
+    value_template: "{{ not is_state('sensor.curl_resp', '200') }}"a
+  action:
+    - delay:
+        seconds: 30
+    - service: rest_command.change_email_fwd_sensor_state
+      data_template:
+        ha_token: !secret ha_token
+        state: "200"
