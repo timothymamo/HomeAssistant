@@ -16,6 +16,7 @@ if [[ "${RESP_CODE}" = 201 ]]; then
   MSG="Forwarding email created!!!"
 elif [[ "${RESP_CODE}" = 400 ]]; then
   MSG=$(echo "${EMAIL_FWD%\}*}}" | jq '.errors[].description' | tr -d '"' | sed -E 's/[^[:space:]]+@[^[:space:]]+//g' | sed 's/^[[:space:]]*//')
+  MSG=${MSG^}
 elif [[ "${RESP_CODE}" = 401 ]]; then
   MSG="Lack of Permissions"
 elif [[ "${RESP_CODE}" = 403 ]]; then
