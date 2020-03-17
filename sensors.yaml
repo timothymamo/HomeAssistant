@@ -7,3 +7,9 @@
   longitude: !secret buienradar_long
   monitored_conditions:
     - feeltemperature
+
+- platform: template
+  sensors:
+    curl_resp:
+      friendly_name: "Gandi Curl Response"
+      value_template: "200"

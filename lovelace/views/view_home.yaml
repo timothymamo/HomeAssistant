@@ -45,7 +45,6 @@ cards:
             service: script.create_fwd_email
             state_icons:
               "200": "mdi:email-send-outline"
-              "": "mdi:email-send-outline"
               "201": "mdi:email-check-outline"
               "400": "mdi:alert-circle-outline"
               "401": "mdi:alert-circle-outline"
