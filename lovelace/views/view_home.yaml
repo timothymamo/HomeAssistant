@@ -44,11 +44,11 @@ cards:
             name: "Create Frowarding Email"
             service: script.create_fwd_email
             state_icons:
-              "200": "mdi:mail-alert-outlinee"
+              "200": "mdi:email-send-outline"
               "201": "mdi:email-check-outline"
-              "400": "mdi:mail-alert-outline"
-              "401": "mdi:mail-alert-outline"
-              "403": "mdi:mail-alert-outline"
+              "400": "mdi:alert-circle-outline"
+              "401": "mdi:alert-circle-outline"
+              "403": "mdi:alert-circle-outline"
       # - type: call-service
       #   name: ' '
       #   icon: mdi:email-send-outline
