@@ -7,7 +7,7 @@
     value_template: "{{ not is_state('sensor.curl_resp', '200') }}"
   action:
     - delay:
-        seconds: 30
+        seconds: 10
     - service: rest_command.change_email_fwd_sensor_state
       data_template:
         ha_token: !secret ha_token
