@@ -46,9 +46,9 @@ cards:
             state_icons:
               "200": "mdi:email-send-outline"
               "201": "mdi:email-check-outline"
-              "400": "mdi:email-off-outline"
-              "401": "mdi:email-off-outline"
-              "403": "mdi:email-off-outline"
+              "400": "mdi:mail-alert-outline"
+              "401": "mdi:mail-alert-outline"
+              "403": "mdi:mail-alert-outline"
       # - type: call-service
       #   name: ' '
       #   icon: mdi:email-send-outline
