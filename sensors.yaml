@@ -13,3 +13,9 @@
     curl_resp:
       friendly_name: "Gandi Curl Response"
       value_template: "200"
+
+- platform: template
+  sensors:
+    vpn_error:
+      friendly_name: "VPN Error Check"
+      value_template: "off"
