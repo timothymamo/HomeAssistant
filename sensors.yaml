@@ -18,4 +18,4 @@
   sensors:
     vpn_error:
       friendly_name: "VPN Error Check"
-      value_template: "off"
+      value_template: "new"
