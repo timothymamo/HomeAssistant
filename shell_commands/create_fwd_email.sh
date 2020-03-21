@@ -22,7 +22,7 @@ elif [[ "${RESP_CODE}" = 401 ]]; then
 elif [[ "${RESP_CODE}" = 403 ]]; then
   MSG="Wrong API Key"
 else
-  MSG="Cannot recognise response code ${RESP_CODE}"
+  MSG="Cannot recognise response code '${RESP_CODE}'"
 fi
 
 /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \

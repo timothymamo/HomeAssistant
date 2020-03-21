@@ -97,3 +97,7 @@ cleaner:
 guests:
   name: "Guests"
   icon: mdi:account-multiple-outline
+
+vpn_notification_sent:
+  name: "VPN Notification Sent"
+  icon: mdi:message-alert-outline
