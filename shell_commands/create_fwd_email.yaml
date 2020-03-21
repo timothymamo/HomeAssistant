@@ -1,1 +1,1 @@
-create_fwd_email: /bin/bash /config/shell_commands/create_fwd_email.sh {{ domain }} {{ api_key }} {{ email }} {{ dest_email }} {{ ha_token }}
+create_fwd_email: /bin/bash /config/shell_commands/create_fwd_email.sh {{ !secret gandi_domain }} {{ !secret gandi_api_key }} {{ states('input_text.create_fwd_email') | string }} {{ !secret gandi_dest_email }} {{ !secret ha_token }}
