@@ -11,7 +11,7 @@ VPN_RESULT=$(/usr/bin/curl ${VPN_URL} 2>/dev/null > vpn.html && grep -E -o ${STR
 if [[ ${VPN_RESULT} = 'Your internet traffic is secure' ]]
 then
   SENSOR_STATE=$(/usr/bin/curl -X GET -H "Authorization: Bearer ${HA_TOKEN}" ${SENSOR_API} 2>/dev/null | jq '.state')
-  if [[ ${SENSOR_STATE} = "on" ]]
+  if [[ ${SENSOR_STATE} != "off" ]]
   then 
       /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
         -H "Content-Type: application/json" \
