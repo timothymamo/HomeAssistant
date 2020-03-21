@@ -15,7 +15,7 @@ then
   then 
       /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
         -H "Content-Type: application/json" \
-        -d '{"state": "off"}' ${SENSOR_API}
+        -d '{"state": "off","attributes": {"friendly_name":"VPN Error Check","message":"'"${VPN_RESULT}"'"}}' ${SENSOR_API}
   fi
 else
   /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
