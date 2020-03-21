@@ -6,6 +6,8 @@
       seconds: 0
   action:
     - service: shell_command.check_vpn
+      data_template:
+        ha_token: !secret ha_token 
 
 - alias: 'VPN is not connected'
   trigger:
