@@ -4,4 +4,4 @@ change_email_fwd_sensor_state:
   headers:
     authorization: 'Bearer {{ ha_token }}'
     content_type: 'application/json'
-  payload: '{"state": "200"}'
+  payload: '{"state": "200","attributes": {"friendly_name":"Gandi Curl Response"}}'
