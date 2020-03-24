@@ -4,7 +4,7 @@ HA_TOKEN="$1"
 IP_CHECK="$2"
 
 VPN_URL="http://icanhazip.com/"
-SENSOR_API="http://localhost:8123/api/states/sensor.vpn_error"
+SENSOR_API="http://localhost:8123/api/states/sensor.vpn_status"
 
 VPN_RESULT=$(/usr/bin/curl "${VPN_URL}" 2>/dev/null)
 
@@ -15,10 +15,10 @@ then
   then 
       /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
         -H "Content-Type: application/json" \
-        -d '{"state": "off","attributes": {"friendly_name":"VPN Error Check","message":"'"${VPN_RESULT}"'"}}' "${SENSOR_API}"
+        -d '{"state": "off","attributes": {"friendly_name":"VPN Status Check","message":"VPN is connected"}}' "${SENSOR_API}"
   fi
 else
   /usr/bin/curl -X POST -H "Authorization: Bearer ${HA_TOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"state": "on","attributes": {"friendly_name":"VPN Error Check","message":"'"${VPN_RESULT}"'"}}' "${SENSOR_API}"
+    -d '{"state": "on","attributes": {"friendly_name":"VPN Status Check","message":"VPN is NOT connected!!"}}' "${SENSOR_API}"
 fi

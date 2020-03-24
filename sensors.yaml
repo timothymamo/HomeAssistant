@@ -16,6 +16,6 @@
 
 - platform: template
   sensors:
-    vpn_error:
-      friendly_name: "VPN Error Check"
+    vpn_status:
+      friendly_name: "VPN Status Check"
       value_template: "new"

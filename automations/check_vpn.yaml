@@ -10,10 +10,10 @@
         ha_token: !secret ha_token 
         vpn_ip: !secret vpn_ip
 
-- alias: 'VPN is not connected'
+- alias: 'VPN is NOT connected'
   trigger:
     - platform: state
-      entity_id: sensor.vpn_error
+      entity_id: sensor.vpn_status
       to: 'on'
   condition:
     - condition: state
@@ -25,4 +25,17 @@
         title: "VPN is NOT Connected!!!"
         message: "Your VPN connection seems to be disabled"
     - service: homeassistant.turn_on
+      entity_id: input_boolean.vpn_notification_sent
+
+- alias: 'VPN is connected'
+  trigger:
+    - platform: state
+      entity_id: sensor.vpn_status
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: input_boolean.vpn_notification_sent
+      state: 'on'
+  action:
+    - service: homeassistant.turn_off
       entity_id: input_boolean.vpn_notification_sent
