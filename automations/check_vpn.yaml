@@ -8,6 +8,7 @@
     - service: shell_command.check_vpn
       data_template:
         ha_token: !secret ha_token 
+        vpn_ip: !secret vpn_ip
 
 - alias: 'VPN is not connected'
   trigger:

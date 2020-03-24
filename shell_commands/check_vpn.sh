@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 HA_TOKEN="$1"
+IP_CHECK="$2"
 
-STRING_CHECK="Status Bar - Protected"
-VPN_URL="https://nordvpn.com/what-is-my-ip/"
+VPN_URL="http://icanhazip.com/"
 SENSOR_API="http://localhost:8123/api/states/sensor.vpn_error"
 
-VPN_RESULT=$(/usr/bin/curl "${VPN_URL}" 2>/dev/null > vpn.html && grep -E -o "${STRING_CHECK}" vpn.html && rm vpn.html)
+VPN_RESULT=$(/usr/bin/curl "${VPN_URL}" 2>/dev/null)
 
-if [[ "${VPN_RESULT}" = 'Your internet traffic is secure' ]]
+if [[ "${VPN_RESULT}" = "${IP_CHECK}" ]]
 then
   SENSOR_STATE=$(/usr/bin/curl -X GET -H "Authorization: Bearer ${HA_TOKEN}" "${SENSOR_API}" 2>/dev/null | jq '.state')
   if [[ "${SENSOR_STATE}" != "off" ]]
