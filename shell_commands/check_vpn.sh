@@ -2,7 +2,7 @@
 
 HA_TOKEN="$1"
 
-STRING_CHECK="Your internet traffic is secure"
+STRING_CHECK="Status Bar - Protected"
 VPN_URL="https://nordvpn.com/what-is-my-ip/"
 SENSOR_API="http://localhost:8123/api/states/sensor.vpn_error"
 
