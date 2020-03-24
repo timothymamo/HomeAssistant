@@ -8,7 +8,7 @@ SENSOR_API="http://localhost:8123/api/states/sensor.vpn_status"
 
 VPN_RESULT=$(/usr/bin/curl "${VPN_URL}" 2>/dev/null)
 
-if [[ "${VPN_RESULT}" = "${IP_CHECK}" ]]
+if [[ "${VPN_RESULT}" = "${IP_CHECK}"* ]]
 then
   SENSOR_STATE=$(/usr/bin/curl -X GET -H "Authorization: Bearer ${HA_TOKEN}" "${SENSOR_API}" 2>/dev/null | jq '.state')
   if [[ "${SENSOR_STATE}" != "off" ]]
