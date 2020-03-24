@@ -101,3 +101,4 @@ guests:
 vpn_notification_sent:
   name: "VPN Notification Sent"
   icon: mdi:message-alert-outline
+  initial: off
