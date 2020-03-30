@@ -1,23 +1,23 @@
 # Mini Media Player - installed via HACS
-- url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+- url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
   type: module
 # Group Card - https://github.com/custom-cards/group-card
-- url: /community_plugin/group-card/group-card.js
+- url: /hacsfiles/group-card/group-card.js
   type: module
 # Auto Entities - https://github.com/thomasloven/lovelace-auto-entities
-- url: /community_plugin/lovelace-auto-entities/auto-entities.js
+- url: /hacsfiles/lovelace-auto-entities/auto-entities.js
   type: module
 # Text Input Row - https://github.com/gadgetchnnel/lovelace-text-input-row
-- url: /community_plugin/lovelace-text-input-row/lovelace-text-input-row.js
+- url: /hacsfiles/lovelace-text-input-row/lovelace-text-input-row.js
   type: js
 # Multiple Entity Row - https://github.com/benct/lovelace-multiple-entity-row
-- url: /community_plugin/lovelace-multiple-entity-row/multiple-entity-row.js
+- url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
   type: module
 # Button Entity Row - https://github.com/custom-cards/button-entity-row#using-state-icons
-- url: /community_plugin/button-entity-row/button-entity-row.js
+- url: /hacsfiles/button-entity-row/button-entity-row.js
   type: module
 # Template Entity Row - https://github.com/thomasloven/lovelace-template-entity-row
-- url: /community_plugin/lovelace-template-entity-row/template-entity-row.js
+- url: /hacsfiles/lovelace-template-entity-row/template-entity-row.js
   type: module
-- url: /community_plugin/lovelace-paper-buttons-row/paper-buttons-row.js
+- url: /hacsfiles/lovelace-paper-buttons-row/paper-buttons-row.js
   type: module
