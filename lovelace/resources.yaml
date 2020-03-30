@@ -10,14 +10,12 @@
 # Text Input Row - https://github.com/gadgetchnnel/lovelace-text-input-row
 - url: /hacsfiles/lovelace-text-input-row/lovelace-text-input-row.js
   type: js
-# Multiple Entity Row - https://github.com/benct/lovelace-multiple-entity-row
-- url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
-  type: module
-# Button Entity Row - https://github.com/custom-cards/button-entity-row#using-state-icons
-- url: /hacsfiles/button-entity-row/button-entity-row.js
-  type: module
+# # Multiple Entity Row - https://github.com/benct/lovelace-multiple-entity-row
+# - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
+#   type: module
 # Template Entity Row - https://github.com/thomasloven/lovelace-template-entity-row
 - url: /hacsfiles/lovelace-template-entity-row/template-entity-row.js
   type: module
+# Paper Buttons Row - https://github.com/jcwillox/lovelace-paper-buttons-row
 - url: /hacsfiles/lovelace-paper-buttons-row/paper-buttons-row.js
   type: module
