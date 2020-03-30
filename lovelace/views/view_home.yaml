@@ -42,7 +42,9 @@ cards:
         buttons:
           - entity: sensor.curl_resp
             name: "Create Frowarding Email"
-            service: script.create_fwd_email
+            tap_action:
+              action: call-service
+              service: script.create_fwd_email
             state_icons:
               "200": "mdi:email-send-outline"
               "201": "mdi:email-check-outline"
