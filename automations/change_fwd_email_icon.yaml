@@ -17,4 +17,4 @@
       data_template:
         ha_token: !secret ha_token
         entity: "input_text.create_fwd_email"
-        payload: '{"state": "","attributes": {"friendly_name":"Create Forwarding Email", "pattern":"^[A-Za-z0-9][\w.-]*[A-Za-z0-9]$", "min":0, "max":100, "editable": false, "mode":"text"}}'
+        payload: '{"state": "","attributes": {"friendly_name":"Create Forwarding Email", "pattern":"^[A-Za-z0-9][\w.-]*[A-Za-z0-9]$", "min":"0", "max":"100", "editable":"false", "mode":"text"}}'
