@@ -2,5 +2,4 @@ wakeup_time:
   name: "Start lights at"
   has_time: true
   has_date: false
-  initial: "06:25"
   icon: mdi:alarm
