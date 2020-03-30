@@ -1,4 +1,4 @@
-ha_rest_post:
+ha_post:
   url: http://localhost:8123/api/states/{{ entity }}
   method: POST
   headers:
