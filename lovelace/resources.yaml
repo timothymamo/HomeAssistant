@@ -19,3 +19,5 @@
 # Template Entity Row - https://github.com/thomasloven/lovelace-template-entity-row
 - url: /community_plugin/lovelace-template-entity-row/template-entity-row.js
   type: module
+- url: /community_plugin/lovelace-paper-buttons-row/paper-buttons-row.js
+  type: module
