@@ -1,7 +1,7 @@
-change_email_fwd_sensor_state:
-  url: http://localhost:8123/api/states/sensor.curl_resp
+ha_rest_post:
+  url: http://localhost:8123/api/states/{{ entity }}
   method: POST
   headers:
     authorization: 'Bearer {{ ha_token }}'
     content_type: 'application/json'
-  payload: '{"state": "200","attributes": {"friendly_name":"Gandi Curl Response"}}'
+  payload: '{{ payload }}'

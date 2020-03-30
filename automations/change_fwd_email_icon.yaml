@@ -8,6 +8,8 @@
   action:
     - delay:
         seconds: 10
-    - service: rest_command.change_email_fwd_sensor_state
+    - service: rest_command.ha_rest_post
       data_template:
         ha_token: !secret ha_token
+        entity: "sensor.curl_resp"
+        payload: '{"state": "200","attributes": {"friendly_name":"Gandi Curl Response"}}'
