@@ -9,8 +9,8 @@ hallway_sensors:
   entities:
     - sensor.motion_sensor_hallway
     - sensor.motion_sensor_storage
-    - binary_sensor.motion_sensor_hallway_2
-    - binary_sensor.motion_sensor_storage_2
+    - binary_sensor.motion_sensor_hallway
+    - binary_sensor.motion_sensor_storage
     - sensor.motion_sensor_hallway_2
     - sensor.motion_sensor_storage_2
     - input_boolean.hallway

@@ -1,13 +1,13 @@
 # Motion Sensors
-binary_sensor.motion_sensor_bottom_stairs_2:
+binary_sensor.motion_sensor_bottom_stairs:
   friendly_name: Motion Sensor Bottom Stairs
-binary_sensor.motion_sensor_entrance_2:
+binary_sensor.motion_sensor_entrance:
   friendly_name: Motion Sensor Entrance
-binary_sensor.motion_sensor_hallway_2:
+binary_sensor.motion_sensor_hallway:
   friendly_name: Motion Sensor Hallway
-binary_sensor.motion_sensor_kitchen_2:
+binary_sensor.motion_sensor_kitchen:
   friendly_name: Motion Sensor Kitchen
-binary_sensor.motion_sensor_storage_2:
+binary_sensor.motion_sensor_storage:
   friendly_name: Motion Sensor Storage
-binary_sensor.motion_sensor_top_stairs_2:
+binary_sensor.motion_sensor_top_stairs:
   friendly_name: Motion Sensor Top Stairs

@@ -1,14 +1,14 @@
 - alias: 'Toggle top stairs boolean when sensor triggers'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_top_stairs_2
+      entity_id: binary_sensor.motion_sensor_top_stairs
       to: 'on'
   condition: 
     condition: and
     conditions:
       - condition: template
-        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_top_stairs_2.last_changed)) 
-        - (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_2.last_changed)) > 0 ) }}'
+        value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_top_stairs.last_changed)) 
+        - (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs.last_changed)) > 0 ) }}'
       - condition: state
         entity_id: input_boolean.bottom_stairs
         state: 'off'
