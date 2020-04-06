@@ -1,25 +1,25 @@
 - alias: 'Warn when water sensor is triggered'
   trigger:
     - platform: state
-      entity_id: binary_sensor.water_1
+      entity_id: binary_sensor.water_sensor_1
       to: 'on'
     - platform: state
-      entity_id: binary_sensor.water_2
+      entity_id: binary_sensor.water_sensor_2
       to: 'on'
     - platform: state
-      entity_id: binary_sensor.water_3
+      entity_id: binary_sensor.water_sensor_3
       to: 'on'
     - platform: state
-      entity_id: binary_sensor.water_4
+      entity_id: binary_sensor.water_sensor_4
       to: 'on'
   action:
     - service: notify.tim_phone_notifier
       data_template:
-        message: "{% if is_state('binary_sensor.water_1', 'on') or is_state('binary_sensor.water_4', 'on') %}
+        message: "{% if is_state('binary_sensor.water_sensor_1', 'on') or is_state('binary_sensor.water_sensor_4', 'on') %}
         !!! Water sensor under the dish washer has been triggered !!!
-        {% elif is_state('binary_sensor.water_2', 'on') %}
+        {% elif is_state('binary_sensor.water_sensor_2', 'on') %}
         !!! Water sensor under the washing machine has been triggered !!!
-        {% elif is_state('binary_sensor.water_3', 'on') %}
+        {% elif is_state('binary_sensor.water_sensor_3', 'on') %}
         !!! Water sensor under the boiler has been triggered !!!
         {% endif %}"
       data:
@@ -33,11 +33,11 @@
           - "Kitchen Dot"
           - "Bedroom Dot"
         message: "A water leak has been detected. The
-        {% if is_state('binary_sensor.water_1', 'on') or is_state('binary_sensor.water_4', 'on') %}
+        {% if is_state('binary_sensor.water_sensor_1', 'on') or is_state('binary_sensor.water_sensor_4', 'on') %}
         water sensor under the dish washer has been triggered.
-        {% elif is_state('binary_sensor.water_2', 'on') %}
+        {% elif is_state('binary_sensor.water_sensor_2', 'on') %}
         water sensor under the washing machine has been triggered.
-        {% elif is_state('binary_sensor.water_3', 'on') %}
+        {% elif is_state('binary_sensor.water_sensor_3', 'on') %}
         water sensor under the boiler has been triggered.
         {% endif %}"
         data:

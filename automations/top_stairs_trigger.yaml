@@ -22,6 +22,6 @@
     - condition: or
       conditions:
         - condition: state
-          entity_id: binary_sensor.openclose_2
+          entity_id: binary_sensor.window_door_sensor_2
           state: 'off'
     - service: script.turn_off_hallway
