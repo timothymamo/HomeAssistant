@@ -5,6 +5,6 @@
       to: 'on'
   action:
     - delay:
-        seconds: 15
+        seconds: 5
     - service: counter.increment
       entity_id: counter.bottom_stairs_counter

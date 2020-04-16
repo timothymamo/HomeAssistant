@@ -1,0 +1,14 @@
+- alias: 'Turn on bedroom override booleab'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.top_stairs
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: counter.bottom_stairs_counter
+        below: 1
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.bedroom_light_override
