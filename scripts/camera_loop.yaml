@@ -8,12 +8,12 @@ camera_arm_disarm:
       service: script.turn_off
       entity_id: script.camera_loop
     - alias: Arm Camera
-      - service: ifttt.trigger
+      service: ifttt.trigger
       data: {"event":"arm_blink"}
     - delay:
         seconds: 45
     - alias: Disarm Camera
-      - service: ifttt.trigger
+      service: ifttt.trigger
       data: {"event":"disarm_blink"}
     - alias: Call Camera Loop
       service: script.camera_loop
