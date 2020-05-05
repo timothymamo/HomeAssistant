@@ -10,8 +10,8 @@
   action:
     - service: script.turn_on
       entity_id: script.alarm_notifications
-    - service: alarm_control_panel.alarm_arm_away
-      entity_id: alarm_control_panel.blink_home
+    - service: ifttt.trigger
+      data: {"event":"arm_blink"}
     - delay:
         seconds: 5
     - condition: and
