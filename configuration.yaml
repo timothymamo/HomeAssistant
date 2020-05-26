@@ -1,3 +1,7 @@
+## Upcoming Changes which need to be fixed before shit is broken
+## Plex will not support yaml anymore - integration is done via the UI
+## Can the braviatv integration be used rather than the custom component?
+
 # Default integrations (substitute for default_config) 
 config:
 frontend:
