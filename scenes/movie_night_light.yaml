@@ -4,4 +4,3 @@
       state: 'on'
       rgb_color: [255,145,38]
       brightness: 255
-      transition: 900
