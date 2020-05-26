@@ -27,7 +27,7 @@
     - service: media_player.media_pause
       entity_id: media_player.mybraviatv
     - service: notify.alexa_media
-      data_template:
+      data:
         target: 
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"

@@ -23,7 +23,7 @@ alarm_voice:
         seconds: 2
     - alias: Voice Script
       service: notify.alexa_media
-      data_template:
+      data:
         target: 
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"
