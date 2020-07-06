@@ -17,7 +17,6 @@ alarm_voice:
       service: notify.alexa_media
       data_template:
         message: "{{ message }}"
-      data:
         target: 
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"
