@@ -20,13 +20,13 @@ alarm_voice:
     - alias: Voice Script
       service: notify.alexa_media
       data_template:
+        data:
+          type: tts
         message: "{{ message }}"
         target: 
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"
           - "Bedroom Dot"
-        data:
-          type: tts
     - delay:
         seconds: 15
     - alias: Decrease Dots Volume
