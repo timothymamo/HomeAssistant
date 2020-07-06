@@ -1,0 +1,8 @@
+alexa_speak:
+  alias: "Alexa TTS"
+  sequence:
+    service: notify.alexa_media_simon_s_echo_dot
+    data_template:    
+      data:
+        type: tts
+      message: "{{ states('input_text.text1') }}"
