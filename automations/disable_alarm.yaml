@@ -22,3 +22,20 @@
       entity_id: input_boolean.disable_alarm_voice
     - service: homeassistant.turn_off
       entity_id: input_boolean.disable_alarm_lights
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm_notification
+
+- alias: 'Enable Alarms'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.disable_alarm
+      to: 'off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm_camera
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm_voice
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm_lights
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm_notification
