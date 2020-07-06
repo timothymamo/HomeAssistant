@@ -14,8 +14,7 @@
       to: 'on'
   action:
     - alias: Send Notification
-      service: script.turn_on
-      entity_id: script.alarm_notification
+      service: script.alarm_notification
       data:
         title: "!!! WATER SENSOR WARNING !!!"
         message: "{% if is_state('binary_sensor.water_sensor_1', 'on') or is_state('binary_sensor.water_sensor_4', 'on') %}

@@ -14,17 +14,14 @@
         state: 'off'
   action:
     - alias: Send Notification
-      service: script.turn_on
-      entity_id: script.alarm_notification
+      service: script.alarm_notification
       data:
         title: "!!! ENTRANCE HAS BEEN TRIGGERED !!!"
         message: "!!! The front door has been opened !!!"
     - alias: Enable Cameras
-      service: script.turn_on
-      entity_id: script.alarm_camera
+      service: script.alarm_camera
     - alias: Enable Alarm Lights
-      service: script.turn_on
-      entity_id: script.alarm_lights
+      service: script.alarm_lights
     - alias: Delay for 5 seconds
       delay:
         seconds: 5
@@ -47,11 +44,9 @@
           entity_id: input_boolean.disable_alarm
           state: 'off'
     - alias: Enable Alarm Lights
-      service: script.turn_on
-      entity_id: script.alarm_lights
+      service: script.alarm_lights
     - alias: Enable Unauthorised Entrance Voice Alarm
-      service: script.turn_on
-      entity_id: script.alarm_voice
+      service: script.alarm_voice
       data:
         message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
     - alias: Delay for 5 minutes

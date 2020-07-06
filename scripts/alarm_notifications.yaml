@@ -1,4 +1,11 @@
 alarm_notification:
+  fields:
+    title:
+      description: 'The title of the notification'
+      example: 'State change'
+    message:
+      description: 'The message content'
+      example: 'The light is on!'
   sequence:
     - condition: state
       entity_id: input_boolean.disable_alarm_notification
