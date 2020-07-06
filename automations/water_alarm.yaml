@@ -27,8 +27,7 @@
     - service: media_player.media_pause
       entity_id: media_player.mybraviatv
     - alias: Voice Alarm
-      service: homeassistant.turn_on
-      entity_id: script.alarm_voice
+      service: script.alarm_voice
       data:
         message: "A water leak has been detected. The
         {% if is_state('binary_sensor.water_sensor_1', 'on') or is_state('binary_sensor.water_sensor_4', 'on') %}
