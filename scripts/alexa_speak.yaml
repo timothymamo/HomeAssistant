@@ -1,8 +1,12 @@
 alexa_speak:
   alias: "Alexa TTS"
   sequence:
-    service: notify.alexa_media_simon_s_echo_dot
+    service: notify.alexa_media
     data_template:    
       data:
         type: tts
       message: "{{ states('input_text.text1') }}"
+      target: 
+        - "Timothy's Bose Soundbar 500"
+        - "Kitchen Dot"
+        - "Bedroom Dot"
