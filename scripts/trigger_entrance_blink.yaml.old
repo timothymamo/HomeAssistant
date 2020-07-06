@@ -1,9 +1,0 @@
-trigger_entrance_blink:
-  alias: Blink Snap Picture Entrance
-  sequence:
-    - service: blink.trigger_camera
-      data:
-        name: "Entrance"
-    - delay:
-        seconds: 10
-    - service: blink.blink_update

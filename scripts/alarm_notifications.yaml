@@ -1,14 +1,9 @@
-alarm_notifications:
+alarm_notification:
   sequence:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: input_boolean.no_one_home
-          state: 'on'
-        - condition: state
-          entity_id: input_boolean.disable_alarm
-          state: 'off'
+    - condition: state
+      entity_id: input_boolean.disable_alarm_notification
+      state: 'off'
     - service: notify.tim_phone_notifier
       data:
-        title: "!!! ENTRANCE HAS BEEN TRIGGERED !!!"
-        message: "!!! The front door has been opened !!!"
+        title: "{{ title }}"
+        message: "{{ message }}"

@@ -8,6 +8,7 @@ presence:
     - input_boolean.meter_notification_sent
     - input_boolean.cleaner
     - input_boolean.disable_alarm
+    - input_boolean.no_voice_alarm
 
 presence_booleans:
   name: Presence Booleans

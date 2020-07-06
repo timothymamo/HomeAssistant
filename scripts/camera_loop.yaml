@@ -1,30 +1,8 @@
-camera_arm_disarm:
-  alias: Camera Arm and Disarm
-  sequence:
-    - condition: state
-      entity_id: input_boolean.cleaner
-      state: 'on'
-    - alias: Ensure Camera Loop Script is OFF
-      service: script.turn_off
-      entity_id: script.camera_loop
-    - alias: Arm Camera
-      service: ifttt.trigger
-      data: {"event":"arm_blink"}
-    - delay:
-        seconds: 45
-    - alias: Disarm Camera
-      service: ifttt.trigger
-      data: {"event":"disarm_blink"}
-    - alias: Call Camera Loop
-      service: script.camera_loop
-      data:
-        minutes: 90
-
 camera_loop:
   alias: Camera loop
   sequence:
     - delay:
         minutes: "{{ minutes }}"
-    - alias: Call Camera Arm and Disarm Script
+    - alias: Call Camera Alarm Script
       service: script.turn_on
-      entity_id: script.camera_arm_disarm
+      entity_id: script.alarm_camera

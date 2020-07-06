@@ -1,16 +1,8 @@
 alarm_voice:
   sequence:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: input_boolean.no_voice_alarm
-          state: 'off'
-        - condition: state
-          entity_id: input_boolean.no_one_home
-          state: 'on'
-        - condition: state
-          entity_id: input_boolean.disable_alarm
-          state: 'off'
+    - condition: state
+      entity_id: input_boolean.disable_voice_alarm
+      state: 'off'
     - alias: Increase Volume
       service: media_player.volume_set
       data:
@@ -28,7 +20,7 @@ alarm_voice:
           - "Timothy's Bose Soundbar 500"
           - "Kitchen Dot"
           - "Bedroom Dot"
-        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+        message: "{{ message }}"
         data:
           type: tts
     - delay:
@@ -48,12 +40,3 @@ alarm_voice:
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
-
-voice_loop:
-  alias: Voice loop
-  sequence:
-    - delay:
-        seconds: 5
-    - alias: Call Voice Script
-      service: script.turn_on
-      entity_id: script.alarm_voice

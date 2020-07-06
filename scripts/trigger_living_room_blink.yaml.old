@@ -1,9 +1,0 @@
-trigger_living_room_blink:
-  alias: Blink Snap Picture Living Room
-  sequence:
-    - service: blink.trigger_camera
-      data:
-        name: "Living Room"
-    - delay:
-        seconds: 10
-    - service: blink.blink_update

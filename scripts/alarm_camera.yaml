@@ -1,0 +1,24 @@
+alarm_camera:
+  alias: Camera Alarm
+  sequence:
+    - condition: state
+      entity_id: input_boolean.disable_alarm_camera
+      state: 'off'
+    - alias: Ensure Camera Loop Script is OFF
+      service: script.turn_off
+      entity_id: script.camera_loop
+    - alias: Arm Camera
+      service: ifttt.trigger
+      data: {"event":"arm_blink"}
+    - delay:
+        seconds: 45
+    - alias: Disarm Camera
+      service: ifttt.trigger
+      data: {"event":"disarm_blink"}
+    - condition: state
+      entity_id: input_boolean.disable_alarm_camera
+      state: 'off'
+    - alias: Call Camera Loop
+      service: script.camera_loop
+      data:
+        minutes: 90

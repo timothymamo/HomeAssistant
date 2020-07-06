@@ -82,13 +82,20 @@ disable_alarm:
   name: "Disable Alarm"
   icon: mdi:alarm-bell
 
-no_flashing_lights:
-  name: "Disable Flashing Lights"
+disable_alarm_lights:
+  name: "Disable Alarm Lights"
   icon: mdi:car-parking-lights
 
-no_voice_alarm:
+disable_alarm_voice:
   name: "Disable Voice Alarm"
   icon: mdi:voice-off
+
+disable_alarm_notification:
+  name: "Disable Notification Alarm"
+  icon: mdi:message-alert-outline
+
+disable_alarm_camera:
+  name: "Disable Camera Alarm"
 
 cleaner:
   name: "Cleaner"
