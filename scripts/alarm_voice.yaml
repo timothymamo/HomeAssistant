@@ -5,7 +5,7 @@ alarm_voice:
       example: 'The light is on!'
   sequence:
     - condition: state
-      entity_id: input_boolean.disable_voice_alarm
+      entity_id: input_boolean.disable_alarm_voice
       state: 'off'
     - alias: Increase Volume
       service: media_player.volume_set
