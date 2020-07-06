@@ -1,4 +1,8 @@
 alarm_voice:
+  fields:
+    message:
+      description: 'The message content'
+      example: 'The light is on!'
   sequence:
     - condition: state
       entity_id: input_boolean.disable_voice_alarm
@@ -15,7 +19,7 @@ alarm_voice:
         seconds: 2
     - alias: Voice Script
       service: notify.alexa_media
-      data:
+      data_template:
         message: "{{ message }}"
         target: 
           - "Timothy's Bose Soundbar 500"
