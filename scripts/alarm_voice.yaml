@@ -15,7 +15,7 @@ alarm_voice:
         seconds: 2
     - alias: Voice Script
       service: notify.alexa_media
-      data_template:
+      data:
         message: "{{ message }}"
         target: 
           - "Timothy's Bose Soundbar 500"
