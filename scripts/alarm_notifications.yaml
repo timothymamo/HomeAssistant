@@ -4,6 +4,6 @@ alarm_notification:
       entity_id: input_boolean.disable_alarm_notification
       state: 'off'
     - service: notify.tim_phone_notifier
-      data:
+      data_template:
         title: "{{ title }}"
         message: "{{ message }}"
