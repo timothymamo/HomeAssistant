@@ -2,10 +2,18 @@
   trigger:
     - platform: template
       value_template: '{% if not is_state("person.ruby", "home") and not is_state("person.tim", "home") %}true{% endif %}'
-  condition: 
-    - condition: state
-      entity_id: input_boolean.override_presence
-      state: 'off'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.override_presence
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.cleaner
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.guests
+        state: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.no_one_home
