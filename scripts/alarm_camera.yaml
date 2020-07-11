@@ -1,9 +1,15 @@
 alarm_camera:
   alias: Camera Alarm
   sequence:
-    - condition: state
-      entity_id: input_boolean.disable_alarm_camera
-      state: 'off'
+    - condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: input_boolean.disable_alarm_camera
+            state: 'off'
+          - condition: state
+            entity_id: input_boolean.no_one_home
+            state: 'on'
     - alias: Ensure Camera Loop Script is OFF
       service: script.turn_off
       entity_id: script.camera_loop
