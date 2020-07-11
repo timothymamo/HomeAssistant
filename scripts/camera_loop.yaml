@@ -1,6 +1,9 @@
 camera_loop:
   alias: Camera loop
   sequence:
+    - condition: state
+      entity_id: input_boolean.guests
+      state: 'off'
     - delay:
         minutes: "{{ minutes }}"
     - alias: Call Camera Alarm Script
