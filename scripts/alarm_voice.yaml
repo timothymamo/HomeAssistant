@@ -4,15 +4,12 @@ alarm_voice:
       description: 'The message content'
       example: 'The light is on!'
   sequence:
-    - condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: input_boolean.disable_alarm_voice
-            state: 'off'
-          - condition: state
-            entity_id: input_boolean.no_one_home
-            state: 'on'
+    - condition: state
+      entity_id: input_boolean.disable_alarm_voice
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.no_one_home
+      state: 'on'
     - alias: Increase Volume
       service: media_player.volume_set
       data:

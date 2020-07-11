@@ -7,15 +7,12 @@ alarm_notification:
       description: 'The message content'
       example: 'The light is on!'
   sequence:
-    - condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: input_boolean.disable_alarm_notification
-            state: 'off'
-          - condition: state
-            entity_id: input_boolean.no_one_home
-            state: 'on'
+    - condition: state
+      entity_id: input_boolean.disable_alarm_notification
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.no_one_home
+      state: 'on'
     - service: notify.tim_phone_notifier
       data_template:
         title: "{{ title }}"
