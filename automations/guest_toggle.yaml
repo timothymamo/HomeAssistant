@@ -8,5 +8,4 @@
       entity_id: input_boolean.guests
       state: 'on'
   action:
-    - service: script.turn_on
-      entity_id: script.alarm_camera
+    - service: script.alarm_camera

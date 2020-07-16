@@ -17,8 +17,7 @@
       entity_id: input_boolean.cleaner
       state: 'on'
   action:
-    - service: script.turn_on
-      entity_id: script.alarm_camera
+    - service: script.alarm_camera
 
 - alias: 'Toggle No One Home - Cleaner Boolean OFF'
   trigger:
