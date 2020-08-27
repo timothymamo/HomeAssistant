@@ -1,3 +1,0 @@
-username: !secret blink_username
-password: !secret blink_password
-scan_interval: 3600

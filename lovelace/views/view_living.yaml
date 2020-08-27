@@ -33,7 +33,7 @@ cards:
             player_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
-    icon: mdi:playstation
+    icon: mdi:sony-playstation
     artwork: cover
     source: icon
   - entity: media_player.plex_bravia_4k_2015
