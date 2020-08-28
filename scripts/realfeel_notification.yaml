@@ -5,6 +5,6 @@ realfeel_notification:
       data:
         target: 
           - "Bedroom Dot"
-        message: "Currently the real feel is {{ states('sensor.br_feel_temperature_2') | round(0) }} degrees"
+        message: "Currently the real feel is {{ states('sensor.home_realfeel_temperature') | round(0) }} degrees"
         data:
           type: tts
