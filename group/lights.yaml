@@ -1,9 +1,10 @@
 all_lights:
   name: All Lights
   entities:
-    - light.dining_room
-    - light.hue_ambiance_3_bedroom
-    - light.hue_bulb_hallway
-    - light.hue_bulb_kitchen
-    - light.hue_colour
-    - light.inner_candle_entrance
+    - light.dining_1
+    - light.dining_2
+    - light.kitchen
+    - light.hallway
+    - light.bedroom
+    - light.lamp
+    - light.entrance
