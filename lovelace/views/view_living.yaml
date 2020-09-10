@@ -3,7 +3,7 @@ icon: mdi:sofa
 path: living
 cards:
   - entities:
-      - light.hue_colour
+      - light.lamp
     show_header_toggle: true
     title: Living Room
     type: entities

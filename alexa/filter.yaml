@@ -24,9 +24,9 @@ filter:
     - input_datetime.wakeup_time
     - input_number.wakeup_transition
     - script.app_change
-    - light.hue_bulb_hallway
-    - light.hue_ambiance_1_dining
-    - light.hue_ambiance_2_dining
+    - light.hallway
+    - light.dining_1
+    - light.dining_2
     - light.rwl021_6
     - media_player.tv
     - media_player.everywhere

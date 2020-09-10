@@ -1,7 +1,7 @@
 hallway:
   name: Hallway
   entities:
-    - light.hue_bulb_hallway
+    - light.hallway
     - input_boolean.hue_dimmer
 
 hallway_sensors:

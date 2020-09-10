@@ -26,25 +26,25 @@ entity_config:
     name: 'Netflix'
   script.plex:
     name: "Plex"
-  light.hue_ambiance_1_dining:
+  light.dining_1:
     name: 'Dining 1'
     display_categories: 'LIGHT'
-  light.hue_ambiance_2_dining:
+  light.dining_2:
     name: 'Dining 3'
     display_categories: 'LIGHT'
-  light.hue_ambiance_3_bedroom:
+  light.bedroom:
     name: 'Bedroom Light'
     display_categories: 'LIGHT'
-  light.hue_bulb_hallway:
+  light.hallway:
     name: 'Hallway Light'
     display_categories: 'LIGHT'
-  light.hue_bulb_kitchen:
+  light.kitchen:
     name: 'Kitchen Light'
     display_categories: 'LIGHT'
-  light.hue_colour:
+  light.lamp:
     name: 'Lamp'
     display_categories: 'LIGHT'
-  light.inner_candle_entrance:
+  light.entrance:
     name: 'Entrance Light'
     display_categories: 'LIGHT'
   media_player.mybraviatv:

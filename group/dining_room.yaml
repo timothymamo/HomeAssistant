@@ -1,5 +1,5 @@
 dining_room:
   name: Dining Room
   entities:
-    - light.hue_ambiance_1_dining
-    - light.hue_ambiance_2_dining
+    - light.dining_1
+    - light.dining_2

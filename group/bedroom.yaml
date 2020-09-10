@@ -1,4 +1,4 @@
 bedroom:
   name: Bedroom
   entities:
-    - light.hue_ambiance_3_bedroom
+    - light.bedroom

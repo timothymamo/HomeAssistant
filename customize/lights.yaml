@@ -1,15 +1,15 @@
 # Lights
-light.hue_ambiance_1_dining:
+light.dining_1:
   friendly_name: Dining1
-light.hue_ambiance_2_dining:
+light.dining_2:
   friendly_name: Dining2
-light.hue_ambiance_3_bedroom:
+light.bedroom:
   friendly_name: Bedroom
-light.hue_bulb_hallway:
+light.hallway:
   friendly_name: Hallway Light
-light.hue_bulb_kitchen:
+light.kitchen:
   friendly_name: Kitchen
-light.hue_colour:
+light.lamp:
   friendly_name: Lamp
-light.inner_candle_entrance:
+light.entrance:
   friendly_name: Entrance

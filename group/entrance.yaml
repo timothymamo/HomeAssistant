@@ -1,7 +1,7 @@
 entrance:
   name: Entrance
   entities:
-    - light.inner_candle_entrance
+    - light.entrance
 
 entrance_sensors:
   name: Entrance Sensors
