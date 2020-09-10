@@ -1,8 +1,6 @@
 # Temperature Sensors
 sensor.motion_sensor_bottom_stairs_2:
   friendly_name: Temp Sensor Bottom Stairs
-sensor.motion_sensor_entrance_2:
-  friendly_name: Temp Sensor Entrance
 sensor.motion_sensor_hallway_2:
   friendly_name: Temp Sensor Hallway
 sensor.motion_sensor_kitchen:

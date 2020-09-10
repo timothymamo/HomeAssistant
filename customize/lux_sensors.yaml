@@ -1,8 +1,6 @@
 # Lux Sensors
 sensor.motion_sensor_bottom_stairs:
   friendly_name: Lux Sensor Bottom Stairs
-sensor.motion_sensor_entrance:
-  friendly_name: Lux Sensor Entrance
 sensor.motion_sensor_hallway:
   friendly_name: Lux Sensor Hallway
 sensor.motion_sensor_kitchen_2:

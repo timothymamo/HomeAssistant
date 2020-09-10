@@ -1,11 +1,11 @@
 - alias: 'Toggle entrance boolean when sensor triggers'
   trigger:
     - platform: state
-      entity_id: binary_sensor.window_door_sensor_1
+      entity_id: binary_sensor.window_door_sensor_entrance
       to: 'on'
   condition: 
     - condition: template
-      value_template: '{{ ( (as_timestamp(states.binary_sensor.window_door_sensor_1.last_changed) 
+      value_template: '{{ ( (as_timestamp(states.binary_sensor.window_door_sensor_entrance.last_changed) 
       - (as_timestamp(states.binary_sensor.motion_sensor_hallway.last_changed))) > 0 ) }}'
   action:
     - service: homeassistant.turn_on
