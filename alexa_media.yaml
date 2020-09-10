@@ -1,7 +1,7 @@
 accounts:
   - email: !secret amazon_user
     password: !secret amazon_password
-    url: amazon.co.uk
+    url: amazon.nl
     exclude_devices:
       - "This Device"
       - "Everywhere"
