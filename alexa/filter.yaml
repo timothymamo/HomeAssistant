@@ -7,7 +7,7 @@ filter:
     - group.hallway
     - group.kitchen
     - group.living_room
-    - script.disney_plus
+    - script.amazon_video
     - script.netflix
     - script.realfeel_notification
     - script.plex

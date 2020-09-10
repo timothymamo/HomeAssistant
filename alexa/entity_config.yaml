@@ -20,7 +20,7 @@ entity_config:
   group.living_room:
     name: 'Living Room'
     display_categories: 'LIGHT'
-  script.disney_plus:
+  script.amazon_video:
     name: 'Disney Plus'
   script.netflix:
     name: 'Netflix'
@@ -52,9 +52,6 @@ entity_config:
     display_categories: 'TV'
   media_player.playstation_4:
     name: 'PlayStation 4'
-    display_categories: 'TV'
-  media_player.plex_bravia_4k_2015:
-    name: 'Plex TV'
     display_categories: 'TV'
   scene.movie_night:
     name: 'Movie Night'

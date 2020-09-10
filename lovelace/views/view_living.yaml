@@ -26,18 +26,13 @@ cards:
           id: script.app_change
           data:
             player_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
-        - icon: mdi:death-star-variant
+        - icon: mdi:amazon
           type: script
           id: script.app_change
           data:
-            player_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+            player_uri: 'com.sony.dtv.com.amazon.aiv.eu.com.amazon.ignition.IgnitionActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:sony-playstation
-    artwork: cover
-    source: icon
-  - entity: media_player.plex_bravia_4k_2015
-    type: custom:mini-media-player
-    icon: mdi:plex
     artwork: cover
     source: icon
