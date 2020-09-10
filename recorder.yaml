@@ -31,13 +31,10 @@ exclude:
     - sensor.timothy_s_bose_soundbar_500_next_alarm
     - sensor.timothy_s_bose_soundbar_500_next_reminder
     - sensor.timothy_s_bose_soundbar_500_next_timer
-    - sensor.window_door_sensor_1_battery_level
+    - sensor.window_door_sensor_entrance_battery_level
 include:
   entities:
-    - device_tracker.rubys_galaxy_s7
-    - device_tracker.rubys_s7
-    - device_tracker.tims_galaxy_s7
-    - device_tracker.tims_s7
+    - device_tracker.ruby_ha_app
     - device_tracker.tim_ha_app
     - switch.transmission_switch
     - switch.transmission_turtle_mode
