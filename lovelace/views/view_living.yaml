@@ -30,7 +30,7 @@ cards:
           type: script
           id: script.app_change
           data:
-            player_uri: 'com.sony.dtv.com.amazon.aiv.eu.com.amazon.blasthtml5android.MainActivity'
+            player_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:sony-playstation

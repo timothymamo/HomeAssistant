@@ -1,8 +1,11 @@
+# to get a list of all the apps on the TV run the following:
+# curl -XPOST http://192.168.1.200/sony/appControl -d '{"id":2,"method":"getApplicationList","version":"1.0","params":["1.0"]}' -H 'X-Auth-PSK: <PSK can be found in secrets.yaml file>' | jq -r '.result[]'
+
 amazon_video:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.amazon.aiv.eu.com.amazon.blasthtml5android.MainActivity'
+        app_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
 netflix:
   sequence:
     - service: shell_command.app_change
