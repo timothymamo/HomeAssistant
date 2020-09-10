@@ -2,13 +2,12 @@ amazon_video:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.amazon.aiv.eu.com.amazon.ignition.IgnitionActivity'
+        app_uri: 'com.sony.dtv.com.amazon.aiv.eu.com.amazon.blasthtml5android.MainActivity'
 netflix:
   sequence:
     - service: shell_command.app_change
       data_template:
         app_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
-
 plex:
   sequence:
     - service: shell_command.app_change
