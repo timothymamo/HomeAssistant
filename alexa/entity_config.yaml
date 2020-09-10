@@ -21,7 +21,7 @@ entity_config:
     name: 'Living Room'
     display_categories: 'LIGHT'
   script.amazon_video:
-    name: 'Disney Plus'
+    name: 'Amazon Video'
   script.netflix:
     name: 'Netflix'
   script.plex:
