@@ -3,5 +3,4 @@ dining_room:
   entities:
     - light.dining_1
     - light.dining_2
-  icon:
-    - mdi:lightbulb
+  icon: mdi:lightbulb
