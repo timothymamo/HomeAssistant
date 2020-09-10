@@ -7,7 +7,7 @@ badges:
 cards:
   - type: entities
     entities:
-      - light.dining_room
+      - group.dining_room
       - light.bedroom
       - light.hallway
       - light.kitchen
