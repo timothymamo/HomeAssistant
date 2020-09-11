@@ -13,3 +13,13 @@
     vpn_status:
       friendly_name: "VPN Status Check"
       value_template: "new"
+
+- platform: template
+  sensors:
+    last_alexa:
+      entity_id:
+        - media_player.bedroom_dot
+        - media_player.kitchen_dot
+        - media_player.timothy_s_bose_soundbar_500
+      value_template: >
+        {{ states.media_player | selectattr('attributes.last_called','eq',True) | map(attribute='entity_id') | first }}

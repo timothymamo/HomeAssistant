@@ -4,7 +4,7 @@ realfeel_notification:
       service: notify.alexa_media
       data:
         target: 
-          - "Bedroom Dot"
+          - "{{ states.sensor.last_alexa.state }}"
         message: "Currently the real feel is {{ states('sensor.home_realfeel_temperature') | round(0) }} degrees"
         data:
           type: tts
