@@ -16,8 +16,10 @@ cards:
       columns: 4 # Max buttons per row
       buttons:
         - icon: mdi:netflix
-          type: tvshow
-          id: Netflix
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
         - icon: mdi:format-header-1
           type: source
           id: 'HDMI 1'
