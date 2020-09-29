@@ -1,7 +1,3 @@
-## Upcoming Changes which need to be fixed before shit is broken
-## Plex will not support yaml anymore - integration is done via the UI
-## Can the braviatv integration be used rather than the custom component?
-
 # Default integrations (substitute for default_config) 
 config:
 frontend:
@@ -32,7 +28,6 @@ cloud:
 influxdb: !include influxdb.yaml
 device_tracker: !include device_trackers.yaml
 discovery: !include discovery.yaml
-# media_player: !include media_player.yaml
 recorder: !include recorder.yaml
 notify: !include notify.yaml
 hacs: !include hacs.yaml
