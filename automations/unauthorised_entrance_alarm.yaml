@@ -19,10 +19,10 @@
       data:
         title: "!!! ENTRANCE HAS BEEN TRIGGERED !!!"
         message: "!!! The front door has been opened !!!"
-    - alias: Enable Cameras
-      service: script.alarm_camera
     - alias: Enable Alarm Lights
       service: script.alarm_lights
+    - alias: Enable Cameras
+      service: script.alarm_camera
     - alias: Delay for 5 seconds
       delay:
         seconds: 5
