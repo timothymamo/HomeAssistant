@@ -3,7 +3,7 @@
     platform: event
     event_type: transmission_downloaded_torrent
   action:
-    - service: notify.tim_phone_notifier
+    - service: notify.mobile_app_tim_mobile
       data_template:
         title: "Torrent completed!"
         message: "{{trigger.event.data.name}}"

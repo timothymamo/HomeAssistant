@@ -20,7 +20,7 @@
       entity_id: input_boolean.vpn_notification_sent
       state: 'off'
   action:
-    - service: notify.tim_phone_notifier
+    - service: notify.mobile_app_tim_mobile
       data:
         title: "VPN is NOT Connected!!!"
         message: "Your VPN connection seems to be disabled"

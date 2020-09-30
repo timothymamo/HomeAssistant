@@ -14,7 +14,7 @@
         entity_id: input_boolean.meter_notification_sent
         state: 'off'
   action:
-    - service: notify.tim_phone_notifier
+    - service: notify.mobile_app_tim_mobile
       data:
         title: "Meter Readings Reminder"
         message: "Reminder to take Elec/Gas/Water readings"
