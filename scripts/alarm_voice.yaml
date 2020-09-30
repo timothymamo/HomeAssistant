@@ -18,11 +18,12 @@ alarm_voice:
     - alias: Voice Script
       service: notify.alexa_media
       data:
-        type: tts
-      message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
-      target:
-        - "Kitchen Dot"
-        - "Bedroom Dot"
+        data:
+          type: tts
+        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+        target:
+          - "Kitchen Dot"
+          - "Bedroom Dot"
     - delay:
         seconds: 15
     - alias: Decrease Dots Volume
