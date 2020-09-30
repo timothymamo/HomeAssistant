@@ -26,6 +26,9 @@ alarm_voice:
           - "Bedroom Dot"
     - delay:
         seconds: 15
+    - condition: state
+      entity_id: input_boolean.disable_alarm_voice
+      state: 'off'
     - alias: Decrease Dots Volume
       service: media_player.volume_set
       data:
