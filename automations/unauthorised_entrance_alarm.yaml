@@ -1,5 +1,4 @@
 - alias: 'Trigger alarm when unauthorised entrance is triggered'
-  mode: parallel
   trigger:
     - platform: state
       entity_id: input_boolean.entrance
