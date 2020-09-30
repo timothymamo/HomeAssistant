@@ -17,10 +17,10 @@ alarm_voice:
         seconds: 2
     - alias: Voice Script
       service: notify.alexa_media
-      data:
+      data_template:
         data:
           type: tts
-        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+        message: "{{ message }}"
         target:
           - "Kitchen Dot"
           - "Bedroom Dot"

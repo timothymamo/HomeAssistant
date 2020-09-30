@@ -47,6 +47,8 @@
       service: script.alarm_lights
     - alias: Enable Unauthorised Entrance Voice Alarm
       service: script.alarm_voice
+      data:
+        message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
     - alias: Delay for 5 minutes
       delay:
         minutes: 5
