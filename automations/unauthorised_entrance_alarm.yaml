@@ -13,12 +13,12 @@
         entity_id: input_boolean.disable_alarm
         state: 'off'
   action:
-    # - service: notify.mobile_app_tim_mobile
-    #   data:
-    #     message: "request_location_update"
-    # - service: notify.mobile_app_ruby_mobile
-    #   data:
-    #     message: "request_location_update"
+    - service: notify.mobile_app_tim_mobile
+      data:
+        message: "request_location_update"
+    - service: notify.mobile_app_ruby_mobile
+      data:
+        message: "request_location_update"
     # - alias: Delay for 1 seconds
     #   delay:
     #     seconds: 1
