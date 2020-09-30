@@ -22,7 +22,7 @@
     - alias: Delay for 1 seconds
       delay:
         seconds: 1
-    - condition:
+    - condition: state
       entity_id: input_boolean.no_one_home
       state: 'on'
     - alias: Send Notification
