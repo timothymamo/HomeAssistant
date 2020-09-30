@@ -12,10 +12,12 @@
       entity_id: input_boolean.disable_alarm_voice
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm_lights
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.disable_alarm_notification
     - delay:
         minutes: 1
-    - service: homeassistant.turn_on
-      entity_id: automation.enable_alarms
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.disable_alarm
 
 - alias: 'Enable Alarms'
   trigger:
