@@ -17,13 +17,12 @@ alarm_voice:
         seconds: 2
     - alias: Voice Script
       service: notify.alexa_media
-      data_template:
-        data:
-          type: tts
-        message: "Hello Tim Script"
-        target:
-          - "Kitchen Dot"
-          - "Bedroom Dot"
+      data:
+        type: tts
+      message: "Unauthorised entrance has been detected. Video recording is enabled. The home owner and police have been notified. LEAVE NOW!!"
+      target:
+        - "Kitchen Dot"
+        - "Bedroom Dot"
     - delay:
         seconds: 15
     - alias: Decrease Dots Volume
@@ -33,11 +32,6 @@ alarm_voice:
           - media_player.bedroom_dot
           - media_player.kitchen_dot
         volume_level: 0.65
-    - alias: Decrease Soundbar Volume
-      service: media_player.volume_set
-      data:
-        entity_id: media_player.timothy_s_bose_soundbar_500
-        volume_level: 0.30
     - alias: Call Loop Voice Script
       service: script.turn_on
       entity_id: script.voice_loop
