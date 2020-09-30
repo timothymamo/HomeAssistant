@@ -18,11 +18,11 @@
       data:
         title: "!!! WATER SENSOR WARNING !!!"
         message: "{% if is_state('binary_sensor.water_sensor_kitchen_1', 'on') or is_state('binary_sensor.water_sensor_kitchen_2', 'on') %}
-        !!! Water sensor under the <b>dish washer</b> has been triggered !!!
+        !!! Water sensor under the dish washer has been triggered !!!
         {% elif is_state('binary_sensor.water_sensor_washing_machine', 'on') %}
-        !!! Water sensor under the <b>washing machine</b> has been triggered !!!
+        !!! Water sensor under the washing machine has been triggered !!!
         {% elif is_state('binary_sensor.water_sensor_boiler', 'on') %}
-        !!! Water sensor under the <b>boiler</b> has been triggered !!!
+        !!! Water sensor under the boiler has been triggered !!!
         {% endif %}"
     - service: media_player.media_pause
       entity_id: media_player.mybraviatv
