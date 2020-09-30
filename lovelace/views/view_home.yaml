@@ -54,3 +54,9 @@ cards:
               "400": "mdi:alert-circle-outline"
               "401": "mdi:alert-circle-outline"
               "403": "mdi:alert-circle-outline"
+
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Disable Alarms
+    group: group.disable_alarms

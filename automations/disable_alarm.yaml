@@ -13,17 +13,9 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm_lights
     - delay:
-        minutes: 10
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.disable_alarm
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.disable_alarm_camera
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.disable_alarm_voice
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.disable_alarm_lights
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.disable_alarm_notification
+        minutes: 1
+    - service: homeassistant.turn_on
+      entity_id: automation.enable_alarms
 
 - alias: 'Enable Alarms'
   trigger:
