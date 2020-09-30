@@ -6,7 +6,7 @@ stop_voice_notification:
         entity_id: 
           - media_player.bedroom_dot
           - media_player.kitchen_dot
-        volume_level: 0
+        volume_level: 0.01
     - delay:
         seconds: 30
     - alias: Reset Dots Volume
@@ -15,4 +15,4 @@ stop_voice_notification:
         entity_id: 
           - media_player.bedroom_dot
           - media_player.kitchen_dot
-        volume_level: 0.65
+        volume_level: 0.7
