@@ -19,12 +19,12 @@
     - service: notify.mobile_app_ruby_mobile
       data:
         message: "request_location_update"
-    # - alias: Delay for 1 seconds
-    #   delay:
-    #     seconds: 1
-    # - condition:
-    #     entity_id: input_boolean.no_one_home
-    #     state: 'on'
+    - alias: Delay for 1 seconds
+      delay:
+        seconds: 1
+    - condition:
+      entity_id: input_boolean.no_one_home
+      state: 'on'
     - alias: Send Notification
       service: script.alarm_notification
       data:
