@@ -14,7 +14,7 @@
       entity_id: input_boolean.disable_alarm_lights
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm_notification
-    - service: automation.reload
+    - service: automation.toggle
       entity_id: 
         - automation.warn_when_water_sensor_is_triggered
         - automation.trigger_alarm_when_unauthorised_entrance_is_triggered
