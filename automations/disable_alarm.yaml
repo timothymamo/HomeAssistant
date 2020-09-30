@@ -14,6 +14,8 @@
       entity_id: input_boolean.disable_alarm_lights
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm_notification
+    - service: automation.reload
+      entity_id: all
     - delay:
         minutes: 1
     - service: homeassistant.turn_off
