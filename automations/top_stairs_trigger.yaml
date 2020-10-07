@@ -1,4 +1,5 @@
 - alias: 'Turn on Dining and Hallway when top stairs sensor triggered'
+  mode: restart
   trigger:
     - platform: state
       entity_id: input_boolean.top_stairs
