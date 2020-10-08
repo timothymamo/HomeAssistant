@@ -4,10 +4,6 @@
       entity_id: input_boolean.disable_alarm
       to: 'on'
   action:
-    - service: script.turn_on
-      entity_id: script.stop_voice_notification
-    - service: script.turn_on
-      entity_id: script.stop_camera
     - service: homeassistant.turn_on
       entity_id: input_boolean.disable_alarm_camera
     - service: homeassistant.turn_on
