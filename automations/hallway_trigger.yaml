@@ -17,7 +17,7 @@
   action:
     - service: script.turn_on_entrance
 
-- alias: 'Turn off Entrance after 2 min'
+- alias: 'Turn off Entrance after 3 min'
   trigger:
     - platform: state
       entity_id: input_boolean.hallway
