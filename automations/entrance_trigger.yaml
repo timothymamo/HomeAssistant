@@ -34,6 +34,13 @@
           for:
             minutes: 2
     - service: script.turn_off_hallway
+    - delay:
+        minutes: 3
+    - condition: state
+      entity_id: media_player.mybraviatv
+      state: 'on'
+    - service: script.turn_off_dining
+
 
 - alias: 'Turn off Dining after 3 min TV is on'
   trigger:
