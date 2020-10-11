@@ -6,10 +6,34 @@
   condition:
     condition: and
     conditions:
+      - condition: or
+        conditions:
+          - condition: time
+            weekday:
+              - mon
+          - condition: template
+            value_template: "{%- macro last_dayofmonth(month, year) -%}
+                              {%- set daysinmonths = [31,28,31,30,31,30,31,31,30,31,30,31] -%}
+                              {%- set month = month|int -%}
+                              {%- set year = year|int -%}
+                              {# Simplified leap year calculation. See https://www.mathsisfun.com/leap-years.html #}
+                              {%- set isleapyear = year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) -%}
+                              {%- set monthindex = month-1 -%}
+                              {%- if month == 2 and isleapyear -%}
+                                {{ daysinmonths[monthindex]+1 }}
+                              {%- else -%}
+                                {{ daysinmonths[monthindex] }}
+                              {%- endif -%}
+                            {%- endmacro -%}
+
+                            {%- set month_now = (as_timestamp(now()) | timestamp_custom ('%m')) -%}
+                            {%- set year_now = (as_timestamp(now()) | timestamp_custom ('%G')) -%}
+
+                            {{ last_dayofmonth(month_now, year_now) == (as_timestamp(now()) | timestamp_custom ('%d')) }}"
+          - condition: template
+            value_template: "{{ (as_timestamp(now()) | timestamp_custom ('%d')) == 1 }}"
       - condition: time
         after: '16:00:00'
-        weekday:
-          - mon
       - condition: state
         entity_id: input_boolean.meter_notification_sent
         state: 'off'

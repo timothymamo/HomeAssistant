@@ -4,9 +4,13 @@
       entity_id: input_boolean.disable_alarm
       to: 'on'
   condition:
-    condition: template
-    value_template: '{{ ( (as_timestamp(states.input_boolean.disable_alarm.last_changed) 
-    - (as_timestamp(states.input_boolean.entrance.last_changed))) > 0 ) }}'
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ ( (as_timestamp(states.input_boolean.disable_alarm.last_changed) 
+        - (as_timestamp(states.input_boolean.entrance.last_changed))) > 0 ) }}'
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
     - alias: Delay for 1 seconds
       delay:
