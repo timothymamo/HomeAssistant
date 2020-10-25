@@ -1,8 +1,8 @@
 temp_sensors:
   name: Temperature Sensors
   entities:
-    - sensor.motion_sensor_bottom_stairs_2
-    - sensor.motion_sensor_hallway_2
+    - sensor.motion_sensor_bottom_stairs
+    - sensor.motion_sensor_hallway
     - sensor.motion_sensor_kitchen
-    - sensor.motion_sensor_storage_2
-    - sensor.motion_sensor_top_stairs_2
+    - sensor.motion_sensor_storage
+    - sensor.motion_sensor_top_stairs
