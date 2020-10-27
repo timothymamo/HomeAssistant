@@ -1,4 +1,5 @@
-- alias: Send Notificxation Completed Torrent
+- alias: Send Notification Completed Torrent
+  mode: queued
   trigger:
     platform: event
     event_type: transmission_downloaded_torrent
