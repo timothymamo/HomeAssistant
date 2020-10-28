@@ -26,3 +26,17 @@
         minutes: 2
   action:
     - service: script.turn_off_kitchen
+
+- alias: 'Turn off bedroom when kitchen goes on and only one person in house'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.kitchen
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition:  state
+        entity_id: input_boolean.one_person
+        state: 'on'
+  action:
+    - service: script.turn_off_bedroom

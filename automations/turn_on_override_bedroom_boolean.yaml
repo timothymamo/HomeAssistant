@@ -1,4 +1,4 @@
-- alias: 'Turn on bedroom override booleab'
+- alias: 'Turn on bedroom override boolean if bottom stairs counter below one'
   trigger:
     - platform: state
       entity_id: input_boolean.top_stairs
