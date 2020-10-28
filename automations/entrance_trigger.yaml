@@ -21,10 +21,10 @@
       entity_id: input_boolean.asleep
       state: 'off'
     - delay:
-        seconds: 30
+        seconds: 10
     - service: script.turn_on_dining
     - delay:
-        minutes: 1
+        minutes: 2
     - service: script.turn_off_entrance
     - condition: and
       conditions:
@@ -32,7 +32,7 @@
           entity_id: input_boolean.storage
           state: 'off'
           for:
-            minutes: 2
+            minutes: 1
     - service: script.turn_off_hallway
     - delay:
         minutes: 3
