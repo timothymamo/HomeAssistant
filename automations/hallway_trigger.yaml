@@ -26,3 +26,21 @@
         minutes: 3
   action:
     - service: script.turn_off_entrance
+
+- alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hallway
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition:  state
+        entity_id: input_boolean.one_person
+        state: 'on'
+  action:
+    - service: script.turn_off_dining
+    - service: script.turn_off_bedroom
+    - service: script.turn_off_living
+    - service: script.turn_off_entrance
+    - service: script.turn_off_kitchen

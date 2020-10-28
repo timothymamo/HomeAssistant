@@ -16,3 +16,18 @@
         state: 'off'
   action:
     - service: script.turn_on_bedroom
+
+- alias: 'Turn off downstairs when bottom stairs sensor triggered and only one person in house'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bottom_stairs
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition:  state
+        entity_id: input_boolean.one_person
+        state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.downstairs_lights
