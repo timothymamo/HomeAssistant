@@ -109,6 +109,10 @@ tim:
   name: "Tim"
   icon: mdi:human-male
 
+one_person:
+  name: "One Person"
+  icon: mdi:account
+
 guests:
   name: "Guests"
   icon: mdi:account-multiple-outline
