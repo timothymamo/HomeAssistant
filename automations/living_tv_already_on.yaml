@@ -42,3 +42,27 @@
     - delay:
         minutes: 3
     - service: script.turn_off_dining
+
+- alias: 'Turn on Living Room if TV goes on and it is dark'
+  trigger:
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+      - condition: state
+        entity_id: input_boolean.no_one_home
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
+  action:
+    - condition: state
+      entity_id: input_boolean.living_light_override
+      state: 'off'
+    - service: script.turn_off_dining
+    - service: scene.turn_on
+      entity_id: scene.movie_night_light
