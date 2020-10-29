@@ -19,13 +19,17 @@
     - service: script.turn_on_dining
     - service: script.turn_on_hallway
     - delay:
-        minutes: 3
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: binary_sensor.window_door_sensor_storage
-          state: 'off'
+        minutes: 1
+    - condition: state
+      entity_id: binary_sensor.window_door_sensor_storage
+      state: 'off'
     - service: script.turn_off_hallway
+    - delay:
+        minutes: 2
+    - condition: state
+      entity_id: media_player.mybraviatv
+      state: 'on'
+    - service: script.turn_off_dining
 
 - alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
   trigger:
@@ -33,11 +37,9 @@
       entity_id: input_boolean.top_stairs
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition:  state
-        entity_id: input_boolean.one_person
-        state: 'on'
+    - condition:  state
+      entity_id: input_boolean.one_person
+      state: 'on'
   action:
     - service: script.turn_off_bedroom
     - service: script.turn_off_living
