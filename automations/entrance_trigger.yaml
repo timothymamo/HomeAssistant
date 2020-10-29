@@ -5,10 +5,8 @@
       entity_id: input_boolean.entrance
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition: template
-        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+    - condition: template
+      value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
   action:
     - service: script.turn_on_entrance
     - delay:
@@ -26,13 +24,11 @@
     - delay:
         minutes: 2
     - service: script.turn_off_entrance
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: input_boolean.storage
-          state: 'off'
-          for:
-            minutes: 1
+    - condition: state
+      entity_id: input_boolean.storage
+      state: 'off'
+      for:
+        minutes: 1
     - service: script.turn_off_hallway
     - delay:
         minutes: 3
@@ -57,11 +53,9 @@
       entity_id: media_player.mybraviatv
       to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition:  state
-        entity_id: input_boolean.one_person
-        state: 'on'
+    - condition:  state
+      entity_id: input_boolean.one_person
+      state: 'on'
   action:
     - service: script.turn_off_dining
     - service: script.turn_off_bedroom
