@@ -40,3 +40,4 @@
         state: 'on'
   action:
     - service: script.turn_off_bedroom
+    - service: script.turn_off_hallway
