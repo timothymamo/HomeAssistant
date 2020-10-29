@@ -13,7 +13,6 @@ exclude:
     - sensor.time
     - sun.sun
     - weather.home
-    - binary_sensor.window_door_sensor_entrance
     - binary_sensor.vibration_2
     - light.rwl021_6
     - media_player.everywhere
