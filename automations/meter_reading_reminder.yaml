@@ -39,6 +39,9 @@
       - condition: state
         entity_id: input_boolean.meter_notification_sent
         state: 'off'
+      - condition: state
+        entity_id: person.tim
+        state: 'home'
   action:
     - service: notify.mobile_app_tim_mobile
       data:
