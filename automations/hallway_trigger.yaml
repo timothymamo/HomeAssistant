@@ -40,5 +40,4 @@
     - service: script.turn_off_dining
     - service: script.turn_off_bedroom
     - service: script.turn_off_living
-    - service: script.turn_off_entrance
     - service: script.turn_off_kitchen
