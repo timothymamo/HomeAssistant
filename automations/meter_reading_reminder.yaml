@@ -3,6 +3,8 @@
     - platform: state
       entity_id: person.tim
       to: 'home'
+    - platform: time
+      at: "18:30:00"
   condition:
     condition: and
     conditions:
