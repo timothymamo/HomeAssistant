@@ -2,10 +2,6 @@
   trigger:
     - platform: time
       at: "01:00:00"
-  condition:
-    - condition: time
-      weekday:
-        - tue
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.meter_notification_sent
