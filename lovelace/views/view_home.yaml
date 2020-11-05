@@ -15,12 +15,14 @@ cards:
       - light.entrance
     show_header_toggle: true
     title: Lights
+
   - type: custom:group-card
     card:
       type: entities
       show_header_toggle: false
       title: Light Override
     group: group.override_lights
+
   - type: custom:group-card
     card:
       type: entities
