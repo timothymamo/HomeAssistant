@@ -48,4 +48,3 @@ input_text: !include input_text.yaml
 rest_command: !include rest_command.yaml
 ifttt:
   key: !secret ifttt_apikey
-
