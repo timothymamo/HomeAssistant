@@ -1,7 +1,7 @@
 # Default integrations (substitute for default_config) 
 config:
 frontend:
-  themes: !include_dir_merge_named /config/lovelace/themes/
+  themes: !include_dir_merge_named /config/themes/
 history:
 logbook:
 map:
