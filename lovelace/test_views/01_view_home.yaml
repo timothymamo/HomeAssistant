@@ -5,63 +5,80 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - entity: group.dining_room # Change this to the entity you want to control
-    icon: 'mdi:vanity-light' # Change this to the icon you want to display
-    name: Dining Room # Change this to the name you want to display
-    size: 30% # You can adjust the size of the icon
-    styles:
-      img_cell:
-        - padding-left: 25px # You can adjust padding of the icon
-        - justify-content: start
-      card:
-        - width: min(25vw, 100px)
-        - height: min(25vw, 100px)
-        - border-radius: 15px
-        - border-style: solid
-        - border-color: var(--primary-background-color)
-        - border-width: 1px
-        - margin: 10px
-        - box-shadow: |
-            [[[ return states['sun.sun'].state == 'below_horizon'
-              ? '-5px -5px 8px rgba(50, 50, 50, .2), 5px 5px 8px rgba(0, 0, 0, .08)'
-              : '-4px -4px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
-            ]]]
-        - background-color: var(--primary-background-color)
-      icon:
-        - color: var(--primary-text-color)
-      grid:
-        - grid-template-areas: '"i" "n" "s"'
-        - grid-template-columns: 1fr
-        - grid-template-rows: 1fr min-content min-content
-      name:
-        - justify-self: start
-        - font-weight: bold
-        - font-size: 15px
-        - padding-left: 15px
+  type: horizontal-stack
+  cards:
+    - entity: light.bedroom # Change this to the entity you want to control
+      icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
+      show_icon: true
+      show_name: false
       state:
-        - justify-self: start
-        - font-weight: bold
-        - font-size: 15px
-        - opacity: 0.6
-        - padding: 0 15px 5px
-    show_state: true
-    state:
-      - value: 'on'
-        styles:
-          card:
-            - border-width: 2px
-            - box-shadow: |
-                [[[ return states['sun.sun'].state == 'below_horizon'
-                  ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
-                  : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-                ]]]
-            - border-color: var(--paper-item-icon-active-color)
-          icon:
-            - color: var(--paper-item-icon-active-color)
-    tap_action:
-      action: toggle
-      haptic: light
-    hold_action:
-      action: more-info
-      haptic: medium
-    type: 'custom:button-card'
+        - value: 'on'
+          styles:
+            card:
+              - box-shadow: |
+                  [[[ return states['sun.sun'].state == 'below_horizon'
+                    ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
+                    : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
+                  ]]]
+            icon:
+              - color: var(--paper-item-icon-active-color)
+      styles:
+        card:
+          - width: 80px
+          - height: 80px
+          - margin: 10px
+          - border-radius: 15px
+          - box-shadow: |
+              [[[ return states['sun.sun'].state == 'below_horizon'
+                ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+                : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
+              ]]]
+          - background-color: var(--primary-background-color)
+        icon:
+          - color: var(--primary-text-color)
+        # Actions to perform
+        tap_action:
+          action: toggle
+          haptic: light
+        hold_action:
+          action: more-info
+          haptic: medium
+      type: 'custom:button-card'
+    # - cards:
+    #     - content: |
+    #         # Bedroom
+    #       style:
+    #         .: |
+    #           ha-card {
+    #             --ha-card-background: none !important;
+    #             box-shadow: none !important;
+    #             height: 20px;
+    #             margin-top: 15px;
+    #           }
+    #         ha-markdown:
+    #           $: |
+    #             h1 {
+    #               font-size: 20px;
+    #               font-weight: bold;
+    #               font-family: Helvetica;
+    #               letter-spacing: '-0.01em';
+    #             }
+    #       type: markdown
+    #     - content: >
+    #         # Small text to display
+    #       style:
+    #         .: |
+    #           ha-card {
+    #             --ha-card-background: none !important;
+    #             box-shadow: none !important;
+    #           }
+    #         ha-markdown:
+    #           $: |
+    #             h1 {
+    #               font-size: 15px;
+    #               font-weight: thin;
+    #               font-family: Helvetica;
+    #               letter-spacing: '-0.01em';
+    #             }
+    #       type: markdown
+    #   type: vertical-stack
