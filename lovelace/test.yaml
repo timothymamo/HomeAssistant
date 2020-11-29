@@ -1,2 +1,2 @@
 title: My Awesome Home
-views: !include_dir_list lovelace/test_views
+views: !include_dir_merge_list lovelace/test_views/
