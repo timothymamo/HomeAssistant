@@ -81,4 +81,4 @@ cards:
                     letter-spacing: '-0.01em';
                   }
             type: markdown
-      #   type: vertical-stack
+        type: vertical-stack
