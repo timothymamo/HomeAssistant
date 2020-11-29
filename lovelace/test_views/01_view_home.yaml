@@ -5,63 +5,63 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  entity: group.dining_room # Change this to the entity you want to control
-  icon: 'mdi:vanity-light' # Change this to the icon you want to display
-  name: Dining Room # Change this to the name you want to display
-  size: 30% # You can adjust the size of the icon
-  styles:
-    img_cell:
-      - padding-left: 25px # You can adjust padding of the icon
-      - justify-content: start
-    card:
-      - width: min(25vw, 100px)
-      - height: min(25vw, 100px)
-      - border-radius: 15px
-      - border-style: solid
-      - border-color: var(--primary-background-color)
-      - border-width: 1px
-      - margin: 10px
-      - box-shadow: |
-          [[[ return states['sun.sun'].state == 'below_horizon'
-            ? '-5px -5px 8px rgba(50, 50, 50, .2), 5px 5px 8px rgba(0, 0, 0, .08)'
-            : '-4px -4px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
-          ]]]
-      - background-color: var(--primary-background-color)
-    icon:
-      - color: var(--primary-text-color)
-    grid:
-      - grid-template-areas: '"i" "n" "s"'
-      - grid-template-columns: 1fr
-      - grid-template-rows: 1fr min-content min-content
-    name:
-      - justify-self: start
-      - font-weight: bold
-      - font-size: 15px
-      - padding-left: 15px
+  - entity: group.dining_room # Change this to the entity you want to control
+    icon: 'mdi:vanity-light' # Change this to the icon you want to display
+    name: Dining Room # Change this to the name you want to display
+    size: 30% # You can adjust the size of the icon
+    styles:
+      img_cell:
+        - padding-left: 25px # You can adjust padding of the icon
+        - justify-content: start
+      card:
+        - width: min(25vw, 100px)
+        - height: min(25vw, 100px)
+        - border-radius: 15px
+        - border-style: solid
+        - border-color: var(--primary-background-color)
+        - border-width: 1px
+        - margin: 10px
+        - box-shadow: |
+            [[[ return states['sun.sun'].state == 'below_horizon'
+              ? '-5px -5px 8px rgba(50, 50, 50, .2), 5px 5px 8px rgba(0, 0, 0, .08)'
+              : '-4px -4px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
+            ]]]
+        - background-color: var(--primary-background-color)
+      icon:
+        - color: var(--primary-text-color)
+      grid:
+        - grid-template-areas: '"i" "n" "s"'
+        - grid-template-columns: 1fr
+        - grid-template-rows: 1fr min-content min-content
+      name:
+        - justify-self: start
+        - font-weight: bold
+        - font-size: 15px
+        - padding-left: 15px
+      state:
+        - justify-self: start
+        - font-weight: bold
+        - font-size: 15px
+        - opacity: 0.6
+        - padding: 0 15px 5px
+    show_state: true
     state:
-      - justify-self: start
-      - font-weight: bold
-      - font-size: 15px
-      - opacity: 0.6
-      - padding: 0 15px 5px
-  show_state: true
-  state:
-    - value: 'on'
-      styles:
-        card:
-          - border-width: 2px
-          - box-shadow: |
-              [[[ return states['sun.sun'].state == 'below_horizon'
-                ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
-                : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-              ]]]
-          - border-color: var(--paper-item-icon-active-color)
-        icon:
-          - color: var(--paper-item-icon-active-color)
-  tap_action:
-    action: toggle
-    haptic: light
-  hold_action:
-    action: more-info
-    haptic: medium
-  type: 'custom:button-card'
+      - value: 'on'
+        styles:
+          card:
+            - border-width: 2px
+            - box-shadow: |
+                [[[ return states['sun.sun'].state == 'below_horizon'
+                  ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
+                  : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
+                ]]]
+            - border-color: var(--paper-item-icon-active-color)
+          icon:
+            - color: var(--paper-item-icon-active-color)
+    tap_action:
+      action: toggle
+      haptic: light
+    hold_action:
+      action: more-info
+      haptic: medium
+    type: 'custom:button-card'
