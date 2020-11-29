@@ -1,0 +1,24 @@
+- alias: Set Theme
+  trigger:
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: sun.sun
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: "above_horizon"
+      sequence:
+      - service: frontend.set_theme
+        data:
+          name: midnight-remake
+    - conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: "below_horizon"
+      sequence:
+      - service: frontend.set_theme
+        data:
+          name: midnight-remake
