@@ -50,9 +50,9 @@ cards:
             style:
               .: |
                 ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;
-                  height: 20px;
+                  --ha-card-background: none!important;
+                  box-shadow: none!important;
+                  height: 20p;
                   margin-top: 15px;
                 }
               ha-markdown:
