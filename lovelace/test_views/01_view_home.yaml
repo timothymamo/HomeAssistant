@@ -4,6 +4,7 @@ path: home
 badges:
   - person.ruby
   - person.tim
+type: horizontal-stack
 cards:
   - entity: group.dining_room # Change this to the entity you want to control
     icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
@@ -62,79 +63,79 @@ cards:
                 letter-spacing: '-0.01em';
               }
         type: markdown
-      - content: >
-          # Small text to display
-        style:
-          .: |
-            ha-card {
-              --ha-card-background: none !important;
-              box-shadow: none !important;
-            }
-          ha-markdown:
-            $: |
-              h1 {
-                font-size: 15px;
-                font-weight: thin;
-                font-family: Helvetica;
-                letter-spacing: '-0.01em';
-              }
-        type: markdown
+      # - content: >
+      #     # Small text to display
+      #   style:
+      #     .: |
+      #       ha-card {
+      #         --ha-card-background: none !important;
+      #         box-shadow: none !important;
+      #       }
+      #     ha-markdown:
+      #       $: |
+      #         h1 {
+      #           font-size: 15px;
+      #           font-weight: thin;
+      #           font-family: Helvetica;
+      #           letter-spacing: '-0.01em';
+      #         }
+      #   type: markdown
     type: vertical-stack
-  - type: entities
-    entities:
-      - group.dining_room
-      - light.bedroom
-      - light.hallway
-      - light.kitchen
-      - light.lamp
-      - light.entrance
-    show_header_toggle: true
-    title: Lights
+#   - type: entities
+#     entities:
+#       - group.dining_room
+#       - light.bedroom
+#       - light.hallway
+#       - light.kitchen
+#       - light.lamp
+#       - light.entrance
+#     show_header_toggle: true
+#     title: Lights
 
-  - type: custom:group-card
-    card:
-      type: entities
-      show_header_toggle: false
-      title: Light Override
-    group: group.override_lights
+#   - type: custom:group-card
+#     card:
+#       type: entities
+#       show_header_toggle: false
+#       title: Light Override
+#     group: group.override_lights
 
-  - type: custom:group-card
-    card:
-      type: entities
-      show_header_toggle: false
-      title: Presence
-    group: group.presence
+#   - type: custom:group-card
+#     card:
+#       type: entities
+#       show_header_toggle: false
+#       title: Presence
+#     group: group.presence
 
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Wake Up Light
-    group: group.alarm_clock
+#   - type: custom:group-card
+#     card:
+#       type: entities
+#       title: Wake Up Light
+#     group: group.alarm_clock
 
-  - type: entities
-    entities:
-      - type: custom:template-entity-row
-        name: "{{ states.sensor.curl_resp.attributes.message }}"
-        condition: "{{ not is_state('sensor.curl_resp', '200')}}"
-      - type: 'custom:text-input-row'
-        entity: input_text.create_fwd_email
-      - type: "custom:paper-buttons-row"
-        buttons:
-          - entity: sensor.curl_resp
-            name: "Create Frowarding Email"
-            tap_action:
-              action: call-service
-              service: script.create_fwd_email
-            state_icons:
-              "200": "mdi:email-send-outline"
-              "201": "mdi:email-check-outline"
-              "400": "mdi:alert-circle-outline"
-              "401": "mdi:alert-circle-outline"
-              "403": "mdi:alert-circle-outline"
+#   - type: entities
+#     entities:
+#       - type: custom:template-entity-row
+#         name: "{{ states.sensor.curl_resp.attributes.message }}"
+#         condition: "{{ not is_state('sensor.curl_resp', '200')}}"
+#       - type: 'custom:text-input-row'
+#         entity: input_text.create_fwd_email
+#       - type: "custom:paper-buttons-row"
+#         buttons:
+#           - entity: sensor.curl_resp
+#             name: "Create Frowarding Email"
+#             tap_action:
+#               action: call-service
+#               service: script.create_fwd_email
+#             state_icons:
+#               "200": "mdi:email-send-outline"
+#               "201": "mdi:email-check-outline"
+#               "400": "mdi:alert-circle-outline"
+#               "401": "mdi:alert-circle-outline"
+#               "403": "mdi:alert-circle-outline"
 
-  - type: custom:group-card
-    card:
-      type: entities
-      title: Disable Alarms
-    group: group.disable_alarms
-# type: horizontal-stack
+#   - type: custom:group-card
+#     card:
+#       type: entities
+#       title: Disable Alarms
+#     group: group.disable_alarms
+# # type: horizontal-stack
