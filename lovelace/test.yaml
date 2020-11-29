@@ -11,8 +11,8 @@ views:
         # The filter card will filter entities for their state
       - type: entity-filter
         entities:
-          - device_tracker.paulus
-          - device_tracker.anne_there
+          - person.tim
+          - person.ruby
         state_filter:
           - 'home'
         card:
@@ -22,7 +22,7 @@ views:
         # The picture entity card will represent an entity with a picture
       - type: picture-entity
         image: https://www.home-assistant.io/images/default-social.png
-        entity: light.bed_light
+        entity: light.bedroom
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
@@ -37,7 +37,6 @@ views:
         # Each entry is an entity ID or a map with extra options.
         entities:
           - light.kitchen
-          - switch.ac
           - entity: light.living_room
             # Override the name to use
             name: LR Lights
