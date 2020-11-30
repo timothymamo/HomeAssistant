@@ -7,7 +7,7 @@ badges:
 cards:
   - type: horizontal-stack
     cards:
-      - entity: light.bedroom # Change this to the entity you want to control
+      - entity: group.dining_room # Change this to the entity you want to control
         icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
         show_icon: true
         show_name: false
@@ -46,7 +46,7 @@ cards:
         type: 'custom:button-card'
       - cards:
           - content: |
-              # Bedroom
+              # Dining Room
             style:
               .: |
                 ha-card {
@@ -54,6 +54,7 @@ cards:
                   box-shadow: none !important;
                   height: 20px;
                   margin-top: 15px;
+                  color: {% if states('sensor.other_area_lights_on') | float > 0 %} gold {% endif %};
                 }
               ha-markdown:
                 $: |
@@ -65,12 +66,14 @@ cards:
                   }
             type: markdown
           - content: >
-              # Small text to display
+              The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style:
               .: |
                 ha-card {
                   --ha-card-background: none !important;
                   box-shadow: none !important;
+                  color: {% if states('sensor.other_area_lights_on') | float > 0 %} gold {% endif %};
                 }
               ha-markdown:
                 $: |
