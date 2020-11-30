@@ -69,7 +69,7 @@ cards:
     cards:
       - type: 'custom:button-card'
         entity: group.dining_room # Change this to the entity you want to control
-        icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
+        icon: 'mdi:ceiling-light' # Change this to the icon you want to display
         show_icon: true
         show_name: false
         state: *card-state
@@ -80,6 +80,22 @@ cards:
               # Dining Room
 
               ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
+            style: *markdown-style
+        type: vertical-stack
+      - type: 'custom:button-card'
+        entity: light.bedroom # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *card-state
+        styles: *cards-style
+      - cards:
+          - type: markdown
+            content: |
+              # Bedroom
+
+              ## The bedroom light is {% if is_state('group.dining_room', 'on') %} on 
               {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style: *markdown-style
         type: vertical-stack
