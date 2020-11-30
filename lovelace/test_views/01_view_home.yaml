@@ -8,6 +8,11 @@ cards:
   - type: horizontal-stack
     cards:
       - type: vertical-stack
+        styles:
+          card:
+            - width: 80px
+            - height: 80px
+            - margin: 10px
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
