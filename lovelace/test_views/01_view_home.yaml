@@ -68,11 +68,12 @@ cards:
                     margin-bottom:5px;
                   }
                   h2 {
-                    font-size: 15px;
+                    font-size: 10px;
                     font-weight: thin;
                     font-family: Helvetica;
                     letter-spacing: '-0.01em';
                     margin-top:0;
+                    opacity: 1;
                   }
             type: markdown
         type: vertical-stack
