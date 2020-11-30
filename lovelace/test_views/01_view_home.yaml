@@ -67,6 +67,13 @@ badges:
   - person.tim
 cards:
   - type: horizontal-stack
+    style: |
+      .column {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+      }
     cards:
       - type: 'custom:button-card'
         entity: group.dining_room # Change this to the entity you want to control
