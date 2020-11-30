@@ -1,9 +1,21 @@
-style-card: &cards-style
+button-state: &button-state
+  - value: 'on'
+    styles:
+      card:
+        - box-shadow: |
+            [[[ return states['sun.sun'].state == 'below_horizon'
+              ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
+              : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
+            ]]]
+      icon:
+        - color: var(--paper-item-icon-active-color)
+
+button-style: &button-style
   card:
-    - width: 60px
-    - height: 60px
-    - margin: 5px
-    - border-radius: 10px
+    - width: 80px
+    - height: 80px
+    - margin: 10px
+    - border-radius: 15px
     - box-shadow: |
         [[[ return states['sun.sun'].state == 'below_horizon'
           ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
@@ -20,38 +32,23 @@ style-card: &cards-style
     action: more-info
     haptic: medium
 
-state-card: &card-state
-  - value: 'on'
-    styles:
-      card:
-        - box-shadow: |
-            [[[ return states['sun.sun'].state == 'below_horizon'
-              ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
-              : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-            ]]]
-      icon:
-        - color: var(--paper-item-icon-active-color)
-
-style-markdown: &markdown-style
+markdown-style: &markdown-style
   .: |
     ha-card {
       --ha-card-background: none !important;
       box-shadow: none !important;
-      height: 60px;
-      margin-top: 0px;
+      margin-top: 15px;
     }
   ha-markdown:
     $: |
       ha-markdown-element {
         letter-spacing: 0;
-        padding: 
-          padding-bottom: 5px;
       }
       h1 {
         font-size: 20px !important;
         font-weight: bold;
         font-family: Helvetica;
-        margin-bottom: 5px;
+        margin-bottom:5px;
       }
       h2 {
         font-size: 15px !important;
@@ -75,8 +72,8 @@ cards:
         icon: 'mdi:ceiling-light' # Change this to the icon you want to display
         show_icon: true
         show_name: false
-        state: *card-state
-        styles: *cards-style
+        state: *button-state
+        styles: *button-style
       - cards:
           - type: markdown
             content: |
@@ -93,8 +90,8 @@ cards:
         icon: 'mdi:lamp' # Change this to the icon you want to display
         show_icon: true
         show_name: false
-        state: *card-state
-        styles: *cards-style
+        state: *button-state
+        styles: *button-style
       - cards:
           - type: markdown
             content: |
