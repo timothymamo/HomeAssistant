@@ -74,6 +74,10 @@ hall_light_override:
   name: "Hallway Light Override"
   icon: mdi:alarm-off
 
+daylight:
+  name: "Daylight"
+  icon: mdi:theme-light-dark
+
 downstairs_override:
   name: "Downstairs Override"
   icon: mdi:alarm-off
