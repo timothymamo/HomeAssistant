@@ -157,6 +157,8 @@ cards:
               {% elif is_state('light.entrance', 'off') %} off {% endif %}
             style: *markdown-style
 
+  - type: vertical-stack
+    cards:
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
