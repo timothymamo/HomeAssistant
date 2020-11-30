@@ -47,41 +47,29 @@ cards:
       - cards:
           - content: |
               # Dining Room
-            style:
-              .: |
-                ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;
-                  height: 20px;
-                  margin-top: 15px;
-                  color: {% if states('sensor.other_area_lights_on') | float > 0 %} gold {% endif %};
-                }
-              ha-markdown:
-                $: |
-                  h1 {
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: Helvetica;
-                    letter-spacing: '-0.01em';
-                  }
-            type: markdown
-          - content: >
-              The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+
+              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
               {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style:
               .: |
                 ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;
-                  color: {% if states('sensor.other_area_lights_on') | float > 0 %} gold {% endif %};
+                  --paper-card-background-color: none;
+                  box-shadow: none;
+                  margin-top: 15px;
                 }
               ha-markdown:
                 $: |
+                  ha-markdown-element {
+                    letter-spacing: 0;
+                  }
                   h1 {
-                    font-size: 15px;
-                    font-weight: thin;
-                    font-family: Helvetica;
-                    letter-spacing: '-0.01em';
+                    font-size: 20px !important;
+                    margin-bottom:5px;
+                  }
+                  h2 {
+                    font-size: 15px !important;
+                    margin-top:0;
+                    opacity: 1;
                   }
             type: markdown
         type: vertical-stack
