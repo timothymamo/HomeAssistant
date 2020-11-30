@@ -24,7 +24,7 @@
       entity_id: input_boolean.bottom_stairs
       to: 'on'
   condition:
-    - condition:  state
+    - condition: state
       entity_id: input_boolean.one_person
       state: 'on'
   action:
