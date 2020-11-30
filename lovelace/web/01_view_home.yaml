@@ -66,11 +66,6 @@ badges:
   - person.tim
 cards:
   - type: vertical-stack
-    styles:
-      card:
-        - padding: 0px
-        - background: none
-        - height: 50%
     cards:
       - type: horizontal-stack
         cards:
@@ -81,14 +76,13 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
-          - cards:
-              - type: markdown
-                content: |
-                  # Dining Room
+          - type: markdown
+            content: |
+              # Dining Room
 
-                  ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-                  {% elif is_state('group.dining_room', 'off') %} off {% endif %}
-                style: *markdown-style
+              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
+            style: *markdown-style
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
