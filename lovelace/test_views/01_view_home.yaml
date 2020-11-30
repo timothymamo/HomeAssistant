@@ -5,14 +5,10 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - type: horizontal-stack
+  - type: group.dining_room
+    columns: 2
     cards:
       - type: vertical-stack
-        styles:
-          card:
-            - width: 80px
-            - height: 80px
-            - margin: 10px
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
