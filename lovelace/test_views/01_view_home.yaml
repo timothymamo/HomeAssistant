@@ -44,12 +44,14 @@ style-markdown: &markdown-style
     $: |
       ha-markdown-element {
         letter-spacing: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
       h1 {
         font-size: 20px !important;
         font-weight: bold;
         font-family: Helvetica;
-        margin-bottom:5px;
+        margin-bottom: 5px;
       }
       h2 {
         font-size: 15px !important;
@@ -67,13 +69,6 @@ badges:
   - person.tim
 cards:
   - type: horizontal-stack
-    style: |
-      .column {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-      }
     cards:
       - type: 'custom:button-card'
         entity: group.dining_room # Change this to the entity you want to control
