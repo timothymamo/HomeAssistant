@@ -7,7 +7,8 @@ badges:
 cards:
   - type: horizontal-stack
     cards:
-      - entity: group.dining_room # Change this to the entity you want to control
+      - type: 'custom:button-card'
+        entity: group.dining_room # Change this to the entity you want to control
         icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
         show_icon: true
         show_name: false
@@ -43,7 +44,6 @@ cards:
           hold_action:
             action: more-info
             haptic: medium
-        type: 'custom:button-card'
       - cards:
           - type: markdown
             content: |
