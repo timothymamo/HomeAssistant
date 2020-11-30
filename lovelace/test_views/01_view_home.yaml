@@ -66,10 +66,11 @@ badges:
   - person.tim
 cards:
   - type: custom:stack-in-card
-    styles:
-      card:
-        - background-color: none !important
-        - box-shadow: none !important
+    style: |
+      ha-card {
+        --ha-card-background: none !important;
+        box-shadow: none !important;
+      }
     cards:
       - type: horizontal-stack
         cards:
