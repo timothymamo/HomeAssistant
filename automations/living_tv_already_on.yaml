@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: input_boolean.daylight
-      state: 'off'
+      to: 'off'
   condition:
     condition: and
     conditions:
