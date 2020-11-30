@@ -70,7 +70,7 @@ cards:
       - type: horizontal-stack
         styles:
           card:
-            - margin: 0px
+            - height: 80px
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
@@ -89,7 +89,7 @@ cards:
       - type: horizontal-stack
         styles:
           card:
-            - margin: 0px
+            - height: 80px
         cards:
           - type: 'custom:button-card'
             entity: light.bedroom # Change this to the entity you want to control
@@ -108,7 +108,7 @@ cards:
       - type: horizontal-stack
         styles:
           card:
-            - margin: 0px
+            - height: 80px
         cards:
           - type: 'custom:button-card'
             entity: light.hallway # Change this to the entity you want to control
