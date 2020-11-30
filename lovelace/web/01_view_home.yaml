@@ -66,10 +66,11 @@ badges:
   - person.tim
 cards:
   - type: vertical-stack
-    card:
-      - margin: 0px
     cards:
       - type: horizontal-stack
+        styles:
+          card:
+            - margin: 0px
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
@@ -86,6 +87,9 @@ cards:
               {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
+        styles:
+          card:
+            - margin: 0px
         cards:
           - type: 'custom:button-card'
             entity: light.bedroom # Change this to the entity you want to control
@@ -102,6 +106,9 @@ cards:
               {% elif is_state('light.bedroom', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
+        styles:
+          card:
+            - margin: 0px
         cards:
           - type: 'custom:button-card'
             entity: light.hallway # Change this to the entity you want to control
