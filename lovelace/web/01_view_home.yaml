@@ -66,6 +66,11 @@ badges:
   - person.tim
 cards:
   - type: vertical-stack
+    styles:
+      card:
+        - padding: 0px
+        - background: none
+        - height: 90%
     cards:
       - type: horizontal-stack
         cards:
