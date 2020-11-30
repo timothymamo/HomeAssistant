@@ -65,7 +65,8 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - type: vertical-stack
+  - type: grid
+    columns: 2
     cards:
       - type: horizontal-stack
         cards:
