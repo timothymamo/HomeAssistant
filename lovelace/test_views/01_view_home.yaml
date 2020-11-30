@@ -36,7 +36,7 @@ style-markdown: &markdown-style
   .: |
     ha-card {
       --ha-card-background: none !important;
-      box-shadow: none !important;;
+      box-shadow: none !important;
       margin-top: 15px;
     }
   ha-markdown:
@@ -66,6 +66,10 @@ badges:
   - person.tim
 cards:
   - type: custom:stack-in-card
+    styles:
+      card:
+        - background-color: none !important
+        - box-shadow: none !important
     cards:
       - type: horizontal-stack
         cards:
