@@ -46,7 +46,7 @@ cards:
             haptic: medium
       - cards:
           - content: |
-              # Lights
+              # Dining Room
 
               ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
               {% elif is_state('group.dining_room', 'off') %} off {% endif %}
@@ -75,34 +75,5 @@ cards:
                     margin-top:0;
                     opacity: 1;
                   }
-            #   <h1>Dining Room</h1>
-
-            #   <h2>The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-            #   {% elif is_state('group.dining_room', 'off') %} off {% endif %}</h2>
-            # style:
-            #   .: |
-            #     ha-card {
-            #       --ha-card-background: none !important;
-            #       box-shadow: none !important;
-            #       height: 20px;
-            #       margin-top: 15px;
-            #     }
-            #   ha-markdown:
-            #     $: |
-            #       h1 {
-            #         font-size: 20px;
-            #         font-weight: bold;
-            #         font-family: Helvetica;
-            #         letter-spacing: '-0.01em';
-            #         margin-bottom:5px;
-            #       }
-            #       h2 {
-            #         font-size: 10px;
-            #         font-weight: thin;
-            #         font-family: Helvetica;
-            #         letter-spacing: '-0.01em';
-            #         margin-top:0;
-            #         opacity: 1;
-            #       }
             type: markdown
         type: vertical-stack
