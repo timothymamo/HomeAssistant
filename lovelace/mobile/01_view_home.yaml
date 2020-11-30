@@ -22,7 +22,7 @@ button-style: &button-style
     - background-color: var(--primary-background-color)
   name:
     - font-weight: bold
-    - font-size: 10px
+    - font-size: 15px
   icon:
     - color: var(--primary-text-color)
 
@@ -50,11 +50,6 @@ cards:
         hold_action:
           action: more-info
           haptic: medium
-        style:
-          .: |
-            ha-card {
-                width:90% !important;
-            }
       - type: 'custom:button-card'
         entity: light.bedroom # Change this to the entity you want to control
         icon: 'mdi:lamp' # Change this to the icon you want to display
