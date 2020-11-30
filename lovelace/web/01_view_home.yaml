@@ -14,7 +14,7 @@ button-style: &button-style
   card:
     - width: 80px
     - height: 80px
-    - margin: 10px
+    - margin: px
     - border-radius: 15px
     - box-shadow: |
         [[[ return states['sun.sun'].state == 'below_horizon'
@@ -68,11 +68,6 @@ cards:
   - type: vertical-stack
     cards:
       - type: horizontal-stack
-        style:
-          .: |
-            element {
-              height: 80px;
-            }
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
