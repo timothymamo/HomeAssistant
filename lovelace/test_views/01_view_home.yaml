@@ -5,8 +5,7 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - type: grid
-    columns: 2
+  - type: horizontal-stack
     cards:
       - type: vertical-stack
         cards:
