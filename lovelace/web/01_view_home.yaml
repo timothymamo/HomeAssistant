@@ -37,7 +37,7 @@ markdown-style: &markdown-style
     ha-card {
       --ha-card-background: none !important;
       box-shadow: none !important;
-      margin-top: 15px;
+      margin-top: 10px;
     }
   ha-markdown:
     $: |
@@ -55,7 +55,7 @@ markdown-style: &markdown-style
         font-weight: thin;
         font-family: Helvetica;
         margin-top:0;
-        opacity: 1;
+        opacity: 5;
       }
 
 title: Home
@@ -68,6 +68,12 @@ cards:
   - type: vertical-stack
     cards:
       - type: horizontal-stack
+        style:
+          .: |
+            ha-card {
+              margin-bottom: 0px;
+              height: 80px;
+            }
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
