@@ -45,7 +45,8 @@ cards:
             haptic: medium
         type: 'custom:button-card'
       - cards:
-          - content: |
+          - type: markdown
+            content: |
               # Dining Room
 
               ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
@@ -71,5 +72,4 @@ cards:
                     margin-top:0;
                     opacity: 1;
                   }
-            type: markdown
         type: vertical-stack
