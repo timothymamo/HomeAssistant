@@ -41,7 +41,7 @@ markdown-style: &markdown-style
         font-size: 15px !important;
         font-weight: bold;
         font-family: Helvetica;
-        margin-bottom: 2px;
+        margin-bottom: 10px;
       }
       h2 {
         font-size: 10px !important;
