@@ -22,6 +22,9 @@ button-style: &button-style
           : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
         ]]]
     - background-color: var(--primary-background-color)
+  name:
+    - font-weight: bold
+    - font-size: 10px
   icon:
     - color: var(--primary-text-color)
   # Actions to perform
