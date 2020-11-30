@@ -44,7 +44,8 @@ style-markdown: &markdown-style
     $: |
       ha-markdown-element {
         letter-spacing: 0;
-        padding: 0px 5px 5px 5px;
+        padding: 
+          padding-bottom: 5px;
       }
       h1 {
         font-size: 20px !important;
