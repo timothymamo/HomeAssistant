@@ -65,12 +65,14 @@ cards:
                     font-weight: bold;
                     font-family: Helvetica;
                     letter-spacing: '-0.01em';
+                    margin-bottom:5px;
                   }
                   h2 {
                     font-size: 15px;
                     font-weight: thin;
                     font-family: Helvetica;
                     letter-spacing: '-0.01em';
+                    margin-top:0;
                   }
             type: markdown
         type: vertical-stack
