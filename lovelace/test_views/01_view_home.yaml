@@ -67,7 +67,7 @@ badges:
 cards:
   - type: horizontal-stack
     cards:
-      - type: vertical-stack
+      - type: horizontal-stack
         cards:
         - type: 'custom:button-card'
           entity: group.dining_room # Change this to the entity you want to control
