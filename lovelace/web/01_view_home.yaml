@@ -48,14 +48,14 @@ markdown-style: &markdown-style
         font-size: 20px !important;
         font-weight: bold;
         font-family: Helvetica;
-        margin-bottom:5px;
+        margin-bottom: 5px;
       }
       h2 {
         font-size: 15px !important;
         font-weight: thin;
         font-family: Helvetica;
         margin-top:0;
-        opacity: 5;
+        opacity: 1;
       }
 
 title: Home
@@ -68,12 +68,6 @@ cards:
   - type: vertical-stack
     cards:
       - type: horizontal-stack
-        style:
-          .: |
-            ha-card {
-              margin-bottom: 0px;
-              height: 800px;
-            }
         cards:
           - type: 'custom:button-card'
             entity: group.dining_room # Change this to the entity you want to control
