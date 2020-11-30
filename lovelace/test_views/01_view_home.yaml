@@ -37,7 +37,6 @@ style-markdown: &markdown-style
     ha-card {
       --ha-card-background: none !important;
       box-shadow: none !important;
-      width: 60px;
       height: 60px;
       margin-top: 5px;
     }
