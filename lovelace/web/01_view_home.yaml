@@ -15,7 +15,7 @@ button-style: &button-style
     - width: 80px
     - height: 80px
     - margin: 10px
-    - border-radius: 15px
+    - border-radius: 5px
     - box-shadow: |
         [[[ return states['sun.sun'].state == 'below_horizon'
           ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
