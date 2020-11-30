@@ -64,7 +64,7 @@ path: home
 badges:
   - person.ruby
   - person.tim
-card:
+cards:
   - type: vertical-stack
     cards:
       - type: horizontal-stack
