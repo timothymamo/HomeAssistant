@@ -45,31 +45,32 @@ cards:
             haptic: medium
         type: 'custom:button-card'
       - cards:
-          - type: markdown
-            content: |
-              # Dining Room
+        - type: vertical-stack
+          cards:
+            - type: markdown
+              content: |
+                # Dining Room
 
-              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
-            style:
-              .: |
-                ha-card {
-                  --paper-card-background-color: none !important;
-                  box-shadow: none !important;
-                  margin-top: 15px;
-                }
-              ha-markdown:
-                $: |
-                  ha-markdown-element {
-                    letter-spacing: 0;
+                ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+                {% elif is_state('group.dining_room', 'off') %} off {% endif %}
+              style:
+                .: |
+                  ha-card {
+                    --paper-card-background-color: none !important;
+                    box-shadow: none !important;
+                    margin-top: 15px;
                   }
-                  h1 {
-                    font-size: 20px !important;
-                    margin-bottom:5px;
-                  }
-                  h2 {
-                    font-size: 15px !important;
-                    margin-top:0;
-                    opacity: 1;
-                  }
-        type: vertical-stack
+                ha-markdown:
+                  $: |
+                    ha-markdown-element {
+                      letter-spacing: 0;
+                    }
+                    h1 {
+                      font-size: 20px !important;
+                      margin-bottom:5px;
+                    }
+                    h2 {
+                      font-size: 15px !important;
+                      margin-top:0;
+                      opacity: 1;
+                    }
