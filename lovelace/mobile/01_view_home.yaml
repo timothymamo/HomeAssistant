@@ -34,7 +34,7 @@ badges:
   - person.tim
 cards:
   - type: grid
-    columns: 5
+    columns: 3
     cards:
       - type: 'custom:button-card'
         entity: group.dining_room # Change this to the entity you want to control
