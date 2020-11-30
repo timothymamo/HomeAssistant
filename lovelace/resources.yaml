@@ -22,3 +22,6 @@
 # Button Text Card - https://github.com/Savjee/button-text-card
 - url: /hacsfiles/button-text-card/button-text-card.js
   type: module
+# Card Mod - https://github.com/thomasloven/lovelace-card-mod
+- url: /hacsfiles/lovelace-card-mod/card-mod.js
+  type: module
