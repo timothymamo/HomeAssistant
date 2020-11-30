@@ -89,9 +89,6 @@ cards:
           - type: markdown
             content: |
               # Dining Room
-
-              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -105,9 +102,6 @@ cards:
           - type: markdown
             content: |
               # Bedroom
-
-              ## The bedroom light is {% if is_state('light.bedroom', 'on') %} on 
-              {% elif is_state('light.bedroom', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -121,9 +115,6 @@ cards:
           - type: markdown
             content: |
               # Hallway
-
-              ## The hallway light is {% if is_state('llight.hallway', 'on') %} on 
-              {% elif is_state('light.hallway', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -137,9 +128,6 @@ cards:
           - type: markdown
             content: |
               # Kitchen
-
-              ## The kitchen light is {% if is_state('light.kitchen', 'on') %} on 
-              {% elif is_state('light.kitchen', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -153,9 +141,6 @@ cards:
           - type: markdown
             content: |
               # Living Room
-
-              ## The living room lamp is {% if is_state('light.lamp', 'on') %} on 
-              {% elif is_state('light.lamp', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -169,9 +154,6 @@ cards:
           - type: markdown
             content: |
               # Entrance
-
-              ## The entrance light is {% if is_state('light.entrance', 'on') %} on 
-              {% elif is_state('light.entrance', 'off') %} off {% endif %}
             style: *markdown-style
 
   - type: vertical-stack
@@ -188,9 +170,6 @@ cards:
           - type: markdown
             content: |
               # Dining Room
-
-              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -204,9 +183,6 @@ cards:
           - type: markdown
             content: |
               # Bedroom
-
-              ## The bedroom light is {% if is_state('light.bedroom', 'on') %} on 
-              {% elif is_state('light.bedroom', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -220,9 +196,6 @@ cards:
           - type: markdown
             content: |
               # Hallway
-
-              ## The hallway light is {% if is_state('llight.hallway', 'on') %} on 
-              {% elif is_state('light.hallway', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -236,9 +209,6 @@ cards:
           - type: markdown
             content: |
               # Kitchen
-
-              ## The kitchen light is {% if is_state('light.kitchen', 'on') %} on 
-              {% elif is_state('light.kitchen', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -252,9 +222,6 @@ cards:
           - type: markdown
             content: |
               # Living Room
-
-              ## The living room lamp is {% if is_state('light.lamp', 'on') %} on 
-              {% elif is_state('light.lamp', 'off') %} off {% endif %}
             style: *markdown-style
       - type: horizontal-stack
         cards:
@@ -268,7 +235,4 @@ cards:
           - type: markdown
             content: |
               # Entrance
-
-              ## The entrance light is {% if is_state('light.entrance', 'on') %} on 
-              {% elif is_state('light.entrance', 'off') %} off {% endif %}
             style: *markdown-style
