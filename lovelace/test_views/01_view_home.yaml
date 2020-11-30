@@ -54,7 +54,7 @@ cards:
             style:
               .: |
                 ha-card {
-                  --paper-card-background-color: none !important;
+                  --paper-card-background-color: #f1f4f7;
                   box-shadow: none !important;
                   margin-top: 15px;
                 }
