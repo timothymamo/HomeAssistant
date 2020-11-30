@@ -1,0 +1,40 @@
+title: Living
+icon: mdi:sofa
+path: living
+cards:
+  - entities:
+      - light.lamp
+    show_header_toggle: true
+    title: Living Room
+    type: entities
+  - entity: media_player.mybraviatv
+    name: TV
+    type: custom:mini-media-player
+    icon: 'mdi:television'
+    volume_stateless: true
+    shortcuts:
+      columns: 4 # Max buttons per row
+      buttons:
+        - icon: mdi:netflix
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
+        - icon: mdi:format-header-1
+          type: source
+          id: 'HDMI 1'
+        - icon: mdi:plex
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
+        - icon: mdi:amazon
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
+  - entity: media_player.playstation_4
+    type: custom:mini-media-player
+    icon: mdi:sony-playstation
+    artwork: cover
+    source: icon

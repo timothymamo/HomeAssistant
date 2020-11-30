@@ -1,7 +1,15 @@
-lovelace-test: # Needs to contain a hyphen (-)
+lovelace-web: # Needs to contain a hyphen (-)
   mode: yaml
-  filename: lovelace/test.yaml
-  title: Test
-  icon: mdi:tools
+  filename: lovelace/web.yaml
+  title: Web
+  icon: mdi:desktop_windows
+  show_in_sidebar: true
+  require_admin: true
+
+lovelace-mobile: # Needs to contain a hyphen (-)
+  mode: yaml
+  filename: lovelace/mobile.yaml
+  title: Mobile
+  icon: mdi:mobile_friendly
   show_in_sidebar: true
   require_admin: true
