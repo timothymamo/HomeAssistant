@@ -25,3 +25,6 @@
 # Card Mod - https://github.com/thomasloven/lovelace-card-mod
 - url: /hacsfiles/lovelace-card-mod/card-mod.js
   type: module
+# Stack In Card - https://github.com/custom-cards/stack-in-card
+- url: /hacsfiles/stack-in-card/stack-in-card.js
+  type: module
