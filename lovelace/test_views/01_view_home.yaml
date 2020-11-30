@@ -44,7 +44,7 @@ cards:
             action: more-info
             haptic: medium
         type: 'custom:button-card'
-      - card:
+      - cards:
           - type: markdown
             content: |
               # Dining Room
