@@ -46,10 +46,10 @@ cards:
             haptic: medium
       - cards:
           - content: |
-              # Dining Room
+              <h1>Dining Room</h1>
 
-              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
+              <h2>The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}</h2>
             style:
               .: |
                 ha-card {
