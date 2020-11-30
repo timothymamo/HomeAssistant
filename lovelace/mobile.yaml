@@ -1,0 +1,2 @@
+title: Mobile Test interface
+views: !include_dir_list mobile/

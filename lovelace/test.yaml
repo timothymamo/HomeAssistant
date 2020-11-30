@@ -1,2 +1,0 @@
-title: My Awesome Home
-views: !include_dir_list test_views/

@@ -1,0 +1,2 @@
+title: Web Test interface
+views: !include_dir_list web/
