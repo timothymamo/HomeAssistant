@@ -53,8 +53,8 @@ cards:
             style:
               .: |
                 ha-card {
-                  --paper-card-background-color: none;
-                  box-shadow: none;
+                  --ha-card-background: none !important;
+                  box-shadow: none !important;;
                   margin-top: 15px;
                 }
               ha-markdown:
@@ -64,10 +64,14 @@ cards:
                   }
                   h1 {
                     font-size: 20px !important;
+                    font-weight: bold;
+                    font-family: Helvetica;
                     margin-bottom:5px;
                   }
                   h2 {
                     font-size: 15px !important;
+                    font-weight: thin;
+                    font-family: Helvetica;
                     margin-top:0;
                     opacity: 1;
                   }
