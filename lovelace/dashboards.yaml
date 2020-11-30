@@ -2,7 +2,7 @@ lovelace-web: # Needs to contain a hyphen (-)
   mode: yaml
   filename: lovelace/web.yaml
   title: Web
-  icon: mdi:desktop_windows
+  icon: mdi:web
   show_in_sidebar: true
   require_admin: true
 
@@ -10,6 +10,6 @@ lovelace-mobile: # Needs to contain a hyphen (-)
   mode: yaml
   filename: lovelace/mobile.yaml
   title: Mobile
-  icon: mdi:mobile_friendly
+  icon: mdi:cellphone
   show_in_sidebar: true
   require_admin: true
