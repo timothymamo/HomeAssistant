@@ -65,107 +65,101 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  type: custom:mod-card
-  style: |
-    ha-card {
-      border: 1px solid green;
-    }
-  card:
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: group.dining_room # Change this to the entity you want to control
-              icon: 'mdi:ceiling-light' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Dining Room
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: group.dining_room # Change this to the entity you want to control
+            icon: 'mdi:ceiling-light' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Dining Room
 
-                ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-                {% elif is_state('group.dining_room', 'off') %} off {% endif %}
-              style: *markdown-style
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: light.bedroom # Change this to the entity you want to control
-              icon: 'mdi:lamp' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Bedroom
+              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
+            style: *markdown-style
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.bedroom # Change this to the entity you want to control
+            icon: 'mdi:lamp' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Bedroom
 
-                ## The bedroom light is {% if is_state('light.bedroom', 'on') %} on 
-                {% elif is_state('light.bedroom', 'off') %} off {% endif %}
-              style: *markdown-style
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: light.hallway # Change this to the entity you want to control
-              icon: 'mdi:lamp' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Hallway
+              ## The bedroom light is {% if is_state('light.bedroom', 'on') %} on 
+              {% elif is_state('light.bedroom', 'off') %} off {% endif %}
+            style: *markdown-style
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.hallway # Change this to the entity you want to control
+            icon: 'mdi:lamp' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Hallway
 
-                ## The hallway light is {% if is_state('llight.hallway', 'on') %} on 
-                {% elif is_state('light.hallway', 'off') %} off {% endif %}
-              style: *markdown-style
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: light.kitchen # Change this to the entity you want to control
-              icon: 'mdi:lamp' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Kitchen
+              ## The hallway light is {% if is_state('llight.hallway', 'on') %} on 
+              {% elif is_state('light.hallway', 'off') %} off {% endif %}
+            style: *markdown-style
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.kitchen # Change this to the entity you want to control
+            icon: 'mdi:lamp' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Kitchen
 
-                ## The kitchen light is {% if is_state('light.kitchen', 'on') %} on 
-                {% elif is_state('light.kitchen', 'off') %} off {% endif %}
-              style: *markdown-style
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: light.lamp # Change this to the entity you want to control
-              icon: 'mdi:lamp' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Living Room
+              ## The kitchen light is {% if is_state('light.kitchen', 'on') %} on 
+              {% elif is_state('light.kitchen', 'off') %} off {% endif %}
+            style: *markdown-style
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.lamp # Change this to the entity you want to control
+            icon: 'mdi:lamp' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Living Room
 
-                ## The living room lamp is {% if is_state('light.lamp', 'on') %} on 
-                {% elif is_state('light.lamp', 'off') %} off {% endif %}
-              style: *markdown-style
-        - type: horizontal-stack
-          cards:
-            - type: 'custom:button-card'
-              entity: light.entrance # Change this to the entity you want to control
-              icon: 'mdi:lamp' # Change this to the icon you want to display
-              show_icon: true
-              show_name: false
-              state: *button-state
-              styles: *button-style
-            - type: markdown
-              content: |
-                # Entrance
+              ## The living room lamp is {% if is_state('light.lamp', 'on') %} on 
+              {% elif is_state('light.lamp', 'off') %} off {% endif %}
+            style: *markdown-style
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: light.entrance # Change this to the entity you want to control
+            icon: 'mdi:lamp' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Entrance
 
-                ## The entrance light is {% if is_state('light.entrance', 'on') %} on 
-                {% elif is_state('light.entrance', 'off') %} off {% endif %}
-              style: *markdown-style
+              ## The entrance light is {% if is_state('light.entrance', 'on') %} on 
+              {% elif is_state('light.entrance', 'off') %} off {% endif %}
+            style: *markdown-style
