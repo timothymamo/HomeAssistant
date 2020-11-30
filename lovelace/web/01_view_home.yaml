@@ -1,9 +1,10 @@
+# {{ is_state_attr("sensor.daylight", "daylight", false) }}
 button-state: &button-state
   - value: 'on'
     styles:
       card:
         - box-shadow: |
-            [[[ return states['sun.sun'].state == 'below_horizon'
+            [[[ return states['sensor.daylight'].daylight == 'false'
               ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
               : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
             ]]]
@@ -17,7 +18,7 @@ button-style: &button-style
     - margin: 0px
     - border-radius: 15px
     - box-shadow: |
-        [[[ return states['sun.sun'].state == 'below_horizon'
+        [[[ return states['sensor.daylight'].daylight == 'false'
           ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
           : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
         ]]]

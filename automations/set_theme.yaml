@@ -3,21 +3,19 @@
   - platform: homeassistant
     event: start
   - platform: state
-    entity_id: sun.sun
+    entity_id: sensor.daylight
   action:
   - choose:
     - conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: "above_horizon"
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", true) }}'
       sequence:
       - service: frontend.set_theme
         data:
-          name: midnight-remake
+          name: clear
     - conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: "below_horizon"
+      - condition: template
+        value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
       sequence:
       - service: frontend.set_theme
         data:
