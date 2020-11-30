@@ -1,4 +1,4 @@
-styles: &cards-style
+style-card: &cards-style
   card:
     - width: 80px
     - height: 80px
@@ -20,6 +20,43 @@ styles: &cards-style
     action: more-info
     haptic: medium
 
+state-card: &card-state
+  - value: 'on'
+    styles:
+      card:
+        - box-shadow: |
+            [[[ return states['sun.sun'].state == 'below_horizon'
+              ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
+              : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
+            ]]]
+      icon:
+        - color: var(--paper-item-icon-active-color)
+
+style-markdown: &markdown-style
+  .: |
+    ha-card {
+      --ha-card-background: none !important;
+      box-shadow: none !important;;
+      margin-top: 15px;
+    }
+  ha-markdown:
+    $: |
+      ha-markdown-element {
+        letter-spacing: 0;
+      }
+      h1 {
+        font-size: 20px !important;
+        font-weight: bold;
+        font-family: Helvetica;
+        margin-bottom:5px;
+      }
+      h2 {
+        font-size: 15px !important;
+        font-weight: thin;
+        font-family: Helvetica;
+        margin-top:0;
+        opacity: 1;
+      }
 
 title: Home
 icon: mdi:home
@@ -35,17 +72,7 @@ cards:
         icon: 'mdi:lightbulb-multiple' # Change this to the icon you want to display
         show_icon: true
         show_name: false
-        state:
-          - value: 'on'
-            styles:
-              card:
-                - box-shadow: |
-                    [[[ return states['sun.sun'].state == 'below_horizon'
-                      ? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
-                      : 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-                    ]]]
-              icon:
-                - color: var(--paper-item-icon-active-color)
+        state: *card-state
         styles: *cards-style
       - cards:
           - type: markdown
@@ -54,29 +81,5 @@ cards:
 
               ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
               {% elif is_state('group.dining_room', 'off') %} off {% endif %}
-            style:
-              .: |
-                ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;;
-                  margin-top: 15px;
-                }
-              ha-markdown:
-                $: |
-                  ha-markdown-element {
-                    letter-spacing: 0;
-                  }
-                  h1 {
-                    font-size: 20px !important;
-                    font-weight: bold;
-                    font-family: Helvetica;
-                    margin-bottom:5px;
-                  }
-                  h2 {
-                    font-size: 15px !important;
-                    font-weight: thin;
-                    font-family: Helvetica;
-                    margin-top:0;
-                    opacity: 1;
-                  }
+            style: *markdown-style
         type: vertical-stack
