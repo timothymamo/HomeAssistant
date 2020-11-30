@@ -46,34 +46,59 @@ cards:
             haptic: medium
       - cards:
           - content: |
-              <h1>Dining Room</h1>
+              # Lights
 
-              <h2>The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-              {% elif is_state('group.dining_room', 'off') %} off {% endif %}</h2>
+              ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+              {% elif is_state('group.dining_room', 'off') %} off {% endif %}
             style:
               .: |
                 ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;
-                  height: 20px;
+                  --paper-card-background-color: none;
+                  box-shadow: none;
                   margin-top: 15px;
                 }
               ha-markdown:
                 $: |
+                  ha-markdown-element {
+                    letter-spacing: 0;
+                  }
                   h1 {
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: Helvetica;
-                    letter-spacing: '-0.01em';
+                    font-size: 20px !important;
                     margin-bottom:5px;
                   }
                   h2 {
-                    font-size: 10px;
-                    font-weight: thin;
-                    font-family: Helvetica;
-                    letter-spacing: '-0.01em';
+                    font-size: 15px !important;
                     margin-top:0;
                     opacity: 1;
                   }
+            #   <h1>Dining Room</h1>
+
+            #   <h2>The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
+            #   {% elif is_state('group.dining_room', 'off') %} off {% endif %}</h2>
+            # style:
+            #   .: |
+            #     ha-card {
+            #       --ha-card-background: none !important;
+            #       box-shadow: none !important;
+            #       height: 20px;
+            #       margin-top: 15px;
+            #     }
+            #   ha-markdown:
+            #     $: |
+            #       h1 {
+            #         font-size: 20px;
+            #         font-weight: bold;
+            #         font-family: Helvetica;
+            #         letter-spacing: '-0.01em';
+            #         margin-bottom:5px;
+            #       }
+            #       h2 {
+            #         font-size: 10px;
+            #         font-weight: thin;
+            #         font-family: Helvetica;
+            #         letter-spacing: '-0.01em';
+            #         margin-top:0;
+            #         opacity: 1;
+            #       }
             type: markdown
         type: vertical-stack
