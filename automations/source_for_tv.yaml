@@ -22,7 +22,7 @@
       conditions:
         - condition: state
           entity_id: input_boolean.daylight
-          state: false
+          state: 'off'
         - condition: state
           entity_id: input_boolean.no_one_home
           state: 'off'

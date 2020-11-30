@@ -7,7 +7,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.daylight
-      state: false
+      state: 'off'
   action:
     - service: notify.mobile_app_tim_mobile
       data:

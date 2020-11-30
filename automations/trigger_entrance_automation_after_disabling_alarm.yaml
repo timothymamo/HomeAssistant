@@ -11,7 +11,7 @@
         - (as_timestamp(states.input_boolean.entrance.last_changed))) > 0 ) }}'
       - condition: state
         entity_id: input_boolean.daylight
-        state: false
+        state: 'off'
   action:
     - alias: Delay for 1 seconds
       delay:

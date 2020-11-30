@@ -9,7 +9,7 @@
     - conditions:
       - condition: state
         entity_id: input_boolean.daylight
-        state: true
+        state: 'on'
       sequence:
       - service: frontend.set_theme
         data:
@@ -17,7 +17,7 @@
     - conditions:
       - condition: state
         entity_id: input_boolean.daylight
-        state: false
+        state: 'off'
       sequence:
       - service: frontend.set_theme
         data:

@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: input_boolean.daylight
-      to: true
+      to: 'on'
     - platform: time
       at: "07:00:00"
   action:
