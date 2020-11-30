@@ -14,7 +14,7 @@ button-style: &button-style
   card:
     - width: 80px
     - height: 80px
-    - margin: 10px
+    - margin: 0px
     - border-radius: 15px
     - box-shadow: |
         [[[ return states['sun.sun'].state == 'below_horizon'
@@ -32,32 +32,6 @@ button-style: &button-style
     action: more-info
     haptic: medium
 
-markdown-style: &markdown-style
-  .: |
-    ha-card {
-      --ha-card-background: none !important;
-      box-shadow: none !important;
-      margin-top: 15px;
-    }
-  ha-markdown:
-    $: |
-      ha-markdown-element {
-        letter-spacing: 0;
-      }
-      h1 {
-        font-size: 20px !important;
-        font-weight: bold;
-        font-family: Helvetica;
-        margin-bottom:5px;
-      }
-      h2 {
-        font-size: 15px !important;
-        font-weight: thin;
-        font-family: Helvetica;
-        margin-top:0;
-        opacity: 1;
-      }
-
 title: Home
 icon: mdi:home
 path: home
@@ -65,41 +39,54 @@ badges:
   - person.ruby
   - person.tim
 cards:
-  - type: vertical-stack
+  - type: grid
+    columns: 6
     cards:
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: group.dining_room # Change this to the entity you want to control
-            icon: 'mdi:ceiling-light' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - cards:
-              - type: markdown
-                content: |
-                  # Dining Room
-
-                  ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
-                  {% elif is_state('group.dining_room', 'off') %} off {% endif %}
-                style: *markdown-style
-            type: vertical-stack
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.bedroom # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - cards:
-              - type: markdown
-                content: |
-                  # Bedroom
-
-                  ## The bedroom light is {% if is_state('light.bedroom', 'on') %} on 
-                  {% elif is_state('light.bedroom', 'off') %} off {% endif %}
-                style: *markdown-style
-            type: vertical-stack
+      - type: 'custom:button-card'
+        entity: group.dining_room # Change this to the entity you want to control
+        icon: 'mdi:ceiling-light' # Change this to the icon you want to display
+        name: Dining
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
+      - type: 'custom:button-card'
+        entity: light.bedroom # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        name: Bedroom
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
+      - type: 'custom:button-card'
+        entity: light.hallway # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        name: Hallway
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
+      - type: 'custom:button-card'
+        entity: light.kitchen # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        name: Kitchen
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
+      - type: 'custom:button-card'
+        entity: light.lamp # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        name: Living
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
+      - type: 'custom:button-card'
+        entity: light.entrance # Change this to the entity you want to control
+        icon: 'mdi:lamp' # Change this to the icon you want to display
+        name: Entrance
+        show_icon: true
+        show_name: true
+        state: *button-state
+        styles: *button-style
