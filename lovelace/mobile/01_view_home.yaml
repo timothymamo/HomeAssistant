@@ -13,7 +13,7 @@ button-state: &button-state
 button-style: &button-style
   card:
     - width: 80px
-    - height: 80px
+    - height: 90%
     - margin: 0px
     - border-radius: 15px
     - box-shadow: |
@@ -27,13 +27,6 @@ button-style: &button-style
     - font-size: 10px
   icon:
     - color: var(--primary-text-color)
-  # Actions to perform
-  tap_action:
-    action: toggle
-    haptic: light
-  hold_action:
-    action: more-info
-    haptic: medium
 
 title: Home
 icon: mdi:home
@@ -53,6 +46,17 @@ cards:
         show_name: true
         state: *button-state
         styles: *button-style
+        tap_action:
+          action: toggle
+          haptic: light
+        hold_action:
+          action: more-info
+          haptic: medium
+        style:
+          .: |
+            ha-card {
+                width:90% !important;
+            }
       - type: 'custom:button-card'
         entity: light.bedroom # Change this to the entity you want to control
         icon: 'mdi:lamp' # Change this to the icon you want to display

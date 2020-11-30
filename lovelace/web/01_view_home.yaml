@@ -24,13 +24,6 @@ button-style: &button-style
     - background-color: var(--primary-background-color)
   icon:
     - color: var(--primary-text-color)
-  # Actions to perform
-  tap_action:
-    action: toggle
-    haptic: light
-  hold_action:
-    action: more-info
-    haptic: medium
 
 markdown-style: &markdown-style
   .: |
