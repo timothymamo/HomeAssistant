@@ -89,7 +89,6 @@ cards:
                   ## The dining room lights are {% if is_state('group.dining_room', 'on') %} on 
                   {% elif is_state('group.dining_room', 'off') %} off {% endif %}
                 style: *markdown-style
-            type: vertical-stack
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
