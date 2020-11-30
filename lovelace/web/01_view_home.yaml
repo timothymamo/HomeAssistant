@@ -66,6 +66,8 @@ badges:
   - person.tim
 cards:
   - type: vertical-stack
+    card:
+      - margin: 0px
     cards:
       - type: horizontal-stack
         cards:
