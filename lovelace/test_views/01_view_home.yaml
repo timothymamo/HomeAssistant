@@ -54,8 +54,8 @@ cards:
             style:
               .: |
                 ha-card {
-                  background-color: var(--primary-background-color);
-                  box-shadow: none !important;
+                  background-color: none;
+                  box-shadow: none;
                   margin-top: 15px;
                 }
               ha-markdown:
