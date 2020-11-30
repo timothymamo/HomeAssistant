@@ -72,7 +72,7 @@ cards:
           .: |
             ha-card {
               margin-bottom: 0px;
-              height: 80px;
+              height: 800px;
             }
         cards:
           - type: 'custom:button-card'
