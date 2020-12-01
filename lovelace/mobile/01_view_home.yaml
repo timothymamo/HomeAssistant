@@ -421,8 +421,9 @@ cards:
             hold_action:
               action: more-info
               haptic: medium
-      - type: entity
+      - type: 'custom:time-picker-card'
         entity: input_datetime.wakeup_time # Change this to the entity you want to control
-        show_icon: false
+        hide:
+          name: true
         state: *button-word-state
         styles: *button-word-style
