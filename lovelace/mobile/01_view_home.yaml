@@ -425,5 +425,4 @@ cards:
         entity: input_datetime.wakeup_time # Change this to the entity you want to control
         hide:
           name: true
-        state: *button-word-state
-        styles: *button-word-style
+        style: *button-style
