@@ -23,16 +23,11 @@ static get properties() {
 static get styles() {
 	return css`
 	ha-card{
-		height: 70px;
+		height: 50px;
 		width: 168px;
     background-color: var(--primary-background-color);
     border-radius: 15px;
-    box-shadow:
-      {% if is_state('input_boolean.daylight', 'off') %}
-        inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5);
-      {% elif is_state('input_boolean.daylight', 'on') %}
-        inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08);
-      {% endif %}
+    box-shadow: inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08);
 		-webkit-font-smoothing:var(--paper-font-body1_-_-webkit-font-smoothing);
 		font-size:var(--paper-font-body1_-_font-size);
 		font-weight:var(--paper-font-body1_-_font-weight);
