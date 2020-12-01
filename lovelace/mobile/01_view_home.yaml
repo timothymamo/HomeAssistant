@@ -429,9 +429,11 @@ cards:
           .: |
             ha-card {
               --ha-card-background: var(--primary-background-color);
-              --ha-card-box-shadow: {% if states('input_boolean.daylight') == 'off' %}
-                '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)
-                {% elif states('input_boolean.daylight') == 'on' %}
-                '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
               --ha-card-border-radius: 15px;
+            }
+            :host {
+              box-shadow: {% if states('input_boolean.daylight') == 'off' %}
+              '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+              {% elif states('input_boolean.daylight') == 'on' %}
+              '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)'
             }
