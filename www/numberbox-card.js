@@ -23,18 +23,14 @@ static get properties() {
 static get styles() {
 	return css`
 	ha-card{
-		height: 50px;
-		width: 168px;
-    background-color: var(--primary-background-color);
-    border-radius: 15px;
-    box-shadow: [[[ return states['input_boolean.daylight'].state == 'off'
-			? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
-			: 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-		]]];
 		-webkit-font-smoothing:var(--paper-font-body1_-_-webkit-font-smoothing);
 		font-size:var(--paper-font-body1_-_font-size);
 		font-weight:var(--paper-font-body1_-_font-weight);
 		line-height:var(--paper-font-body1_-_line-height);
+		height: 50px;
+		width: 168px;
+    background-color: var(--primary-background-color);
+    border-radius: 15px;
 		padding:4px 0}
 	ha-card.noborder{padding:0 !important;margin:0 !important;
 		box-shadow:none !important;border:none !important}
@@ -104,6 +100,11 @@ render() {
 			vars['name']=null;
 		}
 	}
+	
+	if( states['input_boolean.daylight'].state == 'off' ){
+		vars['box-shadow']='inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)';
+	}else{vars['box-shadow']='inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';}
+
 	return this.renderMain(vars);
 }
 
