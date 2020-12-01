@@ -426,7 +426,7 @@ cards:
         hide:
           name: true
         styles:
-          card:
+          :host:
             - box-shadow: |
                 [[[ return states['input_boolean.daylight'].state == 'off'
                   ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
