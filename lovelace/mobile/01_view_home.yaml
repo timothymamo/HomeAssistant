@@ -27,6 +27,20 @@ button-style: &button-style
   icon:
     - color: var(--primary-text-color)
 
+button-override-style: &button-override-style
+  card:
+    - height: 40px
+    - width: 40px
+    - border-radius: 15px
+    - box-shadow: |
+        [[[ return states['input_boolean.daylight'].state == 'off'
+          ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+          : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
+        ]]]
+    - background-color: var(--primary-background-color)
+  icon:
+    - color: var(--primary-text-color)
+
 title: Home
 icon: mdi:home
 path: home
@@ -149,3 +163,66 @@ cards:
             hold_action:
               action: more-info
               haptic: medium
+
+  - type: vertical-stack
+    cards:
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
+      - type: 'custom:button-card'
+        entity: input_boolean.dining_light_override # Change this to the entity you want to control
+        icon: 'mdi:pause-octagon-outline' # Change this to the icon you want to display
+        show_icon: true
+        show_name: false
+        state: *button-state
+        styles: *button-override-style
+        tap_action:
+          action: toggle
+          haptic: light
