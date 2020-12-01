@@ -421,8 +421,8 @@ cards:
             hold_action:
               action: more-info
               haptic: medium
-      - type: entities
-        entities: 
-          - entity: input_datetime.wakeup_time # Change this to the entity you want to control
+      - type: entity
+        entity: input_datetime.wakeup_time # Change this to the entity you want to control
+        show_icon: false
         state: *button-word-state
         styles: *button-word-style
