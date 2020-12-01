@@ -31,3 +31,6 @@
 # Time Picker Card - https://github.com/GeorgeSG/lovelace-time-picker-card
 - url: /hacsfiles/lovelace-time-picker-card/time-picker-card.js
   type: module
+# Numberbox Card - https://github.com/htmltiger/numberbox-card
+- url: /hacsfiles/numberbox-card/numberbox-card.js
+  type: module`
