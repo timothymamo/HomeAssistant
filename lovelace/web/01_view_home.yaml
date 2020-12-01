@@ -99,6 +99,12 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
+            hold_action:
+              action: more-info
+              haptic: medium
           - type: markdown
             content: |
               # Bedroom
@@ -125,6 +131,12 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
+            hold_action:
+              action: more-info
+              haptic: medium
           - type: markdown
             content: |
               # Kitchen
@@ -138,6 +150,12 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
+            hold_action:
+              action: more-info
+              haptic: medium
           - type: markdown
             content: |
               # Living Room
@@ -151,87 +169,12 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
-          - type: markdown
-            content: |
-              # Entrance
-            style: *markdown-style
-
-  - type: vertical-stack
-    cards:
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: group.dining_room # Change this to the entity you want to control
-            icon: 'mdi:ceiling-light' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Dining Room
-            style: *markdown-style
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.bedroom # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Bedroom
-            style: *markdown-style
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.hallway # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Hallway
-            style: *markdown-style
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.kitchen # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Kitchen
-            style: *markdown-style
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.lamp # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Living Room
-            style: *markdown-style
-      - type: horizontal-stack
-        cards:
-          - type: 'custom:button-card'
-            entity: light.entrance # Change this to the entity you want to control
-            icon: 'mdi:lamp' # Change this to the icon you want to display
-            show_icon: true
-            show_name: false
-            state: *button-state
-            styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
+            hold_action:
+              action: more-info
+              haptic: medium
           - type: markdown
             content: |
               # Entrance
