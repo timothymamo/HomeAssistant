@@ -56,7 +56,7 @@ button-word-style: &button-word-style
   name:
     - font-size: 20px
     - font-weight: bold
-    - color: var(--primary-text-color)
+    - font-color: var(--primary-text-color)
 
 title: Home
 icon: mdi:home
