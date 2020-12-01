@@ -347,3 +347,9 @@ cards:
                     hold_action:
                       action: more-info
                       haptic: medium
+
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Wake Up Light
+    group: group.alarm_clock
