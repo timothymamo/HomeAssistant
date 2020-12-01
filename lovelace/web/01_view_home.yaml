@@ -89,10 +89,16 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
           - type: markdown
             content: |
               # Dining Room
             style: *markdown-style
+            tap_action:
+              action: more-info
+              haptic: medium
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
@@ -105,9 +111,6 @@ cards:
             tap_action:
               action: toggle
               haptic: light
-            hold_action:
-              action: more-info
-              haptic: medium
           - type: markdown
             content: |
               # Bedroom
@@ -121,10 +124,16 @@ cards:
             show_name: false
             state: *button-state
             styles: *button-style
+            tap_action:
+              action: toggle
+              haptic: light
           - type: markdown
             content: |
               # Hallway
             style: *markdown-style
+            tap_action:
+              action: more-info
+              haptic: medium
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
@@ -137,13 +146,13 @@ cards:
             tap_action:
               action: toggle
               haptic: light
-            hold_action:
-              action: more-info
-              haptic: medium
           - type: markdown
             content: |
               # Kitchen
             style: *markdown-style
+            tap_action:
+              action: more-info
+              haptic: medium
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
@@ -156,13 +165,13 @@ cards:
             tap_action:
               action: toggle
               haptic: light
-            hold_action:
-              action: more-info
-              haptic: medium
           - type: markdown
             content: |
               # Living Room
             style: *markdown-style
+            tap_action:
+              action: more-info
+              haptic: medium
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
@@ -175,10 +184,10 @@ cards:
             tap_action:
               action: toggle
               haptic: light
-            hold_action:
-              action: more-info
-              haptic: medium
           - type: markdown
             content: |
               # Entrance
             style: *markdown-style
+            tap_action:
+              action: more-info
+              haptic: medium
