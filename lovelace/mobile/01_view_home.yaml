@@ -42,6 +42,21 @@ button-override-style: &button-override-style
   icon:
   - color: var(--primary-text-color)
 
+button-word-style: &button-word-style
+  card:
+    - height: 80px
+    - width: 80px
+    - border-radius: 15px
+    - box-shadow: |
+        [[[ return states['input_boolean.daylight'].state == 'off'
+          ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+          : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
+        ]]]
+    - background-color: var(--primary-background-color)
+  name:
+    - font-size: 20px
+    - font-weight: bold
+
 title: Home
 icon: mdi:home
 path: home
@@ -386,7 +401,7 @@ cards:
             show_icon: true
             show_name: false
             state: *button-state
-            styles: *button-style
+            styles: *button-word-style
             tap_action:
               action: toggle
               haptic: light
