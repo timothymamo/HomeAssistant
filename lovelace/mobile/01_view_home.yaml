@@ -403,8 +403,8 @@ cards:
             state: *button-word-state
             styles: *button-word-style
           - type: entities
-            entities: input_datetime.wakeup_time # Change this to the entity you want to control
-            state: *button-word-state
+            entities: 
+              - input_datetime.wakeup_time # Change this to the entity you want to control
             styles: *button-word-style
             tap_action:
               action: toggle
