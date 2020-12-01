@@ -280,9 +280,9 @@ cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.override_presence # Change this to the entity you want to control
                     icon: "{% if is_state('nput_boolean.override_presence', 'off') %}
-                            mdi:home-lock
+                            'mdi:home-lock'
                           {% elif is_state('nput_boolean.override_presence', 'on') %}
-                            mdi:home-lock-open;
+                            'mdi:home-lock-open'
                           {% endif %}"
                     show_icon: true
                     show_name: true
