@@ -299,10 +299,10 @@ cards:
                     entity: input_boolean.no_one_home # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
-                    name: |
+                    icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
-                    icon: |
+                    name: |
                       [[[ if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state == 'home') {'Both Home'}
                           else if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state != 'home')) {'Ruby Home'}
                           else if (return (states['person.ruby'].state != 'home' && return states['person.tim'].state == 'home')) {'Tim Home'}
