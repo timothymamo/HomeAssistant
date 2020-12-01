@@ -438,7 +438,10 @@ cards:
                   inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08);
                 {% endif %}
             }
-      - type: 'custom:mod-card'
+      - type: 'custom:numberbox-card'
+        entity: input_number.wakeup_transition # Change this to the entity you want to control
+        name: false
+        icon: false
         style: |
           ha-card {
             background-color: var(--primary-background-color);
@@ -450,8 +453,3 @@ cards:
                 inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08);
               {% endif %}
           }
-        card: 
-          type: 'custom:numberbox-card'
-          entity: input_number.wakeup_transition # Change this to the entity you want to control
-          name: false
-          icon: false
