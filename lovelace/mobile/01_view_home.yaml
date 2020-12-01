@@ -445,10 +445,8 @@ cards:
         border: false
         style: |
             ha-card {
-              height: 140px;
-              width: 168px;
-              --ha-card-background: var(--primary-background-color);
-              --ha-card-border-radius: 15px;
+              background-color: var(--primary-background-color);
+              border-radius: 15px;
               box-shadow:
                 {% if is_state('input_boolean.daylight', 'off') %}
                   inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5);
