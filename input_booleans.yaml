@@ -32,7 +32,7 @@ storage:
 
 no_one_home:
   name: "No One Home"
-  icon: mdi:home-export-outline
+  icon: mdi:home-remove-outline
 
 override_presence:
   name: "Override Home Presence"
