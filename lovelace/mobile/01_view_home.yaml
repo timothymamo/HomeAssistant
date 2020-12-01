@@ -101,7 +101,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: group.dining_room # Change this to the entity you want to control
-                icon: 'mdi:ceiling-light' # Change this to the icon you want to display
+                icon: 'mdi:vanity-light' # Change this to the icon you want to display
                 name: Dining
                 show_icon: true
                 show_name: true
@@ -127,7 +127,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: light.bedroom # Change this to the entity you want to control
-                icon: 'mdi:lamp' # Change this to the icon you want to display
+                icon: 'mdi:floor-lamp' # Change this to the icon you want to display
                 name: Bedroom
                 show_icon: true
                 show_name: true
@@ -205,7 +205,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: light.lamp # Change this to the entity you want to control
-                icon: 'mdi:lamp' # Change this to the icon you want to display
+                icon: 'mdi:floor-lamp-variant' # Change this to the icon you want to display
                 name: Living
                 show_icon: true
                 show_name: true
@@ -231,7 +231,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: light.entrance # Change this to the entity you want to control
-                icon: 'mdi:lamp' # Change this to the icon you want to display
+                icon: 'mdi:outdoor-lamp' # Change this to the icon you want to display
                 name: Entrance
                 show_icon: true
                 show_name: true
