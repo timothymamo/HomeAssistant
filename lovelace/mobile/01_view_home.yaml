@@ -370,9 +370,7 @@ cards:
         cards:
           - type: 'custom:button-card'
             entity: input_boolean.wakeup_enabled # Change this to the entity you want to control
-            name: "{% if is_state('input_boolean.wakeup_enabled', 'on') %}ON
-            {% elif is_state('input_boolean.wakeup_enabled', 'off') %}OFF
-            {% endif %}"
+            name: "[[[ return states['input_boolean.wakeup_enabled == 'off' ? 'OFF' : 'ON';]]]"
             show_icon: false
             show_name: true
             state: *button-state
