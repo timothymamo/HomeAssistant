@@ -23,6 +23,8 @@ static get properties() {
 static get styles() {
 	return css`
 	ha-card{
+		height: 70px;
+		width: 168px;
     background-color: var(--primary-background-color);
     border-radius: 15px;
     box-shadow:
