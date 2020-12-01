@@ -32,5 +32,5 @@
 - url: /hacsfiles/lovelace-time-picker-card/time-picker-card.js
   type: module
 # Numberbox Card - https://github.com/htmltiger/numberbox-card
-- url: /hacsfiles/numberbox-card/numberbox-card.js
+- url: /local/numberbox-card.js?v=1
   type: module
