@@ -445,6 +445,23 @@ cards:
   
   - type: vertical-stack
     cards:
+      - type: markdown
+        content: |
+          # Create Forwarding Email
+        style:
+          .: |
+            ha-card {
+              --ha-card-background: none !important;
+              box-shadow: none !important;
+            }
+          ha-markdown:
+            $: |
+              h1 {
+                font-size: 20px;
+                font-weight: bold;
+                font-family: Helvetica;
+                letter-spacing: '-0.01em';
+              }
       - type: entities
         style: |
           ha-card {
@@ -459,23 +476,6 @@ cards:
               {% endif %}
           }
         entities:
-          - type: markdown
-            content: |
-              # Create Forwarding Email
-            style:
-              .: |
-                ha-card {
-                  --ha-card-background: none !important;
-                  box-shadow: none !important;
-                }
-              ha-markdown:
-                $: |
-                  h1 {
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: Helvetica;
-                    letter-spacing: '-0.01em';
-                  }
           - type: 'custom:text-input-row'
             entity: input_text.create_fwd_email
           - type: "custom:paper-buttons-row"
