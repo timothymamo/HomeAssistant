@@ -398,7 +398,7 @@ cards:
               haptic: medium
           - type: 'custom:button-card'
             entity: input_boolean.wakeup_weekend # Change this to the entity you want to control
-            naem: Weekend
+            name: Weekend
             show_icon: true
             show_name: true
             state: *button-state
