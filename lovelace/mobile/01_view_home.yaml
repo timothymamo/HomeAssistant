@@ -1,6 +1,6 @@
 button-state: &button-state
   - value: 'on'
-    style:
+    styles:
       card:
         - box-shadow: |
             [[[ return states['input_boolean.daylight'].state == 'off'
@@ -44,7 +44,7 @@ button-override-style: &button-override-style
 
 button-word-state: &button-word-state
   - value: 'on'
-    style:
+    styles:
       card:
         - box-shadow: |
             [[[ return states['input_boolean.daylight'].state == 'off'
@@ -106,7 +106,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -119,7 +119,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -132,7 +132,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -145,7 +145,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -158,7 +158,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -171,7 +171,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -184,7 +184,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -197,7 +197,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -210,7 +210,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -223,7 +223,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -236,7 +236,7 @@ cards:
                 show_icon: true
                 show_name: true
                 state: *button-state
-                style: *button-style
+                styles: *button-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -249,7 +249,7 @@ cards:
                 show_icon: true
                 show_name: false
                 state: *button-state
-                style: *button-override-style
+                styles: *button-override-style
                 tap_action:
                   action: toggle
                   haptic: light
@@ -282,7 +282,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -296,7 +296,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -310,7 +310,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -324,7 +324,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -338,7 +338,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -352,7 +352,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -366,7 +366,7 @@ cards:
                     show_icon: true
                     show_name: false
                     state: *button-state
-                    style: *button-style
+                    styles: *button-style
                     tap_action:
                       action: toggle
                       haptic: light
@@ -401,7 +401,7 @@ cards:
             show_icon: false
             show_name: true
             state: *button-word-state
-            style: *button-word-style
+            styles: *button-word-style
             tap_action:
               action: toggle
               haptic: light
@@ -414,7 +414,7 @@ cards:
             show_icon: true
             show_name: true
             state: *button-state
-            style: *button-style
+            styles: *button-style
             tap_action:
               action: toggle
               haptic: light
