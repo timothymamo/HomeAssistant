@@ -12,7 +12,7 @@ button-state: &button-state
 
 button-style: &button-style
   card:
-    - height: 90%
+    - height: 30%
     - border-radius: 15px
     - box-shadow: |
         [[[ return states['input_boolean.daylight'].state == 'off'
@@ -34,7 +34,7 @@ badges:
   - person.tim
 cards:
   - type: grid
-    columns: 5
+    columns: 1
     cards:
       - type: 'custom:button-card'
         entity: group.dining_room # Change this to the entity you want to control
