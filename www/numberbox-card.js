@@ -100,11 +100,6 @@ render() {
 			vars['name']=null;
 		}
 	}
-	if( states['input_boolean.daylight'].state == 'off' ){
-		vars['box-shadow']='inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)';
-	}else{
-		vars['box-shadow']='inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-	}
 	return this.renderMain(vars);
 }
 
