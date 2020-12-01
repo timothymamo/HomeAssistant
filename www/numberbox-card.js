@@ -30,7 +30,7 @@ static get styles() {
     box-shadow: [[[ return states['input_boolean.daylight'].state == 'off'
 			? 'inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5)'
 			: 'inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08)';
-		]]]
+		]]];
 		-webkit-font-smoothing:var(--paper-font-body1_-_-webkit-font-smoothing);
 		font-size:var(--paper-font-body1_-_font-size);
 		font-weight:var(--paper-font-body1_-_font-weight);
