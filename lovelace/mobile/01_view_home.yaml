@@ -389,7 +389,7 @@ cards:
             show_icon: false
             show_name: true
             state: *button-state
-            styles: *button-style
+            styles: *button-word-style
             tap_action:
               action: toggle
               haptic: light
@@ -401,7 +401,7 @@ cards:
             show_icon: true
             show_name: false
             state: *button-state
-            styles: *button-word-style
+            styles: *button-style
             tap_action:
               action: toggle
               haptic: light
