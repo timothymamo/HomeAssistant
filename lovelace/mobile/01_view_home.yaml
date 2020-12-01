@@ -444,7 +444,7 @@ cards:
         icon: false
         border: false
         style: |
-            ha-card {
+            :host {
               height: 140px;
               width: 168px;
               background-color: var(--primary-background-color);
