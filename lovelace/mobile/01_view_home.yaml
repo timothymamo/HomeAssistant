@@ -448,13 +448,14 @@ cards:
       - type: entities
         style: |
           ha-card {
+            background-color: var(--primary-background-color);
             border-radius: 15px;
-            box-shadow: |
-                [[[ return states['input_boolean.daylight'].state == 'off'
-                  ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
-                  : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
-                ]]]
-            background-color: var(--primary-background-color)
+            box-shadow:
+              {% if is_state('input_boolean.daylight', 'off') %}
+                -5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+              {% elif is_state('input_boolean.daylight', 'on') %}
+                -5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03);
+              {% endif %}
           }
         entities:
           - type: custom:template-entity-row
