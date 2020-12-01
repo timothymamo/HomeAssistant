@@ -427,6 +427,8 @@ cards:
           name: true
         style: |
             ha-card {
+              height: 160px;
+              width: 160px;
               background-color: var(--primary-background-color);
               border-radius: 15px;
               box-shadow:
