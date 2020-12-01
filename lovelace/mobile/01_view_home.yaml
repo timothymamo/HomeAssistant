@@ -28,10 +28,11 @@ button-style: &button-style
     - color: var(--primary-text-color)
 
 button-override-style: &button-override-style
+  
   card:
     - height: 60px
     - width: 60px
-    - padding-top: 10px
+    - margin-top: 10px
     - border-radius: 15px
     - box-shadow: |
         [[[ return states['input_boolean.daylight'].state == 'off'
@@ -40,7 +41,7 @@ button-override-style: &button-override-style
         ]]]
     - background-color: var(--primary-background-color)
   icon:
-    - color: var(--primary-text-color)
+  - color: var(--primary-text-color)
 
 title: Home
 icon: mdi:home
