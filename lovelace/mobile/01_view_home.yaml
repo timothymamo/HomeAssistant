@@ -282,9 +282,9 @@ cards:
                     icon: |
                       [[[ return states['input_boolean.override_presence'].state == 'off'
                         ? 'mdi:home-lock-open' : 'mdi:home-lock' ]]]
+                    name: Override
                     show_icon: true
                     show_name: true
-                    name: Override
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -299,9 +299,15 @@ cards:
                     entity: input_boolean.no_one_home # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    name: |
+                      [[[ return states['input_boolean.disable_alarm'].state == 'off'
+                        ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     icon: |
-                      [[[ return states['input_boolean.no_one_home'].state == 'off'
-                        ? 'mdi:home-account' : 'mdi:home-remove-outline' ]]]
+                      [[[ if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state == 'home') {'Both Home'}
+                          else if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state != 'home')) {'Ruby Home'}
+                          else if (return (states['person.ruby'].state != 'home' && return states['person.tim'].state == 'home')) {'Tim Home'}
+                          else if (return (states['person.ruby'].state != 'home' && return states['person.tim'].state != 'home')) {'No One Home'}
+                      ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
