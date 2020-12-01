@@ -448,6 +448,7 @@ cards:
       - type: entities
         style: |
           ha-card {
+            font-family: Helvetica;
             background-color: var(--primary-background-color);
             border-radius: 15px;
             box-shadow:
