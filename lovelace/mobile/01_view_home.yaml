@@ -352,10 +352,10 @@ cards:
     card:
       type: entities
       title: Wake Up Light
-    style:
-      .: |
-        ha-card {
-          --ha-card-background: none !important;
-          box-shadow: none !important;
-        }
+      style:
+        .: |
+          ha-card {
+            --ha-card-background: none !important;
+            box-shadow: none !important;
+          }
     group: group.alarm_clock
