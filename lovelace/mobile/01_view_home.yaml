@@ -31,7 +31,7 @@ button-override-style: &button-override-style
   card:
     - height: 60px
     - width: 60px
-    - padding-top: 10px:
+    - padding-top: 10px
     - border-radius: 15px
     - box-shadow: |
         [[[ return states['input_boolean.daylight'].state == 'off'
