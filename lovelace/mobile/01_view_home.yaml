@@ -299,6 +299,9 @@ cards:
                     entity: input_boolean.no_one_home # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    icon: |
+                      [[[ return states['input_boolean.no_one_home'].state == 'off'
+                        ? 'mdi:home-account' : 'mdi:home-remove-outline' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -313,6 +316,9 @@ cards:
                     entity: input_boolean.guests # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    icon: |
+                      [[[ return states['input_boolean.guests'].state == 'off'
+                        ? 'mdi:account-multiple-minus-outline' : 'mdi:account-multiple-plus-outline' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -327,6 +333,9 @@ cards:
                     entity: input_boolean.asleep # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    icon: |
+                      [[[ return states['input_boolean.asleep'].state == 'off'
+                        ? 'mdi:sleep-off' : 'mdi:sleep' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -341,6 +350,9 @@ cards:
                     entity: input_boolean.meter_notification_sent # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    icon: |
+                      [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
+                        ? 'mdi:message-outline' : 'mdi:message-arrow-right-outline' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -369,6 +381,9 @@ cards:
                     entity: input_boolean.disable_alarm # Change this to the entity you want to control
                     show_icon: true
                     show_name: false
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm'].state == 'off'
+                        ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
