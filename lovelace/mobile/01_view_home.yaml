@@ -153,7 +153,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: light.hallway # Change this to the entity you want to control
-                icon: 'mdi:lamp' # Change this to the icon you want to display
+                icon: 'mdi:ceiling-light' # Change this to the icon you want to display
                 name: Hallway
                 show_icon: true
                 show_name: true
@@ -179,7 +179,7 @@ cards:
             cards:
               - type: 'custom:button-card'
                 entity: light.kitchen # Change this to the entity you want to control
-                icon: 'mdi:lamp' # Change this to the icon you want to display
+                icon: 'mdi:ceiling-light' # Change this to the icon you want to display
                 name: Kitchen
                 show_icon: true
                 show_name: true
