@@ -431,8 +431,8 @@ cards:
               border-radius: 15px;
               box-shadow:
                 {% if is_state('input_boolean.daylight', 'off') %}
-                  -4px -4px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03);
+                  inset -4px -4px 5px rgba(60, 60, 60, .6), inset 4px 4px 5px rgba(0, 0, 0, .5);
                 {% elif is_state('input_boolean.daylight', 'on') %}
-                  -5px -5px 8px rgba(50, 50, 50, .2), 5px 5px 8px rgba(0, 0, 0, .08);
+                  inset -3px -3px 5px rgba(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, .08);
                 {% endif %}
             }
