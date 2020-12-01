@@ -281,7 +281,7 @@ cards:
                     entity: input_boolean.override_presence # Change this to the entity you want to control
                     icon: |
                       [[[ return states['input_boolean.override_presence'].state == 'off'
-                        ? 'mdi:home-lock' : 'mdi:home-lock-open' ]]]
+                        ? 'mdi:home-lock-open' : 'mdi:home-lock' ]]]
                     show_icon: true
                     show_name: true
                     name: Override
