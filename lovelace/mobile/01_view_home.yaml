@@ -447,7 +447,7 @@ cards:
             :host {
               height: 140px;
               width: 168px;
-              background-color: var(--primary-background-color);
+              background: var(--primary-background-color);
               border-radius: 15px;
               box-shadow:
                 {% if is_state('input_boolean.daylight', 'off') %}
