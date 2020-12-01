@@ -28,3 +28,6 @@
 # Stack In Card - https://github.com/custom-cards/stack-in-card
 - url: /hacsfiles/stack-in-card/stack-in-card.js
   type: module
+# Time Picker Card - https://github.com/GeorgeSG/lovelace-time-picker-card
+- url: /hacsfiles/lovelace-time-picker-card/time-picker-card.js
+  type: module
