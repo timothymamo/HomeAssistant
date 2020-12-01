@@ -425,11 +425,12 @@ cards:
         entity: input_datetime.wakeup_time # Change this to the entity you want to control
         hide:
           name: true
-        styles:
-          :host:
-            - box-shadow: |
-                [[[ return states['input_boolean.daylight'].state == 'off'
-                  ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
-                  : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
-                ]]]
-            - background-color: var(--primary-background-color)
+        style: |
+          :host {
+            box-shadow:
+              [[[ return states['input_boolean.daylight'].state == 'off'
+                ? '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
+                : '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)';
+              ]]]
+            background: var(--primary-background-color)
+            }
