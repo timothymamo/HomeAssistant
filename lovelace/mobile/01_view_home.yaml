@@ -561,9 +561,9 @@ cards:
               ]]]
             styles:
               card:
-                - height: 80px
-                - width: 80px
-                - border-radius: 15px
+                - height: 60px
+                - width: 60px
+                - border: none !important
                 - box-shadow: none !important
                 - background-color: var(--primary-background-color)
               icon:
