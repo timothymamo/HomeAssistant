@@ -304,13 +304,13 @@ cards:
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     name: >
                       [[[ 
-                        if (person.ruby.state == 'home' && person.tim.state == 'home')
+                        if ((person.ruby.state == 'home') && (person.tim.state == 'home'))
                           return 'Both Home';
-                        else if (person.ruby.state == 'home' && person.tim.state != 'home')
+                        else if ((person.ruby.state == 'home') && (person.tim.state != 'home'))
                           return 'Ruby is Home';
-                        else if (person.ruby.state != 'home' && person.tim.state == 'home')
+                        else if ((person.ruby.state != 'home') && (person.tim.state == 'home'))
                           return 'Tim is Home';
-                        else if (person.ruby.state != 'home' && person.tim.state != 'home'))
+                        else if ((person.ruby.state != 'home') && (person.tim.state != 'home'))
                           return 'No One Home';
                       ]]]
                     state: *button-state
@@ -509,4 +509,3 @@ cards:
                   "400": "states.sensor.curl_resp.attributes.message"
                   "401": "states.sensor.curl_resp.attributes.message"
                   "403": "states.sensor.curl_resp.attributes.message"
-
