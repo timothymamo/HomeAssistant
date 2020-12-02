@@ -581,13 +581,13 @@ cards:
           - type: markdown
             content: >
               {% if is_state('sensor.curl_resp', '200') %}
-                "Create Forwarding Mail"
+                ## Create Forwarding Mail
               {% elif is_state('sensor.curl_resp', '201') %}
-                "Woohhooo Forwarding Mail created"
+                ## Woohhooo Forwarding Mail created
               {% elif is_state('sensor.curl_resp', '400') or is_state('sensor.curl_resp', '401') or is_state('sensor.curl_resp', '403') %}
-                "{{ states.sensor.curl_resp.attributes.message }}"
+                ## {{ states.sensor.curl_resp.attributes.message }}
               {% else %}
-                "Create Forwarding Mail"
+                ## Create Forwarding Mail
               {% endif %}
             style: *markdown-style
             tap_action:
