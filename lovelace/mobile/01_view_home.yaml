@@ -29,8 +29,8 @@ button-style: &button-style
 
 button-override-style: &button-override-style
   card:
-    - height: 30px
-    - width: 30px
+    - height: 40px
+    - width: 40px
     - margin-top: 10px
     - border-radius: 15px
     - box-shadow: |
