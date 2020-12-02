@@ -522,7 +522,7 @@ cards:
                     entity: input_boolean.disable_alarm_notification # Change this to the entity you want to control
                     icon: |
                       [[[ return states['input_boolean.disable_alarm_notification'].state == 'off'
-                        ? 'mdi:message-outline' : 'mdi:message-off-outline' ]]]
+                        ? 'mdi:comment-outline' : 'mdi:comment-off-outline' ]]]
                     name: Notification
                     show_icon: true
                     show_name: true
