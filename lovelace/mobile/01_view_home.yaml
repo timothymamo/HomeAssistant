@@ -304,7 +304,7 @@ cards:
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     name: >
                       [[[ 
-                        if (( states['person.ruby'].state == 'home') && ( states['person.tim'].state == 'home'))
+                        if (( person.ruby.state == 'home') && ( states['person.tim'].state == 'home'))
                           return 'Both Home';
                         else if (( states['person.ruby'].state == 'home') && ( states['person.tim'].state != 'home'))
                           return 'Ruby is Home';
