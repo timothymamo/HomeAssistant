@@ -489,20 +489,6 @@ cards:
           - type: "custom:paper-buttons-row"
             buttons:
               - entity: sensor.curl_resp
-                name: |
-                      [[[ if ((return states['sensor.curl_resp'].state == '200') && (return states['sensor.curl_resp'].state == '201'))
-                          {
-                            return stastes['sensor.curl_resp'].attributes.message;
-                          }
-                          else if (return (states['sensor.curl_resp'].state == '201')
-                          {
-                            'Woohhooo Mail created';
-                          }
-                          else
-                          {
-                            'Create Forwarding Mail';
-                          }
-                      ]]]
                 tap_action:
                   action: call-service
                   service: script.create_fwd_email
@@ -512,3 +498,10 @@ cards:
                   "400": "mdi:alert-circle-outline"
                   "401": "mdi:alert-circle-outline"
                   "403": "mdi:alert-circle-outline"
+                state_text:
+                  "200": "Create Forwarding Mail"
+                  "201": "Woohhooo Mail created"
+                  "400": "{{ states.sensor.curl_resp.attributes.message }}"
+                  "401": "{{ states.sensor.curl_resp.attributes.message }}"
+                  "403": "{{ states.sensor.curl_resp.attributes.message }}"
+
