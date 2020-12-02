@@ -580,16 +580,15 @@ cards:
             styles: *button-style
           - type: markdown
             content: >
-              [[[ 
-                if (( states['sensor.curl_resp'].state != '200') && ( states['sensor.curl_resp'].state != '201' ))
-                  return 'No Cigar';
-                else if ( states['sensor.curl_resp'].state == '201' )
-                  return 'Woohhooo Mail created';
-                else if ( states['sensor.curl_resp'].state == '200' )
-                  return 'Create Forwarding Mail';
-                else 
-                  return 'Create Forwarding Mail';
-              ]]]
+              {% if is_state('sensor.curl_resp', '200') %}
+                "Create Forwarding Mail"
+              {% elif is_state('sensor.curl_resp', '201') %}
+                "Woohhooo Forwarding Mail created"
+              {% elif is_state('sensor.curl_resp', '400') or is_state('sensor.curl_resp', '401') or is_state('sensor.curl_resp', '403') %}
+                "{{ states.sensor.curl_resp.attributes.message }}"
+              {% else %}
+                "Create Forwarding Mail"
+              {% endif %}
             style: *markdown-style
             tap_action:
               action: call-service
