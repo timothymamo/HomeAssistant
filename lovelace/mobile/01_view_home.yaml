@@ -69,6 +69,35 @@ button-word-style: &button-word-style
     - font-size: 20px
     - font-weight: bold
 
+markdown-style: &markdown-style
+  .: |
+    ha-card {
+      --ha-card-background: none !important;
+      box-shadow: none !important;
+    }
+  ha-markdown:
+    $: |
+      ha-markdown-element {
+        letter-spacing: 0;
+      }
+      ha-markdown-element pre {
+        padding: 0px;
+      }
+      h1 {
+        font-size: 15px !important;
+        font-weight: bold;
+        font-family: Helvetica;
+        margin-bottom: 10px;
+        padding-left: 0px
+      }
+      h2 {
+        font-size: 10px !important;
+        font-weight: thin;
+        font-family: Helvetica;
+        margin-top:0;
+        opacity: 1;
+      }
+
 title: Home
 icon: mdi:home
 path: home
@@ -526,3 +555,23 @@ cards:
                   "400": "mdi:alert-circle-outline"
                   "401": "mdi:alert-circle-outline"
                   "403": "mdi:alert-circle-outline"
+  - type: vertical-stack
+    cards:
+      - type: 'custom:text-input-row'
+        entity: input_text.create_fwd_email    
+      - type: horizontal-stack
+        cards:
+          - type: 'custom:button-card'
+            entity: sensor.curl_resp # Change this to the entity you want to control
+            icon: 'mdi:email-send-outline' # Change this to the icon you want to display
+            show_icon: true
+            show_name: false
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: |
+              # Create Forwarding Mail
+            style: *markdown-style
+            tap_action:
+              action: call-service
+              service: script.create_fwd_email
