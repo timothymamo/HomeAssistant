@@ -303,10 +303,10 @@ cards:
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     name: |
-                      [[[ if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state == 'home') {'Both Home'}
-                          else if (return (states['person.ruby'].state == 'home' && return states['person.tim'].state != 'home')) {'Ruby Home'}
-                          else if (return (states['person.ruby'].state != 'home' && return states['person.tim'].state == 'home')) {'Tim Home'}
-                          else if (return (states['person.ruby'].state != 'home' && return states['person.tim'].state != 'home')) {'No One Home'}
+                      [[[ if ((return states['person.ruby'].state == 'home') && (return states['person.tim'].state == 'home')) {'Both Home'}
+                          else if ((return states['person.ruby'].state == 'home') && (return states['person.tim'].state != 'home')) {'Ruby is Home'}
+                          else if ((return (states['person.ruby'].state != 'home') && (return states['person.tim'].state == 'home')) {'Tim is Home'}
+                          else if ((return (states['person.ruby'].state != 'home') && (return states['person.tim'].state != 'home')) {'No One Home'}
                       ]]]
                     state: *button-state
                     styles: *button-style
@@ -490,13 +490,19 @@ cards:
             buttons:
               - entity: sensor.curl_resp
                 name: |
-                  "{% if not is_state('sensor.curl_resp', '200') and not is_state('sensor.curl_resp', '201') %} 
-                  'states.sensor.curl_resp.attributes.message'
-                  {% elif is_state('sensor.curl_resp', '201') %}
-                  'Woohhooo Mail created'
-                  {% else %}
-                  'Create Forwarding Mail'
-                  {% endif %}"
+                      [[[ if ((return states['sensor.curl_resp'].state == '200') && (return states['sensor.curl_resp'].state == '201'))
+                          {
+                            return stastes['sensor.curl_resp'].attributes.message;
+                          }
+                          else if (return (states['sensor.curl_resp'].state == '201')
+                          {
+                            'Woohhooo Mail created';
+                          }
+                          else
+                          {
+                            'Create Forwarding Mail';
+                          }
+                      ]]]
                 tap_action:
                   action: call-service
                   service: script.create_fwd_email
