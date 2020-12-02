@@ -571,7 +571,7 @@ cards:
                   return 'mdi:email-send-outline';
                 else if ( states['sensor.curl_resp'].state == '201' )
                   return 'mdi:email-check-outline';
-                else if ( states['sensor.curl_resp'].state == '400' ) || ( states['sensor.curl_resp'].state == '401' ) || ( states['sensor.curl_resp'].state == '403' )
+                else if (( states['sensor.curl_resp'].state == '400' ) || ( states['sensor.curl_resp'].state == '401' ) || ( states['sensor.curl_resp'].state == '403' ))
                   return 'mdi:alert-circle-outline';
                 else 
                   return 'mdi:email-send-outline';
