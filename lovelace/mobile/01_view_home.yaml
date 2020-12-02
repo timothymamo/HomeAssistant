@@ -392,7 +392,7 @@ cards:
                     show_name: true
                     icon: |
                       [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
-                        ? 'mdi:message-outline' : 'mdi:message-arrow-right-outline' ]]]
+                        ? 'mdi:comment-off-outline' : 'mdi:message-arrow-right-outline' ]]]
                     name: |
                       [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
                         ? 'Msg Not Sent' : 'Msg Sent' ]]]
@@ -429,7 +429,7 @@ cards:
                     show_name: false
                     icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
-                        ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
+                        ? 'mdi:alarm-bell' : 'mdi:alarm-off' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -466,7 +466,10 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm # Change this to the entity you want to control
-                    name: Alarm
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm'].state == 'off'
+                        ? 'mdi:shield-outline' : 'mdi:shield-off-outline' ]]]
+                    name: All Alarms
                     show_icon: true
                     show_name: true
                     state: *button-state
@@ -481,6 +484,9 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm_lights # Change this to the entity you want to control
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm_lights'].state == 'off'
+                        ? 'mdi:lightbulb-group-outline' : 'mdi:lightbulb-group-off-outline' ]]]
                     name: Lights
                     show_icon: true
                     show_name: true
@@ -496,6 +502,9 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm_voice # Change this to the entity you want to control
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm_voice'].state == 'off'
+                        ? 'mdi:account-voice' : 'mdi:voice-off' ]]]
                     name: Voice
                     show_icon: true
                     show_name: true
@@ -511,6 +520,9 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm_notification # Change this to the entity you want to control
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm_notification'].state == 'off'
+                        ? 'mdi:message-outline' : 'mdi:message-off-outline ]]]
                     name: Notification
                     show_icon: true
                     show_name: true
@@ -526,6 +538,9 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm_camera # Change this to the entity you want to control
+                    icon: |
+                      [[[ return states['input_boolean.disable_alarm_camera'].state == 'off'
+                        ? 'mdi:video-outline' : 'mdi:video-off-outline' ]]]
                     name: Camera
                     show_icon: true
                     show_name: true
