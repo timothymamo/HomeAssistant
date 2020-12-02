@@ -304,13 +304,13 @@ cards:
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
                     name: >
                       [[[ 
-                        if ((return states['person.ruby'].state == 'home') && (return states['person.tim'].state == 'home'))
+                        if (( states['person.ruby'].state == 'home') && ( states['person.tim'].state == 'home'))
                           return 'Both Home';
-                        else if ((return states['person.ruby'].state == 'home') && (return states['person.tim'].state != 'home'))
+                        else if (( states['person.ruby'].state == 'home') && ( states['person.tim'].state != 'home'))
                           return 'Ruby is Home';
-                        else if ((return states['person.ruby'].state != 'home') && (return states['person.tim'].state == 'home'))
+                        else if (( states['person.ruby'].state != 'home') && ( states['person.tim'].state == 'home'))
                           return 'Tim is Home';
-                        else if ((return states['person.ruby'].state != 'home') && (return states['person.tim'].state != 'home'))
+                        else if (( states['person.ruby'].state != 'home') && ( states['person.tim'].state != 'home'))
                           return 'No One Home';
                       ]]]
                     state: *button-state
