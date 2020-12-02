@@ -561,11 +561,12 @@ cards:
               ]]]
             styles:
               card:
-                - height: 30px
+                - height: 50px
                 - width: 60px
                 - border: none !important
                 - box-shadow: none !important
                 - background-color: var(--primary-background-color)
+                - position: centre
               icon:
                 - color: var(--primary-text-color)
           - type: markdown
