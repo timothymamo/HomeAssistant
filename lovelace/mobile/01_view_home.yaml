@@ -563,9 +563,30 @@ cards:
         cards:
           - type: 'custom:button-card'
             entity: sensor.curl_resp # Change this to the entity you want to control
-            icon: 'mdi:email-send-outline' # Change this to the icon you want to display
             show_icon: true
-            show_name: false
+            show_name: true
+            icon: >
+              [[[ 
+                if ( states['sensor.curl_resp'].state == '200' )
+                  return 'mdi:email-send-outline';
+                else if ( states['sensor.curl_resp'].state == '201' )
+                  return 'mdi:email-check-outline';
+                else if ( states['sensor.curl_resp'].state == '400' ) || ( states['sensor.curl_resp'].state == '401' ) || ( states['sensor.curl_resp'].state == '403' )
+                  return 'mdi:alert-circle-outline';
+                else 
+                  return 'mdi:email-send-outline';
+              ]]]
+            name: >
+              [[[ 
+                if (( states['sensor.curl_resp'].state != '200') && ( states['sensor.curl_resp'].state != '201' ))
+                  return 'No Cigar';
+                else if ( states['sensor.curl_resp'].state == '201' )
+                  return 'Woohhooo Mail created';
+                else if ( states['sensor.curl_resp'].state == '200' )
+                  return 'Create Forwarding Mail';
+                else 
+                  return 'Create Forwarding Mail';
+              ]]]
             state: *button-state
             styles: *button-style
           - type: markdown
