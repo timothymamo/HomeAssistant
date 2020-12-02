@@ -85,17 +85,10 @@ markdown-style: &markdown-style
       }
       h1 {
         font-size: 15px !important;
-        font-weight: bold;
         font-family: Helvetica;
         margin-bottom: 10px;
-        padding-left: 0px
-      }
-      h2 {
-        font-size: 10px !important;
-        font-weight: thin;
-        font-family: Helvetica;
-        margin-top:0;
         opacity: 1;
+        padding-left: 0px
       }
 
 title: Home
