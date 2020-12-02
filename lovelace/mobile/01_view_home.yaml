@@ -510,7 +510,7 @@ cards:
                   [[[ 
                     if (( states['sensor.curl_resp'].state != '200') && ( states['person.tim'].state != '201' ))
                       return states['sensor.curl_resp'].state;
-                    else if ( states['person.tim'].state == '201' )
+                    else if ( states['sensor.curl_resp'].state == '201' )
                       return 'Woohhooo Mail created';
                     else if ( states['sensor.curl_resp'].state == '200' )
                       return 'Create Forwarding Mail';
