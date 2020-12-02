@@ -535,17 +535,7 @@ cards:
           - type: "custom:paper-buttons-row"
             buttons:
               - entity: sensor.curl_resp
-                name: >
-                  [[[ 
-                    if (( states['sensor.curl_resp'].state != '200') && ( states['sensor.curl_resp'].state != '201' ))
-                      return 'No Cigar';
-                    else if ( states['sensor.curl_resp'].state == '201' )
-                      return 'Woohhooo Mail created';
-                    else if ( states['sensor.curl_resp'].state == '200' )
-                      return 'Create Forwarding Mail';
-                    else 
-                      return 'Create Forwarding Mail';
-                  ]]]
+                name: 'Create Forwarding Mail'
                 tap_action:
                   action: call-service
                   service: script.create_fwd_email
@@ -581,13 +571,13 @@ cards:
           - type: markdown
             content: >
               {% if is_state('sensor.curl_resp', '200') %}
-                ## Create Forwarding Mail
+                # Create Forwarding Mail
               {% elif is_state('sensor.curl_resp', '201') %}
-                ## Woohhooo Forwarding Mail created
+                # Woohhooo Forwarding Mail created
               {% elif is_state('sensor.curl_resp', '400') or is_state('sensor.curl_resp', '401') or is_state('sensor.curl_resp', '403') %}
-                ## {{ states.sensor.curl_resp.attributes.message }}
+                # {{ states.sensor.curl_resp.attributes.message }}
               {% else %}
-                ## Create Forwarding Mail
+                # Create Forwarding Mail
               {% endif %}
             style: *markdown-style
             tap_action:
