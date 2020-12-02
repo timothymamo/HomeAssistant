@@ -559,8 +559,15 @@ cards:
                 else 
                   return 'mdi:email-send-outline';
               ]]]
-            state: *button-state
-            styles: *button-style
+            styles:
+              card:
+                - height: 80px
+                - width: 80px
+                - border-radius: 15px
+                - box-shadow: none !important
+                - background-color: var(--primary-background-color)
+              icon:
+                - color: var(--primary-text-color)
           - type: markdown
             content: >
               {% if is_state('sensor.curl_resp', '200') %}
