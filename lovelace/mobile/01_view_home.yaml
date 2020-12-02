@@ -618,9 +618,7 @@ cards:
                       -5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03);
                     {% endif %}
                 }
-          - type: |
-              [[[ return states['input_boolean.disable_alarm_camera'].state == 'off'
-                ? 'custom:numberbox-card' : 'custom:numberbox-card' ]]]
+          - type: 'custom:numberbox-card'
             entity: input_number.wakeup_transition # Change this to the entity you want to control
             name: false
             icon: false
