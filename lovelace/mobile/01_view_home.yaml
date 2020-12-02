@@ -346,7 +346,7 @@ cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.asleep # Change this to the entity you want to control
                     show_icon: true
-                    show_name: false
+                    show_name: true
                     icon: |
                       [[[ return states['input_boolean.asleep'].state == 'off'
                         ? 'mdi:sleep-off' : 'mdi:sleep' ]]]
@@ -366,7 +366,7 @@ cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.meter_notification_sent # Change this to the entity you want to control
                     show_icon: true
-                    show_name: false
+                    show_name: true
                     icon: |
                       [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
                         ? 'mdi:message-outline' : 'mdi:message-arrow-right-outline' ]]]
@@ -389,7 +389,7 @@ cards:
                       [[[ return states['input_boolean.cleaner'].state == 'off'
                         ? 'No Cleaner' : 'Cleaner' ]]]
                     show_icon: true
-                    show_name: false
+                    show_name: true
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -403,7 +403,7 @@ cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.disable_alarm # Change this to the entity you want to control
                     show_icon: true
-                    show_name: false
+                    show_name: true
                     icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
