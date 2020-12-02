@@ -429,7 +429,7 @@ cards:
                     show_name: false
                     icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
-                        ? 'mdi:alarm-bell' : 'mdi:alarm-off' ]]]
+                        ? 'mdi:shield-outline' : 'mdi:shield-off-outline' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
