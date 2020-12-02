@@ -490,13 +490,13 @@ cards:
             buttons:
               - entity: sensor.curl_resp
                 name: |
-                  {% if not is_state('sensor.curl_resp', '200') %} 
+                  "{% if not is_state('sensor.curl_resp', '200') and not is_state('sensor.curl_resp', '201') %} 
                   'states.sensor.curl_resp.attributes.message'
-                  {% elif is_state('sensor.curl_resp', '200') %}
+                  {% elif is_state('sensor.curl_resp', '201') %}
                   'Woohhooo Mail created'
                   {% else %}
                   'Create Forwarding Mail'
-                  {% endif %}
+                  {% endif %}"
                 tap_action:
                   action: call-service
                   service: script.create_fwd_email
