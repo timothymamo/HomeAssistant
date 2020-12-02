@@ -326,10 +326,13 @@ cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.guests # Change this to the entity you want to control
                     show_icon: true
-                    show_name: false
+                    show_name: true
                     icon: |
                       [[[ return states['input_boolean.guests'].state == 'off'
                         ? 'mdi:account-multiple-minus-outline' : 'mdi:account-multiple-plus-outline' ]]]
+                    name: |
+                      [[[ return states['input_boolean.guests'].state == 'off'
+                        ? 'No Guests' : 'Guests' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -347,6 +350,9 @@ cards:
                     icon: |
                       [[[ return states['input_boolean.asleep'].state == 'off'
                         ? 'mdi:sleep-off' : 'mdi:sleep' ]]]
+                    name: |
+                      [[[ return states['input_boolean.asleep'].state == 'off'
+                        ? 'Awake' : 'Asleep' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -364,6 +370,9 @@ cards:
                     icon: |
                       [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
                         ? 'mdi:message-outline' : 'mdi:message-arrow-right-outline' ]]]
+                    name: |
+                      [[[ return states['input_boolean.meter_notification_sent'].state == 'off'
+                        ? 'Msg Not Sent' : 'Msg Sent' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
@@ -376,6 +385,9 @@ cards:
                 cards:
                   - type: 'custom:button-card'
                     entity: input_boolean.cleaner # Change this to the entity you want to control
+                    name: |
+                      [[[ return states['input_boolean.cleaner'].state == 'off'
+                        ? 'No Cleaner' : 'Cleaner' ]]]
                     show_icon: true
                     show_name: false
                     state: *button-state
@@ -395,6 +407,9 @@ cards:
                     icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
+                    name: |
+                      [[[ return states['input_boolean.disable_alarm'].state == 'off'
+                        ? '' : 'Alarm Disabled' ]]]
                     state: *button-state
                     styles: *button-style
                     tap_action:
