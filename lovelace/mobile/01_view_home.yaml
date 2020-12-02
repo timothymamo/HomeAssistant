@@ -29,8 +29,8 @@ button-style: &button-style
 
 button-override-style: &button-override-style
   card:
-    - height: 60px
-    - width: 60px
+    - height: 30px
+    - width: 30px
     - margin-top: 10px
     - border-radius: 15px
     - box-shadow: |
@@ -41,6 +41,7 @@ button-override-style: &button-override-style
     - background-color: var(--primary-background-color)
   icon:
     - color: var(--primary-text-color)
+    - width: 70%
 
 button-word-state: &button-word-state
   - value: 'on'
