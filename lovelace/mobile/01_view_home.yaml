@@ -496,6 +496,7 @@ cards:
                   'Woohhooo Mail created'
                   {% else %}
                   'Create Forwarding Mail'
+                  {% endif %}
                 tap_action:
                   action: call-service
                   service: script.create_fwd_email
