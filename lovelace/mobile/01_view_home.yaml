@@ -302,7 +302,7 @@ cards:
                     icon: |
                       [[[ return states['input_boolean.disable_alarm'].state == 'off'
                         ? 'mdi:alarm-bell' : 'mdi:alarm-note-off' ]]]
-                    name: |
+                    name: >
                       [[[ 
                           if ((person.ruby.state == 'home') && (person.tim.state == 'home')) 
                             return 'Both Home';
