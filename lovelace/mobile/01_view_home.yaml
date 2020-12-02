@@ -564,7 +564,7 @@ cards:
           - type: 'custom:button-card'
             entity: sensor.curl_resp # Change this to the entity you want to control
             show_icon: true
-            show_name: true
+            show_name: false
             icon: >
               [[[ 
                 if ( states['sensor.curl_resp'].state == '200' )
@@ -576,7 +576,10 @@ cards:
                 else 
                   return 'mdi:email-send-outline';
               ]]]
-            name: >
+            state: *button-state
+            styles: *button-style
+          - type: markdown
+            content: >
               [[[ 
                 if (( states['sensor.curl_resp'].state != '200') && ( states['sensor.curl_resp'].state != '201' ))
                   return 'No Cigar';
@@ -587,11 +590,6 @@ cards:
                 else 
                   return 'Create Forwarding Mail';
               ]]]
-            state: *button-state
-            styles: *button-style
-          - type: markdown
-            content: |
-              # Create Forwarding Mail
             style: *markdown-style
             tap_action:
               action: call-service
