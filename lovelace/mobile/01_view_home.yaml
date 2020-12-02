@@ -618,7 +618,7 @@ cards:
                       -5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03);
                     {% endif %}
                 }
-          - type: 'custom:numberbox-card'
+          - type: "{% if is_state('input_boolean.daylight', 'off') %} custom:numberbox-card {% endif %}"
             entity: input_number.wakeup_transition # Change this to the entity you want to control
             name: false
             icon: false

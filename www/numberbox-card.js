@@ -31,6 +31,7 @@ static get styles() {
 		width: 168px;
     background-color: var(--primary-background-color);
     border-radius: 15px;
+		box-shadow: -5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08);
 		padding:4px 0}
 	ha-card.noborder{padding:0 !important;margin:0 !important;
 		box-shadow:none !important;border:none !important}
