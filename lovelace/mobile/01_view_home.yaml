@@ -509,7 +509,7 @@ cards:
                 name: >
                   [[[ 
                     if (( states['sensor.curl_resp'].state != '200') && ( states['person.tim'].state != '201' ))
-                      return attributes['sensor.curl_resp'].message;
+                      return states['sensor.curl_resp'].message;
                     else if ( states['person.tim'].state == '201' )
                       return 'Woohhooo Mail created';
                     else if ( states['sensor.curl_resp'].state == '200' )
