@@ -56,3 +56,6 @@ clear:
   hacs-status-installed: 'var(--text-color)'                                      # Installed Icon
   hacs-status-pending-restart: 'var(--text-light-color)'                          # Restart Icon
   hacs-status-pending-update: 'var(--accent-color)'                               # Update Icon
+
+  # Custom
+  custom-box-shadow: '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)

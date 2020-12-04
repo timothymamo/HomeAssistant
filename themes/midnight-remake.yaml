@@ -70,3 +70,6 @@ midnight-remake:
   # Google colors
   google-red-500: 'var(--accent-color)'
   google-green-500: '#27ae60'
+
+  # Custom
+  custom-box-shadow: '-5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)'
