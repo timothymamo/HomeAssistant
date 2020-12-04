@@ -58,4 +58,4 @@ clear:
   hacs-status-pending-update: 'var(--accent-color)'                               # Update Icon
 
   # Custom
-  custom-box-shadow: '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)
+  custom-box-shadow: '-5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03)'
