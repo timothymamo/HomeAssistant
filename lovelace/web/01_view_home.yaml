@@ -83,7 +83,7 @@ cards:
       - type: horizontal-stack
         cards:
           - type: 'custom:button-card'
-            entity: group.dining_room # Change this to the entity you want to control
+            entity: light.dining_room # Change this to the entity you want to control
             icon: 'mdi:ceiling-light' # Change this to the icon you want to display
             show_icon: true
             show_name: false

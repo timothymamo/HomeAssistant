@@ -124,7 +124,7 @@ cards:
           - type: horizontal-stack
             cards:
               - type: 'custom:button-card'
-                entity: group.dining_room # Change this to the entity you want to control
+                entity: light.dining_room # Change this to the entity you want to control
                 icon: 'mdi:vanity-light' # Change this to the icon you want to display
                 name: Dining
                 show_icon: true

@@ -4,5 +4,5 @@ downstairs_lights:
     - light.entrance
     - light.hallway
     - light.kitchen
-    - group.dining_room
+    - light.dining_room
     - light.lamp

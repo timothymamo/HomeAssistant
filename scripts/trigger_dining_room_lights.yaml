@@ -4,7 +4,7 @@ turn_on_dining:
       entity_id: input_boolean.dining_light_override
       state: 'off'
     - service: homeassistant.turn_on
-      entity_id: group.dining_room
+      entity_id: light.dining_room
 
 turn_off_dining:
   sequence:
@@ -12,4 +12,4 @@ turn_off_dining:
       entity_id: input_boolean.dining_light_override
       state: 'off'
     - service: homeassistant.turn_off
-      entity_id: group.dining_room
+      entity_id: light.dining_room
