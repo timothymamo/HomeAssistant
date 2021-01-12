@@ -1,7 +1,7 @@
 - alias: 'VPN check'
   trigger:
     - platform: time_pattern
-      hours: '/1'
+      hours: '/3'
       minutes: 0
       seconds: 0
   action:
