@@ -5,6 +5,6 @@ realfeel_notification:
       data_template:
         target: 
           - "{{ states.sensor.last_alexa.state }}"
-        message: "Currently the real feel is {{ states('sensor.home_realfeel_temperature') | round(0) }} degrees"
+        message: "Currently the real feel is {{ states('sensor.home_wind_chill_temperature') | round(0) }} degrees"
         data:
           type: tts
