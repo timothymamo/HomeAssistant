@@ -1,0 +1,7 @@
+echos:
+  name: Echomania
+  entities:
+    - media_player.bedroom_dot
+    - media_player.kitchen_dot
+    - media_player.soundbar
+    - media_player.timothy_s_bose_soundbar_500
