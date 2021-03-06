@@ -1,0 +1,7 @@
+- alias: 'Turn off all lights 1 hour after sunrise'
+  trigger:
+    - platform: time
+      at: "01:00:00"
+  action:
+    - service: light.turn_off
+      entity_id: all
