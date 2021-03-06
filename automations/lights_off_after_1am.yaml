@@ -1,4 +1,4 @@
-- alias: 'Turn off all lights 1 hour after sunrise'
+- alias: 'Turn off all lights at 1am'
   trigger:
     - platform: time
       at: "01:00:00"
