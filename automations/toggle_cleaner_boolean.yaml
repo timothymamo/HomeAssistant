@@ -18,13 +18,13 @@
 - alias: Toggle Cleaner Boolean OFF
   trigger:
     platform: time
-    at: '14:30:00'
+    at: '17:30:00'
   condition:
     condition: and
     conditions:
       - condition: time
         weekday:
-          - thu
+          - wed
       - condition: state
         entity_id: input_boolean.cleaner
         state: 'on'
