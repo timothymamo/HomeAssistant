@@ -1,7 +1,33 @@
-- alias: "Wake me up with bedroom light transition for weekdays"
+- alias: "Wake me up with bedroom light"
   trigger:
     platform: template
-    value_template: "{{ states('sensor.time') == (states.input_datetime.wakeup_time.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
+    value_template: |
+      {% if (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) | timestamp_custom("%d")) == (as_timestamp(now()) | timestamp_custom("%d"))
+          or (as_timestamp(states.sensor.tim_mobile_next_alarm.state) | timestamp_custom("%d")) == (as_timestamp(now()) | timestamp_custom("%d")) %}
+        {% if (states.sensor.ruby_mobile_next_alarm.state != 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
+          {% if ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) < (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
+            {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
+            {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+            True
+          {% elif ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) > (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
+            {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
+            {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+            True
+          {% else %}
+            True
+          {% endif %}
+        {% elif (states.sensor.ruby_mobile_next_alarm.state == 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
+          {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
+          {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+          True
+        {% elif (states.sensor.ruby_mobile_next_alarm.state != 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state == 'unavailable') %}
+          {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
+          {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+          True
+        {% endif %}
+      {% else %}
+          False
+      {% endif %}
   condition:
     condition: and
     conditions:
@@ -11,18 +37,9 @@
       - condition: state
         entity_id: input_boolean.wakeup_enabled
         state: 'on'
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: input_boolean.wakeup_weekend
-            state: 'on'
-          - condition: time
-            weekday:
-              - mon
-              - tue
-              - wed
-              - thu
-              - fri
+      - condition: state
+        entity_id: input_boolean.daylight
+        state: 'off'
   action:
     - service: light.turn_on
       entity_id: group.bedroom
