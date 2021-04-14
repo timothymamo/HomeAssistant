@@ -588,36 +588,6 @@ cards:
                 hold_action:
                   action: more-info
                   haptic: medium
-              - type: 'custom:button-card'
-                entity: input_boolean.wakeup_weekend # Change this to the entity you want to control
-                name: Weekend
-                show_icon: true
-                show_name: true
-                state: *button-state
-                styles: *button-style
-                tap_action:
-                  action: toggle
-                  haptic: light
-                hold_action:
-                  action: more-info
-                  haptic: medium
-          - type: 'custom:time-picker-card'
-            entity: input_datetime.wakeup_time # Change this to the entity you want to control
-            hide:
-              name: true
-            style: |
-                ha-card {
-                  height: 140px;
-                  width: 168px;
-                  background-color: var(--primary-background-color);
-                  border-radius: 15px;
-                  box-shadow:
-                    {% if is_state('input_boolean.daylight', 'off') %}
-                      -5px -5px 10px rgba(50, 50, 50, .2), 6px 6px 10px rgba(0, 0, 0, .08)
-                    {% elif is_state('input_boolean.daylight', 'on') %}
-                      -5px -5px 8px rgba(255, 255, 255, .5), 5px 5px 8px rgba(0, 0, 0, .03);
-                    {% endif %}
-                }
           - type: 'custom:numberbox-card'
             entity: input_number.wakeup_transition # Change this to the entity you want to control
             name: false
