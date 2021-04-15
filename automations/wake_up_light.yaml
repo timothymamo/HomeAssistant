@@ -8,25 +8,23 @@
           {% if ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) < (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
             {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
             {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
-            True
           {% elif ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) > (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
             {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
             {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
-            True
           {% else %}
-            True
           {% endif %}
         {% elif (states.sensor.ruby_mobile_next_alarm.state == 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
           {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
           {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
-          True
         {% elif (states.sensor.ruby_mobile_next_alarm.state != 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state == 'unavailable') %}
           {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
           {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
-          True
         {% endif %}
+      {% endif %}
+      {% if (hour == (as_timestamp(now()) | timestamp_custom("%H"))) and (min == (as_timestamp(now()) | timestamp_custom("%M"))) %}
+        True
       {% else %}
-          False
+        False
       {% endif %}
   condition:
     condition: and
