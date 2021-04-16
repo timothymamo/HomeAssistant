@@ -1,4 +1,5 @@
-- alias: 'Turn on Bedroom when bottom stairs sensor triggered'
+- id: turn_on_bedroom_when_bottom_stairs_sensor_triggered'
+  alias: 'Turn on Bedroom when bottom stairs sensor triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.bottom_stairs
@@ -18,7 +19,8 @@
   action:
     - service: script.turn_on_bedroom
 
-- alias: 'Turn off downstairs when bottom stairs sensor triggered and only one person in house'
+- id: turn_off_downstairs_when_bottom_stairs_sensor_triggered_and_only_one_person_in_house
+  alias: 'Turn off downstairs when bottom stairs sensor triggered and only one person in house'
   trigger:
     - platform: state
       entity_id: input_boolean.bottom_stairs
