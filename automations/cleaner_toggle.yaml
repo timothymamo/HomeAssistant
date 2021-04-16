@@ -19,7 +19,6 @@
       entity_id: input_boolean.cleaner
       state: 'on'
   action:
-    - id: nable Camera
       alias: Enable Cameras
       service: script.alarm_camera
 
