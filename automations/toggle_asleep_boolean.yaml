@@ -1,4 +1,5 @@
-- alias: 'Turn off Asleep Boolean in the morning'
+- id: turn_off_asleep_boolean_in_the_morning
+  alias: 'Turn off Asleep Boolean in the morning'
   trigger:
     - platform: state
       entity_id: input_boolean.daylight

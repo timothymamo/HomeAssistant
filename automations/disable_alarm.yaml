@@ -1,4 +1,5 @@
-- alias: 'Disable Alarm'
+- id: disable_alarm
+  alias: 'Disable Alarm'
   trigger:
     - platform: state
       entity_id: input_boolean.disable_alarm
@@ -21,7 +22,8 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.disable_alarm
 
-- alias: 'Enable Alarms'
+- id: enable_alarms
+  alias: 'Enable Alarms'
   trigger:
     - platform: state
       entity_id: input_boolean.disable_alarm

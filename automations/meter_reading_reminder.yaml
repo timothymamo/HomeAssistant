@@ -1,4 +1,5 @@
-- alias: 'Reminder to take Meter Readings'
+- id: reminder_to_take_meter_readings
+  alias: 'Reminder to take Meter Readings'
   trigger:
     - platform: state
       entity_id: person.tim

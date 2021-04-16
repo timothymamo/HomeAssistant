@@ -1,4 +1,5 @@
-- alias: 'Toggle storage boolean when sensor triggers'
+- id: toggle_storage_boolean_when_sensor_triggers
+  alias: 'Toggle storage boolean when sensor triggers'
   trigger:
     - platform: state
       entity_id: binary_sensor.window_door_sensor_storage
@@ -7,7 +8,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.storage
 
-- alias: 'Toggle storage boolean to off'
+- id: toggle_storage_boolean_to_off
+  alias: 'Toggle storage boolean to off'
   trigger:
     - platform: state
       entity_id: binary_sensor.window_door_sensor_storage

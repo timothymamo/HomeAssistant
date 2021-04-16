@@ -1,4 +1,5 @@
-- alias: 'Change Forwarding Email Sensor Icon'
+- id: change_forwarding_email_sensor_icon
+  alias: 'Change Forwarding Email Sensor Icon'
   trigger:
     - platform: state
       entity_id: sensor.curl_resp

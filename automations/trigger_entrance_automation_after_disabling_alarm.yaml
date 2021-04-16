@@ -1,4 +1,5 @@
-- alias: 'Trigger Entrance Automation After Disabling alarm'
+- id: trigger_entrance_automation_after_disabling_alarm
+  alias: 'Trigger Entrance Automation After Disabling alarm'
   trigger:
     - platform: state
       entity_id: input_boolean.disable_alarm

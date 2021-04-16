@@ -1,4 +1,5 @@
-- alias: 'Turn on Hallway when storage sensor triggered'
+- id: turn_on_hallway_when_storage_sensor_triggered
+  alias: 'Turn on Hallway when storage sensor triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.storage
@@ -18,7 +19,8 @@
   action:
     - service: script.turn_on_hallway
 
-- alias: 'Turn off Hallway after 3 min - Storage trigger'
+- id: turn_off_hallway_after_3_min_storage_trigger
+  alias: 'Turn off Hallway after 3 min - Storage trigger'
   trigger:
     - platform: state
       entity_id: input_boolean.storage

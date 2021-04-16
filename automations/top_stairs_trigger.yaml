@@ -1,4 +1,5 @@
-- alias: 'Turn on Dining and Hallway when top stairs sensor triggered'
+- id: turn_on_dining_and_hallway_when_top_stairs_sensor_triggered
+  alias: 'Turn on Dining and Hallway when top stairs sensor triggered'
   mode: restart
   trigger:
     - platform: state
@@ -32,7 +33,8 @@
       state: 'on'
     - service: script.turn_off_dining
 
-- alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
+- id: turn_off_all_lights_except_hallway_when_hallway_goes_on_and_only_one_person_in_house
+  alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
   trigger:
     - platform: state
       entity_id: input_boolean.top_stairs

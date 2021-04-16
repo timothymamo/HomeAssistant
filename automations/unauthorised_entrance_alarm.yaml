@@ -1,4 +1,5 @@
-- alias: 'Trigger alarm when unauthorised entrance is triggered'
+- id: trigger_alarm_when_unauthorised_entrance_is_triggered
+  alias: 'Trigger alarm when unauthorised entrance is triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.entrance

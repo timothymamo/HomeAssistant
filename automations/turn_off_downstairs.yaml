@@ -1,4 +1,5 @@
-- alias: 'Turn off downstairs if bottom stairs counter is lower than one'
+- id: turn_off_downstairs_if_bottom_stairs_counter_is_lower_than_one
+  alias: 'Turn off downstairs if bottom stairs counter is lower than one'
   trigger:
     - platform: state
       entity_id: input_boolean.bottom_stairs

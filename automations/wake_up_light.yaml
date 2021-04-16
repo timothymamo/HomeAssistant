@@ -1,4 +1,5 @@
-- alias: "Wake me up with bedroom light"
+- id: wake_me_up_with_bedroom_light
+  alias: "Wake me up with bedroom light"
   trigger:
     platform: template
     value_template: |

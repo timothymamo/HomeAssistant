@@ -1,4 +1,5 @@
-- alias: 'Toggle hue dimmer boolean when ON button pressed'
+- id: toggle_hue_dimmer_boolean_when_on_button_pressed
+  alias: 'Toggle hue dimmer boolean when ON button pressed'
   trigger:
     - platform: event
       event_type: deconz_event
@@ -9,7 +10,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.hue_dimmer
 
-- alias: 'Toggle hue dimmer boolean when OFF button pressed'
+- id: toggle_hue_dimmer_boolean_when_off_button_pressed
+  alias: 'Toggle hue dimmer boolean when OFF button pressed'
   trigger:
     - platform: event
       event_type: deconz_event

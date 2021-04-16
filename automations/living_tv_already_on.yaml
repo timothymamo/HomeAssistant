@@ -1,4 +1,5 @@
-- alias: 'Turn on Living Room when TV is on and it gets dark'
+- id: turn_on_living_room_when_tv_is_on_and_it_gets_dark
+  alias: 'Turn on Living Room when TV is on and it gets dark'
   trigger:
     - platform: state
       entity_id: input_boolean.daylight
@@ -22,7 +23,8 @@
     - service: scene.turn_on
       entity_id: scene.movie_night_light
 
-- alias: 'Turn off Living Room when TV goes off'
+- id: turn_off_living_room_when_tv_goes_off
+  alias: 'Turn off Living Room when TV goes off'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
@@ -45,7 +47,8 @@
         minutes: 3
     - service: script.turn_off_dining
 
-- alias: 'Turn on Living Room if TV goes on and it is dark'
+- id: turn_on_living_room_if_tv_goes_on_and_it_is_dark
+  alias: 'Turn on Living Room if TV goes on and it is dark'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv

@@ -1,4 +1,5 @@
-- alias: 'Turn on Kitchen when sensor triggered'
+- id: turn_on_kitchen_when_sensor_triggered
+  alias: 'Turn on Kitchen when sensor triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.kitchen
@@ -18,7 +19,8 @@
   action:
     - service: script.turn_on_kitchen
 
-- alias: 'Turn off Kitchen after 2 min'
+- id: turn_off_kitchen_after_2_min
+  alias: 'Turn off Kitchen after 2 min'
   trigger:
     - platform: state
       entity_id: input_boolean.kitchen
@@ -28,7 +30,8 @@
   action:
     - service: script.turn_off_kitchen
 
-- alias: 'Turn off bedroom when kitchen goes on and only one person in house'
+- id: turn_off_bedroom_when_kitchen_goes_on_and_only_one_person_in_house
+  alias: 'Turn off bedroom when kitchen goes on and only one person in house'
   trigger:
     - platform: state
       entity_id: input_boolean.kitchen

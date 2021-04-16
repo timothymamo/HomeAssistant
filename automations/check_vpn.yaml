@@ -1,4 +1,5 @@
-- alias: 'VPN check'
+- id: vpn_check
+  alias: 'VPN check'
   trigger:
     - platform: time_pattern
       hours: '/3'
@@ -10,7 +11,8 @@
         ha_token: !secret ha_token 
         vpn_ip: !secret vpn_ip
 
-- alias: 'VPN is NOT connected'
+- id: vpn_is_not_connected
+  alias: 'VPN is NOT connected'
   trigger:
     - platform: state
       entity_id: sensor.vpn_status
@@ -27,7 +29,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.vpn_notification_sent
 
-- alias: 'VPN is connected'
+- id: vpn_is_connected
+  alias: 'VPN is connected'
   trigger:
     - platform: state
       entity_id: sensor.vpn_status

@@ -1,4 +1,5 @@
-- alias: 'Turn on Entrance when hallway triggered'
+- id: turn_on_entrance_when_hallway_triggered
+  alias: 'Turn on Entrance when hallway triggered'
   trigger:
     - platform: state
       entity_id: input_boolean.hallway
@@ -18,7 +19,8 @@
   action:
     - service: script.turn_on_entrance
 
-- alias: 'Turn off Entrance after 3 min'
+- id: turn_off_entrance_after_3_min
+  alias: 'Turn off Entrance after 3 min'
   trigger:
     - platform: state
       entity_id: input_boolean.hallway
@@ -28,7 +30,8 @@
   action:
     - service: script.turn_off_entrance
 
-- alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
+- id: turn_off_all_lights_except_hallway_when_hallway_goes_on_and_only_one_person_in_house
+  alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
   trigger:
     - platform: state
       entity_id: input_boolean.hallway

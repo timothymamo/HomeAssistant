@@ -1,4 +1,5 @@
-- alias: 'Toggle entrance boolean when sensor triggers'
+- id: toggle_entrance_boolean_when_sensor_triggers
+  alias: 'Toggle entrance boolean when sensor triggers'
   trigger:
     - platform: state
       entity_id: binary_sensor.window_door_sensor_entrance
@@ -11,7 +12,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.entrance
 
-- alias: 'Toggle entrance boolean after 15 sec'
+- id: toggle_entrance_boolean_after_15_sec
+  alias: 'Toggle entrance boolean after 15 sec'
   trigger:
     - platform: state
       entity_id: input_boolean.entrance

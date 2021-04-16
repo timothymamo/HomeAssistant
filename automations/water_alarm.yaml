@@ -1,4 +1,5 @@
-- alias: 'Warn when water sensor is triggered'
+- id: warn_when_water_sensor_is_triggered
+  alias: 'Warn when water sensor is triggered'
   trigger:
     - platform: state
       entity_id: binary_sensor.water_sensor_kitchen_1

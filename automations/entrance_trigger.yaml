@@ -1,4 +1,5 @@
-- alias: 'Turn on Hallway then Dining when entrance sensor triggered'
+- id: turn_on_hallway_then_dining_when_entrance_sensor_triggered
+  alias: 'Turn on Hallway then Dining when entrance sensor triggered'
   mode: restart
   trigger:
     - platform: state
@@ -44,7 +45,8 @@
       state: 'on'
     - service: script.turn_off_dining
 
-- alias: 'Turn off Dining after 3 min TV is on'
+- id: turn_off_dining_after_3_min_tv_is_on
+  alias: 'Turn off Dining after 3 min TV is on'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
@@ -54,7 +56,8 @@
   action:
     - service: script.turn_off_dining
 
-- alias: 'Turn off all lights except lamp when tv goes on and only one person in house'
+- id: Turn_off_all_lights_except_lamp_when_tv_goes_on_and_only_one_person_in_house
+  alias: 'Turn off all lights except lamp when tv goes on and only one person in house'
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv

@@ -1,4 +1,5 @@
-- alias: 'Turn off all lights when everyone leaves the house'
+- id: turn_off_all_lights_when_everyone_leaves_the_house
+  alias: 'Turn off all lights when everyone leaves the house'
   trigger:
     - platform: state
       entity_id: input_boolean.no_one_home

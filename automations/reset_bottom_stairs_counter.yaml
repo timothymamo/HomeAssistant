@@ -1,4 +1,5 @@
-- alias: 'Reset Bottom Stairs Counter'
+- id: reset_bottom_stairs_counter
+  alias: 'Reset Bottom Stairs Counter'
   trigger:
     - platform: time
       at: "02:00:00"

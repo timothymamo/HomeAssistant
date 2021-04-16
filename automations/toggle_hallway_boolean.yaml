@@ -1,4 +1,5 @@
-- alias: 'Toggle hallway boolean when sensor triggers'
+- id: toggle_hallway_boolean_when_sensor_triggers
+  alias: 'Toggle hallway boolean when sensor triggers'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_hallway
@@ -11,7 +12,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.hallway
 
-- alias: 'Toggle hallway boolean after 15 sec'
+- id: toggle_hallway_boolean_after_15_sec
+  alias: 'Toggle hallway boolean after 15 sec'
   trigger:
     - platform: state
       entity_id: input_boolean.hallway

@@ -1,4 +1,5 @@
-- alias: 'Toggle boolean when Tim leaves home'
+- id: toggle_boolean_when_tim_leaves_home
+  alias: 'Toggle boolean when Tim leaves home'
   trigger:
     - platform: template
       value_template: '{% if not is_state("person.tim", "home") %}true{% else %}false{% endif %}'
@@ -6,7 +7,8 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.tim
 
-- alias: 'Toggle boolean when Tim arrives home'
+- id: toggle_boolean_when_tim_arrives_home
+  alias: 'Toggle boolean when Tim arrives home'
   trigger:
     - platform: state
       entity_id: person.tim
@@ -15,7 +17,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.tim
 
-- alias: 'Toggle boolean when Ruby leaves home'
+- id: toggle_boolean_when_ruby_leaves_home
+  alias: 'Toggle boolean when Ruby leaves home'
   trigger:
     - platform: template
       value_template: '{% if not is_state("person.ruby", "home") %}true{% else %}false{% endif %}'
@@ -23,7 +26,8 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.ruby
 
-- alias: 'Toggle boolean when Ruby arrives home'
+- id: toggle_boolean_when_ruby_arrives_home
+  alias: 'Toggle boolean when Ruby arrives home'
   trigger:
     - platform: state
       entity_id: person.ruby
