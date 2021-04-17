@@ -13,6 +13,8 @@ cards:
       - light.kitchen
       - light.lamp
       - light.entrance
+      - light.stairs
+      - light.clothes_bedroom
     show_header_toggle: true
     title: Lights
 
