@@ -1,0 +1,15 @@
+turn_on_stairs:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.stairs_light_override
+      state: 'off'
+    - service: light.turn_on
+      entity_id: light.stairs
+
+turn_off_stairs:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.stairs_light_override
+      state: 'off'
+    - service: light.turn_off
+      entity_id: light.stairs

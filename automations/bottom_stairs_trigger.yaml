@@ -17,7 +17,11 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
+    - service: script.turn_on_stairs
     - service: script.turn_on_bedroom
+    - delay:
+        minutes: 1
+    - service: script.turn_off_stairs
 
 - id: turn_off_downstairs_when_bottom_stairs_sensor_triggered_and_only_one_person_in_house
   alias: 'Turn off downstairs when bottom stairs sensor triggered and only one person in house'

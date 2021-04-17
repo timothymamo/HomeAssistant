@@ -8,3 +8,5 @@ all_lights:
     - light.bedroom
     - light.lamp
     - light.entrance
+    - light.stairs
+    - light.clothes_bedroom

@@ -18,10 +18,12 @@
         entity_id: input_boolean.asleep
         state: 'off'
   action:
+    - service: script.turn_on_stairs
     - service: script.turn_on_dining
     - service: script.turn_on_hallway
     - delay:
         minutes: 1
+    - service: script.turn_off_stairs
     - condition: state
       entity_id: binary_sensor.window_door_sensor_storage
       state: 'off'
