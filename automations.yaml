@@ -1,0 +1,34 @@
+- id: '1618848405281'
+  alias: Test Automation Button Press
+  description: ''
+  trigger:
+  - device_id: 53c6befcc3819e99fe1ecee031ebf368
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: ba9ed5c2e8cbad081b01e83ac6cfb3a8
+    entity_id: light.clothes_bedroom
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1618848480840'
+  alias: Button Press ON
+  description: ''
+  trigger:
+  - device_id: 53c6befcc3819e99fe1ecee031ebf368
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: ba9ed5c2e8cbad081b01e83ac6cfb3a8
+    entity_id: light.clothes_bedroom
+    domain: light
+    brightness_pct: 100
+  mode: single
