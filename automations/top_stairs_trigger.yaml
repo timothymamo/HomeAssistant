@@ -35,8 +35,8 @@
       state: 'on'
     - service: script.turn_off_dining
 
-- id: turn_off_all_lights_except_hallway_when_hallway_goes_on_and_only_one_person_in_house
-  alias: 'Turn off all lights except hallway when hallway goes on and only one person in house'
+- id: turn_off_all_lights_except_hallway_when_top_stairs_goes_on_and_only_one_person_in_house
+  alias: 'Turn off all lights except hallway when top stairs goes on and only one person in house'
   trigger:
     - platform: state
       entity_id: input_boolean.top_stairs

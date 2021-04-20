@@ -1,5 +1,5 @@
-- id: toggle_cleaner_boolean_on
-  alias: Toggle Cleaner Boolean ON
+- id: send_cleaner_notification
+  alias: Send Cleaner Notification
   trigger:
     - platform: time
       at: "07:00:00"
