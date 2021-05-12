@@ -10,12 +10,12 @@
       entity_id: input_boolean.daylight
       state: 'off'
   action:
-    # - service: notify.mobile_app_tim_mobile
-    #   data:
-    #     message: "request_location_update"
-    # - service: notify.mobile_app_ruby_mobile
-    #   data:
-    #     message: "request_location_update"
+    - service: notify.mobile_app_tim_mobile
+      data:
+        message: "request_location_update"
+    - service: notify.mobile_app_ruby_mobile
+      data:
+        message: "request_location_update"
     - service: script.turn_on_entrance
     - delay:
         seconds: 10
