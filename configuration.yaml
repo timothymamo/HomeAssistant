@@ -18,6 +18,11 @@ tts:
 homeassistant:
   customize: !include_dir_merge_named /config/customize/
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.22.0.0/24
+
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
