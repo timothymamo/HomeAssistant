@@ -9,7 +9,7 @@
     conditions:
       - condition: state
         entity_id: media_player.mybraviatv
-        state: 'on'
+        state: 'playing'
       - condition: state
         entity_id: input_boolean.no_one_home
         state: 'off'
@@ -52,7 +52,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
-      to: 'on'
+      to: 'playing'
   condition:
     condition: and
     conditions:

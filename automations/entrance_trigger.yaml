@@ -42,7 +42,7 @@
         minutes: 3
     - condition: state
       entity_id: media_player.mybraviatv
-      state: 'on'
+      state: 'playing'
     - service: script.turn_off_dining
 
 - id: turn_off_dining_after_3_min_tv_is_on
@@ -50,7 +50,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
-      to: 'on'
+      to: 'playing'
       for:
         minutes: 3
   action:
@@ -61,7 +61,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
-      to: 'on'
+      to: 'playing'
   condition:
     - condition:  state
       entity_id: input_boolean.one_person
