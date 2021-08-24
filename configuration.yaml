@@ -21,7 +21,7 @@ homeassistant:
 http:
   use_x_forwarded_for: true
   trusted_proxies:
-    - 172.22.0.0/24
+    - 172.0.0.0/8
 
 lovelace:
   mode: yaml
