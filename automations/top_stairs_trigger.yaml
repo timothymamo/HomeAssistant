@@ -30,9 +30,8 @@
     - service: script.turn_off_hallway
     - delay:
         minutes: 2
-    - condition: state
-      entity_id: media_player.mybraviatv
-      state: 'playing'
+    - condition: template
+      value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
     - service: script.turn_off_dining
 
 - id: turn_off_all_lights_except_hallway_when_top_stairs_goes_on_and_only_one_person_in_house

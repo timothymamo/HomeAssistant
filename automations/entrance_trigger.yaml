@@ -40,9 +40,8 @@
     - service: script.turn_off_hallway
     - delay:
         minutes: 3
-    - condition: state
-      entity_id: media_player.mybraviatv
-      state: 'playing'
+    - condition: template
+      value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
     - service: script.turn_off_dining
 
 - id: turn_off_dining_after_3_min_tv_is_on
@@ -51,6 +50,11 @@
     - platform: state
       entity_id: media_player.mybraviatv
       to: 'playing'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'paused'
       for:
         minutes: 3
   action:
@@ -62,6 +66,9 @@
     - platform: state
       entity_id: media_player.mybraviatv
       to: 'playing'
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'paused'
   condition:
     - condition:  state
       entity_id: input_boolean.one_person

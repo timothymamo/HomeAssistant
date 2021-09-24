@@ -7,9 +7,8 @@
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: media_player.mybraviatv
-        state: 'playing'
+      - condition: template
+        value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
       - condition: state
         entity_id: input_boolean.no_one_home
         state: 'off'
@@ -53,6 +52,9 @@
     - platform: state
       entity_id: media_player.mybraviatv
       to: 'playing'
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'paused'
   condition:
     condition: and
     conditions:
