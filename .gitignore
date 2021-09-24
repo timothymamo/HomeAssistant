@@ -13,7 +13,7 @@ alexa_media.amazon@themamo.com.pickle
 secrets.yaml
 
 # Ignore the log and database
-home-assistant.log
+home-assistant.log*
 home-assistant_v2.db*
 
 # Ignore any private keys
