@@ -7,19 +7,19 @@
           or (as_timestamp(states.sensor.tim_mobile_next_alarm.state) | timestamp_custom("%d")) == (as_timestamp(now()) | timestamp_custom("%d")) %}
         {% if (states.sensor.ruby_mobile_next_alarm.state != 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
           {% if ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) < (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
-            {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
-            {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+            {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
+            {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
           {% elif ((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) > (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) %}
-            {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
-            {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+            {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
+            {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
           {% else %}
           {% endif %}
         {% elif (states.sensor.ruby_mobile_next_alarm.state == 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
-          {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
-          {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+          {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
+          {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
         {% elif (states.sensor.ruby_mobile_next_alarm.state != 'unavailable' ) and (states.sensor.tim_mobile_next_alarm.state == 'unavailable') %}
-          {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%H") %}
-          {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (5*60)) | timestamp_custom("%M") %}
+          {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
+          {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
         {% endif %}
       {% endif %}
       {% if (hour == (as_timestamp(now()) | timestamp_custom("%H"))) and (min == (as_timestamp(now()) | timestamp_custom("%M"))) %}
@@ -40,13 +40,14 @@
         entity_id: input_boolean.daylight
         state: 'off'
   action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.asleep
+    - service: counter.reset
+      entity_id: counter.bottom_stairs_counter
     - service: light.turn_on
       entity_id: group.bedroom
       data_template:
         transition: "{{ states.input_number.wakeup_transition.state | int * 60 }}"
         brightness: 255
         color_temp: 389
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.asleep
-    - service: counter.reset
-      entity_id: counter.bottom_stairs_counter
+    - delay: '01:30:00'
