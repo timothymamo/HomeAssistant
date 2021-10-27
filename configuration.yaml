@@ -24,6 +24,17 @@ http:
     - 172.0.0.0/8
     - 192.168.0.0/16
 
+logger:
+  default: warning
+  filters:
+    alexapy.alexalogin:
+      - "Domain amazon.nl does not match reported account*"
+      - "No access token found; falling back to credential login instead of oauth."
+    homeassistant.helpers.template:
+      - "Template variable error: 'None' has no attribute 'attributes' when rendering '{{ states.sensor.curl_resp.attributes.message }}'"
+      - "Template variable warning: 'mappingproxy object' has no attribute 'message' when rendering '{{ states.sensor.curl_resp.attributes.message }}'"
+      - "Template variable warning: 'hour' is undefined when rendering"
+
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
