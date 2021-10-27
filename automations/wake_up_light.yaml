@@ -1,5 +1,7 @@
 - id: wake_me_up_with_bedroom_light
   alias: "Wake me up with bedroom light"
+  mode: single
+  max_exceeded: silent
   trigger:
     platform: template
     value_template: |
