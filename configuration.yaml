@@ -34,6 +34,7 @@ logger:
       - "Template variable error: 'None' has no attribute 'attributes' when rendering '{{ states.sensor.curl_resp.attributes.message }}'"
       - "Template variable warning: 'mappingproxy object' has no attribute 'message' when rendering '{{ states.sensor.curl_resp.attributes.message }}'"
       - "Template variable warning: 'hour' is undefined when rendering"
+      - "Template variable warning: No first item, sequence was empty. when rendering '{{ expand(states.group.echos) | selectattr('attributes.last_called','eq',True) | map(attribute='entity_id') | first }}'"
 
 lovelace:
   mode: yaml
