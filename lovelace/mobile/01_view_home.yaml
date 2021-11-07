@@ -505,7 +505,7 @@ cards:
                     entity: input_boolean.disable_alarm_voice # Change this to the entity you want to control
                     icon: |
                       [[[ return states['input_boolean.disable_alarm_voice'].state == 'off'
-                        ? 'mdi:account-voice' : 'mdi:voice-off' ]]]
+                        ? 'mdi:account-voice' : 'mdi:account-voice-off' ]]]
                     name: Voice
                     show_icon: true
                     show_name: true

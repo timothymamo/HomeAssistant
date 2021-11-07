@@ -100,7 +100,7 @@ disable_alarm_lights:
 
 disable_alarm_voice:
   name: "Disable Voice Alarm"
-  icon: mdi:voice-off
+  icon: mdi:account-voice-off
 
 disable_alarm_notification:
   name: "Disable Notification Alarm"
