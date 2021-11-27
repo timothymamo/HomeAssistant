@@ -6,12 +6,12 @@ turn_on_stairs:
     - service: light.turn_on
       entity_id: light.stairs
       data: 
-        brightness: |
-        {% if (as_timestamp(now(), 0) | timestamp_custom ('%H') | int ) < 9 %}
-          150
-        {% else %}
-          255
-        {% endif %}
+        brightness: >
+          {% if (as_timestamp(now(), 0) | timestamp_custom ('%H') | int ) < 9 %}
+            150
+          {% else %}
+            255
+          {% endif %}
 
 turn_off_stairs:
   sequence:
