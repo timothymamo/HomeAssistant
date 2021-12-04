@@ -7,7 +7,7 @@ turn_on_stairs:
       entity_id: light.stairs
       data: 
         brightness: >
-          {% if (as_timestamp(now(), 0) | timestamp_custom ('%H') | int ) < 9 %}
+          {% if (as_timestamp(now(), 0) | timestamp_custom ('%H') | int ) < 9 and (states.light.bedroom.state == "off") %}
             150
           {% else %}
             255
