@@ -30,9 +30,7 @@ entity_config:
   script.plex:
     name: "Plex"
   script.nos:
-    name: "NOS Channel"
-  script.npo:
-    name: "NPO Channel"
+    name: "Dutch TV"
   light.dining_1:
     name: 'Dining 1'
     display_categories: 'LIGHT'
