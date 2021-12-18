@@ -33,6 +33,16 @@ cards:
           id: script.app_change
           data:
             player_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
+        - icon: mdi:car-brake-worn-linings
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.nl.nos.app.nl.nos.app.ui.activities.OverviewActivity'
+        - icon: mdi:television-box
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.main.SplashActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:sony-playstation
