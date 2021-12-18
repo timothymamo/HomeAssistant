@@ -17,3 +17,13 @@ plex:
     - service: shell_command.app_change
       data_template:
         app_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
+nos:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.nl.nos.app.nl.nos.app.ui.activities.OverviewActivity'
+npo:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.main.SplashActivity'
