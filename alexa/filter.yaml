@@ -10,6 +10,8 @@ filter:
     - script.netflix
     - script.realfeel_notification
     - script.plex
+    - script.nos
+    - script.npo
   include_domains:
     - light
     - media_player

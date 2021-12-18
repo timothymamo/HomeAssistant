@@ -29,6 +29,10 @@ entity_config:
     name: 'Netflix'
   script.plex:
     name: "Plex"
+  script.nos:
+    name: "NOS"
+  script.npo:
+    name: "NPO"
   light.dining_1:
     name: 'Dining 1'
     display_categories: 'LIGHT'
