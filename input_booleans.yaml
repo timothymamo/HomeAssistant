@@ -137,4 +137,3 @@ vpn_notification_sent:
 fwd_email_both:
   name: "Both"
   icon: mdi:email-multiple-outline
-  initial: off
