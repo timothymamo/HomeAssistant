@@ -28,11 +28,21 @@ cards:
           id: script.app_change
           data:
             player_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
-        - icon: mdi:amazon
+        - icon: mdi:aws
           type: script
           id: script.app_change
           data:
             player_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
+        - icon: mdi:alpha-n-circle-outline
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.nl.nos.app.nl.nos.app.ui.activities.OverviewActivity'
+        - icon: mdi:record-circle
+          type: script
+          id: script.app_change
+          data:
+            player_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.main.SplashActivity'
   - entity: media_player.playstation_4
     type: custom:mini-media-player
     icon: mdi:sony-playstation
