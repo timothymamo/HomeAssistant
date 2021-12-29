@@ -135,6 +135,6 @@ vpn_notification_sent:
   initial: off
 
 fwd_email_both:
-  name: "Create Forwarding Email for Both"
+  name: "Both"
   icon: mdi:email-multiple-outline
   initial: off
