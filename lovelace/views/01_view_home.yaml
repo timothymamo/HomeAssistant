@@ -59,6 +59,7 @@ cards:
               "401": "mdi:alert-circle-outline"
               "403": "mdi:alert-circle-outline"
       - entity: input_boolean.fwd_email_both
+        show_name: false
 
   - type: custom:group-card
     card:
