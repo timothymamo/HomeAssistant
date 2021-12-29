@@ -73,6 +73,6 @@ cards:
       title: Disable Alarms
     group: group.disable_alarms
 
-  - type: entity
-    entity: input_boolean.fwd_email_both
-    name: " "
+  - type: entities
+    entities: 
+      - input_boolean.fwd_email_both
