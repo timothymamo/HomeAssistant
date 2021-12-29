@@ -45,21 +45,24 @@ cards:
         condition: "{{ not is_state('sensor.curl_resp', '200')}}"
       - type: 'custom:text-input-row'
         entity: input_text.create_fwd_email
-      - type: "custom:paper-buttons-row"
-        buttons:
-          - entity: sensor.curl_resp
-            name: "Create Frowarding Email"
-            tap_action:
-              action: call-service
-              service: script.create_fwd_email
-            state_icons:
-              "200": "mdi:email-send-outline"
-              "201": "mdi:email-check-outline"
-              "400": "mdi:alert-circle-outline"
-              "401": "mdi:alert-circle-outline"
-              "403": "mdi:alert-circle-outline"
-      - entity: input_boolean.fwd_email_both
-        name: " "
+      - type: horizontal-stack
+        cards:
+          - type: "custom:paper-buttons-row"
+            buttons:
+              - entity: sensor.curl_resp
+                name: "Create Frowarding Email"
+                tap_action:
+                  action: call-service
+                  service: script.create_fwd_email
+                state_icons:
+                  "200": "mdi:email-send-outline"
+                  "201": "mdi:email-check-outline"
+                  "400": "mdi:alert-circle-outline"
+                  "401": "mdi:alert-circle-outline"
+                  "403": "mdi:alert-circle-outline"
+          - type: entity
+            entity: input_boolean.fwd_email_both
+            name: " "
 
   - type: custom:group-card
     card:
