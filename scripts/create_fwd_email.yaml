@@ -1,12 +1,3 @@
-# create_fwd_email:
-#   sequence:
-#     - service: shell_command.create_fwd_email
-#       data_template:
-#         domain: !secret gandi_domain
-#         api_key: !secret gandi_api_key
-#         email: "{{ states('input_text.create_fwd_email') | string }}"
-#         dest_email: !secret gandi_dest_email
-#         ha_token: !secret ha_token
 create_fwd_email:
   sequence:
     - service: shell_command.create_fwd_email
@@ -14,10 +5,19 @@ create_fwd_email:
         domain: !secret gandi_domain
         api_key: !secret gandi_api_key
         email: "{{ states('input_text.create_fwd_email') | string }}"
-        dest_email: >
-          {% if is_state("input_boolean.fwd_email_both", "off") -%}
-            !secret gandi_dest_email
-          {%- else -%}
-            !secret gandi_dest_email_both
-          {%- endif %}
+        dest_email: !secret gandi_dest_email
         ha_token: !secret ha_token
+# create_fwd_email:
+#   sequence:
+#     - service: shell_command.create_fwd_email
+#       data_template:
+#         domain: !secret gandi_domain
+#         api_key: !secret gandi_api_key
+#         email: "{{ states('input_text.create_fwd_email') | string }}"
+#         dest_email: >
+#           {% if is_state("input_boolean.fwd_email_both", "off") -%}
+#             !secret gandi_dest_email
+#           {%- else -%}
+#             !secret gandi_dest_email_both
+#           {%- endif %}
+#         ha_token: !secret ha_token
