@@ -133,3 +133,8 @@ vpn_notification_sent:
   name: "VPN Notification Sent"
   icon: mdi:message-alert-outline
   initial: off
+
+fwd_email_both:
+  name: "Create Forwarding Email for Both"
+  icon: mdi:email-multiple-outline
+  initial: off
