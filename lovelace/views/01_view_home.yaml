@@ -78,8 +78,7 @@ cards:
                       action: call-service
                       service: input_boolean.toggle
                       target:
-                        entity_id: 
-                          - input_boolean.fwd_email_both
+                        entity_id: input_boolean.fwd_email_both
                     state_icons:
                       "on": "mdi:email-multiple-outline"
                       "off": "mdi:email-outline"
