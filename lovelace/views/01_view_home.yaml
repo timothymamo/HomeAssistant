@@ -72,7 +72,7 @@ cards:
                         {% if is_state("input_boolean.fwd_email_both", "on") %}
                           Both
                         {% elif is_state("input_boolean.fwd_email_both", "off") %}
-                          Just Tim
+                          Tim
                         {% else %}
                           Unknown
                         {% endif %}
