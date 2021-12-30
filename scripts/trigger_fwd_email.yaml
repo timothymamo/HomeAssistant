@@ -10,6 +10,6 @@ turn_off_fwd_email_both:
   sequence:
     - condition: state
       entity_id: input_boolean.fwd_email_both
-      state: 'off'
+      state: 'on'
     - service: input_boolean.turn_off
       entity_id: input_boolean.fwd_email_both
