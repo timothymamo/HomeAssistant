@@ -76,8 +76,8 @@ cards:
                       {% endif %}
                     tap_action:
                       action: call-service
-                      service: input_boolean.turn_on
-                      target:
+                      service: input_boolean.toggle
+                      service_target:
                         entity_id: input_boolean.fwd_email_both
                     state_icons:
                       "on": "mdi:email-multiple-outline"
