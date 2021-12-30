@@ -63,29 +63,49 @@ cards:
                       "400": "mdi:alert-circle-outline"
                       "401": "mdi:alert-circle-outline"
                       "403": "mdi:alert-circle-outline"
-              - type: 'custom:card-templater'
-                card:
-                  type: entities
-                  entities: 
-                    - entity: input_boolean.fwd_email_both
-                      name_template: |
-                        {% if is_state("input_boolean.fwd_email_both", "on") %}
-                          Both
-                        {% elif is_state("input_boolean.fwd_email_both", "off") %}
-                          Tim
-                        {% else %}
-                          Unknown
-                        {% endif %}
-                      icon_template: |
-                        {% if is_state("input_boolean.fwd_email_both", "on") %}
-                          mdi:email-multiple-outline
-                        {% elif is_state("input_boolean.fwd_email_both", "off") %}
-                          mdi:email-outline
-                        {% else%}
-                          mdi:email-remove-outline
-                        {% endif %}
-                entities:
+              - type: "custom:paper-buttons-row"
+                buttons:
                   - entity: input_boolean.fwd_email_both
+                    name: |
+                      {% if is_state("input_boolean.fwd_email_both", "on") %}
+                        Both
+                      {% elif is_state("input_boolean.fwd_email_both", "off") %}
+                        Tim
+                      {% else %}
+                        Unknown
+                      {% endif %}
+                    tap_action:
+                      action: call-service
+                      service: input_boolean.toggle
+                      target:
+                        entity_id: input_boolean.fwd_email_both
+                    state_icons:
+                      "on": "mdi:email-multiple-outline"
+                      "off": "mdi:email-outline"
+
+              # - type: 'custom:card-templater'
+              #   card:
+              #     type: entities
+              #     entities: 
+              #       - entity: input_boolean.fwd_email_both
+              #         name_template: |
+              #           {% if is_state("input_boolean.fwd_email_both", "on") %}
+              #             Both
+              #           {% elif is_state("input_boolean.fwd_email_both", "off") %}
+              #             Tim
+              #           {% else %}
+              #             Unknown
+              #           {% endif %}
+              #         icon_template: |
+              #           {% if is_state("input_boolean.fwd_email_both", "on") %}
+              #             mdi:email-multiple-outline
+              #           {% elif is_state("input_boolean.fwd_email_both", "off") %}
+              #             mdi:email-outline
+              #           {% else%}
+              #             mdi:email-remove-outline
+              #           {% endif %}
+              #   entities:
+              #     - entity: input_boolean.fwd_email_both
 
 
   - type: custom:group-card
