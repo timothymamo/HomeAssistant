@@ -74,13 +74,9 @@ cards:
                       {% else %}
                         Unknown
                       {% endif %}
-                    # tap_action:
-                    #   action: call-service
-                    #   service: script.toggle_fwd_email_both
                     tap_action:
                       action: call-service
-                      service: input_boolean.toggle
-                      entity_id: input_boolean.fwd_email_both
+                      service: script.toggle_fwd_email_both
                     state_icons:
                       "on": "mdi:email-multiple-outline"
                       "off": "mdi:email-outline"
