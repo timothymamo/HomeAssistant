@@ -34,3 +34,7 @@
 # Numberbox Card - https://github.com/htmltiger/numberbox-card
 - url: /local/numberbox-card.js
   type: module
+# Lovelace Card Templater - https://github.com/gadgetchnnel/lovelace-card-templater
+- url: /hacsfiles/lovelace-card-templater/lovelace-card-templater.js
+  type: module
+                
