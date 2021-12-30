@@ -73,7 +73,7 @@ cards:
                           Both
                         {% elif is_state("input_boolean.fwd_email_both", "off") %}
                           Just Tim
-                        {% else%}
+                        {% else %}
                           Unknown
                         {% endif %}
                       # icon_template: >-
