@@ -65,7 +65,7 @@ cards:
                       "403": "mdi:alert-circle-outline"
               - type: 'custom:card-templater'
                 card:
-                  type: button
+                  type: entities
                   entities: 
                     - entity: input_boolean.fwd_email_both
                       name_template: |
