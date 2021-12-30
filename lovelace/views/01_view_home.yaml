@@ -76,7 +76,7 @@ cards:
                       {% endif %}
                     tap_action:
                       action: call-service
-                      service: input_boolean.toggle
+                      service: input_boolean.on
                       target:
                         entity_id: input_boolean.fwd_email_both
                     state_icons:
