@@ -53,6 +53,6 @@
       entity_id: group.bedroom
       data_template:
         transition: "{{ states.input_number.wakeup_transition.state | int * 60 }}"
-        brightness: 255
+        brightness: 127
         color_temp: 389
     - delay: '01:30:00'
