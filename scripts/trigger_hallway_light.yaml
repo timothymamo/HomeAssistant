@@ -5,6 +5,8 @@ turn_on_hallway:
       state: 'off'
     - service: homeassistant.turn_on
       entity_id: group.hallway
+      data:
+        brightness: 255
 
 turn_off_hallway:
   sequence:

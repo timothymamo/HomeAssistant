@@ -5,6 +5,8 @@ turn_on_kitchen:
       state: 'off'
     - service: light.turn_on
       entity_id: light.kitchen
+      data:
+        brightness: 255
 
 turn_off_kitchen:
   sequence:

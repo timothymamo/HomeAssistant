@@ -5,6 +5,8 @@ turn_on_entrance:
       state: 'off'
     - service: light.turn_on
       entity_id: light.entrance
+      data:
+        brightness: 255
 
 turn_off_entrance:
   sequence:

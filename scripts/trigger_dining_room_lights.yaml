@@ -5,6 +5,8 @@ turn_on_dining:
       state: 'off'
     - service: homeassistant.turn_on
       entity_id: light.dining_room
+      data:
+        brightness: 255
 
 turn_off_dining:
   sequence:
