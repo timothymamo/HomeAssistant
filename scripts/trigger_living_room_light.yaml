@@ -7,7 +7,7 @@ turn_on_living:
       entity_id: light.lamp
       data_template:
         rgb_color: [255, 241, 224]
-        brightness: "{{ brightness }}"
+        brightness: "{{ brightness | default(2255) }}"
         transition: "{{ transition }}"
 
 turn_off_living:
