@@ -3,8 +3,12 @@ turn_on_hallway:
     - condition: state
       entity_id: input_boolean.hall_light_override
       state: 'off'
+    - service: light.turn_on
+      entity_id: light.hallway
+      data_template:
+        brightness: "{{ brightness | default(2255) }}"
     - service: homeassistant.turn_on
-      entity_id: group.hallway
+      entity_id: input_boolean.hue_dimmer
 
 turn_off_hallway:
   sequence:
