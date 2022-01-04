@@ -3,7 +3,7 @@ turn_on_dining:
     - condition: state
       entity_id: input_boolean.dining_light_override
       state: 'off'
-    - service: homeassistant.turn_on
+    - service: light.turn_on
       entity_id: light.dining_room
       data:
         brightness: 255
@@ -13,5 +13,5 @@ turn_off_dining:
     - condition: state
       entity_id: input_boolean.dining_light_override
       state: 'off'
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id: light.dining_room
