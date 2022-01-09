@@ -8,7 +8,7 @@ turn_on_living:
       data_template:        
         brightness: "{{ brightness | default(255) }}"
         rgb_color: "{{ color_temp | default([255, 241, 224]) }}" # 353
-        transition: "{{ transition | default(0) }}"
+        transition: "{{ transition | default(0.4) }}"
 
 turn_off_living:
   sequence:
