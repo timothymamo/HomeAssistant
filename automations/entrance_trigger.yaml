@@ -35,8 +35,6 @@
     - condition: state
       entity_id: input_boolean.storage
       state: 'off'
-      for:
-        minutes: 1
     - service: script.turn_off_hallway
     - delay:
         minutes: 3

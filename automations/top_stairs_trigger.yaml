@@ -61,7 +61,6 @@
   action:
     - delay:
         minutes: 3
-    - condition: state
-      entity_id: media_player.mybraviatv
-      state: 'on'
+    - condition: template
+      value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
     - service: script.turn_off_dining
