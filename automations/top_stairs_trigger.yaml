@@ -23,16 +23,17 @@
     - service: script.turn_on_hallway
     - delay:
         minutes: 1
-    - service: script.turn_off_stairs
     - condition: state
       entity_id: binary_sensor.window_door_sensor_storage
       state: 'off'
     - service: script.turn_off_hallway
-    - delay:
-        minutes: 2
-    - condition: template
-      value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
-    - service: script.turn_off_dining
+    - condition: state
+      entity_id: input_boolean.bottom_stairs
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.top_stairs
+      state: 'off'
+    - service: script.turn_off_stairs
 
 - id: turn_off_all_lights_except_hallway_when_top_stairs_goes_on_and_only_one_person_in_house
   alias: 'Turn off all lights except hallway when top stairs goes on and only one person in house'
@@ -49,3 +50,18 @@
     - service: script.turn_off_living
     - service: script.turn_off_entrance
     - service: script.turn_off_kitchen
+
+- id: turn_off_dining_if_tv_is_on
+  alias: 'Turn off Dining if TV is on'
+  mode: restart
+  trigger:
+    - platform: state
+      entity_id: input_boolean.top_stairs
+      to: 'on'
+  action:
+    - delay:
+        minutes: 3
+    - condition: state
+      entity_id: media_player.mybraviatv
+      state: 'on'
+    - service: script.turn_off_dining
