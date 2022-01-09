@@ -6,7 +6,9 @@ turn_on_kitchen:
     - service: light.turn_on
       entity_id: light.kitchen
       data_template:
-        brightness: "{{ brightness | default(2255) }}"
+        brightness: "{{ brightness | default(255) }}"
+        rgb_color: "{{ color_temp | default([255,162, 76]) }}" # 389
+        transition: "{{ transition | default(0) }}"
 
 turn_off_kitchen:
   sequence:

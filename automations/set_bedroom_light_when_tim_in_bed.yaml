@@ -1,0 +1,22 @@
+- id: set_bedroom_light_when_tim_in_bed
+  alias: 'Set Bedroom Light when Tim in Bed'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.tim_in_bed
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.daylight
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.no_one_home
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
+  action:
+    - service: script.turn_on_bedroom
+      data:
+        brightness: 115

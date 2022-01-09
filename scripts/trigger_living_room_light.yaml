@@ -5,10 +5,10 @@ turn_on_living:
       state: 'off'
     - service: light.turn_on
       entity_id: light.lamp
-      data_template:
-        rgb_color: [255, 241, 224]
-        brightness: "{{ brightness | default(2255) }}"
-        transition: "{{ transition }}"
+      data_template:        
+        brightness: "{{ brightness | default(255) }}"
+        rgb_color: "{{ color_temp | default([255, 241, 224]) }}" # 353
+        transition: "{{ transition | default(0) }}"
 
 turn_off_living:
   sequence:
