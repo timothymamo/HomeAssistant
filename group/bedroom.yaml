@@ -2,3 +2,5 @@ bedroom:
   name: Bedroom
   entities:
     - light.bedroom
+    - input_boolean.tim_in_bed
+    - input_boolean.tim_in_bed_override
