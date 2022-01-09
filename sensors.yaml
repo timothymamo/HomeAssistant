@@ -10,12 +10,6 @@
 
 - platform: template
   sensors:
-    vpn_status:
-      friendly_name: "VPN Status Check"
-      value_template: "new"
-
-- platform: template
-  sensors:
     last_alexa:
       value_template: >
         {{ expand(states.group.echos) | selectattr('attributes.last_called','eq',True) | map(attribute='entity_id') | first }}
