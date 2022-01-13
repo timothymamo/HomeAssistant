@@ -1,0 +1,10 @@
+- id: bottom_stairs_off
+  alias: 'Bottom Stairs OFF - Turn OFF Stairs Lights'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bottom_stairs
+      to: 'off'
+  action:
+    - delay:
+        seconds: 40
+    - service: script.turn_off_stairs

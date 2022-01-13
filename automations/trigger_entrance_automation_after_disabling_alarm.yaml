@@ -18,4 +18,4 @@
       delay:
         seconds: 1
     - service: automation.trigger
-      entity_id: automation.turn_on_hallway_then_dining_when_entrance_sensor_triggered
+      entity_id: automation.entrance_on

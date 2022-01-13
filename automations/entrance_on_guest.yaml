@@ -1,5 +1,5 @@
-- id: turn_on_cameras_when_guests_open_close_door
-  alias: 'Turn on Cameras when guests open/close door'
+- id: entrance_on_guest
+  alias: 'Entrance ON - Guests ON - Turn ON Cameras'
   trigger:
     - platform: state
       entity_id: input_boolean.entrance

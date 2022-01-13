@@ -1,0 +1,15 @@
+- id: hallway_on_one_person
+  alias: 'Hallway ON - One Person - Turn OFF all Lights except Hallway and Entrance'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hallway
+      to: 'on'
+  condition:
+    - condition:  state
+      entity_id: input_boolean.one_person
+      state: 'on'
+  action:
+    - service: script.turn_off_dining
+    - service: script.turn_off_bedroom
+    - service: script.turn_off_living
+    - service: script.turn_off_kitchen

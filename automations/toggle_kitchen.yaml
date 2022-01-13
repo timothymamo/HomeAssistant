@@ -1,5 +1,5 @@
-- id: turn_on_kitchen_when_sensor_triggered
-  alias: 'Turn on Kitchen when sensor triggered'
+- id: kitchen_on
+  alias: 'Kitchen On - Turn ON Kitchen Lights'
   trigger:
     - platform: state
       entity_id: input_boolean.kitchen

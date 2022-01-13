@@ -1,0 +1,20 @@
+- id: hallways_on
+  alias: 'Hallway ON'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hallway
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.daylight
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.no_one_home
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.asleep
+        state: 'off'
+  action:
+    - service: script.turn_on_entrance

@@ -17,7 +17,7 @@
       entity_id: binary_sensor.openclose_36
       to: 'on'
       for:
-        seconds: 1
+        seconds: 5
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.tim_in_bed

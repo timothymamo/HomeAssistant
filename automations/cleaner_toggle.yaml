@@ -1,5 +1,5 @@
-- id: toggle_no_one_home_cleaner_boolean_ON
-  alias: 'Toggle No One Home - Cleaner Boolean ON'
+- id: cleaner_on_toggle_no_one_home
+  alias: 'Cleaner ON - Turn OFF No One Home'
   trigger:
     - platform: state
       entity_id: input_boolean.cleaner
@@ -8,8 +8,8 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.no_one_home
 
-- id: turn_on_cameras_when_cleaner_toggle_on
-  alias: 'Turn on Cameras when cleaner toggle on'
+- id: entrance_cleaner_on_turn_on_cameras
+  alias: 'Entrance ON - Cleaner ON - Turn On Cameras'
   trigger:
     - platform: state
       entity_id: input_boolean.entrance
@@ -22,8 +22,8 @@
       alias: Enable Cameras
       service: script.alarm_camera
 
-- id: toggle_no_one_home_cleaner_boolean_off
-  alias: 'Toggle No One Home - Cleaner Boolean OFF'
+- id: cleaner_off_turn_off_cameras
+  alias: 'Cleaner OFF - Turn Off Camera, Toggle No One Home'
   trigger:
     - platform: state
       entity_id: input_boolean.cleaner

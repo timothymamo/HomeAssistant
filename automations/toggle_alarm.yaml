@@ -1,5 +1,5 @@
 - id: disable_alarm
-  alias: 'Disable Alarm'
+  alias: 'Disable Alarms'
   trigger:
     - platform: state
       entity_id: input_boolean.disable_alarm

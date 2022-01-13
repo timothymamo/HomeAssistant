@@ -1,5 +1,5 @@
-- id: disable_alarm_from_phone_notification
-  alias: Disable Alarm from Phone Notification
+- id: disable_alarm_from_notification
+  alias: 'Disable Alarm from Notification'
   trigger:
     - platform: event
       event_type: mobile_app_notification_action

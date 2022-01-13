@@ -1,0 +1,15 @@
+- id: tv_on_3_min
+  alias: 'TV ON for 3 min - Turn OFF Dining'
+  trigger:
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'playing'
+      for:
+        minutes: 3
+    - platform: state
+      entity_id: media_player.mybraviatv
+      to: 'paused'
+      for:
+        minutes: 3
+  action:
+    - service: script.turn_off_dining

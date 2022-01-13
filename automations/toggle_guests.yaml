@@ -1,5 +1,5 @@
-- id: setup_for_when_guests_are_home
-  alias: 'Setup for when guests are home'
+- id: guests_on
+  alias: 'Guests ON'
   trigger:
     - platform: state
       entity_id: input_boolean.guests
@@ -8,8 +8,8 @@
     - service: homeassistant.turn_off
       entity_id: input_boolean.no_one_home
 
-- id: setup_for_when_guests_leave
-  alias: 'Setup for when guests leave'
+- id: guests_off
+  alias: 'Guests OFF'
   trigger:
     - platform: state
       entity_id: input_boolean.guests
