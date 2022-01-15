@@ -8,7 +8,7 @@
       for:
         minutes: 3
   condition:
-    - condition: template
-      value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
+    condition: template
+    value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
   action:
     - service: script.turn_off_dining
