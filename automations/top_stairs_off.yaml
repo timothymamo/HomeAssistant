@@ -1,8 +1,8 @@
-- id: bottom_stairs_off
-  alias: 'Bottom Stairs OFF - Turn OFF Stairs Lights'
+- id: top_stairs_off
+  alias: 'Top Stairs OFF - Turn OFF Stairs Lights'
   trigger:
     - platform: state
-      entity_id: input_boolean.bottom_stairs
+      entity_id: input_boolean.top_stairs
       to: 'off'
       for:
         seconds: 40
@@ -10,14 +10,14 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: input_boolean.top_stairs
+        entity_id: input_boolean.bottom_stairs
         state: 'off'
       - condition: numeric_state
-        entity_id: automation.top_stairs_on
+        entity_id: automation.bottom_stairs_on
         attribute: current
         below: 1
       - condition: numeric_state
-        entity_id: automation.top_stairs_on_one_person
+        entity_id: automation.bottom_stairs_on_one_person
         attribute: current
         below: 1
   action:

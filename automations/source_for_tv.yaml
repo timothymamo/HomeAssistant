@@ -1,5 +1,5 @@
-- id: switch_tv_to_netflix_when_ps4_is_turned_off
-  alias: 'Switch TV to Netflix when PS4 is turned off'
+- id: ps4_off_set_tv_netflix
+  alias: 'PS4 OFF - TV to Netflix'
   trigger:
     - platform: state
       entity_id: media_player.playstation_4
