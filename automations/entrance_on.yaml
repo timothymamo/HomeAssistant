@@ -1,4 +1,4 @@
-- id: entrance_on
+- id: entrance_on_turn_on_entrance_hallway_and_dining_lights
   alias: 'Entrance ON - Turn On Entrance, Hallway and Dining Lights'
   mode: restart
   trigger:

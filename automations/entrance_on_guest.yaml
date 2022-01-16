@@ -1,4 +1,4 @@
-- id: entrance_on_guest
+- id: entrance_on_guest_on_turn_on_cameras
   alias: 'Entrance ON - Guests ON - Turn ON Cameras'
   trigger:
     - platform: state

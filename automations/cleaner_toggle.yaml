@@ -1,4 +1,4 @@
-- id: cleaner_on_toggle_no_one_home
+- id: cleaner_on_turn_off_no_one_home
   alias: 'Cleaner ON - Turn OFF No One Home'
   trigger:
     - platform: state
@@ -22,8 +22,8 @@
       alias: Enable Cameras
       service: script.alarm_camera
 
-- id: cleaner_off_turn_off_cameras
-  alias: 'Cleaner OFF - Turn Off Camera, Toggle No One Home'
+- id: cleaner_off_turn_off_cameras_toggle_no_one_home
+  alias: 'Cleaner OFF - Turn Off Cameras, Toggle No One Home'
   trigger:
     - platform: state
       entity_id: input_boolean.cleaner

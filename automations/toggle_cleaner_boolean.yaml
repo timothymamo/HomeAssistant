@@ -1,5 +1,5 @@
-- id: toggle_cleaner_boolean_on
-  alias: Toggle Cleaner Boolean ON
+- id: no_one_home_on_turn_on_cleaner
+  alias: 'No One Home ON - Turn ON Cleaner'
   trigger:
     - platform: state
       entity_id: input_boolean.no_one_home
@@ -16,8 +16,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.cleaner
 
-- id: toggle_cleaner_boolean_off
-  alias: Toggle Cleaner Boolean OFF
+- id: time_1730_cleaner_on_turn_off_cleaner
+  alias: 'Time 17:30 - Cleaner ON - Turn OFF Cleaner'
   trigger:
     platform: time
     at: '17:30:00'

@@ -1,5 +1,5 @@
-- id: tim_in_bed_on
-  alias: 'Tim in Bed ON - After 16 - Bedroom Low Light ON'
+- id: tim_in_bed_on_after_16_turn_on_bedroom_low_light_on
+  alias: 'Tim in Bed ON - After 16 - Turn ON Bedroom Low Light'
   trigger:
     - platform: state
       entity_id: input_boolean.tim_in_bed

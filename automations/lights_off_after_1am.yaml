@@ -1,5 +1,5 @@
-- id: turn_off_all_lights_at_1am
-  alias: 'Turn off all lights at 1am'
+- id: turn_off_all_lights_at_1
+  alias: 'Turn off all lights at 1'
   trigger:
     - platform: time
       at: "01:00:00"

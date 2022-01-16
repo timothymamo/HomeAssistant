@@ -1,5 +1,5 @@
-- id: toggle_daylight_boolean_to_on
-  alias: 'Toggle daylight boolean to ON'
+- id: sensor_daylight_true
+  alias: 'Sensor Daylight TRUE'
   trigger:
     - platform: template
       value_template: '{{ is_state_attr("sensor.daylight", "daylight", true) }}'
@@ -7,8 +7,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.daylight
 
-- id: toggle_daylight_boolean_to_off
-  alias: 'Toggle daylight boolean to OFF'
+- id: sensor_daylight_false
+  alias: 'Sensor Daylight FALSE'
   trigger:
     - platform: template
       value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'

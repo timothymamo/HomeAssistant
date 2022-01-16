@@ -1,4 +1,4 @@
-- id: ps4_off_set_tv_netflix
+- id: ps4_off_tv_to_netflix
   alias: 'PS4 OFF - TV to Netflix'
   trigger:
     - platform: state

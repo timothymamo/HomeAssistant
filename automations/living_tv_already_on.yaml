@@ -1,4 +1,4 @@
-- id: daylight_off_tv_on
+- id: daylight_off_tv_on_turn_on_living_room_lights
   alias: 'Daylight OFF - TV ON - Turn ON Living Room Lights'
   trigger:
     - platform: state
@@ -19,7 +19,7 @@
     - service: scene.turn_on
       entity_id: scene.movie_night_light
 
-- id: tv_off
+- id: tv_off_turn_on_dining_room_lights
   alias: 'TV OFF - Turn ON Dining Room Lights'
   trigger:
     - platform: state
@@ -43,7 +43,7 @@
         minutes: 3
     - service: script.turn_off_dining
 
-- id: tv_on
+- id: tv_on_turn_off_dining_room_lights_turn_on_movie_scene
   alias: 'TV ON - Turn OFF Dining Room Lights; Turn ON Movie Scene'
   trigger:
     - platform: state

@@ -1,5 +1,5 @@
-- id: toggle_kitchen_boolean_when_sensor_triggers
-  alias: 'Toggle kitchen boolean when sensor triggers'
+- id: binary_sensor_kitchen_on
+  alias: 'Binary Sensor Kitchen ON'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen
@@ -8,8 +8,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.kitchen
 
-- id: toggle_kitchen_boolean_after_15_sec
-  alias: 'Toggle kitchen boolean after 15 sec'
+- id: binary_sensor_kitchen_off
+  alias: 'Binary Sensor Kitchen OFF'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_kitchen

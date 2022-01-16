@@ -1,4 +1,4 @@
-- id: bottom_stairs_on
+- id: bottom_stairs_on_turn_on_stairs_and_bedroom_lights
   alias: 'Bottom Stairs ON - Turn On Stairs and Bedroom Lights'
   trigger:
     - platform: state

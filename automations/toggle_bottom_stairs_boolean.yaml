@@ -1,5 +1,5 @@
-- id: toggle_bottom_stairs_boolean_when_sensor_triggers
-  alias: 'Toggle bottom stairs boolean when sensor triggers'
+- id: binary_sensor_bottom_stairs_on
+  alias: 'Binary Sensor Bottom Stairs ON'
   trigger:
     - platform: state
       entity_id: binary_sensor.motion_sensor_bottom_stairs
@@ -17,8 +17,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.bottom_stairs
 
-- id: toggle_bottom_stairs_boolean_after_15_sec
-  alias: 'Toggle bottom stairs boolean after 15 sec'
+- id: binary_sensor_bottom_stairs_off
+  alias: 'Binary Sensor Bottom Stairs OFF'
   trigger:
     - platform: state
       entity_id: input_boolean.bottom_stairs
