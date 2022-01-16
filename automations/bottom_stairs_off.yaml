@@ -13,11 +13,11 @@
         entity_id: input_boolean.top_stairs
         state: 'off'
       - condition: numeric_state
-        entity_id: automation.top_stairs_on
+        entity_id: automation.top_stairs_on_turn_on_dining_and_hallway
         attribute: current
         below: 1
       - condition: numeric_state
-        entity_id: automation.top_stairs_on_one_person
+        entity_id: automation.top_stairs_on_one_person_turn_off_bedroom_living_room_entrance_kitchen
         attribute: current
         below: 1
   action:

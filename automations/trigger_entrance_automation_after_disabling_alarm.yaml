@@ -18,4 +18,4 @@
       delay:
         seconds: 1
     - service: automation.trigger
-      entity_id: automation.entrance_on
+      entity_id: automation.entrance_on_turn_on_entrance_hallway_and_dining_lights
