@@ -16,7 +16,7 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.cleaner
 
-- id: time_1730_cleaner_on_turn_off_cleaner
+- id: time_17_30_cleaner_on_turn_off_cleaner
   alias: 'Time 17:30 - Cleaner ON - Turn OFF Cleaner'
   trigger:
     platform: time
