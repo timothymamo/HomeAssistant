@@ -17,7 +17,7 @@
         attribute: current
         below: 1
       - condition: numeric_state
-        entity_id: automation.bottom_stairs_on_one_person_turn_off_downstairs
+        entity_id: automation.bottom_stairs_on_one_person_turn_off_downstairs_lights
         attribute: current
         below: 1
   action:
