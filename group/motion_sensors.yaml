@@ -8,3 +8,4 @@ motion_sensors:
     - binary_sensor.motion_sensor_top_stairs
     - binary_sensor.window_door_sensor_entrance
     - binary_sensor.window_door_sensor_storage
+    - binary_sensor.openclose_36
