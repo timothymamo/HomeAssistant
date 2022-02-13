@@ -1,10 +1,8 @@
 realfeel_notification:
   sequence:
     - alias: Real Feel Temp Alexa
-      service: notify.alexa_media
+      service: notify.alexa_media_last_called
       data_template:
-        target: 
-          - "{{ states.sensor.last_alexa.state }}"
         message: "Currently the real feel is {{ states('sensor.home_wind_chill_temperature') | round(0) }} degrees"
         data:
           type: tts
