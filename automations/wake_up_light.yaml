@@ -2,7 +2,7 @@
   alias: "Wake me up with bedroom light"
   mode: single
   max_exceeded: silent
-  trigger: input_boolean.tim.state input_boolean.ruby.state
+  trigger:
     platform: template
     value_template: |
       {% if (states.sensor.ruby_mobile_next_alarm.state != 'unavailable') and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
