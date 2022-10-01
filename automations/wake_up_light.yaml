@@ -2,25 +2,25 @@
   alias: "Wake me up with bedroom light"
   mode: single
   max_exceeded: silent
-  trigger: input_boolean.tim input_boolean.ruby
+  trigger: input_boolean.tim.state input_boolean.ruby.state
     platform: template
     value_template: |
       {% if (states.sensor.ruby_mobile_next_alarm.state != 'unavailable') and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') %}
-        {% if (((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) < (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) and (input_boolean.tim == 'on')) %}
+        {% if (((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) < (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) and (input_boolean.tim.state == 'on')) %}
           {% set day = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%d") %}
           {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
           {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
-        {% elif (((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) > (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) and (input_boolean.ruby == 'on')) %}
+        {% elif (((as_timestamp(states.sensor.tim_mobile_next_alarm.state)) > (as_timestamp(states.sensor.ruby_mobile_next_alarm.state))) and (input_boolean.ruby.state == 'on')) %}
           {% set day = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%d") %}
           {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
           {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
         {% else %}
         {% endif %}
-      {% elif (states.sensor.ruby_mobile_next_alarm.state == 'unavailable') and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') and (input_boolean.tim == 'on') %}
+      {% elif (states.sensor.ruby_mobile_next_alarm.state == 'unavailable') and (states.sensor.tim_mobile_next_alarm.state != 'unavailable') and (input_boolean.tim.state == 'on') %}
         {% set day = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%d") %}
         {% set hour = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
         {% set min = (as_timestamp(states.sensor.tim_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
-      {% elif (states.sensor.ruby_mobile_next_alarm.state != 'unavailable') and (states.sensor.tim_mobile_next_alarm.state == 'unavailable') and (input_boolean.ruby == 'on') %}
+      {% elif (states.sensor.ruby_mobile_next_alarm.state != 'unavailable') and (states.sensor.tim_mobile_next_alarm.state == 'unavailable') and (input_boolean.ruby.state == 'on') %}
         {% set day = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%d") %}
         {% set hour = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%H") %}
         {% set min = (as_timestamp(states.sensor.ruby_mobile_next_alarm.state) - (states.input_number.wakeup_transition.state | int * 60)) | timestamp_custom("%M") %}
