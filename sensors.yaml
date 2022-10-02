@@ -7,6 +7,8 @@
     curl_resp:
       friendly_name: "Gandi Curl Response"
       value_template: "200"
+      attribute_templates:
+        message: ""
 
 - platform: template
   sensors:
