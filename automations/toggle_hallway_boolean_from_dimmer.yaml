@@ -5,8 +5,7 @@
       entity_id: input_boolean.hue_dimmer
       to: 'on'
   action:
-    - service: homeassistant.turn_on
-      entity_id: input_boolean.hallway
+    - service: script.turn_on_hallway
 
 - id: input_boolean_hue_dimmer_off
   alias: 'Input Boolean Hue Dimmer OFF'
@@ -15,5 +14,4 @@
       entity_id: input_boolean.hue_dimmer
       to: 'off'
   action:
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.hallway
+    - service: script.turn_off_hallway
