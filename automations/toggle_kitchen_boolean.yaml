@@ -2,7 +2,7 @@
   alias: 'Binary Sensor Kitchen ON'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen
+      entity_id: binary_sensor.motion_sensor_kitchen_occupancy
       to: 'on'
   action:
     - service: homeassistant.turn_on
@@ -12,7 +12,7 @@
   alias: 'Binary Sensor Kitchen OFF'
   trigger:
     - platform: state
-      entity_id: binary_sensor.motion_sensor_kitchen
+      entity_id: binary_sensor.motion_sensor_kitchen_occupancy
       to: 'off'
   action:
     - service: homeassistant.turn_off

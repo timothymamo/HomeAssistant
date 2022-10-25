@@ -1,11 +1,11 @@
 motion_sensors:
   name: Motion Sensors
   entities:
-    - binary_sensor.motion_sensor_bottom_stairs
+    - binary_sensor.motion_sensor_bottom_stairs_occupancy
     - binary_sensor.motion_sensor_hallway
-    - binary_sensor.motion_sensor_kitchen
+    - binary_sensor.motion_sensor_kitchen_occupancy
     - binary_sensor.motion_sensor_storage
     - binary_sensor.motion_sensor_top_stairs
-    - binary_sensor.window_door_sensor_entrance
-    - binary_sensor.window_door_sensor_storage
+    - binary_sensor.magnet_sensor_entrance
+    - binary_sensor.magnet_sensor_storage
     - binary_sensor.openclose_36

@@ -1,8 +1,11 @@
 - id: sensor_daylight_true
   alias: 'Sensor Daylight TRUE'
   trigger:
-    - platform: template
-      value_template: '{{ is_state_attr("sensor.daylight", "daylight", true) }}'
+    - platform: sun
+      # Possible values: sunset, sunrise
+      event: sunrise
+      # Optional time offset. This example will trigger 45 minutes after sunrise.
+      offset: "00:45:00"
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.daylight
@@ -10,8 +13,9 @@
 - id: sensor_daylight_false
   alias: 'Sensor Daylight FALSE'
   trigger:
-    - platform: template
-      value_template: '{{ is_state_attr("sensor.daylight", "daylight", false) }}'
+    - platform: sun
+      event: sunset
+      offset: "-00:45:00"
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.daylight

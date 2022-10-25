@@ -24,7 +24,7 @@
     - delay:
         minutes: 1
     - condition: state
-      entity_id: binary_sensor.window_door_sensor_storage
+      entity_id: binary_sensor.magnet_sensor_storage
       state: 'off'
     - service: script.turn_off_hallway
     - condition: state

@@ -6,5 +6,5 @@ entrance:
 entrance_sensors:
   name: Entrance Sensors
   entities:
-    - binary_sensor.window_door_sensor_entrance
+    - binary_sensor.magnet_sensor_entrance
     - input_boolean.entrance
