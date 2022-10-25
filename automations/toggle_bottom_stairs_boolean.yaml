@@ -9,7 +9,7 @@
     conditions:
       - condition: template
         value_template: '{{ ( (as_timestamp(states.binary_sensor.motion_sensor_bottom_stairs_occupancy.last_changed) 
-        - (as_timestamp(states.binary_sensor.motion_sensor_top_stairs.last_changed))) > 0 ) }}'
+        - (as_timestamp(states.binary_sensor.motion_sensor_top_stairs_occupancy.last_changed))) > 0 ) }}'
       - condition: state
         entity_id: input_boolean.top_stairs
         state: 'off'
