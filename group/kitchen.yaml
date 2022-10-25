@@ -6,7 +6,7 @@ kitchen:
 kitchen_sensors:
   name: Kitchen Sensors
   entities:
-    - sensor.motion_sensor_kitchen_2
-    - sensor.motion_sensor_kitchen
+    - sensor.motion_sensor_kitchen_illuminance
+    - sensor.motion_sensor_kitchen_temperature
     - binary_sensor.motion_sensor_kitchen_occupancy
     - input_boolean.kitchen
