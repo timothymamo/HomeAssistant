@@ -1,0 +1,19 @@
+- id: input_boolean_hue_dimmer_on
+  alias: 'Input Boolean Hue Dimmer ON'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hue_dimmer
+      to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hallway
+
+- id: input_boolean_hue_dimmer_off
+  alias: 'Input Boolean Hue Dimmer OFF'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hue_dimmer
+      to: 'off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.hallway

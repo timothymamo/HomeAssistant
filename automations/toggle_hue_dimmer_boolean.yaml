@@ -1,23 +1,23 @@
-- id: hue_dimmer_1000
-  alias: 'Hue Dimmer 1000'
+- id: hue_dimmer_on
+  alias: 'Hue Dimmer ON'
   trigger:
     - platform: event
-      event_type: deconz_event
+      event_type: zha_event
       event_data:
-        id: dimmer_switch
-        event: 1000
+        device_id: 56a2e8ed2ed642109a9e2d92fd148b05
+        command: on_press
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.hue_dimmer
 
-- id: hue_dimmer_4000
-  alias: 'Hue Dimmer 4000'
+- id: hue_dimmer_off
+  alias: 'Hue Dimmer OFF'
   trigger:
     - platform: event
-      event_type: deconz_event
+      event_type: zha_event
       event_data:
-        id: dimmer_switch
-        event: 4000
+        device_id: 56a2e8ed2ed642109a9e2d92fd148b05
+        command: off_press
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.hue_dimmer
