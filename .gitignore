@@ -30,3 +30,6 @@ known_devices*
 
 # Ignore google maps cookie file
 .google_maps_location_sharing*
+
+# Ignore zigbee db
+zigbee.db*
