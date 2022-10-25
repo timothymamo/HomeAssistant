@@ -2,7 +2,7 @@
   alias: 'Smart Button ON - Clothes Bedroom ON'
   trigger:
     - platform: state
-      entity_id: input_boolean.smart_button
+      entity_id: input_boolean.hue_smart_button
       to: 'on'
   action:
     - service: script.turn_on_clothes_bedroom
