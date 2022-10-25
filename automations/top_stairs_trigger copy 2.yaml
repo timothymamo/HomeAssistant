@@ -6,7 +6,7 @@
       entity_id: input_boolean.top_stairs
       to: 'off'
       for:
-        minutes: 3
+        minutes: 2
   condition:
     condition: template
     value_template: "{{ not is_state('media_player.mybraviatv', 'off') }}"
