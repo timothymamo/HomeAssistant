@@ -8,4 +8,4 @@ motion_sensors:
     - binary_sensor.motion_sensor_hallway_occupancy
     - binary_sensor.magnet_sensor_entrance
     - binary_sensor.magnet_sensor_storage
-    - binary_sensor.openclose_36
+    - binary_sensor.magnet_sensor_tim_bed

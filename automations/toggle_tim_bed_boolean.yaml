@@ -2,7 +2,7 @@
   alias: 'Toggle Tim in Bed boolean when bed sensor closed'
   trigger:
     - platform: state
-      entity_id: binary_sensor.openclose_36
+      entity_id: binary_sensor.magnet_sensor_tim_bed
       to: 'off'
       for:
         seconds: 1
@@ -14,7 +14,7 @@
   alias: 'Toggle Tim in Bed boolean when bed sensor open'
   trigger:
     - platform: state
-      entity_id: binary_sensor.openclose_36
+      entity_id: binary_sensor.magnet_sensor_tim_bed
       to: 'on'
       for:
         seconds: 5
