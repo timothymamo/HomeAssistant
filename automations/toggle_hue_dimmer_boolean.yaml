@@ -10,6 +10,16 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.hue_dimmer
 
+- id: hue_dimmer_on_hallway_light
+  alias: 'Hue Dimmer ON When Hallway Light is ON'
+  trigger:
+    - platform: state
+      entity_id: light.hallway
+      to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hue_dimmer
+
 - id: hue_dimmer_off
   alias: 'Hue Dimmer OFF'
   trigger:
@@ -18,6 +28,16 @@
       event_data:
         device_id: 56a2e8ed2ed642109a9e2d92fd148b05
         command: off_press
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.hue_dimmer
+
+- id: hue_dimmer_off_hallway_light
+  alias: 'Hue Dimmer OFF When Hallway Light is OFF'
+  trigger:
+    - platform: state
+      entity_id: light.hallway
+      to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.hue_dimmer
