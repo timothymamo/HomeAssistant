@@ -9,6 +9,8 @@ turn_on_hallway:
         brightness: "{{ brightness | default(255) }}"
         rgb_color: "{{ color_temp | default([255,162, 76]) }}" # 389
         transition: "{{ transition | default(0.4) }}"
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.hue_dimmer
 
 turn_off_hallway:
   sequence:
@@ -17,3 +19,5 @@ turn_off_hallway:
       state: 'off'
     - service: light.turn_off
       entity_id: light.hallway
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.hue_dimmer
