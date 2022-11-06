@@ -16,7 +16,7 @@
   alias: 'Binary Sensor Entrance OFF'
   trigger:
     - platform: state
-      entity_id: input_boolean.entrance
+      entity_id: binary_sensor.magnet_sensor_entrance
       to: 'off'
       for:
         seconds: 30
