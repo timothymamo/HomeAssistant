@@ -54,6 +54,10 @@ hue_smart_button:
   name: "Hue Smart Button"
   icon: mdi:light-switch
 
+hue_smart_button_2:
+  name: "Hue Smart Button 2"
+  icon: mdi:light-switch
+
 dining_light_override:
   name: "Dining Room Light Override"
   icon: mdi:alarm-off
