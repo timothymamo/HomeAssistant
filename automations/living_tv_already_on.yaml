@@ -48,10 +48,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
-      to: 'playing'
-    - platform: state
-      entity_id: media_player.mybraviatv
-      to: 'paused'
+      to: 'on'
   condition:
     condition: and
     conditions:
