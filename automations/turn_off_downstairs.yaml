@@ -16,5 +16,6 @@
   action:
     - service: homeassistant.turn_off
       entity_id: group.downstairs_lights
+    - delay: 00:01:00
     - service: homeassistant.turn_off
       entity_id: input_boolean.bedroom_light_override
