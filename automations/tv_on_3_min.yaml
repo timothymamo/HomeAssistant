@@ -3,12 +3,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mybraviatv
-      to: 'playing'
-      for:
-        minutes: 3
-    - platform: state
-      entity_id: media_player.mybraviatv
-      to: 'paused'
+      to: 'on'
       for:
         minutes: 3
   action:
