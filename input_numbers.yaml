@@ -6,3 +6,24 @@ wakeup_transition:
   step: 5
   icon: mdi:transition-masked
   mode: slider
+disable_pihole_duration_hours:
+  name: Duration
+  initial: 0
+  min: 0
+  max: 24
+  step: 1
+  mode: box
+disable_pihole_duration_mins:
+  name: Duration
+  initial: 0
+  min: 0
+  max: 55
+  step: 5
+  mode: box
+disable_pihole_duration_sec:
+  name: Duration
+  initial: 30
+  min: 0
+  max: 55
+  step: 5
+  mode: box

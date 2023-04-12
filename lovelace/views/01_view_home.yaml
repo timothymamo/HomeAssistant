@@ -86,3 +86,10 @@ cards:
       type: entities
       title: Disable Alarms
     group: group.disable_alarms
+
+  - type: entities
+    entities:
+      - entity:  input_button.disable_piholes
+      - entity:  input_numbers.disable_pihole_duration_hours
+      - entity:  input_numbers.disable_pihole_duration_mins
+      - entity:  input_numbers.disable_pihole_duration_sec
