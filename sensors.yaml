@@ -25,10 +25,10 @@
     pihole_disable_seconds:
       value_template: '{{ states("input_number.disable_pihole_duration_sec") | round(0) }}'
     pihole_disable_time:
-      value_template: >
+      value_template: |
         {% if states("sensor.pihole_disable_hour") | length == 1 %}0{% endif %}
           {{ states.sensor.pihole_disable_hour.state }}:
         {% if states("sensor.pihole_disable_minutes") | length == 1 %}0{% endif %}
           {{ states.sensor.pihole_disable_minutes.state }}:
         {% if states("sensor.pihole_disable_seconds") | length == 1 %}0{% endif %}
-          {{ states.sensor.pihole_disable_seconds.state }}:
+          {{ states.sensor.pihole_disable_seconds.state }}
