@@ -27,8 +27,8 @@
     pihole_disable_time:
       value_template:
         '{% if states("sensor.pihole_disable_hour") | length == 1 %}0{% endif %}
-          {{ states.sensor.pihole_disable_hour.state }}:
+        {{ states.sensor.pihole_disable_hour.state }}:
         {% if states("sensor.pihole_disable_minutes") | length == 1 %}0{% endif %}
-          {{ states.sensor.pihole_disable_minutes.state }}:
+        {{ states.sensor.pihole_disable_minutes.state }}:
         {% if states("sensor.pihole_disable_seconds") | length == 1 %}0{% endif %}
-          {{ states.sensor.pihole_disable_seconds.state }}'
+        {{ states.sensor.pihole_disable_seconds.state }}'
