@@ -19,16 +19,23 @@
 - platform: template
   sensors:
     pihole_disable_hour:
+      entity_id: input_number.disable_pihole_duration_hours
       value_template: '{{ states("input_number.disable_pihole_duration_hours") | round(0) }}'
     pihole_disable_minutes:
+      entity_id: input_number.disable_pihole_duration_mins
       value_template: '{{ states("input_number.disable_pihole_duration_mins") | round(0) }}'
     pihole_disable_seconds:
+      entity_id: input_number.disable_pihole_duration_sec
       value_template: '{{ states("input_number.disable_pihole_duration_sec") | round(0) }}'
     pihole_disable_time:
+      entity_id: 
+        - sensor.pihole_disable_hour
+        - sensor.pihole_disable_minutes
+        - sensor.pihole_disable_seconds
       value_template: >
         {% if states("sensor.pihole_disable_hour")|length == 1 %}0{% endif %}
           {{ states("sensor.pihole_disable_hour") }}:
         {% if states("sensor.pihole_disable_minutes")|length == 1 %}0{% endif %}
           {{ states("sensor.pihole_disable_minutes"):
-        {% if states("sensor.disable_pihole_duration_sec")|length == 1 %}0{% endif %}
-          {{ states("sensor.disable_pihole_duration_sec") }}
+        {% if states("sensor.pihole_disable_seconds")|length == 1 %}0{% endif %}
+          {{ states("sensor.pihole_disable_seconds") }}
