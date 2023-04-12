@@ -15,3 +15,15 @@
     last_alexa:
       value_template: >
         {{ expand(states.group.echos) | selectattr('attributes.last_called','eq',True) | map(attribute='entity_id') | first }}
+
+- platform: template
+  sensors:
+    pihole_disable_hour:
+      value_template: '{{ states("input_number.disable_pihole_duration_hours") | round(0) }}'
+    pihole_disable_minutes:
+      value_template: '{{ states("input_number.disable_pihole_duration_mins") | round(0) }}'
+    pihole_disable_seconds:
+      value_template: '{{ states("input_number.disable_pihole_duration_sec") | round(0) }}'
+    pihole_disable_time:
+      friendly_name: 'Time'
+      value_template: '{% if states("sensor.pihole_disable_hour")|length == 1 %}0{% endif %}{{ states("sensor.pihole_disable_hour") }}:{% if states("sensor.pihole_disable_minutes")|length == 1 %}0{% endif %}{{ states("sensor.pihole_disable_minutes"):{% if states("sensor.disable_pihole_duration_sec")|length == 1 %}0{% endif %}{{ states("sensor.disable_pihole_duration_sec") }}'
