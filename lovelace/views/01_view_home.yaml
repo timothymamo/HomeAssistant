@@ -43,8 +43,8 @@ cards:
       - type: custom:template-entity-row
         name: "{{ states.sensor.curl_resp.attributes.message }}"
         condition: "{{ not is_state('sensor.curl_resp', '200')}}"
-      - type: 'custom:text-input-row'
-        entity: input_text.create_fwd_email
+      - entity: input_text.create_fwd_email
+        icon: none
       - type: custom:stack-in-card
         mode: vertical
         cards:
