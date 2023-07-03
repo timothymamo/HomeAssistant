@@ -44,7 +44,7 @@
         entity_id: person.tim
         state: 'home'
   action:
-    - service: notify.mobile_app_tim_mobile
+    - service: notify.mobile_app_tim_s_pixel_7a
       data:
         title: "Meter Readings Reminder"
         message: "Reminder to take Elec/Gas/Water readings"

@@ -10,7 +10,7 @@
       entity_id: input_boolean.daylight
       state: 'off'
   action:
-    - service: notify.mobile_app_tim_mobile
+    - service: notify.mobile_app_tim_s_pixel_7a
       data:
         message: "request_location_update"
     - service: notify.mobile_app_fp4
