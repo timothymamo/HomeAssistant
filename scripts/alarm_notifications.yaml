@@ -13,7 +13,7 @@ alarm_notification:
     - condition: state
       entity_id: input_boolean.no_one_home
       state: 'on'
-    - service: notify.mobile_app_tim_s_pixel_7a
+    - service: notify.mobile_app_tim_mobile
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"

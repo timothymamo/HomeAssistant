@@ -12,7 +12,7 @@
       - condition: template
         value_template: "{{ (as_timestamp(now()) | timestamp_custom ('%U') | int % 2) == 0 }}" # Set to 1 or 0
   action:
-    - service: notify.mobile_app_tim_s_pixel_7a
+    - service: notify.mobile_app_tim_mobile
       data:
         title: "Leave Moeny for Cleaner"
         message: "Don't forget to leave €60 for the cleaner on the table"
