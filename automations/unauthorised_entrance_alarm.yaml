@@ -17,7 +17,7 @@
     - service: notify.mobile_app_tim_mobile
       data:
         message: "request_location_update"
-    - service: notify.mobile_app_fp4
+    - service: notify.mobile_app_ruby_mobile
       data:
         message: "request_location_update"
     - alias: Delay for 1 seconds
