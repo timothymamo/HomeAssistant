@@ -44,7 +44,7 @@ cloud:
 influxdb: !include influxdb.yaml
 device_tracker: !include device_trackers.yaml
 recorder: !include recorder.yaml
-hacs: !include hacs.yaml
+  #hacs: !include hacs.yaml
 group: !include_dir_merge_named /config/group/
 automation: !include_dir_merge_list /config/automations/
 script: !include_dir_merge_named /config/scripts/
