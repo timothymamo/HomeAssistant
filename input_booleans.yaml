@@ -42,10 +42,6 @@ asleep:
   name: "Everyone is asleep"
   icon: mdi:sleep
 
-meter_notification_sent:
-  name: "Meter Notification has been sent"
-  icon: mdi:message-alert-outline
-
 hue_dimmer:
   name: "Hue Dimmer"
   icon: mdi:light-switch
