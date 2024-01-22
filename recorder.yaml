@@ -35,5 +35,3 @@ include:
   entities:
     - device_tracker.ruby_ha_app
     - device_tracker.tim_ha_app
-    - switch.transmission_switch
-    - switch.transmission_turtle_mode
