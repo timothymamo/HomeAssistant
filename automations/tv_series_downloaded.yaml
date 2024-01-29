@@ -9,4 +9,4 @@
     - service: notify.mobile_app_tim_mobile
       data_template:
         title: "TV Series Episode Added!"
-        message: "New episode added - {{state_attr("sensor.plex_library_tv_shows", "last_added_item")}}"
+        message: 'New episode added - {{state_attr("sensor.plex_library_tv_shows", "last_added_item")}}'

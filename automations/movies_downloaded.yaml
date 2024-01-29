@@ -9,4 +9,4 @@
     - service: notify.mobile_app_tim_mobile
       data_template:
         title: "Movie Added!"
-        message: "New movie added - {{state_attr("sensor.plex_library_movies", "last_added_item")}}"
+        message: 'New movie added - {{state_attr("sensor.plex_library_movies", "last_added_item")}}'
