@@ -29,8 +29,9 @@
       entity_id: input_boolean.cleaner
       to: 'off'
   action:
-    - service: ifttt.trigger
-      data: {"event":"disarm_blink"}
+    - service: alarm_control_panel.alarm_disarm
+      target:
+        entity_id: alarm_control_panel.blink_home
     - condition: template
       value_template: '{% if not is_state("person.ruby", "home") and not is_state("person.tim", "home") %}true{% endif %}'
     - service: homeassistant.turn_on

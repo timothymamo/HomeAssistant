@@ -5,10 +5,12 @@ alarm_camera:
       entity_id: input_boolean.disable_alarm_camera
       state: 'off'
     - alias: Arm Camera
-      service: ifttt.trigger
-      data: {"event":"arm_blink"}
+      service: alarm_control_panel.alarm_arm_away
+      target:
+          entity_id: alarm_control_panel.blink_home
     - delay:
         seconds: 30
     - alias: Disarm Camera
-      service: ifttt.trigger
-      data: {"event":"disarm_blink"}
+      service: alarm_control_panel.alarm_disarm
+      target:
+        entity_id: alarm_control_panel.blink_home
