@@ -19,8 +19,8 @@
       entity_id: input_boolean.cleaner
       state: 'on'
   action:
-      alias: Enable Cameras
-      service: script.alarm_camera
+      alias: Cameras Loop
+      service: script.cameras_arm_disarm_loop
 
 - id: cleaner_off_turn_off_cameras_toggle_no_one_home
   alias: 'Cleaner OFF - Turn Off Cameras, Toggle No One Home'

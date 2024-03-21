@@ -9,5 +9,5 @@
       entity_id: input_boolean.guests
       state: 'on'
   action:
-    - alias: Enable Cameras
-      service: script.alarm_camera
+    - alias: Cameras Loop
+      service: script.cameras_arm_disarm_loop

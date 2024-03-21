@@ -1,5 +1,0 @@
-stop_camera:
-  sequence:
-    - alias: Disarm Camera
-      service: ifttt.trigger
-      data: {"event":"disarm_blink"}

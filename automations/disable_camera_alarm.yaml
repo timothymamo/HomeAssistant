@@ -6,4 +6,4 @@
       to: 'on'
   action:
     - service: script.turn_on
-      entity_id: script.stop_camera
+      entity_id: script.disarm_camera
