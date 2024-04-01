@@ -36,7 +36,6 @@ logger:
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
-  dashboards: !include lovelace/dashboards.yaml
 
 cloud:
   alexa: !include_dir_merge_named /config/alexa/
