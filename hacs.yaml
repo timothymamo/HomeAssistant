@@ -1,2 +1,0 @@
-token: !secret hacs_token
-appdaemon: True

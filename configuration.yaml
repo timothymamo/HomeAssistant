@@ -42,9 +42,7 @@ cloud:
   alexa: !include_dir_merge_named /config/alexa/
 
 influxdb: !include influxdb.yaml
-device_tracker: !include device_trackers.yaml
 recorder: !include recorder.yaml
-  #hacs: !include hacs.yaml
 group: !include_dir_merge_named /config/group/
 automation: !include_dir_merge_list /config/automations/
 script: !include_dir_merge_named /config/scripts/
@@ -61,5 +59,3 @@ light: !include light_group.yaml
 alexa_media: !include alexa_media.yaml
 input_text: !include input_text.yaml
 rest_command: !include rest_command.yaml
-ifttt:
-  key: !secret ifttt_apikey
