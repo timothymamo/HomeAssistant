@@ -54,6 +54,5 @@ input_button: !include input_buttons.yaml
 input_number: !include input_numbers.yaml
 shell_command: !include_dir_merge_named /config/shell_commands/
 light: !include light_group.yaml
-alexa_media: !include alexa_media.yaml
 input_text: !include input_text.yaml
 rest_command: !include rest_command.yaml
