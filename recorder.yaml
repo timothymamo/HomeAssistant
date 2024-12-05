@@ -16,7 +16,6 @@ exclude:
     - binary_sensor.vibration_2
     - light.rwl021_6
     - media_player.everywhere
-    - media_player.soundbar
     - media_player.this_device
     - media_player.timothy_s_alexa_apps
     - media_player.timothy_s_echosim_beta
@@ -27,9 +26,6 @@ exclude:
     - sensor.kitchen_dot_next_alarm
     - sensor.kitchen_dot_next_reminder
     - sensor.kitchen_dot_next_timer
-    - sensor.timothy_s_bose_soundbar_500_next_alarm
-    - sensor.timothy_s_bose_soundbar_500_next_reminder
-    - sensor.timothy_s_bose_soundbar_500_next_timer
     - sensor.window_door_sensor_entrance_battery_level
 include:
   entities:

@@ -5,10 +5,6 @@ device_tracker.b8_27_eb_26_46_11:
   hidden: true
 device_tracker.bedroom_dot:
   hidden: true
-device_tracker.bose_soundbar_500:
-  hidden: true
-device_tracker.bose_soundbar_500_lan:
-  hidden: true
 device_tracker.kitchen_dot:
   hidden: true
 device_tracker.nest:
