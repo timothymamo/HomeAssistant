@@ -7,7 +7,7 @@ DEST_EMAIL="$4"
 HA_TOKEN="$5"
 
 EMAIL_FWD=$(/usr/bin/curl --silent https://api.gandi.net/v5/email/forwards/${DOMAIN} \
-  -H 'authorization: Apikey '${API_KEY}'' -H 'content-type: application/json' \
+  -H 'authorization: Bearer '${API_KEY}'' -H 'content-type: application/json' \
   -d '{"source":"'${EMAIL}'","destinations":["'${DEST_EMAIL}'"]}' --write-out "%{http_code}\n")
 
 RESP_CODE=$(echo "${EMAIL_FWD##*\}}")
