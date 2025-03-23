@@ -2,5 +2,5 @@ language: "en"
 intents:
   WeatherUpdate:
     data:
-        - sentences:
-          - "What's the weather like?"
+      - sentences:
+        - "What's the weather like?"
