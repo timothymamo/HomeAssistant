@@ -1,16 +1,3 @@
-language: "en"
 intents:
-  Test:
-    data:
-      - sentences:
-        - "Hello"
-        - "Hi"
-  Ping:
-    data:
-      - sentences:
-        - "Ping"
-
   WeatherUpdate:
-    data:
-      - sentences:
-        - "Good morning"
+    - "Good morning."
