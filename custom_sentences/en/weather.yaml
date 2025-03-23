@@ -1,4 +1,6 @@
 language: "en"
 intents:
   WeatherUpdate:
-    - "Good morning."
+    data:
+      - sentences:
+        - "Good morning."
