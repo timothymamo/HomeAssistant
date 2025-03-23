@@ -1,6 +1,6 @@
   Test:
     speech:
-      text: "Hello!"
+      text: "Hello Tim!"
   Ping:
     speech:
       text: "Pong"
