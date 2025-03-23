@@ -3,4 +3,9 @@ intents:
   WeatherUpdate:
     data:
       - sentences:
-        - "Good morning."
+        - "Good morning"
+
+  Ping:
+    data:
+      - sentences:
+        - "Ping"
