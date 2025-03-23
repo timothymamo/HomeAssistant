@@ -4,3 +4,6 @@
   Ping:
     speech:
       text: "Pong"
+  WeatherUpdate:
+    speech:
+      text: "Currently is the weather is spice nice!"

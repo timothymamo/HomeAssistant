@@ -9,3 +9,8 @@ intents:
     data:
       - sentences:
         - "Ping"
+
+  WeatherUpdate:
+    data:
+      - sentences:
+        - "What's the weather like?"
