@@ -1,6 +1,11 @@
 language: "en"
 intents:
-  WeatherUpdate:
+  Test:
     data:
       - sentences:
-        - "What's the weather like?"
+        - "Hello"
+        - "Hi"
+  Ping:
+    data:
+      - sentences:
+        - "Ping"
