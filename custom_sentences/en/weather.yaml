@@ -4,8 +4,3 @@ intents:
     data:
       - sentences:
         - "Good morning"
-
-  Ping:
-    data:
-      - sentences:
-        - "Ping"
