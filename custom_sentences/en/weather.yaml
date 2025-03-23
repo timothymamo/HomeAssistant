@@ -13,4 +13,4 @@ intents:
   WeatherUpdate:
     data:
       - sentences:
-        - "What's the weather like?"
+        - "Good morning"
