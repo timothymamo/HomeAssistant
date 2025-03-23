@@ -1,6 +1,6 @@
 intents:
-  WeatherUpdate:
-    - "What's the weather like?"
+  # WeatherUpdate:
+    # - "What's the weather like?"
 
   YearOfVoice:
     - "how is the year of voice going"
