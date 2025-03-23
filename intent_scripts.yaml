@@ -1,0 +1,4 @@
+intent_script:
+  WeatherUpdate:
+    speech:
+      text: "Today you can expect it to be {{ sensor.home_condition_today }}, with a high of {{ sensor.home_realfeel_temperature_max_today | round(0) }} degrees and a low of {{ sensor.home_realfeel_temperature_min_today | round(0) }} degrees. Currently the real feel ia {{ sensor.home_realfeel_temperature | round(0) }} degrees."

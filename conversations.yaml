@@ -1,0 +1,4 @@
+conversation:
+  intents:
+    WeatherUpdate:
+      - "What's the weather like?"
