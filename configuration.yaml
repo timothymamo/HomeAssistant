@@ -25,8 +25,6 @@ http:
 
 logger:
   default: warning
-  logs:
-    homeassistant.components.shell_command: debug
   filters:
     alexapy.alexalogin:
       - "Domain amazon.nl does not match reported account*"
