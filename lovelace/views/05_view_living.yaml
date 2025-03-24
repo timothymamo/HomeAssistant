@@ -17,29 +17,19 @@ cards:
       buttons:
         - icon: mdi:netflix
           type: script
-          id: script.app_change
-          data:
-            app_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
+          id: script.netflix
         - icon: mdi:format-header-1
           type: source
           id: 'HDMI 1'
         - icon: mdi:plex
           type: script
-          id: script.app_change
-          data:
-            app_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
+          id: script.plex
         - icon: mdi:aws
           type: script
-          id: script.app_change
-          data:
-            app_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
+          id: script.prime
         - icon: mdi:alpha-n-circle-outline
           type: script
-          id: script.app_change
-          data:
-            app_uri: 'com.sony.dtv.nl.nos.app.tv.mauna.app.MainActivity'
+          id: script.nos
         - icon: mdi:record-circle
           type: script
-          id: script.app_change
-          data:
-            app_uri: 'com.sony.dtv.com.sonypicturescore.com.sphe.bravialounge.SplashActivity'
+          id: script.sonypicturescore
