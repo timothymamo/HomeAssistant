@@ -3,3 +3,4 @@ app_change:
     - service: shell_command.app_change
       data_template:
         app_uri: '{{ player_uri }}'
+        tv_psk: !secret tv_psk
