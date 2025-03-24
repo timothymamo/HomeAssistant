@@ -16,35 +16,30 @@ cards:
       columns: 4 # Max buttons per row
       buttons:
         - icon: mdi:netflix
-          type: script
-          id: script.app_change
+          type: shell_command
+          id: shell_command.app_change
           data:
             player_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
         - icon: mdi:format-header-1
           type: source
           id: 'HDMI 1'
         - icon: mdi:plex
-          type: script
-          id: script.app_change
+          type: shell_command
+          id: shell_command.app_change
           data:
             player_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
         - icon: mdi:aws
-          type: script
-          id: script.app_change
+          type: shell_command
+          id: shell_command.app_change
           data:
             player_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
         - icon: mdi:alpha-n-circle-outline
-          type: script
-          id: script.app_change
+          type: shell_command
+          id: shell_command.app_change
           data:
-            player_uri: 'com.sony.dtv.nl.nos.app.nl.nos.app.ui.activities.OverviewActivity'
+            player_uri: 'com.sony.dtv.nl.nos.app.tv.mauna.app.MainActivity'
         - icon: mdi:record-circle
-          type: script
-          id: script.app_change
+          type: shell_command
+          id: shell_command.app_change
           data:
-            player_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.main.SplashActivity'
-  - entity: media_player.playstation_4
-    type: custom:mini-media-player
-    icon: mdi:sony-playstation
-    artwork: cover
-    source: icon
+            player_uri: 'com.sony.dtv.com.sonypicturescore.com.sphe.bravialounge.SplashActivity'

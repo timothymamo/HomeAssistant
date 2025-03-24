@@ -1,6 +1,6 @@
 # This is used for voice control via Alexa devices
 # For a full list of APIs see the following documentation:
-# https://pro-bravia.sony.net/develop/integrate/rest-api/spec/index.html
+# https://pro-bravia.sony.net/develop/integrate/ip-control/index.html
 # To get a list of all the apps on the TV run the following:
 # curl -XPOST http://192.168.1.210/sony/appControl -d '{"id":2,"method":"getApplicationList","version":"1.0","params":["1.0"]}' -H 'X-Auth-PSK: <PSK can be found in secrets.yaml file>' | jq -r '.result[]'
 
@@ -23,9 +23,44 @@ nos:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.nl.nos.app.nl.nos.app.ui.activities.OverviewActivity'
+        app_uri: 'com.sony.dtv.nl.nos.app.tv.mauna.app.MainActivity'
 npo:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.main.SplashActivity'
+        app_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.tv.presentation.activities.main.MainActivity'
+disneyplus:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+youtube:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.google.android.youtube.tv.com.google.android.apps.youtube.tv.activity.ShellActivity'
+sonypicturescore:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.sonypicturescore.com.sphe.bravialounge.SplashActivity'
+hbomax:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.wbd.hbomax.com.wbd.beam.BeamActivity'
+livingdecor:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.sony.dtv.livingfit.com.sony.dtv.livingfit.MainActivity'
+ecodashboard:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.sony.dtv.ecodashboard.com.sony.dtv.ecodashboard.presentation.activity.EcoDashboardActivity'
+projectlauncher:
+  sequence:
+    - service: shell_command.app_change
+      data_template:
+        app_uri: 'com.sony.dtv.com.spocky.projengmenu.com.spocky.projengmenu.ui.home.MainActivity'
