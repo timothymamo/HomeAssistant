@@ -10,6 +10,7 @@ sun:
 system_health:
 mobile_app:
 media_source:
+wake_on_lan:
 
 tts:
   - platform: google_translate
