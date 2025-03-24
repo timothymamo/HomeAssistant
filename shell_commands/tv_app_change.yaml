@@ -1,1 +1,1 @@
-app_change: '/usr/bin/curl -X POST http://192.168.1.210/sony/appControl -d "{"id":2,"method":"setActiveApp","version":"1.0","params":[{ "uri": {{ app_uri }} }]}" -H "X-Auth-PSK: {{ tv_psk }}"'
+app_change: "/usr/bin/curl -X POST http://192.168.1.210/sony/appControl -d '{"id":2,"method":"setActiveApp","version":"1.0","params":[{ "uri": "{{ app_uri }}" }]}' -H "X-Auth-PSK: {{ tv_psk }}""
