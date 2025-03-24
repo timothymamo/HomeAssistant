@@ -8,7 +8,7 @@ prime:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: '{"id":2,"method":"setActiveApp","version":"1.0","params":[{ "uri": "com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity" }]}'
+        payload: "{\"id\":2,\"method\":\"setActiveApp\",\"version\":\"1.0\",\"params\":[{ \"uri\": \"com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity\" }]}"
         tv_psk: !secret tv_psk
 netflix:
   sequence:
