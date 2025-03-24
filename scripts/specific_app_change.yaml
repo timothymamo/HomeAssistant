@@ -8,71 +8,71 @@ prime:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity'
+        app_uri: com.sony.dtv.com.amazon.amazonvideo.livingroom.com.amazon.ignition.IgnitionActivity
         tv_psk: !secret tv_psk
 netflix:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity'
+        app_uri: com.sony.dtv.com.netflix.ninja.com.netflix.ninja.MainActivity
         tv_psk: !secret tv_psk
 plex:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity'
+        app_uri: com.sony.dtv.com.plexapp.android.com.plexapp.plex.activities.SplashActivity
         tv_psk: !secret tv_psk
 nos:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.nl.nos.app.tv.mauna.app.MainActivity'
+        app_uri: com.sony.dtv.nl.nos.app.tv.mauna.app.MainActivity
         tv_psk: !secret tv_psk
 npo:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.tv.presentation.activities.main.MainActivity'
+        app_uri: com.sony.dtv.nl.uitzendinggemist.nl.uitzendinggemist.tv.presentation.activities.main.MainActivity
         tv_psk: !secret tv_psk
 disneyplus:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity'
+        app_uri: com.sony.dtv.com.disney.disneyplus.com.bamtechmedia.dominguez.main.MainActivity
         tv_psk: !secret tv_psk
 youtube:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.google.android.youtube.tv.com.google.android.apps.youtube.tv.activity.ShellActivity'
+        app_uri: com.sony.dtv.com.google.android.youtube.tv.com.google.android.apps.youtube.tv.activity.ShellActivity
         tv_psk: !secret tv_psk
 sonypicturescore:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.sonypicturescore.com.sphe.bravialounge.SplashActivity'
+        app_uri: com.sony.dtv.com.sonypicturescore.com.sphe.bravialounge.SplashActivity
         tv_psk: !secret tv_psk
 hbomax:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.wbd.hbomax.com.wbd.beam.BeamActivity'
+        app_uri: com.sony.dtv.com.wbd.hbomax.com.wbd.beam.BeamActivity
         tv_psk: !secret tv_psk
 livingdecor:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.sony.dtv.livingfit.com.sony.dtv.livingfit.MainActivity'
+        app_uri: com.sony.dtv.com.sony.dtv.livingfit.com.sony.dtv.livingfit.MainActivity
         tv_psk: !secret tv_psk
 ecodashboard:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.sony.dtv.ecodashboard.com.sony.dtv.ecodashboard.presentation.activity.EcoDashboardActivity'
+        app_uri: com.sony.dtv.com.sony.dtv.ecodashboard.com.sony.dtv.ecodashboard.presentation.activity.EcoDashboardActivity
         tv_psk: !secret tv_psk
 projectlauncher:
   sequence:
     - service: shell_command.app_change
       data_template:
-        app_uri: 'com.sony.dtv.com.spocky.projengmenu.com.spocky.projengmenu.ui.home.MainActivity'
+        app_uri: com.sony.dtv.com.spocky.projengmenu.com.spocky.projengmenu.ui.home.MainActivity
         tv_psk: !secret tv_psk
