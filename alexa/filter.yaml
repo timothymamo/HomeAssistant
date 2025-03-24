@@ -6,11 +6,7 @@ filter:
     - group.hallway
     - group.kitchen
     - group.living_room
-    - script.prime
-    - script.netflix
     - script.realfeel_notification
-    - script.plex
-    - script.nos
   include_domains:
     - light
     - media_player
@@ -23,7 +19,6 @@ filter:
     - group.temp_sensors
     - input_datetime.wakeup_time
     - input_number.wakeup_transition
-    - script.app_change
     - light.hallway
     - light.dining_1
     - light.dining_2

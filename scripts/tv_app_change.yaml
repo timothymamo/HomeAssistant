@@ -1,6 +1,0 @@
-app_change:
-  sequence:
-    - service: shell_command.app_change
-      data_template:
-        app_uri: '{"id":2,"method":"setActiveApp","version":"1.0","params":[{ "uri": "{{ app_uri }}" }]}'
-        tv_psk: !secret tv_psk

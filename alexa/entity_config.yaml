@@ -23,14 +23,6 @@ entity_config:
   group.living_room:
     name: 'Living Room'
     display_categories: 'LIGHT'
-  script.amazon_video:
-    name: 'Amazon Video'
-  script.netflix:
-    name: 'Netflix'
-  script.plex:
-    name: "Plex"
-  script.nos:
-    name: "Dutch TV"
   light.dining_1:
     name: 'Dining 1'
     display_categories: 'LIGHT'
