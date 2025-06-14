@@ -86,7 +86,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: heading
-        heading: Pollen in de lucht
+        heading: Pollen in the air
         heading_style: title
         card_mod:
           class: class-section-heading
@@ -96,7 +96,7 @@ cards:
       - type: horizontal-stack
         cards:
           - entity: sensor.kleenex_pollen_radar_huis_weeds
-            name: Onkruid
+            name: Weeds
             type: tile
             vertical: true
             tap_action:
@@ -104,7 +104,7 @@ cards:
             card_mod:
               style: |
                 ha-tile-icon {
-                  {% set level = states('sensor.kleenex_pollen_radar_huis_weeds_level') %}
+                  {% set level = states('sensor.kleenex_pollen_radar_home_weeds_level') %}
                   {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
                   {% set level_color = color.get(level,'gray') %}
                   {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
@@ -116,7 +116,7 @@ cards:
                   --tile-color: {{level_color}};
                 }
           - entity: sensor.kleenex_pollen_radar_huis_grass
-            name: Gras
+            name: Grass
             type: tile
             vertical: true
             tap_action:
@@ -124,7 +124,7 @@ cards:
             card_mod:
               style: |
                 ha-tile-icon {
-                  {% set level = states('sensor.kleenex_pollen_radar_huis_grass_level') %}
+                  {% set level = states('sensor.kleenex_pollen_radar_home_grass_level') %}
                   {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
                   {% set level_color = color.get(level,'gray') %}
                   {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
@@ -136,7 +136,7 @@ cards:
                   --tile-color: {{level_color}};
                 }
           - entity: sensor.kleenex_pollen_radar_huis_trees
-            name: Bomen
+            name: Trees
             type: tile
             vertical: true
             tap_action:
@@ -144,7 +144,7 @@ cards:
             card_mod:
               style: |
                 ha-tile-icon {
-                  {% set level = states('sensor.kleenex_pollen_radar_huis_trees_level') %}
+                  {% set level = states('sensor.kleenex_pollen_radar_home_trees_level') %}
                   {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
                   {% set level_color = color.get(level,'gray') %}
                   {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
