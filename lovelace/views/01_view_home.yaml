@@ -81,6 +81,140 @@ cards:
                       "on": "mdi:email-multiple-outline"
                       "off": "mdi:email-outline"
 
+# Sourcecode by vdbrink.github.io
+# Entities Card Configuration
+  - type: vertical-stack
+    cards:
+      - type: heading
+        heading: Pollen in de lucht
+        heading_style: title
+        card_mod:
+          class: class-section-heading
+        tap_action:
+          action: url
+          url_path: https://www.kleenex.nl/pollenradar
+      - type: horizontal-stack
+        cards:
+          - entity: sensor.kleenex_pollen_radar_huis_weeds
+            name: Onkruid
+            type: tile
+            vertical: true
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-tile-icon {
+                  {% set level = states('sensor.kleenex_pollen_radar_huis_weeds_level') %}
+                  {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                  {% set level_color = color.get(level,'gray') %}
+                  {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
+                  {% set percentage = circle.get(level,'25') %}
+                  border-radius: 24px;
+                  background: radial-gradient(var(--card-background-color) 60%,transparent calc(60% + 1px)),
+                  conic-gradient({{level_color}} {{percentage}}% 0%,
+                  var(--card-background-color) 0% 100%);
+                  --tile-color: {{level_color}};
+                }
+          - entity: sensor.kleenex_pollen_radar_huis_grass
+            name: Gras
+            type: tile
+            vertical: true
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-tile-icon {
+                  {% set level = states('sensor.kleenex_pollen_radar_huis_grass_level') %}
+                  {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                  {% set level_color = color.get(level,'gray') %}
+                  {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
+                  {% set percentage = circle.get(level,'25') %}
+                  border-radius: 24px;
+                  background: radial-gradient(var(--card-background-color) 60%,transparent calc(60% + 1px)),
+                  conic-gradient({{level_color}} {{percentage}}% 0%,
+                  var(--card-background-color) 0% 100%);
+                  --tile-color: {{level_color}};
+                }
+          - entity: sensor.kleenex_pollen_radar_huis_trees
+            name: Bomen
+            type: tile
+            vertical: true
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-tile-icon {
+                  {% set level = states('sensor.kleenex_pollen_radar_huis_trees_level') %}
+                  {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                  {% set level_color = color.get(level,'gray') %}
+                  {% set circle = {'low':'25','moderate':'50','high':'75','very-high':'100'} %}        
+                  {% set percentage = circle.get(level,'25') %}
+                  border-radius: 24px;
+                  background: radial-gradient(var(--card-background-color) 60%,transparent calc(60% + 1px)),
+                  conic-gradient({{level_color}} {{percentage}}% 0%,
+                  var(--card-background-color) 0% 100%);
+                  --tile-color: {{level_color}};
+                }
+      - type: horizontal-stack
+        cards:
+          - type: markdown
+            entity: sensor.kleenex_pollen_radar_huis_weeds_level
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgb(128,193,177);
+                  color:
+                    {% set level = states('sensor.kleenex_pollen_radar_huis_weeds_level') %}
+                    {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                    {% set level_color = color.get(level,'gray') %}
+                    {{level_color}};
+                  font-weight: 800;
+                  text-align: center;
+                }
+            content: |
+              {% set level = states(config.entity) %}
+              {% set text = {'low':'laag','moderate':'gemiddeld','high':'hoog','very-high':'heel hoog'} %}
+              {% set level_text = text.get(level,'onbekend') %}
+              {{ level_text }}
+          - type: markdown
+            entity: sensor.kleenex_pollen_radar_huis_grass_level
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgb(128,193,177);
+                  color:
+                    {% set level = states('sensor.kleenex_pollen_radar_huis_grass_level') %}
+                    {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                    {% set level_color = color.get(level,'gray') %}
+                    {{level_color}};
+                  font-weight: 800;
+                  text-align: center;
+                }
+            content: |
+              {% set level = states(config.entity) %}
+              {% set text = {'low':'laag','moderate':'gemiddeld','high':'hoog','very-high':'heel hoog'} %}
+              {% set level_text = text.get(level,'onbekend') %}
+              {{ level_text }}
+          - type: markdown
+            entity: sensor.kleenex_pollen_radar_huis_trees_level
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgb(128,193,177);
+                  color:
+                    {% set level = states('sensor.kleenex_pollen_radar_huis_trees_level') %}
+                    {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
+                    {% set level_color = color.get(level,'gray') %}
+                    {{level_color}};
+                  font-weight: 800;
+                  text-align: center;
+                }
+            content: |
+              {% set level = states(config.entity) %}
+              {% set text = {'low':'laag','moderate':'gemiddeld','high':'hoog','very-high':'heel hoog'} %}
+              {% set level_text = text.get(level,'onbekend') %}
+              {{ level_text }}
+
   - type: custom:group-card
     card:
       type: entities
