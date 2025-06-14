@@ -180,7 +180,6 @@ cards:
             card_mod:
               style: |
                 ha-card {
-                  background: rgb(128,193,177);
                   color:
                     {% set level = states('sensor.kleenex_pollen_radar_home_grass_level') %}
                     {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
@@ -199,7 +198,6 @@ cards:
             card_mod:
               style: |
                 ha-card {
-                  background: rgb(128,193,177);
                   color:
                     {% set level = states('sensor.kleenex_pollen_radar_home_trees_level') %}
                     {% set color = {'low':'green','moderate':'orange','high':'red','very-high':'maroon'} %}
