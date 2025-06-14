@@ -83,6 +83,87 @@ cards:
 
 # Sourcecode by vdbrink.github.io
 # Entities Card Configuration
+  - type: horizontal-stack
+    cards:
+      - type: tile
+        entity: sensor.kleenex_pollen_radar_home_trees
+        name: Hazel
+        grid_options:
+          columns: 3
+          rows: 2
+        vertical: true
+        card_mod:
+          style:
+            ha-tile-icon: >
+              {% set input_name = 'Hazelaar' %} 
+              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
+              {% set item = details | selectattr('name', 'eq', input_name) | first() %} 
+              {% set level = item.level | default('N/A') %}  
+              {% set color_map = {'low': 'green', 'moderate': 'orange', 'high': 'red', 'very high': 'maroon'} %} 
+              {% set level_color = color_map.get(level, 'gray') %}
+
+              ha-state-icon {
+                conic-gradient({{ level_color }} var(--card-background-color) 0% 100%);
+              }
+
+              ha-tile-icon {
+                --tile-color: {{level_color}};
+              }
+            ha-tile-info$: >
+              {% set input_name = 'Hazelaar' %}  
+              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
+              {% set item = details | selectattr('name', 'eq', input_name) | first() %}
+
+              .secondary state-display {
+                display: none;
+              }
+
+              .secondary::after {
+                content: "{{ item.value }} ppm";
+                display: block;
+                text-align: center;
+              }
+      - type: tile
+        entity: sensor.kleenex_pollen_radar_home_trees
+        name: Birch
+        grid_options:
+          columns: 3
+          rows: 2
+        vertical: true
+        card_mod:
+          style:
+            ha-tile-icon: >
+              {% set input_name = 'Berk' %} 
+              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
+              {% set item = details | selectattr('name', 'eq', input_name) | first() %} 
+              {% set level = item.level | default('N/A') %}  
+              {% set color_map = {'low': 'green', 'moderate': 'orange', 'high': 'red', 'very high': 'maroon'} %} 
+              {% set level_color = color_map.get(level, 'gray') %}
+
+              ha-state-icon {
+                conic-gradient({{ level_color }} var(--card-background-color) 0% 100%);
+              }
+
+              ha-tile-icon {
+                --tile-color: {{level_color}};
+              }
+            ha-tile-info$: >
+              {% set input_name = 'Berk' %}  
+              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
+              {% set item = details | selectattr('name', 'eq', input_name) | first() %}
+
+              .secondary state-display {
+                display: none;
+              }
+
+              .secondary::after {
+                content: "{{ item.value }} ppm";
+                display: block;
+                text-align: center;
+              }
+
+# Sourcecode by vdbrink.github.io
+# Entities Card Configuration
   - type: vertical-stack
     cards:
       - type: heading
@@ -211,89 +292,6 @@ cards:
               {% set text = {'low':'low','moderate':'moderate','high':'high','very-high':'very high'} %}
               {% set level_text = text.get(level,'unknown') %}
               {{ level_text }}
-
-
-  
-# Sourcecode by vdbrink.github.io
-# Entities Card Configuration
-  - type: horizontal-stack
-    cards:
-      - type: tile
-        entity: sensor.kleenex_pollen_radar_home_trees
-        name: Hazel
-        grid_options:
-          columns: 3
-          rows: 2
-        vertical: true
-        card_mod:
-          style:
-            ha-tile-icon: >
-              {% set input_name = 'Hazelaar' %} 
-              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
-              {% set item = details | selectattr('name', 'eq', input_name) | first() %} 
-              {% set level = item.level | default('N/A') %}  
-              {% set color_map = {'low': 'green', 'moderate': 'orange', 'high': 'red', 'very high': 'maroon'} %} 
-              {% set level_color = color_map.get(level, 'gray') %}
-
-              ha-state-icon {
-                conic-gradient({{ level_color }} var(--card-background-color) 0% 100%);
-              }
-
-              ha-tile-icon {
-                --tile-color: {{level_color}};
-              }
-            ha-tile-info$: >
-              {% set input_name = 'Hazelaar' %}  
-              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
-              {% set item = details | selectattr('name', 'eq', input_name) | first() %}
-
-              .secondary state-display {
-                display: none;
-              }
-
-              .secondary::after {
-                content: "{{ item.value }} ppm";
-                display: block;
-                text-align: center;
-              }
-      - type: tile
-        entity: sensor.kleenex_pollen_radar_home_trees
-        name: Birch
-        grid_options:
-          columns: 3
-          rows: 2
-        vertical: true
-        card_mod:
-          style:
-            ha-tile-icon: >
-              {% set input_name = 'Berk' %} 
-              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
-              {% set item = details | selectattr('name', 'eq', input_name) | first() %} 
-              {% set level = item.level | default('N/A') %}  
-              {% set color_map = {'low': 'green', 'moderate': 'orange', 'high': 'red', 'very high': 'maroon'} %} 
-              {% set level_color = color_map.get(level, 'gray') %}
-
-              ha-state-icon {
-                conic-gradient({{ level_color }} var(--card-background-color) 0% 100%);
-              }
-
-              ha-tile-icon {
-                --tile-color: {{level_color}};
-              }
-            ha-tile-info$: >
-              {% set input_name = 'Berk' %}  
-              {% set details = state_attr('sensor.kleenex_pollen_radar_home_trees', 'details') %} 
-              {% set item = details | selectattr('name', 'eq', input_name) | first() %}
-
-              .secondary state-display {
-                display: none;
-              }
-
-              .secondary::after {
-                content: "{{ item.value }} ppm";
-                display: block;
-                text-align: center;
-              }
 
   - type: custom:group-card
     card:
