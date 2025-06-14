@@ -92,7 +92,7 @@ cards:
           class: class-section-heading
         tap_action:
           action: url
-          url_path: https://www.kleenex.nl/pollenradar
+          url_path: https://hooikoortsradar.nl
       - type: horizontal-stack
         cards:
           - entity: sensor.kleenex_pollen_radar_home_weeds
